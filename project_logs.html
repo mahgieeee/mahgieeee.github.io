@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Maggie's Codes</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Style the header */
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+    width: 15%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 70%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 800px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+.dropbtn1 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content1 a:hover {background-color: #f1f1f1}
+
+.dropdown1:hover .dropdown-content1 {
+    display: block;
+}
+
+.dropdown1:hover .dropbtn1 {
+    background-color: #3e8e41;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Programming</h1>
+</div>
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="project_logs.html">Google Cloud Project Logs</a>
+  <a href="#">About</a>
+  <a href="interests.html">Interests</a>
+</div>
+
+<div class="row">
+  <div class="column side">
+    <h2>Projects List</h2>
+    <p>
+<p><div class="dropdown">
+  <button class="dropbtn">Simple Functions</button>
+  <div class="dropdown-content">
+    <a href="Basic_Functions/compare_sorting.cpp">Compare Sorting</a> 
+    <a href="Basic_Functions/subset.cpp">Subset </a> 
+    <a href="Basic_Functions/dynamic.cpp">Dynamic Function example</a>
+  </div>
+</div></p>
+
+<p><div class="dropdown">
+  <button class="dropbtn">Google Code Jam</button>
+  <div class="dropdown-content">
+    <a href="https://code.google.com/codejam/contest/544101/dashboard"> Assignment Link </a> 
+    <a href="Google_Code_Jam/Board.cpp">Board Class</a> 
+    <a href="Google_Code_Jam/Board.h">Board Header File</a> 
+    <a href="Google_Code_Jam/mainBoard.cpp">Board main driver</a> 
+    <a href="Google_Code_Jam/reverse.cpp">Reverse</a> <br>
+    <a href="Google_Code_Jam/AlienLanguage.cpp">Alien Language</a>
+    <a href="Google_Code_Jam/Numbers.cpp">Numbers</a>
+    <a href="Google_Code_Jam/MinimumScalarProduct.cpp">Minimum Scalar Product</a>
+  </div>
+</div></p>
+
+<p><div class="dropdown">
+  <button class="dropbtn">Systems Programming</button>
+  <div class="dropdown-content">
+    <a href="Systems_Programming/uniq.c">Uniq command</a>
+    <a href="Systems_Programming/runsim.c">Running child processes</a>
+    <a href="Systems_Programming/my_grep.c">Grep command</a>
+    <a href="Systems_Programming/pipe.c">Pipe example</a>
+    <a href="Systems_Programming/my_nohup.c">Signals </a>
+  </div>
+</div><p>
+
+<p><div class="dropdown">
+  <button class="dropbtn">Mirai Project </button>
+  <div class="dropdown-content">
+    <a href="MiraiSecurityProject.pdf">Mirai execution report</a>
+  </div>
+</div><p>
+
+<p><div class="dropdown">
+  <button class="dropbtn">Simple Shapes CNN </button>
+  <div class="dropdown-content">
+    <a href="Simple_Shapes_CNN/draw.py">Drawing random shapes</a>
+    <a href="Simple_Shapes_CNN/reduce_images_pickle.py">Reduce image size</a>
+    <a href="Simple_Shapes_CNN/pickletestcats.py">Creating pickle files</a>
+    <a href="Simple_Shapes_CNN/merge_files.py">Merging pickle files</a>
+    <a href="Simple_Shapes_CNN/load_merge_files.py">Pickle loader to CNN</a>
+    <a href="Simple_Shapes_CNN/cnncopy.py">Basic CNN</a>
+    <a href="Simple_Shapes_CNN/googlecloud_config_cnn.txt">Google Cloud Configuration</a>
+    <a href="Simple_Shapes_CNN/cnn_copy_sobel.py">Contour Detection & Cropping</a>
+  </div>
+</div><p>
+
+</p>
+</div>
+
+  <div class="column middle">
+  <div style="width:1200px;height:700px;line-height:1.2em;overflow:auto;padding:0px;">
+    <h2>Project Logs for Simple Shapes using Convolutional Neural Network project</h2>
+    <p>
+    <p><div class="dropdown1">
+  <button class="dropbtn1">Project Logs</button>
+  <div class="dropdown-content1"> 
+    <a href="Simple_Shapes_CNN/logs_text.pdf">Google Cloud Logs</a>
+    <a href="Simple_Shapes_CNN/project_logs.pdf">Project Logs</a>
+    <a href="Simple_Shapes_CNN/interim_status_report.pdf">Interim Status Report</a>
+    <a href="Simple_Shapes_CNN/nn_architecture.pdf">CNN design & Research</a>
+    <a href="Simple_Shapes_CNN/interim_status_report2.pdf">Interim Status Report II</a>
+    </div>
+  </div><p>
+    </p>
+</div>
+</div>
+
+  <div class="column side">
+    <h2>Questions or Comments?</h2>
+    <p><a href="mailto:maggie.cao.bc@gmail.com" style="text-decoration:none;">Email Me</a> 
+   </p>
+  </div>
+</div>
+
+</body>
+</html>

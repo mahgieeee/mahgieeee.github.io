@@ -1,0 +1,84 @@
+python cnn_copy_sobel.py --job-dir ./ --train-file cropped_random_shapes.pkl 
+Using Theano backend.
+Using logs_path located at .//logs/2017-11-14T11:27:53.057598
+Shape of cropped image:  (234, 90, 3)
+before cropped shape (300, 300, 3)
+printing numpy array from get_edges
+Shape of cropped image:  (153, 86, 3)
+[[[ 27.  18.  31.]
+  [ 27.  18.  31.]
+  [ 27.  18.  31.]
+  ..., 
+  [ 28.  18.  31.]
+  [ 28.  18.  31.]
+  [ 28.  18.  31.]]
+
+ [[ 27.  18.  31.]
+  [ 27.  18.  31.]
+  [ 27.  18.  31.]
+  ..., 
+  [ 28.  18.  31.]
+  [ 28.  18.  31.]
+  [ 28.  18.  31.]]
+
+ [[ 27.  18.  31.]
+  [ 27.  18.  31.]
+  [ 27.  18.  31.]
+  ..., 
+  [ 28.  18.  31.]
+  [ 28.  18.  31.]
+  [ 28.  18.  31.]]
+
+ ..., 
+ [[ 28.  18.  31.]
+  [ 28.  18.  31.]
+  [ 28.  18.  31.]
+  ..., 
+  [ 28.  18.  31.]
+  [ 28.  18.  31.]
+  [ 28.  18.  31.]]
+
+ [[ 28.  18.  31.]
+  [ 28.  18.  31.]
+  [ 28.  18.  31.]
+  ..., 
+  [ 28.  18.  31.]
+  [ 28.  18.  31.]
+  [ 28.  18.  31.]]
+
+ [[ 28.  18.  31.]
+  [ 28.  18.  31.]
+  [ 28.  18.  31.]
+  ..., 
+  [ 28.  18.  31.]
+  [ 28.  18.  31.]
+  [ 28.  18.  31.]]]
+Epoch 1/20
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/home/maggie/anaconda3/envs/py27/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+    self.run()
+  File "/home/maggie/anaconda3/envs/py27/lib/python2.7/threading.py", line 754, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/keras/utils/data_utils.py", line 560, in data_generator_task
+    generator_output = next(self._generator)
+  File "/home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/keras/preprocessing/image.py", line 815, in next
+    x = self.image_data_generator.standardize(x)
+  File "/home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/keras/preprocessing/image.py", line 491, in standardize
+    if self.preprocessing_function:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+Traceback (most recent call last):
+  File "cnn_copy_sobel.py", line 252, in <module>
+    train_model(**arguments)
+  File "cnn_copy_sobel.py", line 210, in train_model
+    epochs = 20)
+  File "/home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/keras/legacy/interfaces.py", line 87, in wrapper
+    return func(*args, **kwargs)
+  File "/home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/keras/models.py", line 1117, in fit_generator
+    initial_epoch=initial_epoch)
+  File "/home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/keras/legacy/interfaces.py", line 87, in wrapper
+    return func(*args, **kwargs)
+  File "/home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/keras/engine/training.py", line 1809, in fit_generator
+    generator_output = next(output_generator)
+StopIteration

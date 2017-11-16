@@ -1,1 +1,258 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Maggie's Codes</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Style the header */
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+    width: 15%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 85%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 800px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Programming</h1>
+</div>
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="project_logs.html">Google Cloud Project Logs</a>
+  <a href="#">About</a>
+  <a href="interests.html">Interests</a>
+</div>
+
+<div class="row">
+  <div class="column side">
+    <h2>Projects List</h2>
+    <p>
+<p><div class="dropdown">
+  <button class="dropbtn">Simple Functions</button>
+  <div class="dropdown-content">
+    <a href="Basic_Functions/compare_sorting.cpp">Compare Sorting</a> 
+    <a href="Basic_Functions/subset.cpp">Subset </a> 
+    <a href="Basic_Functions/dynamic.cpp">Dynamic Function example</a>
+  </div>
+</div></p>
+
+<p><div class="dropdown">
+  <button class="dropbtn">Google Code Jam</button>
+  <div class="dropdown-content">
+    <a href="https://code.google.com/codejam/contest/544101/dashboard"> Assignment Link </a> 
+    <a href="Google_Code_Jam/Board.cpp">Board Class</a> 
+    <a href="Google_Code_Jam/Board.h">Board Header File</a> 
+    <a href="Google_Code_Jam/mainBoard.cpp">Board main driver</a> 
+    <a href="Google_Code_Jam/reverse.cpp">Reverse</a> <br>
+    <a href="Google_Code_Jam/AlienLanguage.cpp">Alien Language</a>
+    <a href="Google_Code_Jam/Numbers.cpp">Numbers</a>
+    <a href="Google_Code_Jam/MinimumScalarProduct.cpp">Minimum Scalar Product</a>
+  </div>
+</div></p>
+
+<p><div class="dropdown">
+  <button class="dropbtn">Systems Programming</button>
+  <div class="dropdown-content">
+    <a href="Systems_Programming/uniq.c">Uniq command</a>
+    <a href="Systems_Programming/runsim.c">Running child processes</a>
+    <a href="Systems_Programming/my_grep.c">Grep command</a>
+    <a href="Systems_Programming/pipe.c">Pipe example</a>
+    <a href="Systems_Programming/my_nohup.c">Signals </a>
+  </div>
+</div><p>
+
+<p><div class="dropdown">
+  <button class="dropbtn">Mirai Project </button>
+  <div class="dropdown-content">
+    <a href="MiraiSecurityProject.pdf">Mirai execution report</a>
+  </div>
+</div><p>
+
+<p><div class="dropdown">
+  <button class="dropbtn">Simple Shapes CNN </button>
+  <div class="dropdown-content">
+    <a href="Simple_Shapes_CNN/proposal.pdf">Neural Network Concept</a>
+    <a href="Simple_Shapes_CNN/draw.py">Drawing random shapes</a>
+    <a href="Simple_Shapes_CNN/reduce_images_pickle.py">Reduce image size</a>
+    <a href="Simple_Shapes_CNN/pickletestcats.py">Creating pickle files</a>
+    <a href="Simple_Shapes_CNN/merge_files.py">Merging pickle files</a>
+    <a href="Simple_Shapes_CNN/load_merge_files.py">Pickle loader to CNN</a>
+    <a href="Simple_Shapes_CNN/cnncopy.py">Basic CNN</a>
+    <a href="Simple_Shapes_CNN/googlecloud_config_cnn.txt">Google Cloud Configuration</a>
+    <a href="Simple_Shapes_CNN/cnn_copy_sobel.py">Contour Detection & Cropping</a>
+    
+  </div>
+</div><p>
+
+<p><div class="dropdown">
+  <button class="dropbtn">Current Logs in CNN file</button>
+  <div class="dropdown-content">
+    <a href="segmentation_fault_nov14_testing_crop_in_cnn.txt">Simple testing of pickle loading with crop function</a>
+    <a href="cnn_sobel_py2.py">crop function</a>
+    <a href="cnn_sobel_main.py">crop function in main works except last input image load</a>
+    <a href="logs_generator_error.txt">fixed segmentation issue but issue with generator function</a>
+    <a href="cnn_copy_sobel.py"> cnn loader file with crop (current)</a>
+  </div>
+</div><p>
+</p>
+</div>
+
+  <div class="column middle">
+  <div style="width:1300px;height:700px;line-height:1.2em;overflow:auto;padding:0px;">
+    <h2>Current Project: Simple Shapes using Convolutional Neural Networks</h2>
+    <p> General Problem: To get the machine to learn simple shapes of triangle, circles, squares and rectangles individually and their intersections. <br> 
+
+Proposed Solution: Since the architecture of a convolutional neural network (CNN) focuses on the features of images in pixels, it will be able to generalize a machine learning model of simple shapes. The first goal of the project is to get the computer to learn each individual shape (triangle, circle, square and rectangle) generally. The second goal is to get the machine to learn the intersection of the shapes either by adding onto the CNN model using a recurrent network or a multi-label output instead of a multi-class output. Simple subsets of the creation of image data and preparing the CNN file for loading will be compiled locally on Anaconda’s Python 3, which uses Spyder as the main IDE. The main CNN file will be tested on Anaconda’s virtual environment in Python 2 and compiled remotely on Google Cloud’s Machine Learning Engine using Keras as a front end library, Tensorflow as a backend.</p>
+
+<p>Actual tasks that will be performed:<br> 
+1. Research on neural networks in regards to their architecture and optimization methods.<br> 
+2. Learn Python 3 online and multivariable calculus. Review linear algebra.<br> 
+3. Do a tutorial on a simple cats and dogs CNN, which is a very popular example on the web.<br> 
+4. Read Keras documentation. There’s a cheat-sheet available online on basic functions in Keras.<br> 
+5. Figure out how to successfully compile a CNN in Google Cloud’s Machine Learning Engine<br> 
+6. Train the CNN as necessary, prevent overfitting, focus on optimization for a general model through feature extraction.<br> 
+7. Test the CNN model by loading it and seeing how it performs on unseen images.<br> 
+8. Make changes to the architecture of the CNN as necessary. </p>
+
+<p> Week of October 23: <br>
+	The baby AI image dataset is very old and has bugs in it. I wasn’t able to extract the dataset by running their python program. So, I spent all this time creating my own dataset and preparing it for loading using pickle’s serialization format into Google Cloud’s Machine Learning Engine. I created my own python class called Draw.py, which uses multiprocessing of Pool workers in a class to draw images themselves as well as the intersection of images. Multiprocessing allows me to make as many images as possible by using parallel computing of 4 cores in a CPU.</p>
+<img src="Simple_Shapes_CNN/circle.png" alt="Circle" width="100%" height=auto>
+<img src="Simple_Shapes_CNN/rectangle.png" alt="Rectangle" width="100%" height=auto>
+<img src="Simple_Shapes_CNN/square.png" alt="Square" width="100%" height=auto>
+<img src="Simple_Shapes_CNN/triangle.png" alt="Triangle" width="100%" height=auto>
+<p>10.31.17: <br>
+	The training set consists of a total of 6,200 images. Before being serialized into a pickle file, the training set is organized in a tuple structure (numpy array, y_label). The numpy array is the data array processed by the PIL module in (300, 300, 3) format. The numpy array represents the matrix in float32 of the image. The y_label represents the target values of the shapes, which is the expected output of the convolutional neural network. Keras requires categorical crossentropy loss to be computed with categorical encodings. The categorical one hot encoding transfers integers (0...number of classes) into binary format. My y_label is a series of categorical hot encodings of 0, 1, 2 in binary format of three classes (circles, rectangles and squares, triangle). <br> 
+	I had to change the numpy array data structure from a default float to float32 bit since the loading of the pickle files in the default float structure consumes too much memory in megabytes per file. The difference almost reduced the entire file size from 3.0 GB (without compression) to 1.7 G.B.  The pickle files are too huge, so I have to reduce the quality and size of each image to reduce the pickle files. Pickle loads and image creation of the shapes are created using multiprocessing of independent Pool workers. I have been trying to figure out how to create a pickle file, organize numpy arrays and store them in a huge list, dump that huge list using joblib. Use memmap to store large numpy arrays because it's inefficient for the list to increase in data memory allocation in list comprehension of pickle loading. The file below create (numpy arrays, y_label) tuples and stores them in a pickle file.<br>  
+	The short-term goal is to train the shapes individually first and then figure out how to get the model to generalize on the “intersection” of shapes either by using recurrent convolutional neural networks or multi-label output using supervised learning. How will the network learn? I need to adjust the architecture of the CNN. The multi-label output is simpler and much easier. This requires sigmoid activation and loss = binary_crossentropy at the output layer for multi-label output to work. </p>
+<p>
+11.3-11.5.17: <br>
+Google cloud works locally but had errors of loading pickle file remotely on google cloud because the Cloud Compute Engine doesn't recognize python's file descriptor. I need to use tensorflow's open method, need to set gs:// for every input file data for Google Cloud to recognized it. (See CNN loader file to run in cloud)<br>
+11.6.17: <br>
+There is an memory error when running on Google Cloud's regular CPU after one set of 10 epochs for the first half of the dataset. There is not enough memory allocated and training took 1 hour, which is too slow. I decided to use yaml configuration to run on a single NVIDIA K80 GPU processor on Google Cloud Compute Engine. <br> 
+11.7.17:<br>
+I executed this with no errors in Google Cloud with GPU computing on a validation set 1000 images and training set of 6000 images with roughly 60 percent accuracy, 3 percent error rate in 3 series of 10 epochs per training set each. The learning model is able to be saved. Google Cloud automatically plots the gradient on Tensorboard. The reason the error rate is so high and accuracy is low is because there are alot of background samples that the CNN intakes as pool sizes. Background colored samples are data that contains no linear information - unimportant numpy array figures. so when the network does the maxpool of background samples near the 'important line samples', if the background samples are in greater distributation than the amount of important line samples, maxpool will label that area as background sample which makes the neurons increase the weights for backgrounds instead of the contour images itself.<br>
+11.8.17:<br>
+I increased the y-label output from 3 classes to 4 classes. Keras does the automatic shuffle at every epoch in fit_generator. I changed the architecture of the CNN, add drop out layers that might drop out neurons that have no data of contour characteristics being drawn or do some cropping of batches that do not consist of contour information beforehand. I increased the pool size of the CNN and changed it from adam optimizer to rms optimizer. The CNN will do fit the generator model from data augmentation in 20 epochs with validation and training inputs inputted. I also implemented the validation set correctly during the fitting of the network with real data augmentation. The CNN does poorly during training, with an accuracy of 59 percent and 6 percent loss. This is because I used 3,000 images to train the dataset, which is 1/3 of the total training set, which might not contain evenly distributed images of each type of shape. I reduced the total training set by a third because I want to focus on getting the architecture of the CNN right and there is memory error at the Tesla K80 GPU from the loading of the images since the validation data increased by twice as much as the previous one.<br>
+11.9.17: <br>
+Trying to figure out how to redesign the architecture of my CNN by looking back on the research I did in Neural Network Design. I also need to create my own data generator (augmentation) function that crops large scaled images to reduce unnecessary background sampling of images in Pooling. I don’t want to separate the contours and filling of the images from the background because the background plays an important part in the composition of the entire image object. Such images that need to be cropped, where the dotted lines represent the cropping location, in a generator function are:<br>
+</p>
+<img src="Simple_Shapes_CNN/crop1.png" alt="Crop1" width="30%" height=auto>
+<img src="Simple_Shapes_CNN/crop2.png" alt="Crop2" width="30%" height=auto>
+<p>
+11.14.17:
+     Cropping function during pickle load in main except for the last pickle image array. It looks like this:
+</p>
+<img src="imperfect_image.png" alt="crop" width="30%" height=auto>
+<p>Also don't know I'm having a segmentation fault when implementing command line arguments in the cnn_sobel_py2.py file. This segmentation fault happens even without implementing the crop function that has a broken cv2 module installation in python 2. Python 3 in cv2 works fine. It is because of the opencv2 installation conda install -c https://conda.binstar.org/menpo opencv (in python 2 py27 environment). In python 3, it cv2 is installed in conda install --channel https://conda.anaconda.org/menpo opencv3 (not on environment). It's also I didn't use conda install -c conda-forge opencv (didn't include conda-forge. I'm testing it on my other machine to see if it works.</p>
+<p> 11.15.17: <br>
+The cropping function called get_edges works in the convolutional neural network loader, but Keras' generator wants me to return the original shape of the array (300, 300, 300). The resulting image being generated by the processor function get_edges is a cropped version of the image pasted on a white background which is 300 by 300 pixels. So the object is segmented from the background in this way. I don't know how to tell keras during the convolution to ignore all pure white pixels, or change to a higher stride if it reaches the white background. (The second option seems to be a better design, I'll look into it after finding out how the network will do with the cropping function being implemented) Get_edges cropping function will get boundaries of contour shapes and crops the images based on the location of the rectangular boundaries. See project logs for images created by get_edges</p>
+
+
+
+</div>
+</div>
+
+</body>
+</html>

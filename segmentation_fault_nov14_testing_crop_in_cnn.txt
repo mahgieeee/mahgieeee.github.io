@@ -1,0 +1,1262 @@
+python cnn_sobel_py2.py --job-dir ./ --train-file cropped_random_shapes.pkl
+*** Error in `python': free(): invalid size: 0x0000555888a4b280 ***
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x70bcb)[0x7f5033616bcb]
+/lib/x86_64-linux-gnu/libc.so.6(+0x76f96)[0x7f503361cf96]
+/lib/x86_64-linux-gnu/libc.so.6(+0x777de)[0x7f503361d7de]
+/home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/../../libopencv_core.so.2.4(inflateReset2+0x6d)[0x7f503097cbad]
+/home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/../../././libz.so.1(inflateInit2_+0x84)[0x7f502aeb45a4]
+/home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/zlib.so(+0x23e5)[0x7f5022d703e5]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalFrameEx+0x79e5)[0x7f503434f615]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalCodeEx+0x7e9)[0x7f50343514e9]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0x6cfda)[0x7f50342d9fda]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyObject_Call+0x43)[0x7f50342b5773]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0x5750d)[0x7f50342c450d]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyObject_Call+0x43)[0x7f50342b5773]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0xa1254)[0x7f503430e254]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0x9db0b)[0x7f503430ab0b]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyObject_Call+0x43)[0x7f50342b5773]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalFrameEx+0x190b)[0x7f503434953b]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0x6299b)[0x7f50342cf99b]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0x9c1ef)[0x7f50343091ef]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyObject_Call+0x43)[0x7f50342b5773]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalFrameEx+0x190b)[0x7f503434953b]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalCodeEx+0x7e9)[0x7f50343514e9]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0x6cfda)[0x7f50342d9fda]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyObject_Call+0x43)[0x7f50342b5773]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0x5750d)[0x7f50342c450d]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyObject_Call+0x43)[0x7f50342b5773]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyObject_CallFunctionObjArgs+0xc3)[0x7f50342b6053]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalFrameEx+0x4c31)[0x7f503434c861]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalCodeEx+0x7e9)[0x7f50343514e9]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalFrameEx+0x6852)[0x7f503434e482]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalCodeEx+0x7e9)[0x7f50343514e9]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0x6d0c7)[0x7f50342da0c7]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyObject_Call+0x43)[0x7f50342b5773]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalFrameEx+0x28a0)[0x7f503434a4d0]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalCodeEx+0x7e9)[0x7f50343514e9]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalCode+0x1a)[0x7f503435170a]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0xfd93d)[0x7f503436a93d]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyRun_FileExFlags+0x78)[0x7f503436bab8]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyRun_SimpleFileExFlags+0xe8)[0x7f503436ccd8]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(Py_Main+0xbac)[0x7f503437ed3c]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf1)[0x7f50335c62b1]
+python(+0x87f)[0x555883edd87f]
+======= Memory map: ========
+555883edd000-555883ede000 r-xp 00000000 08:04 1184919                    /home/maggie/anaconda3/envs/py27/bin/python2.7
+5558840dd000-5558840de000 r--p 00000000 08:04 1184919                    /home/maggie/anaconda3/envs/py27/bin/python2.7
+5558840de000-5558840df000 rw-p 00001000 08:04 1184919                    /home/maggie/anaconda3/envs/py27/bin/python2.7
+555885e5f000-55588a701000 rw-p 00000000 00:00 0                          [heap]
+7f4ff8000000-7f4ff8021000 rw-p 00000000 00:00 0 
+7f4ff8021000-7f4ffc000000 ---p 00000000 00:00 0 
+7f4fff9c5000-7f4fffc05000 rw-p 00000000 00:00 0 
+7f4fffc05000-7f4fffc16000 r-xp 00000000 08:04 6035124                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/testing.so
+7f4fffc16000-7f4fffe15000 ---p 00011000 08:04 6035124                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/testing.so
+7f4fffe15000-7f4fffe16000 r--p 00010000 08:04 6035124                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/testing.so
+7f4fffe16000-7f4fffe17000 rw-p 00011000 08:04 6035124                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/testing.so
+7f4fffe17000-7f5000018000 rw-p 00000000 00:00 0 
+7f5000018000-7f500001a000 r-xp 00000000 08:04 6034996                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/util/_move.so
+7f500001a000-7f5000219000 ---p 00002000 08:04 6034996                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/util/_move.so
+7f5000219000-7f500021a000 r--p 00001000 08:04 6034996                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/util/_move.so
+7f500021a000-7f500021b000 rw-p 00002000 08:04 6034996                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/util/_move.so
+7f500021b000-7f500022f000 r-xp 00000000 08:04 5773715                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/io/msgpack/_unpacker.so
+7f500022f000-7f500042e000 ---p 00014000 08:04 5773715                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/io/msgpack/_unpacker.so
+7f500042e000-7f500042f000 r--p 00013000 08:04 5773715                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/io/msgpack/_unpacker.so
+7f500042f000-7f5000431000 rw-p 00014000 08:04 5773715                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/io/msgpack/_unpacker.so
+7f5000431000-7f5000441000 r-xp 00000000 08:04 5773666                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/io/msgpack/_packer.so
+7f5000441000-7f5000640000 ---p 00010000 08:04 5773666                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/io/msgpack/_packer.so
+7f5000640000-7f5000641000 r--p 0000f000 08:04 5773666                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/io/msgpack/_packer.so
+7f5000641000-7f5000642000 rw-p 00010000 08:04 5773666                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/io/msgpack/_packer.so
+7f5000642000-7f5000702000 rw-p 00000000 00:00 0 
+7f5000702000-7f5000718000 r-xp 00000000 08:04 6035145                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/json.so
+7f5000718000-7f5000917000 ---p 00016000 08:04 6035145                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/json.so
+7f5000917000-7f5000918000 r--p 00015000 08:04 6035145                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/json.so
+7f5000918000-7f5000919000 rw-p 00016000 08:04 6035145                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/json.so
+7f5000919000-7f5000959000 rw-p 00000000 00:00 0 
+7f5000959000-7f50009d6000 r-xp 00000000 08:04 6035188                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/parsers.so
+7f50009d6000-7f5000bd5000 ---p 0007d000 08:04 6035188                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/parsers.so
+7f5000bd5000-7f5000bd6000 r--p 0007c000 08:04 6035188                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/parsers.so
+7f5000bd6000-7f5000bdc000 rw-p 0007d000 08:04 6035188                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/parsers.so
+7f5000bdc000-7f5000c1d000 rw-p 00000000 00:00 0 
+7f5000c1d000-7f5000c39000 r-xp 00000000 08:04 6035166                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/reshape.so
+7f5000c39000-7f5000e38000 ---p 0001c000 08:04 6035166                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/reshape.so
+7f5000e38000-7f5000e39000 r--p 0001b000 08:04 6035166                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/reshape.so
+7f5000e39000-7f5000e3c000 rw-p 0001c000 08:04 6035166                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/reshape.so
+7f5000e3c000-7f5000ebc000 rw-p 00000000 00:00 0 
+7f5000ebc000-7f5000f58000 r-xp 00000000 08:04 6035191                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/groupby.so
+7f5000f58000-7f5001157000 ---p 0009c000 08:04 6035191                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/groupby.so
+7f5001157000-7f5001158000 r--p 0009b000 08:04 6035191                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/groupby.so
+7f5001158000-7f500115e000 rw-p 0009c000 08:04 6035191                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/groupby.so
+7f500115e000-7f500121e000 rw-p 00000000 00:00 0 
+7f500121e000-7f50012b3000 r-xp 00000000 08:04 6035189                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/window.so
+7f50012b3000-7f50014b2000 ---p 00095000 08:04 6035189                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/window.so
+7f50014b2000-7f50014b3000 r--p 00094000 08:04 6035189                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/window.so
+7f50014b3000-7f50014ba000 rw-p 00095000 08:04 6035189                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/window.so
+7f50014ba000-7f500153b000 rw-p 00000000 00:00 0 
+7f500153b000-7f5001540000 r-xp 00000000 08:04 1708908                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/mmap.so
+7f5001540000-7f500173f000 ---p 00005000 08:04 1708908                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/mmap.so
+7f500173f000-7f5001740000 r--p 00004000 08:04 1708908                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/mmap.so
+7f5001740000-7f5001741000 rw-p 00005000 08:04 1708908                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/mmap.so
+7f5001741000-7f5001781000 rw-p 00000000 00:00 0 
+7f5001781000-7f500185f000 r-xp 00000000 08:04 6035193                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/sparse.so
+7f500185f000-7f5001a5f000 ---p 000de000 08:04 6035193                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/sparse.so
+7f5001a5f000-7f5001a60000 r--p 000de000 08:04 6035193                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/sparse.so
+7f5001a60000-7f5001a64000 rw-p 000df000 08:04 6035193                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/sparse.so
+7f5001a64000-7f5001b65000 rw-p 00000000 00:00 0 
+7f5001b65000-7f5001bc4000 r-xp 00000000 08:04 6035186                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/period.so
+7f5001bc4000-7f5001dc4000 ---p 0005f000 08:04 6035186                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/period.so
+7f5001dc4000-7f5001dc5000 r--p 0005f000 08:04 6035186                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/period.so
+7f5001dc5000-7f5001dcc000 rw-p 00060000 08:04 6035186                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/period.so
+7f5001dcc000-7f5001ecc000 rw-p 00000000 00:00 0 
+7f5001ecc000-7f5001ecd000 ---p 00000000 00:00 0 
+7f5001ecd000-7f50026cd000 rw-p 00000000 00:00 0 
+7f50026cd000-7f50026ce000 ---p 00000000 00:00 0 
+7f50026ce000-7f5002ece000 rw-p 00000000 00:00 0 
+7f5002ece000-7f5002ecf000 ---p 00000000 00:00 0 
+7f5002ecf000-7f50036cf000 rw-p 00000000 00:00 0 
+7f50036cf000-7f50036d0000 ---p 00000000 00:00 0 
+7f50036d0000-7f5003ed0000 rw-p 00000000 00:00 0 
+7f5003ed0000-7f5003ed1000 ---p 00000000 00:00 0 
+7f5003ed1000-7f50046d1000 rw-p 00000000 00:00 0 
+7f50046d1000-7f50046d2000 ---p 00000000 00:00 0 
+7f50046d2000-7f5004ed2000 rw-p 00000000 00:00 0 
+7f5004ed2000-7f5004ed3000 ---p 00000000 00:00 0 
+7f5004ed3000-7f50056d3000 rw-p 00000000 00:00 0 
+7f50056d3000-7f50056d4000 ---p 00000000 00:00 0 
+7f50056d4000-7f5005f14000 rw-p 00000000 00:00 0 
+7f5005f14000-7f5006341000 r-xp 00000000 08:04 57938081                   /home/maggie/anaconda3/envs/py27/lib/libmkl_rt.so
+7f5006341000-7f5006540000 ---p 0042d000 08:04 57938081                   /home/maggie/anaconda3/envs/py27/lib/libmkl_rt.so
+7f5006540000-7f5006546000 r--p 0042c000 08:04 57938081                   /home/maggie/anaconda3/envs/py27/lib/libmkl_rt.so
+7f5006546000-7f5006547000 rw-p 00432000 08:04 57938081                   /home/maggie/anaconda3/envs/py27/lib/libmkl_rt.so
+7f5006547000-7f5006559000 rw-p 00000000 00:00 0 
+7f5006559000-7f500659a000 r-xp 00000000 08:04 3412823                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numexpr/interpreter.so
+7f500659a000-7f5006799000 ---p 00041000 08:04 3412823                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numexpr/interpreter.so
+7f5006799000-7f500679b000 rw-p 00040000 08:04 3412823                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numexpr/interpreter.so
+7f500679b000-7f50067ff000 rw-p 00000000 00:00 0 
+7f50067ff000-7f5006a20000 r-xp 00000000 08:04 6035200                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/join.so
+7f5006a20000-7f5006c1f000 ---p 00221000 08:04 6035200                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/join.so
+7f5006c1f000-7f5006c20000 r--p 00220000 08:04 6035200                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/join.so
+7f5006c20000-7f5006c29000 rw-p 00221000 08:04 6035200                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/join.so
+7f5006c29000-7f5006c69000 rw-p 00000000 00:00 0 
+7f5006c69000-7f5006cdc000 r-xp 00000000 08:04 6035187                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/index.so
+7f5006cdc000-7f5006edb000 ---p 00073000 08:04 6035187                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/index.so
+7f5006edb000-7f5006edc000 r--p 00072000 08:04 6035187                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/index.so
+7f5006edc000-7f5006ee2000 rw-p 00073000 08:04 6035187                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/index.so
+7f5006ee2000-7f5006f63000 rw-p 00000000 00:00 0 
+7f5006f63000-7f5006f7a000 r-xp 00000000 08:04 5509090                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/move.so
+7f5006f7a000-7f5007179000 ---p 00017000 08:04 5509090                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/move.so
+7f5007179000-7f500717a000 r--p 00016000 08:04 5509090                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/move.so
+7f500717a000-7f500717e000 rw-p 00017000 08:04 5509090                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/move.so
+7f500717e000-7f5007186000 r-xp 00000000 08:04 5509086                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/nonreduce_axis.so
+7f5007186000-7f5007385000 ---p 00008000 08:04 5509086                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/nonreduce_axis.so
+7f5007385000-7f5007386000 r--p 00007000 08:04 5509086                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/nonreduce_axis.so
+7f5007386000-7f5007388000 rw-p 00008000 08:04 5509086                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/nonreduce_axis.so
+7f5007388000-7f500738b000 r-xp 00000000 08:04 5509085                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/nonreduce.so
+7f500738b000-7f500758b000 ---p 00003000 08:04 5509085                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/nonreduce.so
+7f500758b000-7f500758c000 r--p 00003000 08:04 5509085                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/nonreduce.so
+7f500758c000-7f500758d000 rw-p 00004000 08:04 5509085                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/nonreduce.so
+7f500758d000-7f50075a4000 r-xp 00000000 08:04 5509091                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/reduce.so
+7f50075a4000-7f50077a3000 ---p 00017000 08:04 5509091                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/reduce.so
+7f50077a3000-7f50077a4000 r--p 00016000 08:04 5509091                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/reduce.so
+7f50077a4000-7f50077a8000 rw-p 00017000 08:04 5509091                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/reduce.so
+7f50077a8000-7f50077b8000 r-xp 00000000 08:04 6035123                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/hashing.so
+7f50077b8000-7f50079b8000 ---p 00010000 08:04 6035123                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/hashing.so
+7f50079b8000-7f50079b9000 r--p 00010000 08:04 6035123                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/hashing.so
+7f50079b9000-7f50079ba000 rw-p 00011000 08:04 6035123                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/hashing.so
+7f50079ba000-7f5007a3a000 rw-p 00000000 00:00 0 
+7f5007a3a000-7f5007bad000 r-xp 00000000 08:04 6035196                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/algos.so
+7f5007bad000-7f5007dad000 ---p 00173000 08:04 6035196                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/algos.so
+7f5007dad000-7f5007dae000 r--p 00173000 08:04 6035196                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/algos.so
+7f5007dae000-7f5007dba000 rw-p 00174000 08:04 6035196                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/algos.so
+7f5007dba000-7f5007f3b000 rw-p 00000000 00:00 0 
+7f5007f3b000-7f50080f9000 r-xp 00000000 08:04 6035198                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/interval.so
+7f50080f9000-7f50082f8000 ---p 001be000 08:04 6035198                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/interval.so
+7f50082f8000-7f50082f9000 r--p 001bd000 08:04 6035198                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/interval.so
+7f50082f9000-7f5008305000 rw-p 001be000 08:04 6035198                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/interval.so
+7f5008305000-7f5008307000 rw-p 00000000 00:00 0 
+7f5008307000-7f5008415000 r-xp 00000000 08:04 6035194                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/lib.so
+7f5008415000-7f5008615000 ---p 0010e000 08:04 6035194                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/lib.so
+7f5008615000-7f5008616000 r--p 0010e000 08:04 6035194                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/lib.so
+7f5008616000-7f5008625000 rw-p 0010f000 08:04 6035194                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/lib.so
+7f5008625000-7f5008626000 rw-p 00000000 00:00 0 
+7f5008626000-7f50086b9000 r-xp 00000000 08:04 6035190                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/hashtable.so
+7f50086b9000-7f50088b9000 ---p 00093000 08:04 6035190                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/hashtable.so
+7f50088b9000-7f50088ba000 r--p 00093000 08:04 6035190                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/hashtable.so
+7f50088ba000-7f50088c2000 rw-p 00094000 08:04 6035190                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/hashtable.so
+7f50088c2000-7f5008902000 rw-p 00000000 00:00 0 
+7f5008902000-7f5008a72000 r-xp 00000000 08:04 6035197                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/tslib.so
+7f5008a72000-7f5008c71000 ---p 00170000 08:04 6035197                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/tslib.so
+7f5008c71000-7f5008c72000 r--p 0016f000 08:04 6035197                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/tslib.so
+7f5008c72000-7f5008c85000 rw-p 00170000 08:04 6035197                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/tslib.so
+7f5008c85000-7f5009708000 rw-p 00000000 00:00 0 
+7f5009708000-7f50099a5000 r-xp 00000000 08:04 4198937                    /home/maggie/anaconda3/envs/py27/lib/libprotobuf.so.14.0.0
+7f50099a5000-7f5009ba4000 ---p 0029d000 08:04 4198937                    /home/maggie/anaconda3/envs/py27/lib/libprotobuf.so.14.0.0
+7f5009ba4000-7f5009bb4000 rw-p 0029c000 08:04 4198937                    /home/maggie/anaconda3/envs/py27/lib/libprotobuf.so.14.0.0
+7f5009bb4000-7f5009bb5000 rw-p 00000000 00:00 0 
+7f5009bb5000-7f5009bf4000 r-xp 00000000 08:04 6816259                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/google/protobuf/pyext/_message.so
+7f5009bf4000-7f5009df4000 ---p 0003f000 08:04 6816259                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/google/protobuf/pyext/_message.so
+7f5009df4000-7f5009dfa000 rw-p 0003f000 08:04 6816259                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/google/protobuf/pyext/_message.so
+7f5009dfa000-7f5009dfe000 r-xp 00000000 08:02 654177                     /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f5009dfe000-7f5009ffd000 ---p 00004000 08:02 654177                     /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f5009ffd000-7f5009ffe000 r--p 00003000 08:02 654177                     /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f5009ffe000-7f5009fff000 rw-p 00004000 08:02 654177                     /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f5009fff000-7f500a000000 r-xp 00000000 08:04 6816258                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/google/protobuf/internal/_api_implementation.so
+7f500a000000-7f500a1ff000 ---p 00001000 08:04 6816258                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/google/protobuf/internal/_api_implementation.so
+7f500a1ff000-7f500a200000 rw-p 00000000 08:04 6816258                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/google/protobuf/internal/_api_implementation.so
+7f500a200000-7f500a400000 rw-p 00000000 00:00 0 
+7f500a400000-7f500a600000 rw-p 00000000 00:00 0 
+7f500a615000-7f500a6d5000 rw-p 00000000 00:00 0 
+7f500a6d5000-7f500e133000 r-xp 00000000 08:04 5508424                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+7f500e133000-7f500e270000 r--p 03a5d000 08:04 5508424                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+7f500e270000-7f500e278000 rw-p 03b9a000 08:04 5508424                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+7f500e278000-7f500e28a000 rw-p 00000000 00:00 0 
+7f500e28a000-7f500ea3f000 rw-p 057de000 08:04 5508424                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+7f500ea3f000-7f500eabf000 rw-p 00000000 00:00 0 
+7f500eabf000-7f500eae2000 r-xp 00000000 08:04 7210269                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_hausdorff.so
+7f500eae2000-7f500ece2000 ---p 00023000 08:04 7210269                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_hausdorff.so
+7f500ece2000-7f500ece5000 rw-p 00023000 08:04 7210269                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_hausdorff.so
+7f500ece5000-7f500ece6000 rw-p 00000000 00:00 0 
+7f500ece6000-7f500ecfa000 r-xp 00000000 08:04 7210253                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_distance_wrap.so
+7f500ecfa000-7f500eefa000 ---p 00014000 08:04 7210253                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_distance_wrap.so
+7f500eefa000-7f500eefb000 rw-p 00014000 08:04 7210253                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_distance_wrap.so
+7f500eefb000-7f500ef1f000 r-xp 00000000 08:04 7210271                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_voronoi.so
+7f500ef1f000-7f500f11e000 ---p 00024000 08:04 7210271                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_voronoi.so
+7f500f11e000-7f500f121000 rw-p 00023000 08:04 7210271                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_voronoi.so
+7f500f121000-7f500f122000 rw-p 00000000 00:00 0 
+7f500f122000-7f500f1f2000 r-xp 00000000 08:04 7210263                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/qhull.so
+7f500f1f2000-7f500f3f2000 ---p 000d0000 08:04 7210263                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/qhull.so
+7f500f3f2000-7f500f401000 rw-p 000d0000 08:04 7210263                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/qhull.so
+7f500f401000-7f500f402000 rw-p 00000000 00:00 0 
+7f500f402000-7f500f408000 r-xp 00000000 08:04 1708912                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_multiprocessing.so
+7f500f408000-7f500f607000 ---p 00006000 08:04 1708912                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_multiprocessing.so
+7f500f607000-7f500f608000 r--p 00005000 08:04 1708912                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_multiprocessing.so
+7f500f608000-7f500f609000 rw-p 00006000 08:04 1708912                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_multiprocessing.so
+7f500f609000-7f500f694000 r-xp 00000000 08:04 7210266                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/ckdtree.so
+7f500f694000-7f500f893000 ---p 0008b000 08:04 7210266                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/ckdtree.so
+7f500f893000-7f500f89d000 rw-p 0008a000 08:04 7210266                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/ckdtree.so
+7f500f89d000-7f500f8dd000 rw-p 00000000 00:00 0 
+7f500f8dd000-7f500f922000 r-xp 00000000 08:04 7210068                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/interpnd.so
+7f500f922000-7f500fb21000 ---p 00045000 08:04 7210068                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/interpnd.so
+7f500fb21000-7f500fb27000 rw-p 00044000 08:04 7210068                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/interpnd.so
+7f500fb27000-7f500fb28000 rw-p 00000000 00:00 0 
+7f500fb28000-7f500fb6f000 r-xp 00000000 08:04 7210061                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_ppoly.so
+7f500fb6f000-7f500fd6f000 ---p 00047000 08:04 7210061                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_ppoly.so
+7f500fd6f000-7f500fd75000 rw-p 00047000 08:04 7210061                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_ppoly.so
+7f500fd75000-7f500fd76000 rw-p 00000000 00:00 0 
+7f500fd76000-7f500fdab000 r-xp 00000000 08:04 7210083                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_bspl.so
+7f500fdab000-7f500ffaa000 ---p 00035000 08:04 7210083                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_bspl.so
+7f500ffaa000-7f500ffb1000 rw-p 00034000 08:04 7210083                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_bspl.so
+7f500ffb1000-7f5010021000 r-xp 00000000 08:04 7210078                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/dfitpack.so
+7f5010021000-7f5010221000 ---p 00070000 08:04 7210078                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/dfitpack.so
+7f5010221000-7f5010228000 rw-p 00070000 08:04 7210078                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/dfitpack.so
+7f5010228000-7f5010266000 r-xp 00000000 08:04 7210084                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_fitpack.so
+7f5010266000-7f5010466000 ---p 0003e000 08:04 7210084                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_fitpack.so
+7f5010466000-7f5010467000 rw-p 0003e000 08:04 7210084                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_fitpack.so
+7f5010467000-7f50104a7000 rw-p 00000000 00:00 0 
+7f50104a7000-7f50104b1000 r-xp 00000000 08:04 7209968                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_nnls.so
+7f50104b1000-7f50106b1000 ---p 0000a000 08:04 7209968                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_nnls.so
+7f50106b1000-7f50106b2000 rw-p 0000a000 08:04 7209968                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_nnls.so
+7f50106b2000-7f50106b5000 r-xp 00000000 08:04 7209982                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_zeros.so
+7f50106b5000-7f50108b4000 ---p 00003000 08:04 7209982                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_zeros.so
+7f50108b4000-7f50108b5000 rw-p 00002000 08:04 7209982                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_zeros.so
+7f50108b5000-7f50108d4000 r-xp 00000000 08:04 7210013                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_lsq/givens_elimination.so
+7f50108d4000-7f5010ad4000 ---p 0001f000 08:04 7210013                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_lsq/givens_elimination.so
+7f5010ad4000-7f5010ad7000 rw-p 0001f000 08:04 7210013                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_lsq/givens_elimination.so
+7f5010ad7000-7f5010b17000 rw-p 00000000 00:00 0 
+7f5010b17000-7f5010b3c000 r-xp 00000000 08:04 7209962                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_group_columns.so
+7f5010b3c000-7f5010d3b000 ---p 00025000 08:04 7209962                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_group_columns.so
+7f5010d3b000-7f5010d3e000 rw-p 00024000 08:04 7209962                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_group_columns.so
+7f5010d3e000-7f5010d3f000 rw-p 00000000 00:00 0 
+7f5010d3f000-7f5010d66000 r-xp 00000000 08:04 7209944                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_minpack.so
+7f5010d66000-7f5010f66000 ---p 00027000 08:04 7209944                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_minpack.so
+7f5010f66000-7f5010f67000 rw-p 00027000 08:04 7209944                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_minpack.so
+7f5010f67000-7f5010f7f000 r-xp 000000Aborted
+(py27) maggie@debian:~/Downloads/Convolutional_Neural_Networks$ python cnn_sobel_py2.py --job-dir ./ --train-file cropped_random_shapes.pkl
+*** Error in `python': free(): invalid pointer: 0x000055b9cd60a7a8 ***
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x70bcb)[0x7fba31b4cbcb]
+/lib/x86_64-linux-gnu/libc.so.6(+0x76f96)[0x7fba31b52f96]
+/lib/x86_64-linux-gnu/libc.so.6(+0x777de)[0x7fba31b537de]
+/home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/../../libopencv_core.so.2.4(inflateReset2+0x6d)[0x7fba2eeb2bad]
+/home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/../../././libz.so.1(inflateInit2_+0x84)[0x7fba293ea5a4]
+/home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/zlib.so(+0x23e5)[0x7fba212a63e5]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalFrameEx+0x79e5)[0x7fba32885615]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalCodeEx+0x7e9)[0x7fba328874e9]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0x6cfda)[0x7fba3280ffda]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyObject_Call+0x43)[0x7fba327eb773]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0x5750d)[0x7fba327fa50d]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyObject_Call+0x43)[0x7fba327eb773]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0xa1254)[0x7fba32844254]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0x9db0b)[0x7fba32840b0b]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyObject_Call+0x43)[0x7fba327eb773]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalFrameEx+0x190b)[0x7fba3287f53b]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0x6299b)[0x7fba3280599b]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0x9c1ef)[0x7fba3283f1ef]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyObject_Call+0x43)[0x7fba327eb773]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalFrameEx+0x190b)[0x7fba3287f53b]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalCodeEx+0x7e9)[0x7fba328874e9]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0x6cfda)[0x7fba3280ffda]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyObject_Call+0x43)[0x7fba327eb773]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0x5750d)[0x7fba327fa50d]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyObject_Call+0x43)[0x7fba327eb773]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyObject_CallFunctionObjArgs+0xc3)[0x7fba327ec053]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalFrameEx+0x4c31)[0x7fba32882861]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalCodeEx+0x7e9)[0x7fba328874e9]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalFrameEx+0x6852)[0x7fba32884482]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalCodeEx+0x7e9)[0x7fba328874e9]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0x6d0c7)[0x7fba328100c7]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyObject_Call+0x43)[0x7fba327eb773]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalFrameEx+0x28a0)[0x7fba328804d0]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalCodeEx+0x7e9)[0x7fba328874e9]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyEval_EvalCode+0x1a)[0x7fba3288770a]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(+0xfd93d)[0x7fba328a093d]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyRun_FileExFlags+0x78)[0x7fba328a1ab8]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(PyRun_SimpleFileExFlags+0xe8)[0x7fba328a2cd8]
+/home/maggie/anaconda3/envs/py27/bin/../lib/libpython2.7.so.1.0(Py_Main+0xbac)[0x7fba328b4d3c]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf1)[0x7fba31afc2b1]
+python(+0x87f)[0x55b9c928e87f]
+======= Memory map: ========
+55b9c928e000-55b9c928f000 r-xp 00000000 08:04 1184919                    /home/maggie/anaconda3/envs/py27/bin/python2.7
+55b9c948e000-55b9c948f000 r--p 00000000 08:04 1184919                    /home/maggie/anaconda3/envs/py27/bin/python2.7
+55b9c948f000-55b9c9490000 rw-p 00001000 08:04 1184919                    /home/maggie/anaconda3/envs/py27/bin/python2.7
+55b9caa22000-55b9cf2c6000 rw-p 00000000 00:00 0                          [heap]
+7fb9f8000000-7fb9f8021000 rw-p 00000000 00:00 0 
+7fb9f8021000-7fb9fc000000 ---p 00000000 00:00 0 
+7fb9fdf05000-7fb9fe145000 rw-p 00000000 00:00 0 
+7fb9fe145000-7fb9fe156000 r-xp 00000000 08:04 6035124                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/testing.so
+7fb9fe156000-7fb9fe355000 ---p 00011000 08:04 6035124                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/testing.so
+7fb9fe355000-7fb9fe356000 r--p 00010000 08:04 6035124                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/testing.so
+7fb9fe356000-7fb9fe357000 rw-p 00011000 08:04 6035124                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/testing.so
+7fb9fe357000-7fb9fe558000 rw-p 00000000 00:00 0 
+7fb9fe558000-7fb9fe55a000 r-xp 00000000 08:04 6034996                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/util/_move.so
+7fb9fe55a000-7fb9fe759000 ---p 00002000 08:04 6034996                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/util/_move.so
+7fb9fe759000-7fb9fe75a000 r--p 00001000 08:04 6034996                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/util/_move.so
+7fb9fe75a000-7fb9fe75b000 rw-p 00002000 08:04 6034996                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/util/_move.so
+7fb9fe75b000-7fb9fe76f000 r-xp 00000000 08:04 5773715                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/io/msgpack/_unpacker.so
+7fb9fe76f000-7fb9fe96e000 ---p 00014000 08:04 5773715                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/io/msgpack/_unpacker.so
+7fb9fe96e000-7fb9fe96f000 r--p 00013000 08:04 5773715                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/io/msgpack/_unpacker.so
+7fb9fe96f000-7fb9fe971000 rw-p 00014000 08:04 5773715                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/io/msgpack/_unpacker.so
+7fb9fe971000-7fb9fe981000 r-xp 00000000 08:04 5773666                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/io/msgpack/_packer.so
+7fb9fe981000-7fb9feb80000 ---p 00010000 08:04 5773666                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/io/msgpack/_packer.so
+7fb9feb80000-7fb9feb81000 r--p 0000f000 08:04 5773666                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/io/msgpack/_packer.so
+7fb9feb81000-7fb9feb82000 rw-p 00010000 08:04 5773666                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/io/msgpack/_packer.so
+7fb9feb82000-7fb9fec42000 rw-p 00000000 00:00 0 
+7fb9fec42000-7fb9fec58000 r-xp 00000000 08:04 6035145                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/json.so
+7fb9fec58000-7fb9fee57000 ---p 00016000 08:04 6035145                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/json.so
+7fb9fee57000-7fb9fee58000 r--p 00015000 08:04 6035145                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/json.so
+7fb9fee58000-7fb9fee59000 rw-p 00016000 08:04 6035145                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/json.so
+7fb9fee59000-7fb9fee99000 rw-p 00000000 00:00 0 
+7fb9fee99000-7fb9fef16000 r-xp 00000000 08:04 6035188                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/parsers.so
+7fb9fef16000-7fb9ff115000 ---p 0007d000 08:04 6035188                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/parsers.so
+7fb9ff115000-7fb9ff116000 r--p 0007c000 08:04 6035188                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/parsers.so
+7fb9ff116000-7fb9ff11c000 rw-p 0007d000 08:04 6035188                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/parsers.so
+7fb9ff11c000-7fb9ff15d000 rw-p 00000000 00:00 0 
+7fb9ff15d000-7fb9ff179000 r-xp 00000000 08:04 6035166                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/reshape.so
+7fb9ff179000-7fb9ff378000 ---p 0001c000 08:04 6035166                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/reshape.so
+7fb9ff378000-7fb9ff379000 r--p 0001b000 08:04 6035166                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/reshape.so
+7fb9ff379000-7fb9ff37c000 rw-p 0001c000 08:04 6035166                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/reshape.so
+7fb9ff37c000-7fb9ff3fc000 rw-p 00000000 00:00 0 
+7fb9ff3fc000-7fb9ff498000 r-xp 00000000 08:04 6035191                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/groupby.so
+7fb9ff498000-7fb9ff697000 ---p 0009c000 08:04 6035191                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/groupby.so
+7fb9ff697000-7fb9ff698000 r--p 0009b000 08:04 6035191                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/groupby.so
+7fb9ff698000-7fb9ff69e000 rw-p 0009c000 08:04 6035191                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/groupby.so
+7fb9ff69e000-7fb9ff75e000 rw-p 00000000 00:00 0 
+7fb9ff75e000-7fb9ff7f3000 r-xp 00000000 08:04 6035189                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/window.so
+7fb9ff7f3000-7fb9ff9f2000 ---p 00095000 08:04 6035189                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/window.so
+7fb9ff9f2000-7fb9ff9f3000 r--p 00094000 08:04 6035189                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/window.so
+7fb9ff9f3000-7fb9ff9fa000 rw-p 00095000 08:04 6035189                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/window.so
+7fb9ff9fa000-7fb9ffa7b000 rw-p 00000000 00:00 0 
+7fb9ffa7b000-7fb9ffa80000 r-xp 00000000 08:04 1708908                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/mmap.so
+7fb9ffa80000-7fb9ffc7f000 ---p 00005000 08:04 1708908                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/mmap.so
+7fb9ffc7f000-7fb9ffc80000 r--p 00004000 08:04 1708908                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/mmap.so
+7fb9ffc80000-7fb9ffc81000 rw-p 00005000 08:04 1708908                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/mmap.so
+7fb9ffc81000-7fb9ffcc1000 rw-p 00000000 00:00 0 
+7fb9ffcc1000-7fb9ffd9f000 r-xp 00000000 08:04 6035193                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/sparse.so
+7fb9ffd9f000-7fb9fff9f000 ---p 000de000 08:04 6035193                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/sparse.so
+7fb9fff9f000-7fb9fffa0000 r--p 000de000 08:04 6035193                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/sparse.so
+7fb9fffa0000-7fb9fffa4000 rw-p 000df000 08:04 6035193                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/sparse.so
+7fb9fffa4000-7fba000a5000 rw-p 00000000 00:00 0 
+7fba000a5000-7fba00104000 r-xp 00000000 08:04 6035186                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/period.so
+7fba00104000-7fba00304000 ---p 0005f000 08:04 6035186                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/period.so
+7fba00304000-7fba00305000 r--p 0005f000 08:04 6035186                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/period.so
+7fba00305000-7fba0030c000 rw-p 00060000 08:04 6035186                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/period.so
+7fba0030c000-7fba0040c000 rw-p 00000000 00:00 0 
+7fba0040c000-7fba0040d000 ---p 00000000 00:00 0 
+7fba0040d000-7fba00c0d000 rw-p 00000000 00:00 0 
+7fba00c0d000-7fba00c0e000 ---p 00000000 00:00 0 
+7fba00c0e000-7fba0140e000 rw-p 00000000 00:00 0 
+7fba0140e000-7fba0140f000 ---p 00000000 00:00 0 
+7fba0140f000-7fba01c0f000 rw-p 00000000 00:00 0 
+7fba01c0f000-7fba01c10000 ---p 00000000 00:00 0 
+7fba01c10000-7fba02410000 rw-p 00000000 00:00 0 
+7fba02410000-7fba02411000 ---p 00000000 00:00 0 
+7fba02411000-7fba02c11000 rw-p 00000000 00:00 0 
+7fba02c11000-7fba02c12000 ---p 00000000 00:00 0 
+7fba02c12000-7fba03412000 rw-p 00000000 00:00 0 
+7fba03412000-7fba03413000 ---p 00000000 00:00 0 
+7fba03413000-7fba03c13000 rw-p 00000000 00:00 0 
+7fba03c13000-7fba03c14000 ---p 00000000 00:00 0 
+7fba03c14000-7fba04454000 rw-p 00000000 00:00 0 
+7fba04454000-7fba04881000 r-xp 00000000 08:04 57938081                   /home/maggie/anaconda3/envs/py27/lib/libmkl_rt.so
+7fba04881000-7fba04a80000 ---p 0042d000 08:04 57938081                   /home/maggie/anaconda3/envs/py27/lib/libmkl_rt.so
+7fba04a80000-7fba04a86000 r--p 0042c000 08:04 57938081                   /home/maggie/anaconda3/envs/py27/lib/libmkl_rt.so
+7fba04a86000-7fba04a87000 rw-p 00432000 08:04 57938081                   /home/maggie/anaconda3/envs/py27/lib/libmkl_rt.so
+7fba04a87000-7fba04a99000 rw-p 00000000 00:00 0 
+7fba04a99000-7fba04ada000 r-xp 00000000 08:04 3412823                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numexpr/interpreter.so
+7fba04ada000-7fba04cd9000 ---p 00041000 08:04 3412823                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numexpr/interpreter.so
+7fba04cd9000-7fba04cdb000 rw-p 00040000 08:04 3412823                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numexpr/interpreter.so
+7fba04cdb000-7fba04d3f000 rw-p 00000000 00:00 0 
+7fba04d3f000-7fba04f60000 r-xp 00000000 08:04 6035200                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/join.so
+7fba04f60000-7fba0515f000 ---p 00221000 08:04 6035200                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/join.so
+7fba0515f000-7fba05160000 r--p 00220000 08:04 6035200                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/join.so
+7fba05160000-7fba05169000 rw-p 00221000 08:04 6035200                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/join.so
+7fba05169000-7fba051a9000 rw-p 00000000 00:00 0 
+7fba051a9000-7fba0521c000 r-xp 00000000 08:04 6035187                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/index.so
+7fba0521c000-7fba0541b000 ---p 00073000 08:04 6035187                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/index.so
+7fba0541b000-7fba0541c000 r--p 00072000 08:04 6035187                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/index.so
+7fba0541c000-7fba05422000 rw-p 00073000 08:04 6035187                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/index.so
+7fba05422000-7fba054a3000 rw-p 00000000 00:00 0 
+7fba054a3000-7fba054ba000 r-xp 00000000 08:04 5509090                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/move.so
+7fba054ba000-7fba056b9000 ---p 00017000 08:04 5509090                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/move.so
+7fba056b9000-7fba056ba000 r--p 00016000 08:04 5509090                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/move.so
+7fba056ba000-7fba056be000 rw-p 00017000 08:04 5509090                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/move.so
+7fba056be000-7fba056c6000 r-xp 00000000 08:04 5509086                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/nonreduce_axis.so
+7fba056c6000-7fba058c5000 ---p 00008000 08:04 5509086                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/nonreduce_axis.so
+7fba058c5000-7fba058c6000 r--p 00007000 08:04 5509086                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/nonreduce_axis.so
+7fba058c6000-7fba058c8000 rw-p 00008000 08:04 5509086                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/nonreduce_axis.so
+7fba058c8000-7fba058cb000 r-xp 00000000 08:04 5509085                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/nonreduce.so
+7fba058cb000-7fba05acb000 ---p 00003000 08:04 5509085                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/nonreduce.so
+7fba05acb000-7fba05acc000 r--p 00003000 08:04 5509085                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/nonreduce.so
+7fba05acc000-7fba05acd000 rw-p 00004000 08:04 5509085                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/nonreduce.so
+7fba05acd000-7fba05ae4000 r-xp 00000000 08:04 5509091                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/reduce.so
+7fba05ae4000-7fba05ce3000 ---p 00017000 08:04 5509091                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/reduce.so
+7fba05ce3000-7fba05ce4000 r--p 00016000 08:04 5509091                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/reduce.so
+7fba05ce4000-7fba05ce8000 rw-p 00017000 08:04 5509091                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/bottleneck/reduce.so
+7fba05ce8000-7fba05cf8000 r-xp 00000000 08:04 6035123                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/hashing.so
+7fba05cf8000-7fba05ef8000 ---p 00010000 08:04 6035123                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/hashing.so
+7fba05ef8000-7fba05ef9000 r--p 00010000 08:04 6035123                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/hashing.so
+7fba05ef9000-7fba05efa000 rw-p 00011000 08:04 6035123                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/hashing.so
+7fba05efa000-7fba05f7a000 rw-p 00000000 00:00 0 
+7fba05f7a000-7fba060ed000 r-xp 00000000 08:04 6035196                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/algos.so
+7fba060ed000-7fba062ed000 ---p 00173000 08:04 6035196                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/algos.so
+7fba062ed000-7fba062ee000 r--p 00173000 08:04 6035196                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/algos.so
+7fba062ee000-7fba062fa000 rw-p 00174000 08:04 6035196                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/algos.so
+7fba062fa000-7fba0647b000 rw-p 00000000 00:00 0 
+7fba0647b000-7fba06639000 r-xp 00000000 08:04 6035198                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/interval.so
+7fba06639000-7fba06838000 ---p 001be000 08:04 6035198                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/interval.so
+7fba06838000-7fba06839000 r--p 001bd000 08:04 6035198                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/interval.so
+7fba06839000-7fba06845000 rw-p 001be000 08:04 6035198                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/interval.so
+7fba06845000-7fba06847000 rw-p 00000000 00:00 0 
+7fba06847000-7fba06955000 r-xp 00000000 08:04 6035194                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/lib.so
+7fba06955000-7fba06b55000 ---p 0010e000 08:04 6035194                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/lib.so
+7fba06b55000-7fba06b56000 r--p 0010e000 08:04 6035194                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/lib.so
+7fba06b56000-7fba06b65000 rw-p 0010f000 08:04 6035194                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/lib.so
+7fba06b65000-7fba06b66000 rw-p 00000000 00:00 0 
+7fba06b66000-7fba06bf9000 r-xp 00000000 08:04 6035190                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/hashtable.so
+7fba06bf9000-7fba06df9000 ---p 00093000 08:04 6035190                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/hashtable.so
+7fba06df9000-7fba06dfa000 r--p 00093000 08:04 6035190                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/hashtable.so
+7fba06dfa000-7fba06e02000 rw-p 00094000 08:04 6035190                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/hashtable.so
+7fba06e02000-7fba06e42000 rw-p 00000000 00:00 0 
+7fba06e42000-7fba06fb2000 r-xp 00000000 08:04 6035197                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/tslib.so
+7fba06fb2000-7fba071b1000 ---p 00170000 08:04 6035197                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/tslib.so
+7fba071b1000-7fba071b2000 r--p 0016f000 08:04 6035197                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/tslib.so
+7fba071b2000-7fba071c5000 rw-p 00170000 08:04 6035197                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/pandas/_libs/tslib.so
+7fba071c5000-7fba07c48000 rw-p 00000000 00:00 0 
+7fba07c48000-7fba07ee5000 r-xp 00000000 08:04 4198937                    /home/maggie/anaconda3/envs/py27/lib/libprotobuf.so.14.0.0
+7fba07ee5000-7fba080e4000 ---p 0029d000 08:04 4198937                    /home/maggie/anaconda3/envs/py27/lib/libprotobuf.so.14.0.0
+7fba080e4000-7fba080f4000 rw-p 0029c000 08:04 4198937                    /home/maggie/anaconda3/envs/py27/lib/libprotobuf.so.14.0.0
+7fba080f4000-7fba080f5000 rw-p 00000000 00:00 0 
+7fba080f5000-7fba08134000 r-xp 00000000 08:04 6816259                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/google/protobuf/pyext/_message.so
+7fba08134000-7fba08334000 ---p 0003f000 08:04 6816259                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/google/protobuf/pyext/_message.so
+7fba08334000-7fba0833a000 rw-p 0003f000 08:04 6816259                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/google/protobuf/pyext/_message.so
+7fba0833a000-7fba0833e000 r-xp 00000000 08:02 654177                     /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7fba0833e000-7fba0853d000 ---p 00004000 08:02 654177                     /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7fba0853d000-7fba0853e000 r--p 00003000 08:02 654177                     /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7fba0853e000-7fba0853f000 rw-p 00004000 08:02 654177                     /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7fba0853f000-7fba08540000 r-xp 00000000 08:04 6816258                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/google/protobuf/internal/_api_implementation.so
+7fba08540000-7fba0873f000 ---p 00001000 08:04 6816258                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/google/protobuf/internal/_api_implementation.so
+7fba0873f000-7fba08740000 rw-p 00000000 08:04 6816258                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/google/protobuf/internal/_api_implementation.so
+7fba08740000-7fba08a00000 rw-p 00000000 00:00 0 
+7fba08a00000-7fba08c00000 rw-p 00000000 00:00 0 
+7fba08c0b000-7fba0c669000 r-xp 00000000 08:04 5508424                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+7fba0c669000-7fba0c7a6000 r--p 03a5d000 08:04 5508424                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+7fba0c7a6000-7fba0c7ae000 rw-p 03b9a000 08:04 5508424                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+7fba0c7ae000-7fba0c7c0000 rw-p 00000000 00:00 0 
+7fba0c7c0000-7fba0cf75000 rw-p 057de000 08:04 5508424                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+7fba0cf75000-7fba0cff5000 rw-p 00000000 00:00 0 
+7fba0cff5000-7fba0d018000 r-xp 00000000 08:04 7210269                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_hausdorff.so
+7fba0d018000-7fba0d218000 ---p 00023000 08:04 7210269                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_hausdorff.so
+7fba0d218000-7fba0d21b000 rw-p 00023000 08:04 7210269                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_hausdorff.so
+7fba0d21b000-7fba0d21c000 rw-p 00000000 00:00 0 
+7fba0d21c000-7fba0d230000 r-xp 00000000 08:04 7210253                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_distance_wrap.so
+7fba0d230000-7fba0d430000 ---p 00014000 08:04 7210253                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_distance_wrap.so
+7fba0d430000-7fba0d431000 rw-p 00014000 08:04 7210253                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_distance_wrap.so
+7fba0d431000-7fba0d455000 r-xp 00000000 08:04 7210271                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_voronoi.so
+7fba0d455000-7fba0d654000 ---p 00024000 08:04 7210271                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_voronoi.so
+7fba0d654000-7fba0d657000 rw-p 00023000 08:04 7210271                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/_voronoi.so
+7fba0d657000-7fba0d658000 rw-p 00000000 00:00 0 
+7fba0d658000-7fba0d728000 r-xp 00000000 08:04 7210263                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/qhull.so
+7fba0d728000-7fba0d928000 ---p 000d0000 08:04 7210263                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/qhull.so
+7fba0d928000-7fba0d937000 rw-p 000d0000 08:04 7210263                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/qhull.so
+7fba0d937000-7fba0d938000 rw-p 00000000 00:00 0 
+7fba0d938000-7fba0d93e000 r-xp 00000000 08:04 1708912                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_multiprocessing.so
+7fba0d93e000-7fba0db3d000 ---p 00006000 08:04 1708912                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_multiprocessing.so
+7fba0db3d000-7fba0db3e000 r--p 00005000 08:04 1708912                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_multiprocessing.so
+7fba0db3e000-7fba0db3f000 rw-p 00006000 08:04 1708912                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_multiprocessing.so
+7fba0db3f000-7fba0dbca000 r-xp 00000000 08:04 7210266                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/ckdtree.so
+7fba0dbca000-7fba0ddc9000 ---p 0008b000 08:04 7210266                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/ckdtree.so
+7fba0ddc9000-7fba0ddd3000 rw-p 0008a000 08:04 7210266                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/spatial/ckdtree.so
+7fba0ddd3000-7fba0de13000 rw-p 00000000 00:00 0 
+7fba0de13000-7fba0de58000 r-xp 00000000 08:04 7210068                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/interpnd.so
+7fba0de58000-7fba0e057000 ---p 00045000 08:04 7210068                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/interpnd.so
+7fba0e057000-7fba0e05d000 rw-p 00044000 08:04 7210068                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/interpnd.so
+7fba0e05d000-7fba0e05e000 rw-p 00000000 00:00 0 
+7fba0e05e000-7fba0e0a5000 r-xp 00000000 08:04 7210061                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_ppoly.so
+7fba0e0a5000-7fba0e2a5000 ---p 00047000 08:04 7210061                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_ppoly.so
+7fba0e2a5000-7fba0e2ab000 rw-p 00047000 08:04 7210061                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_ppoly.so
+7fba0e2ab000-7fba0e2ac000 rw-p 00000000 00:00 0 
+7fba0e2ac000-7fba0e2e1000 r-xp 00000000 08:04 7210083                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_bspl.so
+7fba0e2e1000-7fba0e4e0000 ---p 00035000 08:04 7210083                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_bspl.so
+7fba0e4e0000-7fba0e4e7000 rw-p 00034000 08:04 7210083                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_bspl.so
+7fba0e4e7000-7fba0e557000 r-xp 00000000 08:04 7210078                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/dfitpack.so
+7fba0e557000-7fba0e757000 ---p 00070000 08:04 7210078                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/dfitpack.so
+7fba0e757000-7fba0e75e000 rw-p 00070000 08:04 7210078                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/dfitpack.so
+7fba0e75e000-7fba0e79c000 r-xp 00000000 08:04 7210084                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_fitpack.so
+7fba0e79c000-7fba0e99c000 ---p 0003e000 08:04 7210084                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_fitpack.so
+7fba0e99c000-7fba0e99d000 rw-p 0003e000 08:04 7210084                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/interpolate/_fitpack.so
+7fba0e99d000-7fba0e9dd000 rw-p 00000000 00:00 0 
+7fba0e9dd000-7fba0e9e7000 r-xp 00000000 08:04 7209968                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_nnls.so
+7fba0e9e7000-7fba0ebe7000 ---p 0000a000 08:04 7209968                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_nnls.so
+7fba0ebe7000-7fba0ebe8000 rw-p 0000a000 08:04 7209968                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_nnls.so
+7fba0ebe8000-7fba0ebeb000 r-xp 00000000 08:04 7209982                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_zeros.so
+7fba0ebeb000-7fba0edea000 ---p 00003000 08:04 7209982                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_zeros.so
+7fba0edea000-7fba0edeb000 rw-p 00002000 08:04 7209982                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_zeros.so
+7fba0edeb000-7fba0ee0a000 r-xp 00000000 08:04 7210013                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_lsq/givens_elimination.so
+7fba0ee0a000-7fba0f00a000 ---p 0001f000 08:04 7210013                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_lsq/givens_elimination.so
+7fba0f00a000-7fba0f00d000 rw-p 0001f000 08:04 7210013                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_lsq/givens_elimination.so
+7fba0f00d000-7fba0f04d000 rw-p 00000000 00:00 0 
+7fba0f04d000-7fba0f072000 r-xp 00000000 08:04 7209962                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_group_columns.so
+7fba0f072000-7fba0f271000 ---p 00025000 08:04 7209962                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_group_columns.so
+7fba0f271000-7fba0f274000 rw-p 00024000 08:04 7209962                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_group_columns.so
+7fba0f274000-7fba0f275000 rw-p 00000000 00:00 0 
+7fba0f275000-7fba0f29c000 r-xp 00000000 08:04 7209944                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_minpack.so
+7fba0f29c000-7fba0f49c000 ---p 00027000 08:04 7209944                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_minpack.so
+7fba0f49c000-7fba0f49d000 rw-p 00027000 08:04 7209944                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_minpack.so
+7fba0f49d000-7fba0f4b5000 r-xp 00000000 08:04 7209976                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_slsqp.so
+7fba0f4b5000-7fba0f6b5000 ---p 00018000 08:04 7209976                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_slsqp.so
+7fba0f6b5000-7fba0f6b6000 rw-p 00018000 08:04 7209976                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_slsqp.so
+7fba0f6b6000-7fba0f6d3000 r-xp 00000000 08:04 7209945                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_cobyla.so
+7fba0f6d3000-7fba0f8d3000 ---p 0001d000 08:04 7209945                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_cobyla.so
+7fba0f8d3000-7fba0f8d4000 rw-p 0001d000 08:04 7209945                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_cobyla.so
+7fba0f8d4000-7fba0f8de000 r-xp 00000000 08:04 7209954                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/moduleTNC.so
+7fba0f8de000-7fba0fadd000 ---p 0000a000 08:04 7209954                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/moduleTNC.so
+7fba0fadd000-7fba0fade000 rw-p 00009000 08:04 7209954                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/moduleTNC.so
+7fba0fade000-7fba0fafb000 r-xp 00000000 08:04 7209984                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_lbfgsb.so
+7fba0fafb000-7fba0fcfb000 ---p 0001d000 08:04 7209984                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_lbfgsb.so
+7fba0fcfb000-7fba0fcfc000 rw-p 0001d000 08:04 7209984                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/_lbfgsb.so
+7fba0fcfc000-7fba0fd05000 r-xp 00000000 08:04 7209985                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/minpack2.so
+7fba0fd05000-7fba0ff05000 ---p 00009000 08:04 7209985                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/minpack2.so
+7fba0ff05000-7fba0ff06000 rw-p 00009000 08:04 7209985                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/optimize/minpack2.so
+7fba0ff06000-7fba0ff46000 rw-p 00000000 00:00 0 
+7fba0ff46000-7fba0ffd5000 r-xp 00000000 08:04 7209920                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.so
+7fba0ffd5000-7fba101d4000 ---p 0008f000 08:04 7209920                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.so
+7fba101d4000-7fba101e0000 rw-p 0008e000 08:04 7209920                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.so
+7fba101e0000-7fba10236000 r-xp 00000000 08:04 7209894                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/linalg/dsolve/_superlu.so
+7fba10236000-7fba10435000 ---p 00056000 08:04 7209894                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/linalg/dsolve/_superlu.so
+7fba10435000-7fba10437000 rw-p 00055000 08:04 7209894                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/linalg/dsolve/_superlu.so
+7fba10437000-7fba10477000 rw-p 00000000 00:00 0 
+7fba10477000-7fba104ac000 r-xp 00000000 08:04 7209864                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/linalg/isolve/_iterative.so
+7fba104ac000-7fba106ac000 ---p 00035000 08:04 7209864                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/linalg/isolve/_iterative.so
+7fba106ac000-7fba106b4000 rw-p 00035000 08:04 7209864                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/linalg/isolve/_iterative.so
+7fba106b4000-7fba106f5000 rw-p 00000000 00:00 0 
+7fba106f5000-7fba10739000 r-xp 00000000 08:04 7209794                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/csgraph/_reordering.so
+7fba10739000-7fba10939000 ---p 00044000 08:04 7209794                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/csgraph/_reordering.so
+7fba10939000-7fba1093f000 rw-p 00044000 08:04 7209794                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/csgraph/_reordering.so
+7fba1093f000-7fba10963000 r-xp 00000000 08:04 7209797                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/csgraph/_min_spanning_tree.so
+7fba10963000-7fba10b63000 ---p 00024000 08:04 7209797                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/csgraph/_min_spanning_tree.so
+7fba10b63000-7fba10b68000 rw-p 00024000 08:04 7209797                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/csgraph/_min_spanning_tree.so
+7fba10b68000-7fba10b82000 r-xp 00000000 08:04 7209801                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/csgraph/_traversal.so
+7fba10b82000-7fba10d81000 ---p 0001a000 08:04 7209801                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/csgraph/_traversal.so
+7fba10d81000-7fba10d87000 rw-p 00019000 08:04 7209801                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/csgraph/_traversal.so
+7fba10d87000-7fba10da6000 r-xp 00000000 08:04 7209802                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/csgraph/_tools.so
+7fba10da6000-7fba10fa5000 ---p 0001f000 08:04 7209802                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/csgraph/_tools.so
+7fba10fa5000-7fba10faa000 rw-p 0001e000 08:04 7209802                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/csgraph/_tools.so
+7fba10faa000-7fba10fdd000 r-xp 00000000 08:04 7209795                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/csgraph/_shortest_path.so
+7fba10fdd000-7fba111dc000 ---p 00033000 08:04 7209795                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/csgraph/_shortest_path.so
+7fba111dc000-7fba111e2000 rw-p 00032000 08:04 7209795                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/csgraph/_shortest_path.so
+7fba111e2000-7fba111e3000 rw-p 00000000 00:00 0 
+7fba111e3000-7fba1124a000 r-xp 00000000 08:04 7209775                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/_csparsetools.so
+7fba1124a000-7fba11449000 ---p 00067000 08:04 7209775                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/_csparsetools.so
+7fba11449000-7fba1144f000 rw-p 00066000 08:04 7209775                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/_csparsetools.so
+7fba1144f000-7fba11490000 rw-p 00000000 00:00 0 
+7fba11490000-7fba11833000 r-xp 00000000 08:04 7209773                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/_sparsetools.so
+7fba11833000-7fba11a32000 ---p 003a3000 08:04 7209773                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/_sparsetools.so
+7fba11a32000-7fba11a39000 rw-p 003a2000 08:04 7209773                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/sparse/_sparsetools.so
+7fba11a39000-7fba11a70000 r-xp 00000000 08:04 4850435                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/integrate/lsoda.so
+7fba11a70000-7fba11c6f000 ---p 00037000 08:04 4850435                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/integrate/lsoda.so
+7fba11c6f000-7fba11c71000 rw-p 00036000 08:04 4850435                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/integrate/lsoda.so
+7fba11c71000-7fba11c91000 r-xp 00000000 08:04 4850431                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/integrate/_dop.so
+7fba11c91000-7fba11e90000 ---p 00020000 08:04 4850431                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/integrate/_dop.so
+7fba11e90000-7fba11e92000 rw-p 0001f000 08:04 4850431                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/integrate/_dop.so
+7fba11e92000-7fba11ecb000 r-xp 00000000 08:04 4850421                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/integrate/vode.so
+7fba11ecb000-7fba120ca000 ---p 00039000 08:04 4850421                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/integrate/vode.so
+7fba120ca000-7fba120cc000 rw-p 00038000 08:04 4850421                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/integrate/vode.so
+7fba120cc000-7fba1210d000 rw-p 00000000 00:00 0 
+7fba1210d000-7fba1212b000 r-xp 00000000 08:04 4850433                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/integrate/_quadpack.so
+7fba1212b000-7fba1232b000 ---p 0001e000 08:04 4850433                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/integrate/_quadpack.so
+7fba1232b000-7fba1232c000 rw-p 0001e000 08:04 4850433                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/integrate/_quadpack.so
+7fba1232c000-7fba1235f000 r-xp 00000000 08:04 4850430                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/integrate/_odepack.so
+7fba1235f000-7fba1255e000 ---p 00033000 08:04 4850430                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/integrate/_odepack.so
+7fba1255e000-7fba12560000 rw-p 00032000 08:04 4850430                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/integrate/_odepack.so
+7fba12560000-7fba1256f000 r-xp 00000000 08:04 4331207                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/special/_ellip_harm_2.so
+7fba1256f000-7fba1276f000 ---p 0000f000 08:04 4331207                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/special/_ellip_harm_2.so
+7fba1276f000-7fba12771000 rw-p 0000f000 08:04 4331207                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/special/_ellip_harm_2.so
+7fba12771000-7fba12776000 r-xp 00000000 08:04 4331203                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/special/_comb.so
+7fba12776000-7fba12976000 ---p 00005000 08:04 4331203                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/special/_comb.so
+7fba12976000-7fba12977000 rw-p 00005000 08:04 4331203                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/special/_comb.so
+7fba12977000-7fba12a44000 r-xp 00000000 08:04 4331198                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/special/specfun.so
+7fba12a44000-7fba12c43000 ---p 000cd000 08:04 4331198                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/special/specfun.so
+7fba12c43000-7fba12c4b000 rw-p 000cc000 08:04 4331198                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/special/specfun.so
+7fba12c4b000-7fba12c8b000 rw-p 00000000 00:00 0 
+7fba12c8b000-7fba12ca4000 r-xp 00000000 08:04 4331216                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/special/_ufuncs_cxx.so
+7fba12ca4000-7fba12ea3000 ---p 00019000 08:04 4331216                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/special/_ufuncs_cxx.so
+7fba12ea3000-7fba12ea5000 rw-p 00018000 08:04 4331216                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/special/_ufuncs_cxx.so
+7fba12ea5000-7fba13026000 r-xp 00000000 08:04 4331197                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/special/_ufuncs.so
+7fba13026000-7fba13226000 ---p 00181000 08:04 4331197                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/special/_ufuncs.so
+7fba13226000-7fba13253000 rw-p 00181000 08:04 4331197                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/special/_ufuncs.so
+7fba13253000-7fba1325b000 rw-p 00000000 00:00 0 
+7fba1325b000-7fba132e1000 r-xp 00000000 08:04 7210450                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/cython_lapack.so
+7fba132e1000-7fba134e0000 ---p 00086000 08:04 7210450                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/cython_lapack.so
+7fba134e0000-7fba134e7000 rw-p 00085000 08:04 7210450                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/cython_lapack.so
+7fba134e7000-7fba1351b000 r-xp 00000000 08:04 7210439                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/cython_blas.so
+7fba1351b000-7fba1371a000 ---p 00034000 08:04 7210439                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/cython_blas.so
+7fba1371a000-7fba1371f000 rw-p 00033000 08:04 7210439                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/cython_blas.so
+7fba1371f000-7fba1375d000 r-xp 00000000 08:04 7210429                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/_decomp_update.so
+7fba1375d000-7fba1395d000 ---p 0003e000 08:04 7210429                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/_decomp_update.so
+7fba1395d000-7fba13967000 rw-p 0003e000 08:04 7210429                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/_decomp_update.so
+7fba13967000-7fba139a7000 rw-p 00000000 00:00 0 
+7fba139a7000-7fba139d5000 r-xp 00000000 08:04 7210447                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/_solve_toeplitz.so
+7fba139d5000-7fba13bd4000 ---p 0002e000 08:04 7210447                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/_solve_toeplitz.so
+7fba13bd4000-7fba13bd9000 rw-p 0002d000 08:04 7210447                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/_solve_toeplitz.so
+7fba13bd9000-7fba13be5000 r-xp 00000000 08:04 7210426                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/_flinalg.so
+7fba13be5000-7fba13de5000 ---p 0000c000 08:04 7210426                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/_flinalg.so
+7fba13de5000-7fba13de8000 rw-p 0000c000 08:04 7210426                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/_flinalg.so
+7fba13de8000-7fba13e28000 rw-p 00000000 00:00 0 
+7fba13e28000-7fba13ee8000 r-xp 00000000 08:04 7210443                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/_flapack.so
+7fba13ee8000-7fba140e8000 ---p 000c0000 08:04 7210443                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/_flapack.so
+7fba140e8000-7fba14130000 rw-p 000c0000 08:04 7210443                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/_flapack.so
+7fba14130000-7fba14160000 r-xp 00000000 08:04 57412160                   /home/maggie/anaconda3/envs/py27/lib/libquadmath.so.0.0.0
+7fba14160000-7fba1435f000 ---p 00030000 08:04 57412160                   /home/maggie/anaconda3/envs/py27/lib/libquadmath.so.0.0.0
+7fba1435f000-7fba14360000 r--p 0002f000 08:04 57412160                   /home/maggie/anaconda3/envs/py27/lib/libquadmath.so.0.0.0
+7fba14360000-7fba14361000 rw-p 00030000 08:04 57412160                   /home/maggie/anaconda3/envs/py27/lib/libquadmath.so.0.0.0
+7fba14361000-7fba14485000 r-xp 00000000 08:04 57938052                   /home/maggie/anaconda3/envs/py27/lib/libgfortran.so.3.0.0
+7fba14485000-7fba14685000 ---p 00124000 08:04 57938052                   /home/maggie/anaconda3/envs/py27/lib/libgfortran.so.3.0.0
+7fba14685000-7fba14687000 rw-p 00124000 08:04 57938052                   /home/maggie/anaconda3/envs/py27/lib/libgfortran.so.3.0.0
+7fba14687000-7fba146cf000 r-xp 00000000 08:04 7210423                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/_fblas.so
+7fba146cf000-7fba148ce000 ---p 00048000 08:04 7210423                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/_fblas.so
+7fba148ce000-7fba148e8000 rw-p 00047000 08:04 7210423                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/linalg/_fblas.so
+7fba148e8000-7fba148f6000 r-xp 00000000 08:04 5511632                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/_lib/_ccallback_c.so
+7fba148f6000-7fba14af5000 ---p 0000e000 08:04 5511632                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/_lib/_ccallback_c.so
+7fba14af5000-7fba14af7000 rw-p 0000d000 08:04 5511632                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/scipy/_lib/_ccallback_c.so
+7fba14af7000-7fba14bb7000 rw-p 00000000 00:00 0 
+7fba14bb7000-7fba1521d000 r-xp 00000000 08:04 5774504                    /home/maggie/anaconda3/envs/py27/lib/libQt5Widgets.so.5.6.2
+7fba1521d000-7fba1541d000 ---p 00666000 08:04 5774504                    /home/maggie/anaconda3/envs/py27/lib/libQt5Widgets.so.5.6.2
+7fba1541d000-7fba1544c000 r--p 00666000 08:04 5774504                    /home/maggie/anaconda3/envs/py27/lib/libQt5Widgets.so.5.6.2
+7fba1544c000-7fba154ba000 rw-p 00695000 08:04 5774504                    /home/maggie/anaconda3/envs/py27/lib/libQt5Widgets.so.5.6.2
+7fba154ba000-7fba1599f000 r-xp 00000000 08:04 4981477                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/PyQt5/QtWidgets.so
+7fba1599f000-7fba15b9e000 ---p 004e5000 08:04 4981477                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/PyQt5/QtWidgets.so
+7fba15b9e000-7fba15bb2000 r--p 004e4000 08:04 4981477                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/PyQt5/QtWidgets.so
+7fba15bb2000-7fba15c4b000 rw-p 004f8000 08:04 4981477                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/PyQt5/QtWidgets.so
+7fba15c4b000-7fba15c8b000 rw-p 00000000 00:00 0 
+7fba15c8b000-7fba15c99000 r-xp 00000000 08:02 1318794                    /usr/lib/x86_64-linux-gnu/libdrm.so.2.4.0
+7fba15c99000-7fba15e99000 ---p 0000e000 08:02 1318794                    /usr/lib/x86_64-linux-gnu/libdrm.so.2.4.0
+7fba15e99000-7fba15e9a000 r--p 0000e000 08:02 1318794                    /usr/lib/x86_64-linux-gnu/libdrm.so.2.4.0
+7fba15e9a000-7fba15e9b000 rw-p 0000f000 08:02 1318794                    /usr/lib/x86_64-linux-gnu/libdrm.so.2.4.0
+7fba15e9b000-7fba15ea0000 r-xp 00000000 08:02 1317331                    /usr/lib/x86_64-linux-gnu/libXxf86vm.so.1.0.0
+7fba15ea0000-7fba1609f000 ---p 00005000 08:02 1317331                    /usr/lib/x86_64-linux-gnu/libXxf86vm.so.1.0.0
+7fba1609f000-7fba160a0000 r--p 00004000 08:02 1317331                    /usr/lib/x86_64-linux-gnu/libXxf86vm.so.1.0.0
+7fba160a0000-7fba160a1000 rw-p 00005000 08:02 1317331                    /usr/lib/x86_64-linux-gnu/libXxf86vm.so.1.0.0
+7fba160a1000-7fba160a5000 r-xp 00000000 08:04 3016096                    /home/maggie/anaconda3/envs/py27/lib/libxcb-dri2.so.0.0.0
+7fba160a5000-7fba162a4000 ---p 00004000 08:04 3016096                    /home/maggie/anaconda3/envs/py27/lib/libxcb-dri2.so.0.0.0
+7fba162a4000-7fba162a5000 r--p 00003000 08:04 3016096                    /home/maggie/anaconda3/envs/py27/lib/libxcb-dri2.so.0.0.0
+7fba162a5000-7fba162a6000 rw-p 00004000 08:04 3016096                    /home/maggie/anaconda3/envs/py27/lib/libxcb-dri2.so.0.0.0
+7fba162a6000-7fba162bf000 r-xp 00000000 08:04 3016131                    /home/maggie/anaconda3/envs/py27/lib/libxcb-glx.so.0.0.0
+7fba162bf000-7fba164bf000 ---p 00019000 08:04 3016131                    /home/maggie/anaconda3/envs/py27/lib/libxcb-glx.so.0.0.0
+7fba164bf000-7fba164c1000 r--p 00019000 08:04 3016131                    /home/maggie/anaconda3/envs/py27/lib/libxcb-glx.so.0.0.0
+7fba164c1000-7fba164c2000 rw-p 0001b000 08:04 3016131                    /home/maggie/anaconda3/envs/py27/lib/libxcb-glx.so.0.0.0
+7fba164c2000-7fba164c3000 r-xp 00000000 08:02 1318810                    /usr/lib/x86_64-linux-gnu/libX11-xcb.so.1.0.0
+7fba164c3000-7fba166c2000 ---p 00001000 08:02 1318810                    /usr/lib/x86_64-linux-gnu/libX11-xcb.so.1.0.0
+7fba166c2000-7fba166c3000 r--p 00000000 08:02 1318810                    /usr/lib/x86_64-linux-gnu/libX11-xcb.so.1.0.0
+7fba166c3000-7fba166c4000 rw-p 00001000 08:02 1318810                    /usr/lib/x86_64-linux-gnu/libX11-xcb.so.1.0.0
+7fba166c4000-7fba166ee000 r-xp 00000000 08:02 1318800                    /usr/lib/x86_64-linux-gnu/libglapi.so.0.0.0
+7fba166ee000-7fba168ed000 ---p 0002a000 08:02 1318800                    /usr/lib/x86_64-linux-gnu/libglapi.so.0.0.0
+7fba168ed000-7fba168f1000 r--p 00029000 08:02 1318800                    /usr/lib/x86_64-linux-gnu/libglapi.so.0.0.0
+7fba168f1000-7fba168f2000 rw-p 0002d000 08:02 1318800                    /usr/lib/x86_64-linux-gnu/libglapi.so.0.0.0
+7fba168f2000-7fba168f3000 rw-p 00000000 00:00 0 
+7fba168f3000-7fba168f4000 r-xp 00000000 08:02 1318859                    /usr/lib/x86_64-linux-gnu/libxshmfence.so.1.0.0
+7fba168f4000-7fba16af3000 ---p 00001000 08:02 1318859                    /usr/lib/x86_64-linux-gnu/libxshmfence.so.1.0.0
+7fba16af3000-7fba16af4000 r--p 00000000 08:02 1318859                    /usr/lib/x86_64-linux-gnu/libxshmfence.so.1.0.0
+7fba16af4000-7fba16af5000 rw-p 00001000 08:02 1318859                    /usr/lib/x86_64-linux-gnu/libxshmfence.so.1.0.0
+7fba16af5000-7fba16afb000 r-xp 00000000 08:04 3016101                    /home/maggie/anaconda3/envs/py27/lib/libxcb-sync.so.1.0.0
+7fba16afb000-7fba16cfa000 ---p 00006000 08:04 3016101                    /home/maggie/anaconda3/envs/py27/lib/libxcb-sync.so.1.0.0
+7fba16cfa000-7fba16cfb000 r--p 00005000 08:04 3016101                    /home/maggie/anaconda3/envs/py27/lib/libxcb-sync.so.1.0.0
+7fba16cfb000-7fba16cfc000 rw-p 00006000 08:04 3016101                    /home/maggie/anaconda3/envs/py27/lib/libxcb-sync.so.1.0.0
+7fba16cfc000-7fba16cfe000 r-xp 00000000 08:04 3016050                    /home/maggie/anaconda3/envs/py27/lib/libxcb-present.so.0.0.0
+7fba16cfe000-7fba16efd000 ---p 00002000 08:04 3016050                    /home/maggie/anaconda3/envs/py27/lib/libxcb-present.so.0.0.0
+7fba16efd000-7fba16efe000 r--p 00001000 08:04 3016050                    /home/maggie/anaconda3/envs/py27/lib/libxcb-present.so.0.0.0
+7fba16efe000-7fba16eff000 rw-p 00002000 08:04 3016050                    /home/maggie/anaconda3/envs/py27/lib/libxcb-present.so.0.0.0
+7fba16eff000-7fba16f01000 r-xp 00000000 08:04 3016044                    /home/maggie/anaconda3/envs/py27/lib/libxcb-dri3.so.0.0.0
+7fba16f01000-7fba17100000 ---p 00002000 08:04 3016044                    /home/maggie/anaconda3/envs/py27/lib/libxcb-dri3.so.0.0.0
+7fba17100000-7fba17101000 r--p 00001000 08:04 3016044                    /home/maggie/anaconda3/envs/py27/lib/libxcb-dri3.so.0.0.0
+7fba17101000-7fba17102000 rw-p 00002000 08:04 3016044                    /home/maggie/anaconda3/envs/py27/lib/libxcb-dri3.so.0.0.0
+7fba17102000-7fba17132000 r-xp 00000000 08:04 3015496                    /home/maggie/anaconda3/envs/py27/lib/libexpat.so.1.6.6
+7fba17132000-7fba17331000 ---p 00030000 08:04 3015496                    /home/maggie/anaconda3/envs/py27/lib/libexpat.so.1.6.6
+7fba17331000-7fba17334000 r--p 0002f000 08:04 3015496                    /home/maggie/anaconda3/envs/py27/lib/libexpat.so.1.6.6
+7fba17334000-7fba17335000 rw-p 00032000 08:04 3015496                    /home/maggie/anaconda3/envs/py27/lib/libexpat.so.1.6.6
+7fba17335000-7fba173a3000 r-xp 00000000 08:02 1318866                    /usr/lib/x86_64-linux-gnu/libGL.so.1.2.0
+7fba173a3000-7fba175a2000 ---p 0006e000 08:02 1318866                    /usr/lib/x86_64-linux-gnu/libGL.so.1.2.0
+7fba175a2000-7fba175a5000 r--p 0006d000 08:02 1318866                    /usr/lib/x86_64-linux-gnu/libGL.so.1.2.0
+7fba175a5000-7fba175a6000 rw-p 00070000 08:02 1318866                    /usr/lib/x86_64-linux-gnu/libGL.so.1.2.0
+7fba175a6000-7fba175a7000 rw-p 00000000 00:00 0 
+7fba175a7000-7fba17b5e000 r-xp 00000000 08:04 5774400                    /home/maggie/anaconda3/envs/py27/lib/libQt5Gui.so.5.6.2
+7fba17b5e000-7fba17d5e000 ---p 005b7000 08:04 5774400                    /home/maggie/anaconda3/envs/py27/lib/libQt5Gui.so.5.6.2
+7fba17d5e000-7fba17d70000 r--p 005b7000 08:04 5774400                    /home/maggie/anaconda3/envs/py27/lib/libQt5Gui.so.5.6.2
+7fba17d70000-7fba17d76000 rw-p 005c9000 08:04 5774400                    /home/maggie/anaconda3/envs/py27/lib/libQt5Gui.so.5.6.2
+7fba17d76000-7fba17d7c000 rw-p 00000000 00:00 0 
+7fba17d7c000-7fba17dd0000 rw-p 005d0000 08:04 5774400                    /home/maggie/anaconda3/envs/py27/lib/libQt5Gui.so.5.6.2
+7fba17dd0000-7fba18090000 r-xp 00000000 08:04 4981459                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/PyQt5/QtGui.so
+7fba18090000-7fba18290000 ---p 002c0000 08:04 4981459                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/PyQt5/QtGui.so
+7fba18290000-7fba182a8000 r--p 002c0000 08:04 4981459                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/PyQt5/QtGui.so
+7fba182a8000-7fba18316000 rw-p 002d8000 08:04 4981459                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/PyQt5/QtGui.so
+7fba18316000-7fba18396000 rw-p 00000000 00:00 0 
+7fba18396000-7fba19bc0000 r--p 00000000 08:04 57937822                   /home/maggie/anaconda3/envs/py27/lib/libicudata.so.54.1
+7fba19bc0000-7fba19dbf000 ---p 0182a000 08:04 57937822                   /home/maggie/anaconda3/envs/py27/lib/libicudata.so.54.1
+7fba19dbf000-7fba19dc0000 rw-p 01829000 08:04 57937822                   /home/maggie/anaconda3/envs/py27/lib/libicudata.so.54.1
+7fba19dc0000-7fba19f49000 r-xp 00000000 08:04 57937843                   /home/maggie/anaconda3/envs/py27/lib/libicuuc.so.54.1
+7fba19f49000-7fba1a148000 ---p 00189000 08:04 57937843                   /home/maggie/anaconda3/envs/py27/lib/libicuuc.so.54.1
+7fba1a148000-7fba1a15b000 rw-p 00188000 08:04 57937843                   /home/maggie/anaconda3/envs/py27/lib/libicuuc.so.54.1
+7fba1a15b000-7fba1a15e000 rw-p 00000000 00:00 0 
+7fba1a15e000-7fba1a3b1000 r-xp 00000000 08:04 57937825                   /home/maggie/anaconda3/envs/py27/lib/libicui18n.so.54.1
+7fba1a3b1000-7fba1a5b1000 ---p 00253000 08:04 57937825                   /home/maggie/anaconda3/envs/py27/lib/libicui18n.so.54.1
+7fba1a5b1000-7fba1a5c2000 rw-p 00253000 08:04 57937825                   /home/maggie/anaconda3/envs/py27/lib/libicui18n.so.54.1
+7fba1a5c2000-7fba1aaff000 r-xp 00000000 08:04 1051674                    /home/maggie/anaconda3/envs/py27/lib/libQt5Core.so.5.6.2
+7fba1aaff000-7fba1acfe000 ---p 0053d000 08:04 1051674                    /home/maggie/anaconda3/envs/py27/lib/libQt5Core.so.5.6.2
+7fba1acfe000-7fba1ad0b000 r--p 0053c000 08:04 1051674                    /home/maggie/anaconda3/envs/py27/lib/libQt5Core.so.5.6.2
+7fba1ad0b000-7fba1ad0c000 rw-p 00549000 08:04 1051674                    /home/maggie/anaconda3/envs/py27/lib/libQt5Core.so.5.6.2
+7fba1ad0c000-7fba1ad10000 rw-p 00000000 00:00 0 
+7fba1ad10000-7fba1af93000 r-xp 00000000 08:04 4981456                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/PyQt5/QtCore.so
+7fba1af93000-7fba1b193000 ---p 00283000 08:04 4981456                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/PyQt5/QtCore.so
+7fba1b193000-7fba1b197000 r--p 00283000 08:04 4981456                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/PyQt5/QtCore.so
+7fba1b197000-7fba1b1fe000 rw-p 00287000 08:04 4981456                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/PyQt5/QtCore.so
+7fba1b1fe000-7fba1b21b000 r-xp 00000000 08:04 5377575                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/sip.so
+7fba1b21b000-7fba1b41a000 ---p 0001d000 08:04 5377575                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/sip.so
+7fba1b41a000-7fba1b41b000 r--p 0001c000 08:04 5377575                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/sip.so
+7fba1b41b000-7fba1b41d000 rw-p 0001d000 08:04 5377575                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/sip.so
+7fba1b41d000-7fba1b45d000 rw-p 00000000 00:00 0 
+7fba1b45d000-7fba1b4b6000 r-xp 00000000 08:04 7214471                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/backends/_backend_agg.so
+7fba1b4b6000-7fba1b6b5000 ---p 00059000 08:04 7214471                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/backends/_backend_agg.so
+7fba1b6b5000-7fba1b6b7000 rw-p 00058000 08:04 7214471                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/backends/_backend_agg.so
+7fba1b6b7000-7fba1b778000 rw-p 00000000 00:00 0 
+7fba1b778000-7fba1b7d2000 r-xp 00000000 08:04 7214441                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_qhull.so
+7fba1b7d2000-7fba1b9d1000 ---p 0005a000 08:04 7214441                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_qhull.so
+7fba1b9d1000-7fba1b9d3000 rw-p 00059000 08:04 7214441                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_qhull.so
+7fba1b9d3000-7fba1b9d5000 rw-p 00000000 00:00 0 
+7fba1b9d5000-7fba1b9f1000 r-xp 00000000 08:04 7214442                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_tri.so
+7fba1b9f1000-7fba1bbf0000 ---p 0001c000 08:04 7214442                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_tri.so
+7fba1bbf0000-7fba1bbf2000 rw-p 0001b000 08:04 7214442                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_tri.so
+7fba1bbf2000-7fba1bf33000 rw-p 00000000 00:00 0 
+7fba1bf6d000-7fba1bfa6000 r-xp 00000000 08:04 7214434                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_image.so
+7fba1bfa6000-7fba1c1a5000 ---p 00039000 08:04 7214434                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_image.so
+7fba1c1a5000-7fba1c1a7000 rw-p 00038000 08:04 7214434                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_image.so
+7fba1c1a7000-7fba1c267000 rw-p 00000000 00:00 0 
+7fba1c267000-7fba1c28c000 r-xp 00000000 08:04 3016477                    /home/maggie/anaconda3/envs/py27/lib/liblzma.so.5.2.3
+7fba1c28c000-7fba1c48b000 ---p 00025000 08:04 3016477                    /home/maggie/anaconda3/envs/py27/lib/liblzma.so.5.2.3
+7fba1c48b000-7fba1c48c000 r--p 00024000 08:04 3016477                    /home/maggie/anaconda3/envs/py27/lib/liblzma.so.5.2.3
+7fba1c48c000-7fba1c48d000 rw-p 00025000 08:04 3016477                    /home/maggie/anaconda3/envs/py27/lib/liblzma.so.5.2.3
+7fba1c48d000-7fba1c505000 r-xp 00000000 08:04 57280178                   /home/maggie/anaconda3/envs/py27/lib/libtiff.so.5.2.6
+7fba1c505000-7fba1c704000 ---p 00078000 08:04 57280178                   /home/maggie/anaconda3/envs/py27/lib/libtiff.so.5.2.6
+7fba1c704000-7fba1c708000 r--p 00077000 08:04 57280178                   /home/maggie/anaconda3/envs/py27/lib/libtiff.so.5.2.6
+7fba1c708000-7fba1c709000 rw-p 0007b000 08:04 57280178                   /home/maggie/anaconda3/envs/py27/lib/libtiff.so.5.2.6
+7fba1c709000-7fba1c744000 r-xp 00000000 08:04 3015856                    /home/maggie/anaconda3/envs/py27/lib/libjpeg.so.9.2.0
+7fba1c744000-7fba1c943000 ---p 0003b000 08:04 3015856                    /home/maggie/anaconda3/envs/py27/lib/libjpeg.so.9.2.0
+7fba1c943000-7fba1c944000 r--p 0003a000 08:04 3015856                    /home/maggie/anaconda3/envs/py27/lib/libjpeg.so.9.2.0
+7fba1c944000-7fba1c945000 rw-p 0003b000 08:04 3015856                    /home/maggie/anaconda3/envs/py27/lib/libjpeg.so.9.2.0
+7fba1c945000-7fba1c999000 r-xp 00000000 08:04 3413034                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/PIL/_imaging.so
+7fba1c999000-7fba1cb98000 ---p 00054000 08:04 3413034                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/PIL/_imaging.so
+7fba1cb98000-7fba1cb9e000 rw-p 00053000 08:04 3413034                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/PIL/_imaging.so
+7fba1cb9e000-7fba1cc1f000 rw-p 00000000 00:00 0 
+7fba1cc1f000-7fba1cc25000 r-xp 00000000 08:04 7214438                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_png.so
+7fba1cc25000-7fba1ce25000 ---p 00006000 08:04 7214438                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_png.so
+7fba1ce25000-7fba1ce26000 rw-p 00006000 08:04 7214438                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_png.so
+7fba1ce26000-7fba1cebd000 r-xp 00000000 08:04 1708955                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/unicodedata.so
+7fba1cebd000-7fba1d0bc000 ---p 00097000 08:04 1708955                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/unicodedata.so
+7fba1d0bc000-7fba1d0bd000 r--p 00096000 08:04 1708955                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/unicodedata.so
+7fba1d0bd000-7fba1d0d0000 rw-p 00097000 08:04 1708955                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/unicodedata.so
+7fba1d0d0000-7fba1d210000 rw-p 00000000 00:00 0 
+7fba1d210000-7fba1d223000 r-xp 00000000 08:04 7214625                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/ft2font.so
+7fba1d223000-7fba1d422000 ---p 00013000 08:04 7214625                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/ft2font.so
+7fba1d422000-7fba1d424000 rw-p 00012000 08:04 7214625                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/ft2font.so
+7fba1d424000-7fba1d4a4000 rw-p 00000000 00:00 0 
+7fba1d4a4000-7fba1d4b1000 r-xp 00000000 08:04 7214432                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_contour.so
+7fba1d4b1000-7fba1d6b1000 ---p 0000d000 08:04 7214432                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_contour.so
+7fba1d6b1000-7fba1d6b2000 rw-p 0000d000 08:04 7214432                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_contour.so
+7fba1d6b2000-7fba1d6b8000 r-xp 00000000 08:04 7214429                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_cntr.so
+7fba1d6b8000-7fba1d8b7000 ---p 00006000 08:04 7214429                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_cntr.so
+7fba1d8b7000-7fba1d8b8000 rw-p 00005000 08:04 7214429                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_cntr.so
+7fba1d8b8000-7fba1d8f8000 rw-p 00000000 00:00 0 
+7fba1d8f8000-7fba1d8fe000 r-xp 00000000 08:04 1708919                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_csv.so
+7fba1d8fe000-7fba1dafd000 ---p 00006000 08:04 1708919                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_csv.so
+7fba1dafd000-7fba1dafe000 r--p 00005000 08:04 1708919                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_csv.so
+7fba1dafe000-7fba1db00000 rw-p 00006000 08:04 1708919                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_csv.so
+7fba1db00000-7fba1dc80000 rw-p 00000000 00:00 0 
+7fba1dc80000-7fba1dcaf000 r-xp 00000000 08:04 7214437                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_path.so
+7fba1dcaf000-7fba1deaf000 ---p 0002f000 08:04 7214437                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_path.so
+7fba1deaf000-7fba1deb0000 rw-p 0002f000 08:04 7214437                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/matplotlib/_path.so
+7fba1deb0000-7fba1df31000 rw-p 00000000 00:00 0 
+7fba1df31000-7fba1df3a000 r-xp 00000000 08:04 1708922                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_json.so
+7fba1df3a000-7fba1e13a000 ---p 00009000 08:04 1708922                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_json.so
+7fba1e13a000-7fba1e13b000 r--p 00009000 08:04 1708922                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_json.so
+7fba1e13b000-7fba1e13c000 rw-p 0000a000 08:04 1708922                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_json.so
+7fba1e13c000-7fba1e17c000 rw-p 00000000 00:00 0 
+7fba1e17c000-7fba1e17e000 r-xp 00000000 08:04 1708890                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_bisect.so
+7fba1e17e000-7fba1e37d000 ---p 00002000 08:04 1708890                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_bisect.so
+7fba1e37d000-7fba1e37e000 r--p 00001000 08:04 1708890                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_bisect.so
+7fba1e37e000-7fba1e37f000 rw-p 00002000 08:04 1708890                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_bisect.so
+7fba1e37f000-7fba1e3bf000 rw-p 00000000 00:00 0 
+7fba1e3bf000-7fba1e615000 r-xp 00000000 08:04 4849853                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_ssl.so
+7fba1e615000-7fba1e815000 ---p 00256000 08:04 4849853                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_ssl.so
+7fba1e815000-7fba1e838000 r--p 00256000 08:04 4849853                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_ssl.so
+7fba1e838000-7fba1e84b000 rw-p 00279000 08:04 4849853                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_ssl.so
+7fba1e84b000-7fba1e84f000 rw-p 00000000 00:00 0 
+7fba1e84f000-7fba1e860000 r-xp 00000000 08:04 1708940                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_socket.so
+7fba1e860000-7fba1ea60000 ---p 00011000 08:04 1708940                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_socket.so
+7fba1ea60000-7fba1ea61000 r--p 00011000 08:04 1708940                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_socket.so
+7fba1ea61000-7fba1ea66000 rw-p 00012000 08:04 1708940                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_socket.so
+7fba1ea66000-7fba1ea70000 r-xp 00000000 08:04 1708930                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/array.so
+7fba1ea70000-7fba1ec70000 ---p 0000a000 08:04 1708930                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/array.so
+7fba1ec70000-7fba1ec71000 r--p 0000a000 08:04 1708930                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/array.so
+7fba1ec71000-7fba1ec73000 rw-p 0000b000 08:04 1708930                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/array.so
+7fba1ec73000-7fba1ee73000 rw-p 00000000 00:00 0 
+7fba1ee73000-7fba1ee77000 r-xp 00000000 08:04 5378171                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/_posixsubprocess.so
+7fba1ee77000-7fba1f076000 ---p 00004000 08:04 5378171                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/_posixsubprocess.so
+7fba1f076000-7fba1f077000 r--p 00003000 08:04 5378171                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/_posixsubprocess.so
+7fba1f077000-7fba1f078000 rw-p 00004000 08:04 5378171                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/_posixsubprocess.so
+7fba1f078000-7fba1f07d000 r-xp 00000000 08:04 1708911                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/select.so
+7fba1f07d000-7fba1f27c000 ---p 00005000 08:04 1708911                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/select.so
+7fba1f27c000-7fba1f27d000 r--p 00004000 08:04 1708911                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/select.so
+7fba1f27d000-7fba1f27f000 rw-p 00005000 08:04 1708911                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/select.so
+7fba1f27f000-7fba1f33f000 rw-p 00000000 00:00 0 
+7fba1f33f000-7fba1f345000 r-xp 00000000 08:04 1708914                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/strop.so
+7fba1f345000-7fba1f544000 ---p 00006000 08:04 1708914                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/strop.so
+7fba1f544000-7fba1f545000 r--p 00005000 08:04 1708914                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/strop.so
+7fba1f545000-7fba1f547000 rw-p 00006000 08:04 1708914                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/strop.so
+7fba1f547000-7fba1f607000 rw-p 00000000 00:00 0 
+7fba1f63e000-7fba1f67e000 rw-p 00000000 00:00 0 
+7fba1f67e000-7fba1f72a000 r-xp 00000000 08:04 2884155                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/random/mtrand.so
+7fba1f72a000-7fba1f92a000 ---p 000ac000 08:04 2884155                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/random/mtrand.so
+7fba1f92a000-7fba1f94b000 rw-p 000ac000 08:04 2884155                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/random/mtrand.so
+7fba1f94b000-7fba1f98c000 rw-p 00000000 00:00 0 
+7fba1f98c000-7fba1f995000 r-xp 00000000 08:04 3412234                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/fft/fftpack_lite.so
+7fba1f995000-7fba1fb94000 ---p 00009000 08:04 3412234                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/fft/fftpack_lite.so
+7fba1fb94000-7fba1fb95000 rw-p 00008000 08:04 3412234                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/fft/fftpack_lite.so
+7fba1fb95000-7fba1fb96000 r-xp 00000000 08:04 1708874                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/future_builtins.so
+7fba1fb96000-7fba1fd95000 ---p 00001000 08:04 1708874                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/future_builtins.so
+7fba1fd95000-7fba1fd96000 r--p 00000000 08:04 1708874                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/future_builtins.so
+7fba1fd96000-7fba1fd97000 rw-p 00001000 08:04 1708874                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/future_builtins.so
+7fba1fd97000-7fba1fdd7000 rw-p 00000000 00:00 0 
+7fba1fdd7000-7fba1fdf9000 r-xp 00000000 08:04 3412558                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/linalg/_umath_linalg.so
+7fba1fdf9000-7fba1fff8000 ---p 00022000 08:04 3412558                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/linalg/_umath_linalg.so
+7fba1fff8000-7fba1fffa000 rw-p 00021000 08:04 3412558                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/linalg/_umath_linalg.so
+7fba1fffa000-7fba1fffd000 r-xp 00000000 08:04 3412553                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/linalg/lapack_lite.so
+7fba1fffd000-7fba201fd000 ---p 00003000 08:04 3412553                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/linalg/lapack_lite.so
+7fba201fd000-7fba201fe000 rw-p 00003000 08:04 3412553                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/linalg/lapack_lite.so
+7fba201fe000-7fba2023e000 rw-p 00000000 00:00 0 
+7fba2023e000-7fba20241000 r-xp 00000000 08:04 1708902                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/fcntl.so
+7fba20241000-7fba20441000 ---p 00003000 08:04 1708902                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/fcntl.so
+7fba20441000-7fba20442000 r--p 00003000 08:04 1708902                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/fcntl.so
+7fba20442000-7fba20443000 rw-p 00004000 08:04 1708902                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/fcntl.so
+7fba20443000-7fba20446000 r-xp 00000000 08:04 1708893                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_random.so
+7fba20446000-7fba20645000 ---p 00003000 08:04 1708893                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_random.so
+7fba20645000-7fba20646000 r--p 00002000 08:04 1708893                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_random.so
+7fba20646000-7fba20647000 rw-p 00003000 08:04 1708893                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_random.so
+7fba20647000-7fba207ee000 r-xp 00000000 08:04 4849852                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_hashlib.so
+7fba207ee000-7fba209ee000 ---p 001a7000 08:04 4849852                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_hashlib.so
+7fba209ee000-7fba20a0a000 r--p 001a7000 08:04 4849852                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_hashlib.so
+7fba20a0a000-7fba20a14000 rw-p 001c3000 08:04 4849852                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_hashlib.so
+7fba20a14000-7fba20a18000 rw-p 00000000 00:00 0 
+7fba20a18000-7fba20a1d000 r-xp 00000000 08:04 1708907                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/binascii.so
+7fba20a1d000-7fba20c1c000 ---p 00005000 08:04 1708907                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/binascii.so
+7fba20c1c000-7fba20c1d000 r--p 00004000 08:04 1708907                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/binascii.so
+7fba20c1d000-7fba20c1e000 rw-p 00005000 08:04 1708907                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/binascii.so
+7fba20c1e000-7fba20c5e000 rw-p 00000000 00:00 0 
+7fba20c5e000-7fba20c7c000 r-xp 00000000 08:04 1708950                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_io.so
+7fba20c7c000-7fba20e7c000 ---p 0001e000 08:04 1708950                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_io.so
+7fba20e7c000-7fba20e7d000 r--p 0001e000 08:04 1708950                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_io.so
+7fba20e7d000-7fba20e86000 rw-p 0001f000 08:04 1708950                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_io.so
+7fba20e86000-7fba20e88000 r-xp 00000000 08:04 1708885                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/grp.so
+7fba20e88000-7fba21087000 ---p 00002000 08:04 1708885                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/grp.so
+7fba21087000-7fba21088000 r--p 00001000 08:04 1708885                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/grp.so
+7fba21088000-7fba21089000 rw-p 00002000 08:04 1708885                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/grp.so
+7fba21089000-7fba210a1000 r-xp 00000000 08:04 1708953                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/bz2.so
+7fba210a1000-7fba212a0000 ---p 00018000 08:04 1708953                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/bz2.so
+7fba212a0000-7fba212a1000 r--p 00017000 08:04 1708953                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/bz2.so
+7fba212a1000-7fba212a4000 rw-p 00018000 08:04 1708953                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/bz2.so
+7fba212a4000-7fba212a9000 r-xp 00000000 08:04 1708909                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/zlib.so
+7fba212a9000-7fba214a8000 ---p 00005000 08:04 1708909                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/zlib.so
+7fba214a8000-7fba214a9000 r--p 00004000 08:04 1708909                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/zlib.so
+7fba214a9000-7fba214ab000 rw-p 00005000 08:04 1708909                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/zlib.so
+7fba214ab000-7fba214eb000 rw-p 00000000 00:00 0 
+7fba214eb000-7fba214ef000 r-xp 00000000 08:04 1708906                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/time.so
+7fba214ef000-7fba216ee000 ---p 00004000 08:04 1708906                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/time.so
+7fba216ee000-7fba216ef000 r--p 00003000 08:04 1708906                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/time.so
+7fba216ef000-7fba216f1000 rw-p 00004000 08:04 1708906                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/time.so
+7fba216f2000-7fba21832000 rw-p 00000000 00:00 0 
+7fba21832000-7fba21835000 r-xp 00000000 08:04 1708896                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_functools.so
+7fba21835000-7fba21a34000 ---p 00003000 08:04 1708896                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_functools.so
+7fba21a34000-7fba21a35000 r--p 00002000 08:04 1708896                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_functools.so
+7fba21a35000-7fba21a36000 rw-p 00003000 08:04 1708896                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_functools.so
+7fba21a36000-7fba21a3a000 r-xp 00000000 08:04 1708904                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/cStringIO.so
+7fba21a3a000-7fba21c39000 ---p 00004000 08:04 1708904                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/cStringIO.so
+7fba21c39000-7fba21c3a000 r--p 00003000 08:04 1708904                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/cStringIO.so
+7fba21c3a000-7fba21c3c000 rw-p 00004000 08:04 1708904                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/cStringIO.so
+7fba21c3c000-7fba21c51000 r-xp 00000000 08:04 1708939                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/cPickle.so
+7fba21c51000-7fba21e50000 ---p 00015000 08:04 1708939                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/cPickle.so
+7fba21e50000-7fba21e51000 r--p 00014000 08:04 1708939                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/cPickle.so
+7fba21e51000-7fba21e52000 rw-p 00015000 08:04 1708939                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/cPickle.so
+7fba21e52000-7fba21e55000 r-xp 00000000 08:04 1708901                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_heapq.so
+7fba21e55000-7fba22054000 ---p 00003000 08:04 1708901                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_heapq.so
+7fba22054000-7fba22055000 r--p 00002000 08:04 1708901                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_heapq.so
+7fba22055000-7fba22057000 rw-p 00003000 08:04 1708901                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_heapq.so
+7fba22057000-7fba22061000 r-xp 00000000 08:04 1708931                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/itertools.so
+7fba22061000-7fba22261000 ---p 0000a000 08:04 1708931                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/itertools.so
+7fba22261000-7fba22262000 r--p 0000a000 08:04 1708931                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/itertools.so
+7fba22262000-7fba22267000 rw-p 0000b000 08:04 1708931                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/itertools.so
+7fba22267000-7fba2226f000 r-xp 00000000 08:04 1708920                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_collections.so
+7fba2226f000-7fba2246e000 ---p 00008000 08:04 1708920                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_collections.so
+7fba2246e000-7fba2246f000 r--p 00007000 08:04 1708920                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_collections.so
+7fba2246f000-7fba22471000 rw-p 00008000 08:04 1708920                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_collections.so
+7fba22471000-7fba2247a000 r-xp 00000000 08:04 1708923                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/operator.so
+7fba2247a000-7fba22679000 ---p 00009000 08:04 1708923                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/operator.so
+7fba22679000-7fba2267a000 r--p 00008000 08:04 1708923                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/operator.so
+7fba2267a000-7fba2267c000 rw-p 00009000 08:04 1708923                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/operator.so
+7fba2267c000-7fba226bc000 rw-p 00000000 00:00 0 
+7fba226bc000-7fba22769000 r-xp 00000000 08:04 2624981                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/core/umath.so
+7fba22769000-7fba22969000 ---p 000ad000 08:04 2624981                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/core/umath.so
+7fba22969000-7fba2296f000 rw-p 000ad000 08:04 2624981                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/core/umath.so
+7fba2296f000-7fba229b1000 rw-p 00000000 00:00 0 
+7fba229b1000-7fba229c7000 r-xp 00000000 08:04 1708942                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/datetime.so
+7fba229c7000-7fba22bc6000 ---p 00016000 08:04 1708942                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/datetime.so
+7fba22bc6000-7fba22bc7000 r--p 00015000 08:04 1708942                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/datetime.so
+7fba22bc7000-7fba22bca000 rw-p 00016000 08:04 1708942                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/datetime.so
+7fba22bca000-7fba22bcb000 rw-p 00000000 00:00 0 
+7fba22bcb000-7fba22d35000 r-xp 00000000 08:04 1709795                    /home/maggie/anaconda3/envs/py27/lib/libiomp5.so
+7fba22d35000-7fba22f35000 ---p 0016a000 08:04 1709795                    /home/maggie/anaconda3/envs/py27/lib/libiomp5.so
+7fba22f35000-7fba22f40000 rw-p 0016a000 08:04 1709795                    /home/maggie/anaconda3/envs/py27/lib/libiomp5.so
+7fba22f40000-7fba22f6f000 rw-p 00000000 00:00 0 
+7fba22f6f000-7fba24e21000 r-xp 00000000 08:04 57938099                   /home/maggie/anaconda3/envs/py27/lib/libmkl_core.so
+7fba24e21000-7fba25021000 ---p 01eb2000 08:04 57938099                   /home/maggie/anaconda3/envs/py27/lib/libmkl_core.so
+7fba25021000-7fba25029000 r--p 01eb2000 08:04 57938099                   /home/maggie/anaconda3/envs/py27/lib/libmkl_core.so
+7fba25029000-7fba2504b000 rw-p 01eba000 08:04 57938099                   /home/maggie/anaconda3/envs/py27/lib/libmkl_core.so
+7fba2504b000-7fba250a2000 rw-p 00000000 00:00 0 
+7fba250a2000-7fba26d34000 r-xp 00000000 08:04 57938101                   /home/maggie/anaconda3/envs/py27/lib/libmkl_intel_thread.so
+7fba26d34000-7fba26f34000 ---p 01c92000 08:04 57938101                   /home/maggie/anaconda3/envs/py27/lib/libmkl_intel_thread.so
+7fba26f34000-7fba26f37000 r--p 01c92000 08:04 57938101                   /home/maggie/anaconda3/envs/py27/lib/libmkl_intel_thread.so
+7fba26f37000-7fba27176000 rw-p 01c95000 08:04 57938101                   /home/maggie/anaconda3/envs/py27/lib/libmkl_intel_thread.so
+7fba27176000-7fba2717d000 rw-p 00000000 00:00 0 
+7fba2717d000-7fba279ff000 r-xp 00000000 08:04 57938090                   /home/maggie/anaconda3/envs/py27/lib/libmkl_intel_lp64.so
+7fba279ff000-7fba27bfe000 ---p 00882000 08:04 57938090                   /home/maggie/anaconda3/envs/py27/lib/libmkl_intel_lp64.so
+7fba27bfe000-7fba27bff000 r--p 00881000 08:04 57938090                   /home/maggie/anaconda3/envs/py27/lib/libmkl_intel_lp64.so
+7fba27bff000-7fba27c11000 rw-p 00882000 08:04 57938090                   /home/maggie/anaconda3/envs/py27/lib/libmkl_intel_lp64.so
+7fba27c11000-7fba27c16000 rw-p 00000000 00:00 0 
+7fba27c16000-7fba27dbb000 r-xp 00000000 08:04 2624957                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/core/multiarray.so
+7fba27dbb000-7fba27fba000 ---p 001a5000 08:04 2624957                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/core/multiarray.so
+7fba27fba000-7fba27fc9000 rw-p 001a4000 08:04 2624957                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/numpy/core/multiarray.so
+7fba27fc9000-7fba27fdb000 rw-p 00000000 00:00 0 
+7fba27fdb000-7fba27fe5000 r-xp 00000000 08:04 1708927                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/math.so
+7fba27fe5000-7fba281e5000 ---p 0000a000 08:04 1708927                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/math.so
+7fba281e5000-7fba281e6000 r--p 0000a000 08:04 1708927                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/math.so
+7fba281e6000-7fba281e8000 rw-p 0000b000 08:04 1708927                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/math.so
+7fba281e8000-7fba281f1000 r-xp 00000000 08:04 1708925                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_struct.so
+7fba281f1000-7fba283f1000 ---p 00009000 08:04 1708925                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_struct.so
+7fba283f1000-7fba283f2000 r--p 00009000 08:04 1708925                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_struct.so
+7fba283f2000-7fba283f4000 rw-p 0000a000 08:04 1708925                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_struct.so
+7fba283f4000-7fba28410000 r-xp 00000000 08:04 1708946                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_ctypes.so
+7fba28410000-7fba2860f000 ---p 0001c000 08:04 1708946                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_ctypes.so
+7fba2860f000-7fba28610000 r--p 0001b000 08:04 1708946                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_ctypes.so
+7fba28610000-7fba28614000 rw-p 0001c000 08:04 1708946                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_ctypes.so
+7fba28614000-7fba28686000 r-xp 00000000 08:02 654117                     /lib/x86_64-linux-gnu/libpcre.so.3.13.3
+7fba28686000-7fba28885000 ---p 00072000 08:02 654117                     /lib/x86_64-linux-gnu/libpcre.so.3.13.3
+7fba28885000-7fba28886000 r--p 00071000 08:02 654117                     /lib/x86_64-linux-gnu/libpcre.so.3.13.3
+7fba28886000-7fba28887000 rw-p 00072000 08:02 654117                     /lib/x86_64-linux-gnu/libpcre.so.3.13.3
+7fba28887000-7fba2888a000 r-xp 00000000 08:02 1317305                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fba2888a000-7fba28a89000 ---p 00003000 08:02 1317305                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fba28a89000-7fba28a8a000 r--p 00002000 08:02 1317305                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fba28a8a000-7fba28a8b000 rw-p 00003000 08:02 1317305                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fba28a8b000-7fba28a9f000 r-xp 00000000 08:02 654104                     /lib/x86_64-linux-gnu/libresolv-2.24.so
+7fba28a9f000-7fba28c9e000 ---p 00014000 08:02 654104                     /lib/x86_64-linux-gnu/libresolv-2.24.so
+7fba28c9e000-7fba28c9f000 r--p 00013000 08:02 654104                     /lib/x86_64-linux-gnu/libresolv-2.24.so
+7fba28c9f000-7fba28ca0000 rw-p 00014000 08:02 654104                     /lib/x86_64-linux-gnu/libresolv-2.24.so
+7fba28ca0000-7fba28ca2000 rw-p 00000000 00:00 0 
+7fba28ca2000-7fba28cc7000 r-xp 00000000 08:02 654169                     /lib/x86_64-linux-gnu/libselinux.so.1
+7fba28cc7000-7fba28ec6000 ---p 00025000 08:02 654169                     /lib/x86_64-linux-gnu/libselinux.so.1
+7fba28ec6000-7fba28ec7000 r--p 00024000 08:02 654169                     /lib/x86_64-linux-gnu/libselinux.so.1
+7fba28ec7000-7fba28ec8000 rw-p 00025000 08:02 654169                     /lib/x86_64-linux-gnu/libselinux.so.1
+7fba28ec8000-7fba28eca000 rw-p 00000000 00:00 0 
+7fba28eca000-7fba28ef2000 r-xp 00000000 08:04 3016135                    /home/maggie/anaconda3/envs/py27/lib/libxcb.so.1.1.0
+7fba28ef2000-7fba290f1000 ---p 00028000 08:04 3016135                    /home/maggie/anaconda3/envs/py27/lib/libxcb.so.1.1.0
+7fba290f1000-7fba290f2000 r--p 00027000 08:04 3016135                    /home/maggie/anaconda3/envs/py27/lib/libxcb.so.1.1.0
+7fba290f2000-7fba290f3000 rw-p 00028000 08:04 3016135                    /home/maggie/anaconda3/envs/py27/lib/libxcb.so.1.1.0
+7fba290f3000-7fba291e1000 r-xp 00000000 08:04 1051504                    /home/maggie/anaconda3/envs/py27/lib/libiconv.so.2.5.1
+7fba291e1000-7fba293e0000 ---p 000ee000 08:04 1051504                    /home/maggie/anaconda3/envs/py27/lib/libiconv.so.2.5.1
+7fba293e0000-7fba293e2000 rw-p 000ed000 08:04 1051504                    /home/maggie/anaconda3/envs/py27/lib/libiconv.so.2.5.1
+7fba293e2000-7fba293f8000 r-xp 00000000 08:04 57156936                   /home/maggie/anaconda3/envs/py27/lib/libz.so.1.2.11
+7fba293f8000-7fba295f7000 ---p 00016000 08:04 57156936                   /home/maggie/anaconda3/envs/py27/lib/libz.so.1.2.11
+7fba295f7000-7fba295f8000 r--p 00015000 08:04 57156936                   /home/maggie/anaconda3/envs/py27/lib/libz.so.1.2.11
+7fba295f8000-7fba295f9000 rw-p 00016000 08:04 57156936                   /home/maggie/anaconda3/envs/py27/lib/libz.so.1.2.11
+7fba295f9000-7fba2974a000 r-xp 00000000 08:04 1051533                    /home/maggie/anaconda3/envs/py27/lib/libxml2.so.2.9.4
+7fba2974a000-7fba29949000 ---p 00151000 08:04 1051533                    /home/maggie/anaconda3/envs/py27/lib/libxml2.so.2.9.4
+7fba29949000-7fba29953000 rw-p 00150000 08:04 1051533                    /home/maggie/anaconda3/envs/py27/lib/libxml2.so.2.9.4
+7fba29953000-7fba29954000 rw-p 00000000 00:00 0 
+7fba29954000-7fba299ad000 r-xp 00000000 08:04 1051648                    /home/maggie/anaconda3/envs/py27/lib/libharfbuzz.so.0.939.0
+7fba299ad000-7fba29bad000 ---p 00059000 08:04 1051648                    /home/maggie/anaconda3/envs/py27/lib/libharfbuzz.so.0.939.0
+7fba29bad000-7fba29bae000 r--p 00059000 08:04 1051648                    /home/maggie/anaconda3/envs/py27/lib/libharfbuzz.so.0.939.0
+7fba29bae000-7fba29baf000 rw-p 0005a000 08:04 1051648                    /home/maggie/anaconda3/envs/py27/lib/libharfbuzz.so.0.939.0
+7fba29baf000-7fba29bb0000 r-xp 00000000 08:04 57938715                   /home/maggie/anaconda3/envs/py27/lib/libgthread-2.0.so.0.5000.2
+7fba29bb0000-7fba29daf000 ---p 00001000 08:04 57938715                   /home/maggie/anaconda3/envs/py27/lib/libgthread-2.0.so.0.5000.2
+7fba29daf000-7fba29db0000 rw-p 00000000 08:04 57938715                   /home/maggie/anaconda3/envs/py27/lib/libgthread-2.0.so.0.5000.2
+7fba29db0000-7fba29de6000 r-xp 00000000 08:04 4067062                    /home/maggie/anaconda3/envs/py27/lib/libpng16.so.16.32.0
+7fba29de6000-7fba29fe5000 ---p 00036000 08:04 4067062                    /home/maggie/anaconda3/envs/py27/lib/libpng16.so.16.32.0
+7fba29fe5000-7fba29fe6000 r--p 00035000 08:04 4067062                    /home/maggie/anaconda3/envs/py27/lib/libpng16.so.16.32.0
+7fba29fe6000-7fba29fe7000 rw-p 00036000 08:04 4067062                    /home/maggie/anaconda3/envs/py27/lib/libpng16.so.16.32.0
+7fba29fe7000-7fba2a096000 r-xp 00000000 08:04 3016338                    /home/maggie/anaconda3/envs/py27/lib/libpixman-1.so.0.34.0
+7fba2a096000-7fba2a295000 ---p 000af000 08:04 3016338                    /home/maggie/anaconda3/envs/py27/lib/libpixman-1.so.0.34.0
+7fba2a295000-7fba2a29d000 r--p 000ae000 08:04 3016338                    /home/maggie/anaconda3/envs/py27/lib/libpixman-1.so.0.34.0
+7fba2a29d000-7fba2a29e000 rw-p 000b6000 08:04 3016338                    /home/maggie/anaconda3/envs/py27/lib/libpixman-1.so.0.34.0
+7fba2a29e000-7fba2a2a5000 r-xp 00000000 08:04 57148123                   /home/maggie/anaconda3/envs/py27/lib/libffi.so.6.0.4
+7fba2a2a5000-7fba2a4a5000 ---p 00007000 08:04 57148123                   /home/maggie/anaconda3/envs/py27/lib/libffi.so.6.0.4
+7fba2a4a5000-7fba2a4a6000 r--p 00007000 08:04 57148123                   /home/maggie/anaconda3/envs/py27/lib/libffi.so.6.0.4
+7fba2a4a6000-7fba2a4a7000 rw-p 00008000 08:04 57148123                   /home/maggie/anaconda3/envs/py27/lib/libffi.so.6.0.4
+7fba2a4a7000-7fba2a4ea000 r-xp 00000000 08:04 57938304                   /home/maggie/anaconda3/envs/py27/lib/libpcre.so.1.2.7
+7fba2a4ea000-7fba2a6e9000 ---p 00043000 08:04 57938304                   /home/maggie/anaconda3/envs/py27/lib/libpcre.so.1.2.7
+7fba2a6e9000-7fba2a6ea000 rw-p 00042000 08:04 57938304                   /home/maggie/anaconda3/envs/py27/lib/libpcre.so.1.2.7
+7fba2a6ea000-7fba2a6fb000 r-xp 00000000 08:02 1317316                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fba2a6fb000-7fba2a8fa000 ---p 00011000 08:02 1317316                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fba2a8fa000-7fba2a8fb000 r--p 00010000 08:02 1317316                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fba2a8fb000-7fba2a8fc000 rw-p 00011000 08:02 1317316                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fba2a8fc000-7fba2a906000 r-xp 00000000 08:02 1320191                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7fba2a906000-7fba2ab05000 ---p 0000a000 08:02 1320191                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7fba2ab05000-7fba2ab06000 r--p 00009000 08:02 1320191                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7fba2ab06000-7fba2ab07000 rw-p 0000a000 08:02 1320191                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7fba2ab07000-7fba2ab11000 r-xp 00000000 08:02 1317322                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7fba2ab11000-7fba2ad10000 ---p 0000a000 08:02 1317322                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7fba2ad10000-7fba2ad11000 r--p 00009000 08:02 1317322                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7fba2ad11000-7fba2ad12000 rw-p 0000a000 08:02 1317322                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7fba2ad12000-7fba2ad21000 r-xp 00000000 08:02 1320193                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7fba2ad21000-7fba2af20000 ---p 0000f000 08:02 1320193                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7fba2af20000-7fba2af21000 r--p 0000e000 08:02 1320193                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7fba2af21000-7fba2af22000 rw-p 0000f000 08:02 1320193                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7fba2af22000-7fba2af24000 r-xp 00000000 08:02 1317318                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7fba2af24000-7fba2b123000 ---p 00002000 08:02 1317318                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7fba2b123000-7fba2b124000 r--p 00001000 08:02 1317318                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7fba2b124000-7fba2b125000 rw-p 00002000 08:02 1317318                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7fba2b125000-7fba2b12e000 r-xp 00000000 08:02 1317320                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7fba2b12e000-7fba2b32d000 ---p 00009000 08:02 1317320                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7fba2b32d000-7fba2b32e000 r--p 00008000 08:02 1317320                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7fba2b32e000-7fba2b32f000 rw-p 00009000 08:02 1317320                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7fba2b32f000-7fba2b3c3000 r-xp 00000000 08:04 57938389                   /home/maggie/anaconda3/envs/py27/lib/libfreetype.so.6.11.4
+7fba2b3c3000-7fba2b5c2000 ---p 00094000 08:04 57938389                   /home/maggie/anaconda3/envs/py27/lib/libfreetype.so.6.11.4
+7fba2b5c2000-7fba2b5c8000 r--p 00093000 08:04 57938389                   /home/maggie/anaconda3/envs/py27/lib/libfreetype.so.6.11.4
+7fba2b5c8000-7fba2b5c9000 rw-p 00099000 08:04 57938389                   /home/maggie/anaconda3/envs/py27/lib/libfreetype.so.6.11.4
+7fba2b5c9000-7fba2b606000 r-xp 00000000 08:04 1051580                    /home/maggie/anaconda3/envs/py27/lib/libfontconfig.so.1.9.2
+7fba2b606000-7fba2b805000 ---p 0003d000 08:04 1051580                    /home/maggie/anaconda3/envs/py27/lib/libfontconfig.so.1.9.2
+7fba2b805000-7fba2b807000 r--p 0003c000 08:04 1051580                    /home/maggie/anaconda3/envs/py27/lib/libfontconfig.so.1.9.2
+7fba2b807000-7fba2b80c000 rw-p 0003e000 08:04 1051580                    /home/maggie/anaconda3/envs/py27/lib/libfontconfig.so.1.9.2
+7fba2b80c000-7fba2b853000 r-xp 00000000 08:04 1051938                    /home/maggie/anaconda3/envs/py27/lib/libpango-1.0.so.0.4000.3
+7fba2b853000-7fba2ba53000 ---p 00047000 08:04 1051938                    /home/maggie/anaconda3/envs/py27/lib/libpango-1.0.so.0.4000.3
+7fba2ba53000-7fba2ba55000 r--p 00047000 08:04 1051938                    /home/maggie/anaconda3/envs/py27/lib/libpango-1.0.so.0.4000.3
+7fba2ba55000-7fba2ba56000 rw-p 00049000 08:04 1051938                    /home/maggie/anaconda3/envs/py27/lib/libpango-1.0.so.0.4000.3
+7fba2ba56000-7fba2ba6a000 r-xp 00000000 08:04 1051946                    /home/maggie/anaconda3/envs/py27/lib/libpangoft2-1.0.so.0.4000.3
+7fba2ba6a000-7fba2bc69000 ---p 00014000 08:04 1051946                    /home/maggie/anaconda3/envs/py27/lib/libpangoft2-1.0.so.0.4000.3
+7fba2bc69000-7fba2bc6a000 r--p 00013000 08:04 1051946                    /home/maggie/anaconda3/envs/py27/lib/libpangoft2-1.0.so.0.4000.3
+7fba2bc6a000-7fba2bc6b000 rw-p 00014000 08:04 1051946                    /home/maggie/anaconda3/envs/py27/lib/libpangoft2-1.0.so.0.4000.3
+7fba2bc6b000-7fba2bdfb000 r-xp 00000000 08:04 1051553                    /home/maggie/anaconda3/envs/py27/lib/libgio-2.0.so.0.5000.2
+7fba2bdfb000-7fba2bffa000 ---p 00190000 08:04 1051553                    /home/maggie/anaconda3/envs/py27/lib/libgio-2.0.so.0.5000.2
+7fba2bffa000-7fba2c003000 rw-p 0018f000 08:04 1051553                    /home/maggie/anaconda3/envs/py27/lib/libgio-2.0.so.0.5000.2
+7fba2c003000-7fba2c005000 rw-p 00000000 00:00 0 
+7fba2c005000-7fba2c027000 r-xp 00000000 08:02 1317841                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3600.5
+7fba2c027000-7fba2c227000 ---p 00022000 08:02 1317841                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3600.5
+7fba2c227000-7fba2c228000 r--p 00022000 08:02 1317841                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3600.5
+7fba2c228000-7fba2c229000 rw-p 00023000 08:02 1317841                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3600.5
+7fba2c229000-7fba2c36a000 r-xp 00000000 08:04 2100728                    /home/maggie/anaconda3/envs/py27/lib/libcairo.so.2.11400.8
+7fba2c36a000-7fba2c569000 ---p 00141000 08:04 2100728                    /home/maggie/anaconda3/envs/py27/lib/libcairo.so.2.11400.8
+7fba2c569000-7fba2c56d000 rw-p 00140000 08:04 2100728                    /home/maggie/anaconda3/envs/py27/lib/libcairo.so.2.11400.8
+7fba2c56d000-7fba2c56e000 rw-p 00000000 00:00 0 
+7fba2c56e000-7fba2c591000 r-xp 00000000 08:02 1319173                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.22209.1
+7fba2c591000-7fba2c790000 ---p 00023000 08:02 1319173                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.22209.1
+7fba2c790000-7fba2c793000 r--p 00022000 08:02 1319173                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.22209.1
+7fba2c793000-7fba2c794000 rw-p 00025000 08:02 1319173                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.22209.1
+7fba2c794000-7fba2c799000 r-xp 00000000 08:02 1318846                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7fba2c799000-7fba2c998000 ---p 00005000 08:02 1318846                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7fba2c998000-7fba2c999000 r--p 00004000 08:02 1318846                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7fba2c999000-7fba2c99a000 rw-p 00005000 08:02 1318846                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7fba2c99a000-7fba2c99c000 r-xp 00000000 08:02 1318852                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7fba2c99c000-7fba2cb9b000 ---p 00002000 08:02 1318852                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7fba2cb9b000-7fba2cb9c000 r--p 00001000 08:02 1318852                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7fba2cb9c000-7fba2cb9d000 rw-p 00002000 08:02 1318852                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7fba2cb9d000-7fba2cb9f000 r-xp 00000000 08:02 1320189                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7fba2cb9f000-7fba2cd9e000 ---p 00002000 08:02 1320189                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7fba2cd9e000-7fba2cd9f000 r--p 00001000 08:02 1320189                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7fba2cd9f000-7fba2cda0000 rw-p 00002000 08:02 1320189                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7fba2cda0000-7fba2ceda000 r-xp 00000000 08:02 1317313                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fba2ceda000-7fba2d0da000 ---p 0013a000 08:02 1317313                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fba2d0da000-7fba2d0db000 r--p 0013a000 08:02 1317313                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fba2d0db000-7fba2d0e0000 rw-p 0013b000 08:02 1317313                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fba2d0e0000-7fba2d0ec000 r-xp 00000000 08:04 1051942                    /home/maggie/anaconda3/envs/py27/lib/libpangocairo-1.0.so.0.4000.3
+7fba2d0ec000-7fba2d2eb000 ---p 0000c000 08:04 1051942                    /home/maggie/anaconda3/envs/py27/lib/libpangocairo-1.0.so.0.4000.3
+7fba2d2eb000-7fba2d2ec000 r--p 0000b000 08:04 1051942                    /home/maggie/anaconda3/envs/py27/lib/libpangocairo-1.0.so.0.4000.3
+7fba2d2ec000-7fba2d2ed000 rw-p 0000c000 08:04 1051942                    /home/maggie/anaconda3/envs/py27/lib/libpangocairo-1.0.so.0.4000.3
+7fba2d2ed000-7fba2d2f0000 r-xp 00000000 08:04 57938707                   /home/maggie/anaconda3/envs/py27/lib/libgmodule-2.0.so.0.5000.2
+7fba2d2f0000-7fba2d4ef000 ---p 00003000 08:04 57938707                   /home/maggie/anaconda3/envs/py27/lib/libgmodule-2.0.so.0.5000.2
+7fba2d4ef000-7fba2d4f0000 rw-p 00002000 08:04 57938707                   /home/maggie/anaconda3/envs/py27/lib/libgmodule-2.0.so.0.5000.2
+7fba2d4f0000-7fba2d4f7000 r-xp 00000000 08:02 654105                     /lib/x86_64-linux-gnu/librt-2.24.so
+7fba2d4f7000-7fba2d6f6000 ---p 00007000 08:02 654105                     /lib/x86_64-linux-gnu/librt-2.24.so
+7fba2d6f6000-7fba2d6f7000 r--p 00006000 08:02 654105                     /lib/x86_64-linux-gnu/librt-2.24.so
+7fba2d6f7000-7fba2d6f8000 rw-p 00007000 08:02 654105                     /lib/x86_64-linux-gnu/librt-2.24.so
+7fba2d6f8000-7fba2d80c000 r-xp 00000000 08:04 1051557                    /home/maggie/anaconda3/envs/py27/lib/libglib-2.0.so.0.5000.2
+7fba2d80c000-7fba2da0b000 ---p 00114000 08:04 1051557                    /home/maggie/anaconda3/envs/py27/lib/libglib-2.0.so.0.5000.2
+7fba2da0b000-7fba2da0e000 rw-p 00113000 08:04 1051557                    /home/maggie/anaconda3/envs/py27/lib/libglib-2.0.so.0.5000.2
+7fba2da0e000-7fba2da0f000 rw-p 00000000 00:00 0 
+7fba2da0f000-7fba2da5c000 r-xp 00000000 08:04 1051564                    /home/maggie/anaconda3/envs/py27/lib/libgobject-2.0.so.0.5000.2
+7fba2da5c000-7fba2dc5c000 ---p 0004d000 08:04 1051564                    /home/maggie/anaconda3/envs/py27/lib/libgobject-2.0.so.0.5000.2
+7fba2dc5c000-7fba2dc5e000 rw-p 0004d000 08:04 1051564                    /home/maggie/anaconda3/envs/py27/lib/libgobject-2.0.so.0.5000.2
+7fba2dc5e000-7fba2dd0e000 r-xp 00000000 08:02 1320688                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.31
+7fba2dd0e000-7fba2df0d000 ---p 000b0000 08:02 1320688                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.31
+7fba2df0d000-7fba2df11000 r--p 000af000 08:02 1320688                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.31
+7fba2df11000-7fba2df13000 rw-p 000b3000 08:02 1320688                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.31
+7fba2df13000-7fba2e34f000 r-xp 00000000 08:02 1320689                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.31
+7fba2e34f000-7fba2e54e000 ---p 0043c000 08:02 1320689                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.31
+7fba2e54e000-7fba2e555000 r--p 0043b000 08:02 1320689                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.31
+7fba2e555000-7fba2e559000 rw-p 00442000 08:02 1320689                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.31
+7fba2e559000-7fba2e55c000 rw-p 00000000 00:00 0 
+7fba2e55c000-7fba2e57e000 r-xp 00000000 08:04 57412163                   /home/maggie/anaconda3/envs/py27/lib/libgomp.so.1.0.0
+7fba2e57e000-7fba2e77d000 ---p 00022000 08:04 57412163                   /home/maggie/anaconda3/envs/py27/lib/libgomp.so.1.0.0
+7fba2e77d000-7fba2e77e000 r--p 00021000 08:04 57412163                   /home/maggie/anaconda3/envs/py27/lib/libgomp.so.1.0.0
+7fba2e77e000-7fba2e77f000 rw-p 00022000 08:04 57412163                   /home/maggie/anaconda3/envs/py27/lib/libgomp.so.1.0.0
+7fba2e77f000-7fba2e790000 r-xp 00000000 08:04 57412157                   /home/maggie/anaconda3/envs/py27/lib/libgcc_s.so.1
+7fba2e790000-7fba2e98f000 ---p 00011000 08:04 57412157                   /home/maggie/anaconda3/envs/py27/lib/libgcc_s.so.1
+7fba2e98f000-7fba2e990000 r--p 00010000 08:04 57412157                   /home/maggie/anaconda3/envs/py27/lib/libgcc_s.so.1
+7fba2e990000-7fba2e991000 rw-p 00011000 08:04 57412157                   /home/maggie/anaconda3/envs/py27/lib/libgcc_s.so.1
+7fba2e991000-7fba2eabb000 r-xp 00000000 08:04 57542560                   /home/maggie/anaconda3/envs/py27/lib/libstdc++.so.6.0.24
+7fba2eabb000-7fba2ecba000 ---p 0012a000 08:04 57542560                   /home/maggie/anaconda3/envs/py27/lib/libstdc++.so.6.0.24
+7fba2ecba000-7fba2ecc4000 r--p 00129000 08:04 57542560                   /home/maggie/anaconda3/envs/py27/lib/libstdc++.so.6.0.24
+7fba2ecc4000-7fba2ecc8000 rw-p 00133000 08:04 57542560                   /home/maggie/anaconda3/envs/py27/lib/libstdc++.so.6.0.24
+7fba2ecc8000-7fba2eccb000 rw-p 00000000 00:00 0 
+7fba2eccb000-7fba2ef18000 r-xp 00000000 08:04 7215501                    /home/maggie/anaconda3/envs/py27/lib/libopencv_core.so.2.4.11
+7fba2ef18000-7fba2f117000 ---p 0024d000 08:04 7215501                    /home/maggie/anaconda3/envs/py27/lib/libopencv_core.so.2.4.11
+7fba2f117000-7fba2f11b000 r--p 0024c000 08:04 7215501                    /home/maggie/anaconda3/envs/py27/lib/libopencv_core.so.2.4.11
+7fba2f11b000-7fba2f124000 rw-p 00250000 08:04 7215501                    /home/maggie/anaconda3/envs/py27/lib/libopencv_core.so.2.4.11
+7fba2f124000-7fba2f127000 rw-p 00000000 00:00 0 
+7fba2f127000-7fba2f356000 r-xp 00000000 08:04 7215516                    /home/maggie/anaconda3/envs/py27/lib/libopencv_imgproc.so.2.4.11
+7fba2f356000-7fba2f556000 ---p 0022f000 08:04 7215516                    /home/maggie/anaconda3/envs/py27/lib/libopencv_imgproc.so.2.4.11
+7fba2f556000-7fba2f55d000 r--p 0022f000 08:04 7215516                    /home/maggie/anaconda3/envs/py27/lib/libopencv_imgproc.so.2.4.11
+7fba2f55d000-7fba2f55f000 rw-p 00236000 08:04 7215516                    /home/maggie/anaconda3/envs/py27/lib/libopencv_imgproc.so.2.4.11
+7fba2f55f000-7fba2f5f4000 rw-p 00000000 00:00 0 
+7fba2f5f4000-7fba2f612000 r-xp 00000000 08:04 7215531                    /home/maggie/anaconda3/envs/py27/lib/libopencv_photo.so.2.4.11
+7fba2f612000-7fba2f811000 ---p 0001e000 08:04 7215531                    /home/maggie/anaconda3/envs/py27/lib/libopencv_photo.so.2.4.11
+7fba2f811000-7fba2f812000 r--p 0001d000 08:04 7215531                    /home/maggie/anaconda3/envs/py27/lib/libopencv_photo.so.2.4.11
+7fba2f812000-7fba2f813000 rw-p 0001e000 08:04 7215531                    /home/maggie/anaconda3/envs/py27/lib/libopencv_photo.so.2.4.11
+7fba2f813000-7fba2fa47000 r-xp 00000000 08:04 7215513                    /home/maggie/anaconda3/envs/py27/lib/libopencv_highgui.so.2.4.11
+7fba2fa47000-7fba2fc46000 ---p 00234000 08:04 7215513                    /home/maggie/anaconda3/envs/py27/lib/libopencv_highgui.so.2.4.11
+7fba2fc46000-7fba2fc4e000 r--p 00233000 08:04 7215513                    /home/maggie/anaconda3/envs/py27/lib/libopencv_highgui.so.2.4.11
+7fba2fc4e000-7fba2fc57000 rw-p 0023b000 08:04 7215513                    /home/maggie/anaconda3/envs/py27/lib/libopencv_highgui.so.2.4.11
+7fba2fc57000-7fba2fc5f000 rw-p 00000000 00:00 0 
+7fba2fc5f000-7fba2fcdd000 r-xp 00000000 08:04 7215528                    /home/maggie/anaconda3/envs/py27/lib/libopencv_objdetect.so.2.4.11
+7fba2fcdd000-7fba2fedd000 ---p 0007e000 08:04 7215528                    /home/maggie/anaconda3/envs/py27/lib/libopencv_objdetect.so.2.4.11
+7fba2fedd000-7fba2fede000 r--p 0007e000 08:04 7215528                    /home/maggie/anaconda3/envs/py27/lib/libopencv_objdetect.so.2.4.11
+7fba2fede000-7fba2fedf000 rw-p 0007f000 08:04 7215528                    /home/maggie/anaconda3/envs/py27/lib/libopencv_objdetect.so.2.4.11
+7fba2fedf000-7fba2ff38000 r-xp 00000000 08:04 7215541                    /home/maggie/anaconda3/envs/py27/lib/libopencv_video.so.2.4.11
+7fba2ff38000-7fba30138000 ---p 00059000 08:04 7215541                    /home/maggie/anaconda3/envs/py27/lib/libopencv_video.so.2.4.11
+7fba30138000-7fba30139000 r--p 00059000 08:04 7215541                    /home/maggie/anaconda3/envs/py27/lib/libopencv_video.so.2.4.11
+7fba30139000-7fba3013a000 rw-p 0005a000 08:04 7215541                    /home/maggie/anaconda3/envs/py27/lib/libopencv_video.so.2.4.11
+7fba3013a000-7fba301b7000 r-xp 00000000 08:04 7215522                    /home/maggie/anaconda3/envs/py27/lib/libopencv_ml.so.2.4.11
+7fba301b7000-7fba303b7000 ---p 0007d000 08:04 7215522                    /home/maggie/anaconda3/envs/py27/lib/libopencv_ml.so.2.4.11
+7fba303b7000-7fba303b9000 r--p 0007d000 08:04 7215522                    /home/maggie/anaconda3/envs/py27/lib/libopencv_ml.so.2.4.11
+7fba303b9000-7fba303bb000 rw-p 0007f000 08:04 7215522                    /home/maggie/anaconda3/envs/py27/lib/libopencv_ml.so.2.4.11
+7fba303bb000-7fba30427000 r-xp 00000000 08:04 7215507                    /home/maggie/anaconda3/envs/py27/lib/libopencv_flann.so.2.4.11
+7fba30427000-7fba30627000 ---p 0006c000 08:04 7215507                    /home/maggie/anaconda3/envs/py27/lib/libopencv_flann.so.2.4.11
+7fba30627000-7fba3062a000 r--p 0006c000 08:04 7215507                    /home/maggie/anaconda3/envs/py27/lib/libopencv_flann.so.2.4.11
+7fba3062a000-7fba3062b000 rw-p 0006f000 08:04 7215507                    /home/maggie/anaconda3/envs/py27/lib/libopencv_flann.so.2.4.11
+7fba3062b000-7fba306d1000 r-xp 00000000 08:04 7215504                    /home/maggie/anaconda3/envs/py27/lib/libopencv_features2d.so.2.4.11
+7fba306d1000-7fba308d0000 ---p 000a6000 08:04 7215504                    /home/maggie/anaconda3/envs/py27/lib/libopencv_features2d.so.2.4.11
+7fba308d0000-7fba308d4000 r--p 000a5000 08:04 7215504                    /home/maggie/anaconda3/envs/py27/lib/libopencv_features2d.so.2.4.11
+7fba308d4000-7fba308d6000 rw-p 000a9000 08:04 7215504                    /home/maggie/anaconda3/envs/py27/lib/libopencv_features2d.so.2.4.11
+7fba308d6000-7fba308d7000 rw-p 00000000 00:00 0 
+7fba308d7000-7fba309b0000 r-xp 00000000 08:04 7215495                    /home/maggie/anaconda3/envs/py27/lib/libopencv_calib3d.so.2.4.11
+7fba309b0000-7fba30baf000 ---p 000d9000 08:04 7215495                    /home/maggie/anaconda3/envs/py27/lib/libopencv_calib3d.so.2.4.11
+7fba30baf000-7fba30bb0000 r--p 000d8000 08:04 7215495                    /home/maggie/anaconda3/envs/py27/lib/libopencv_calib3d.so.2.4.11
+7fba30bb0000-7fba30bb1000 rw-p 000d9000 08:04 7215495                    /home/maggie/anaconda3/envs/py27/lib/libopencv_calib3d.so.2.4.11
+7fba30bb1000-7fba30ccb000 r-xp 00000000 08:04 7215519                    /home/maggie/anaconda3/envs/py27/lib/libopencv_legacy.so.2.4.11
+7fba30ccb000-7fba30ecb000 ---p 0011a000 08:04 7215519                    /home/maggie/anaconda3/envs/py27/lib/libopencv_legacy.so.2.4.11
+7fba30ecb000-7fba30ece000 r--p 0011a000 08:04 7215519                    /home/maggie/anaconda3/envs/py27/lib/libopencv_legacy.so.2.4.11
+7fba30ece000-7fba30ed1000 rw-p 0011d000 08:04 7215519                    /home/maggie/anaconda3/envs/py27/lib/libopencv_legacy.so.2.4.11
+7fba30ed1000-7fba30ed2000 rw-p 00000000 00:00 0 
+7fba30ed2000-7fba30eef000 r-xp 00000000 08:04 7215525                    /home/maggie/anaconda3/envs/py27/lib/libopencv_nonfree.so.2.4.11
+7fba30eef000-7fba310ef000 ---p 0001d000 08:04 7215525                    /home/maggie/anaconda3/envs/py27/lib/libopencv_nonfree.so.2.4.11
+7fba310ef000-7fba310f0000 r--p 0001d000 08:04 7215525                    /home/maggie/anaconda3/envs/py27/lib/libopencv_nonfree.so.2.4.11
+7fba310f0000-7fba310f1000 rw-p 0001e000 08:04 7215525                    /home/maggie/anaconda3/envs/py27/lib/libopencv_nonfree.so.2.4.11
+7fba310f1000-7fba311e5000 r-xp 00000000 08:04 7215498                    /home/maggie/anaconda3/envs/py27/lib/libopencv_contrib.so.2.4.11
+7fba311e5000-7fba313e5000 ---p 000f4000 08:04 7215498                    /home/maggie/anaconda3/envs/py27/lib/libopencv_contrib.so.2.4.11
+7fba313e5000-7fba313e7000 r--p 000f4000 08:04 7215498                    /home/maggie/anaconda3/envs/py27/lib/libopencv_contrib.so.2.4.11
+7fba313e7000-7fba313e9000 rw-p 000f6000 08:04 7215498                    /home/maggie/anaconda3/envs/py27/lib/libopencv_contrib.so.2.4.11
+7fba313e9000-7fba31528000 r-xp 00000000 08:04 7215551                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/cv2.so
+7fba31528000-7fba31727000 ---p 0013f000 08:04 7215551                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/cv2.so
+7fba31727000-7fba31728000 r--p 0013e000 08:04 7215551                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/cv2.so
+7fba31728000-7fba3173b000 rw-p 0013f000 08:04 7215551                    /home/maggie/anaconda3/envs/py27/lib/python2.7/site-packages/cv2.so
+7fba3173b000-7fba3173c000 rw-p 00000000 00:00 0 
+7fba3173c000-7fba318d7000 r--p 00000000 08:02 1308456                    /usr/lib/locale/locale-archive
+7fba318d7000-7fba318db000 r-xp 00000000 08:04 1708900                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_locale.so
+7fba318db000-7fba31ada000 ---p 00004000 08:04 1708900                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_locale.so
+7fba31ada000-7fba31adb000 r--p 00003000 08:04 1708900                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_locale.so
+7fba31adb000-7fba31adc000 rw-p 00004000 08:04 1708900                    /home/maggie/anaconda3/envs/py27/lib/python2.7/lib-dynload/_locale.so
+7fba31adc000-7fba31c71000 r-xp 00000000 08:02 654088                     /lib/x86_64-linux-gnu/libc-2.24.so
+7fba31c71000-7fba31e71000 ---p 00195000 08:02 654088                     /lib/x86_64-linux-gnu/libc-2.24.so
+7fba31e71000-7fba31e75000 r--p 00195000 08:02 654088                     /lib/x86_64-linux-gnu/libc-2.24.so
+7fba31e75000-7fba31e77000 rw-p 00199000 08:02 654088                     /lib/x86_64-linux-gnu/libc-2.24.so
+7fba31e77000-7fba31e7b000 rw-p 00000000 00:00 0 
+7fba31e7b000-7fba31f7e000 r-xp 00000000 08:02 654092                     /lib/x86_64-linux-gnu/libm-2.24.so
+7fba31f7e000-7fba3217d000 ---p 00103000 08:02 654092                     /lib/x86_64-linux-gnu/libm-2.24.so
+7fba3217d000-7fba3217e000 r--p 00102000 08:02 654092                     /lib/x86_64-linux-gnu/libm-2.24.so
+7fba3217e000-7fba3217f000 rw-p 00103000 08:02 654092                     /lib/x86_64-linux-gnu/libm-2.24.so
+7fba3217f000-7fba32181000 r-xp 00000000 08:02 654107                     /lib/x86_64-linux-gnu/libutil-2.24.so
+7fba32181000-7fba32380000 ---p 00002000 08:02 654107                     /lib/x86_64-linux-gnu/libutil-2.24.so
+7fba32380000-7fba32381000 r--p 00001000 08:02 654107                     /lib/x86_64-linux-gnu/libutil-2.24.so
+7fba32381000-7fba32382000 rw-p 00002000 08:02 654107                     /lib/x86_64-linux-gnu/libutil-2.24.so
+7fba32382000-7fba32385000 r-xp 00000000 08:02 654091                     /lib/x86_64-linux-gnu/libdl-2.24.so
+7fba32385000-7fba32584000 ---p 00003000 08:02 654091                     /lib/x86_64-linux-gnu/libdl-2.24.so
+7fba32584000-7fba32585000 r--p 00002000 08:02 654091                     /lib/x86_64-linux-gnu/libdl-2.24.so
+7fba32585000-7fba32586000 rw-p 00003000 08:02 654091                     /lib/x86_64-linux-gnu/libdl-2.24.so
+7fba32586000-7fba3259e000 r-xp 00000000 08:02 654103                     /lib/x86_64-linux-gnu/libpthread-2.24.so
+7fba3259e000-7fba3279d000 ---p 00018000 08:02 654103                     /lib/x86_64-linux-gnu/libpthread-2.24.so
+7fba3279d000-7fba3279e000 r--p 00017000 08:02 654103                     /lib/x86_64-linux-gnu/libpthread-2.24.so
+7fba3279e000-7fba3279f000 rw-p 00018000 08:02 654103                     /lib/x86_64-linux-gnu/libpthread-2.24.so
+7fba3279f000-7fba327a3000 rw-p 00000000 00:00 0 
+7fba327a3000-7fba32920000 r-xp 00000000 08:04 1053487                    /home/maggie/anaconda3/envs/py27/lib/libpython2.7.so.1.0
+7fba32920000-7fba32b1f000 ---p 0017d000 08:04 1053487                    /home/maggie/anaconda3/envs/py27/lib/libpython2.7.so.1.0
+7fba32b1f000-7fba32b23000 r--p 0017c000 08:04 1053487                    /home/maggie/anaconda3/envs/py27/lib/libpython2.7.so.1.0
+7fba32b23000-7fba32b5f000 rw-p 00180000 08:04 1053487                    /home/maggie/anaconda3/envs/py27/lib/libpython2.7.so.1.0
+7fba32b5f000-7fba32b80000 rw-p 00000000 00:00 0 
+7fba32b80000-7fba32ba3000 r-xp 00000000 08:02 654083                     /lib/x86_64-linux-gnu/ld-2.24.so
+7fba32bd2000-7fba32c92000 rw-p 00000000 00:00 0 
+7fba32cc3000-7fba32d87000 rw-p 00000000 00:00 0 
+7fba32d9e000-7fba32d9f000 rw-p 00000000 00:00 0 
+7fba32d9f000-7fba32da0000 rwxp 00000000 00:00 0 
+7fba32da0000-7fba32da3000 rw-p 00000000 00:00 0 
+7fba32da3000-7fba32da4000 r--p 00023000 08:02 654083                     /lib/x86_64-linux-gnu/ld-2.24.so
+7fba32da4000-7fba32da5000 rw-p 00024000 08:02 654083                     /lib/x86_64-linux-gnu/ld-2.24.so
+7fba32da5000-7fba32da6000 rw-p 00000000 00:00 0 
+7ffcbffd5000-7ffcbfffb000 rw-p 00000000 00:00 0                          [stack]
+7ffcbfffc000-7ffcbfffe000 r--p 00000000 00:00 0                          [vvar]
+7ffcbfffe000-7ffcc0000000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+Aborted
+
