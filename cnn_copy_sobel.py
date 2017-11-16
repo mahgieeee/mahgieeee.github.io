@@ -94,7 +94,7 @@ def get_edges(image_array):
     # draws physical rectangle to be cropped
     # cv2.rectangle(grayscale, (smallest_x, smallest_y), 
     #             (largest_x, largest_y), (0,255,0), 2)
-    offset = 15 
+    offset = 25 
     crop_original_image = image_array[smallest_y + offset:largest_y + offset, 
                                       smallest_x + offset:largest_x + offset]
     

@@ -11,6 +11,8 @@ image will be done through array slicing. This python 2 program will be
 implemented in the main cnn loader file, which will be incorporated with 
 the cropping of images as a function. The cnn will see the images cropped 
 and will not see the original image.  
+Nov 16: If offset is 50 or greater, the offset extends the original image when 
+pasted on the background (ValueError: tile cannot extend outside image)
 @author: maggie
 """
 from __future__ import print_function
@@ -31,18 +33,15 @@ import scipy.misc
 """code to get boundaries of contour shapes and crops the images based on the 
 location of the rectangular boundaries"""
 def get_edges(image_array):    
-    # change from np.float16 to np.float32 in pickletestcats file
-    # new_image_converted = image_array.astype(np.float32)
     # needed for cv2 to read the image in the proper color format
     original_img = cv2.cvtColor(np.array(image_array), cv2.COLOR_BGR2RGB)
 
     # requires the image to be in grayscale: 
-    # convert copy of original image array to grayscale
     grayscale = cv2.cvtColor(original_img, cv2.COLOR_BGR2GRAY)
     
     # Gaussian to remove noise from 
     img = cv2.GaussianBlur(grayscale,(3,3),0)
-    # Edge Detection Filter: use sobel algorithm to detect edges
+    # Edge Detection Filter: use sobel algorithm to detect contours
     sobelx = cv2.Sobel(img,cv2.CV_64F,1,0,ksize=5)  
     sobely = cv2.Sobel(img,cv2.CV_64F,0,1,ksize=5)  
     gradient_x = cv2.convertScaleAbs(sobelx)
@@ -80,7 +79,7 @@ def get_edges(image_array):
     # draws physical rectangle to be cropped
     # cv2.rectangle(grayscale, (smallest_x, smallest_y), 
     #             (largest_x, largest_y), (0,255,0), 2)
-    offset = 15 
+    offset = 25 
     crop_original_image = image_array[smallest_y + offset:largest_y + offset, 
                                       smallest_x + offset:largest_x + offset]
     
@@ -123,7 +122,7 @@ def train_model(train_file = 'cropped_random_shapes.pkl',
     name = []
     num_files = 200 
     for i in range(num_files):
-        name.append("cropped_sobel/pasted_shapes/paste_" + str(i) + ".jpg")
+        name.append("cropped_sobel/total_shapes/crop_" + str(i) + ".jpg")
         
     for x in range(num_files):
         scipy.misc.imsave(name[x], get_edges(train_shape_dataset[x]))
