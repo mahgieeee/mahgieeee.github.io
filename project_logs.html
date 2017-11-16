@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {
+*{
     box-sizing: border-box;
 }
 
@@ -15,19 +15,48 @@ body {
 
 /* Style the header */
 .header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
     background-color: #f1f1f1;
     padding: 20px;
     text-align: center;
 }
 
+H2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    color: #009900;
+}
+
+P {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.5;
+    letter-spacing: .25px;
+}
+
 /* Style the top navigation bar */
 .topnav {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    color: #009900;
     overflow: hidden;
     background-color: #333;
 }
 
 /* Style the topnav links */
 .topnav a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
     float: left;
     display: block;
     color: #f2f2f2;
@@ -38,6 +67,10 @@ body {
 
 /* Change color on hover */
 .topnav a:hover {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
     background-color: #ddd;
     color: black;
 }
@@ -54,7 +87,7 @@ body {
 
 /* Middle column */
 .column.middle {
-    width: 70%;
+    width: 85%;
 }
 
 /* Clear floats after the columns */
@@ -72,7 +105,13 @@ body {
 }
 
 .dropbtn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
     background-color: #4CAF50;
+    border-bottom: solid 1px #006600;
+    text-transform: uppercase;
     color: white;
     padding: 8px;
     font-size: 16px;
@@ -95,6 +134,10 @@ body {
 }
 
 .dropdown-content a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -111,46 +154,6 @@ body {
     background-color: #3e8e41;
 }
 
-
-.dropbtn1 {
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown1 {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content1 {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content1 a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content1 a:hover {background-color: #f1f1f1}
-
-.dropdown1:hover .dropdown-content1 {
-    display: block;
-}
-
-.dropdown1:hover .dropbtn1 {
-    background-color: #3e8e41;
-}
 </style>
 </head>
 <body>
@@ -213,6 +216,7 @@ body {
 <p><div class="dropdown">
   <button class="dropbtn">Simple Shapes CNN </button>
   <div class="dropdown-content">
+    <a href="Simple_Shapes_CNN/proposal.pdf">Neural Network Concept</a>
     <a href="Simple_Shapes_CNN/draw.py">Drawing random shapes</a>
     <a href="Simple_Shapes_CNN/reduce_images_pickle.py">Reduce image size</a>
     <a href="Simple_Shapes_CNN/pickletestcats.py">Creating pickle files</a>
@@ -221,9 +225,20 @@ body {
     <a href="Simple_Shapes_CNN/cnncopy.py">Basic CNN</a>
     <a href="Simple_Shapes_CNN/googlecloud_config_cnn.txt">Google Cloud Configuration</a>
     <a href="Simple_Shapes_CNN/cnn_copy_sobel.py">Contour Detection & Cropping</a>
+    
   </div>
 </div><p>
 
+<p><div class="dropdown">
+  <button class="dropbtn">Current Logs in CNN file</button>
+  <div class="dropdown-content">
+    <a href="segmentation_fault_nov14_testing_crop_in_cnn.txt">Simple testing of pickle loading with crop function</a>
+    <a href="cnn_sobel_py2.py">crop function</a>
+    <a href="cnn_sobel_main.py">crop function in main works except last input image load</a>
+    <a href="logs_generator_error.txt">fixed segmentation issue but issue with generator function</a>
+    <a href="cnn_copy_sobel.py"> cnn loader file with crop (current)</a>
+  </div>
+</div><p>
 </p>
 </div>
 
