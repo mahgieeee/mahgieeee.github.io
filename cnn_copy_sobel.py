@@ -17,7 +17,6 @@ from __future__ import print_function
 from __future__ import division
 import argparse
 import cv2
-from matplotlib import pyplot as plt
 from keras.models import Sequential
 from keras.layers import Conv2D
 from keras.layers import MaxPooling2D
@@ -45,18 +44,15 @@ Convolutional 2D layers will need to deal with the white background either
 by changing the stride in the convolution or making a function for stride 
 to stop at the end pixels of the cropped shape"""
 def get_edges(image_array):    
-    # change from np.float16 to np.float32 in pickletestcats file
-    # new_image_converted = image_array.astype(np.float32)
     # needed for cv2 to read the image in the proper color format
     original_img = cv2.cvtColor(np.array(image_array), cv2.COLOR_BGR2RGB)
 
     # requires the image to be in grayscale: 
-    # convert copy of original image array to grayscale
     grayscale = cv2.cvtColor(original_img, cv2.COLOR_BGR2GRAY)
     
     # Gaussian to remove noise from 
     img = cv2.GaussianBlur(grayscale,(3,3),0)
-    # Edge Detection Filter: use sobel algorithm to detect edges
+    # Edge Detection Filter: use sobel algorithm to detect contours
     sobelx = cv2.Sobel(img,cv2.CV_64F,1,0,ksize=5)  
     sobely = cv2.Sobel(img,cv2.CV_64F,0,1,ksize=5)  
     gradient_x = cv2.convertScaleAbs(sobelx)
@@ -94,23 +90,35 @@ def get_edges(image_array):
     # draws physical rectangle to be cropped
     # cv2.rectangle(grayscale, (smallest_x, smallest_y), 
     #             (largest_x, largest_y), (0,255,0), 2)
-    offset = 25 
+    offset = 30
     crop_original_image = image_array[smallest_y + offset:largest_y + offset, 
                                       smallest_x + offset:largest_x + offset]
+    #width, height = crop_original_image.shape[0], crop_original_image.shape[1]
+    print (crop_original_image.shape)
+     
+    # resize the image using ratio 
+    crop_image = Image.fromarray(np.uint8(crop_original_image))
+    crop_width = 300
+    percent = (crop_width / float(crop_image.size[0]))
+    crop_height = int((float(crop_image.size[1]) * float(percent)))
+    crop_image = crop_image.resize((crop_width, crop_height), Image.ANTIALIAS) #ANTIALIAS reserves quality
+    crop_image = np.array(crop_image, np.float32)
+    
+    # to deal with ambiguous images, just give it a single color 
+    if (crop_width < 50 or crop_height < 50):
+        crop_image[: , : , :] = [255, 255, 255] 
     
     # white background to create the same shapes (needed for keras generator)
     pasted_crop = Image.new("RGB", (300, 300), color = "white")
     # creating an image from a PIL array
-    new_image = Image.fromarray(np.uint8(crop_original_image))
-    width, height = crop_original_image.shape[0], crop_original_image.shape[1]
-    pasted_crop.paste(new_image, (0, 0, height, width))
+    new_image = Image.fromarray(np.uint8(crop_image))
+    pasted_crop.paste(new_image, (0, 0, crop_width, crop_height))
     # pasted_crop.show()
     
     # convert back to numpy array
     pasted_crop = np.array(pasted_crop, np.float32)
-    
-    return pasted_crop
 
+    return pasted_crop
 
 def train_model(train_file = 'random_shapes.pkl',
                 job_dir = './', 
@@ -177,7 +185,6 @@ def train_model(train_file = 'random_shapes.pkl',
     # check if optimizer adam is good, categorical_crossentropy is for 
     # multi-class network, multilabel with intersection needs binary_crossentropy
     # and sigmoid activations
-    # change from adam to rmsprop
     classifier.compile(optimizer = 'adam', 
                        loss = 'categorical_crossentropy', 
                        metrics = ['accuracy'])
@@ -235,7 +242,7 @@ def train_model(train_file = 'random_shapes.pkl',
                                         batch_size = 32)
     classifier.fit_generator(train_generator_half, 
                              steps_per_epoch = len(train_shape_halfdataset) / 32, 
-                             epochs = 20,
+                             epochs = 30,
                              callbacks = [early_stopping],
                              validation_data =  validate_generator,
                              validation_steps = 300)

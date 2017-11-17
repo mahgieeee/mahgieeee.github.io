@@ -79,22 +79,34 @@ def get_edges(image_array):
     # draws physical rectangle to be cropped
     # cv2.rectangle(grayscale, (smallest_x, smallest_y), 
     #             (largest_x, largest_y), (0,255,0), 2)
-    offset = 25 
+    offset = 30
     crop_original_image = image_array[smallest_y + offset:largest_y + offset, 
                                       smallest_x + offset:largest_x + offset]
+    #width, height = crop_original_image.shape[0], crop_original_image.shape[1]
+    print (crop_original_image.shape)
+     
+    # resize the image using ratio 
+    crop_image = Image.fromarray(np.uint8(crop_original_image))
+    crop_width = 300
+    percent = (crop_width / float(crop_image.size[0]))
+    crop_height = int((float(crop_image.size[1]) * float(percent)))
+    crop_image = crop_image.resize((crop_width, crop_height), Image.ANTIALIAS) #ANTIALIAS reserves quality
+    crop_image = np.array(crop_image, np.float32)
+    
+    # to deal with ambiguous images, just give it a single color 
+    if (crop_width < 50 or crop_height < 50):
+        crop_image[: , : , :] = [255, 255, 255] 
     
     # white background to create the same shapes (needed for keras generator)
     pasted_crop = Image.new("RGB", (300, 300), color = "white")
     # creating an image from a PIL array
-    new_image = Image.fromarray(np.uint8(crop_original_image))
-    width, height = crop_original_image.shape[0], crop_original_image.shape[1]
-    pasted_crop.paste(new_image, (0, 0, height, width))
+    new_image = Image.fromarray(np.uint8(crop_image))
+    pasted_crop.paste(new_image, (0, 0, crop_width, crop_height))
     # pasted_crop.show()
     
     # convert back to numpy array
     pasted_crop = np.array(pasted_crop, np.float32)
-    print ("shape of array", pasted_crop.shape)
-    
+
     '''plt.subplot(2,2,1),plt.imshow(image_array)
     plt.title('original image'), plt.xticks([]), plt.yticks([])
     plt.subplot(2,2,2),plt.imshow(grayscale)
