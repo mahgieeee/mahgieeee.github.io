@@ -13,5 +13,6 @@ setup(name='cnncopy',
           'keras',
           'h5py',
           'pillow',
-          'joblib'],
+          'joblib',
+          'opencv-python'],
       zip_safe=False)

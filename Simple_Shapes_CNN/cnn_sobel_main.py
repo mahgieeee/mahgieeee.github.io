@@ -13,11 +13,12 @@ the cropping of images as a function. The cnn will see the images cropped
 and will not see the original image.  
 Nov 16: If offset is 50 or greater, the offset extends the original image when 
 pasted on the background (ValueError: tile cannot extend outside image)
+Need to convert np.array16 to np.array32 since cv2 doesn't support np.array16.
+
 @author: maggie
 """
 from __future__ import print_function
 import cv2
-from matplotlib import pyplot as plt
 import numpy as np
 from tensorflow.python.lib.io import file_io 
 import joblib
@@ -27,14 +28,15 @@ from datetime import datetime
 import scipy.misc
 
 """to run code locally:
-   python cnn_sobel_py2.py --job-dir ./ --train-file cropped_random_shapes.pkl
+   python cnn_sobel_py2.py --job-dir ./ --train-file random_shapes_test.pkl
 """
     
 """code to get boundaries of contour shapes and crops the images based on the 
 location of the rectangular boundaries"""
 def get_edges(image_array):    
     # needed for cv2 to read the image in the proper color format
-    original_img = cv2.cvtColor(np.array(image_array), cv2.COLOR_BGR2RGB)
+    new_image_converted = image_array.astype(np.float32)
+    original_img = cv2.cvtColor(new_image_converted, cv2.COLOR_BGR2RGB)
 
     # requires the image to be in grayscale: 
     grayscale = cv2.cvtColor(original_img, cv2.COLOR_BGR2GRAY)
@@ -56,8 +58,8 @@ def get_edges(image_array):
     im2, contours, hierarchy = cv2.findContours(gradient_t, 
                                                 cv2.RETR_TREE, 
                                                 cv2.CHAIN_APPROX_SIMPLE)
-    cv2.drawContours(gradient_t, contours, 0, (0, 0, 255), 2)
-     
+    #cv2.drawContours(gradient_t, contours, 0, (0, 0, 255), 2)
+    print("contours:", contours)
     # with each contour, find 2 sets of coordinates to draw bounding rectangle
     # need to do list allocation here
     edge_list_x = []
@@ -79,44 +81,37 @@ def get_edges(image_array):
     # draws physical rectangle to be cropped
     # cv2.rectangle(grayscale, (smallest_x, smallest_y), 
     #             (largest_x, largest_y), (0,255,0), 2)
-    offset = 30
-    crop_original_image = image_array[smallest_y + offset:largest_y + offset, 
-                                      smallest_x + offset:largest_x + offset]
-    #width, height = crop_original_image.shape[0], crop_original_image.shape[1]
+    offset = 10
+    crop_original_image = image_array[smallest_y:largest_y + offset, 
+                                      smallest_x:largest_x + offset]
+    width, height = crop_original_image.shape[0], crop_original_image.shape[1]
     print (crop_original_image.shape)
      
     # resize the image using ratio 
-    crop_image = Image.fromarray(np.uint8(crop_original_image))
-    crop_width = 300
-    percent = (crop_width / float(crop_image.size[0]))
-    crop_height = int((float(crop_image.size[1]) * float(percent)))
-    crop_image = crop_image.resize((crop_width, crop_height), Image.ANTIALIAS) #ANTIALIAS reserves quality
-    crop_image = np.array(crop_image, np.float32)
+    #crop_image = Image.fromarray(np.uint8(crop_original_image))
+    #crop_width = 300
+    #percent = (crop_width / float(crop_image.size[0]))
+    #crop_height = int((float(crop_image.size[1]) * float(percent)))
+    #crop_image = crop_image.resize((crop_width, crop_height), Image.ANTIALIAS) #ANTIALIAS reserves quality
+    #crop_image = np.array(crop_image, np.float32)
     
     # to deal with ambiguous images, just give it a single color 
-    if (crop_width < 50 or crop_height < 50):
-        crop_image[: , : , :] = [255, 255, 255] 
+    #if (width < 50 or height < 50):
+    #    crop_original_image[: , : , :] = [255, 255, 255] 
     
     # white background to create the same shapes (needed for keras generator)
     pasted_crop = Image.new("RGB", (300, 300), color = "white")
-    # creating an image from a PIL array
-    new_image = Image.fromarray(np.uint8(crop_image))
-    pasted_crop.paste(new_image, (0, 0, crop_width, crop_height))
-    # pasted_crop.show()
+    # creating an image from a PIL numpy array
+    new_image = Image.fromarray(np.uint8(crop_original_image))
+    pasted_crop.paste(new_image, (0, 0, height, width))
     
     # convert back to numpy array
-    pasted_crop = np.array(pasted_crop, np.float32)
-
-    '''plt.subplot(2,2,1),plt.imshow(image_array)
-    plt.title('original image'), plt.xticks([]), plt.yticks([])
-    plt.subplot(2,2,2),plt.imshow(grayscale)
-    plt.title('grayscale'), plt.xticks([]), plt.yticks([])
-    plt.subplot(2,2,3),plt.imshow(crop_original_image)
-    plt.title('crop'), plt.xticks([]), plt.yticks([])'''
+    pasted_crop = np.array(pasted_crop, np.float16)
+    
     return pasted_crop
 
 
-def train_model(train_file = 'cropped_random_shapes.pkl',
+def train_model(train_file = 'random_shapes_test.pkl',
                 job_dir = './', 
                 **args):
      # set the loggining path for ML Engine logging to storage bucket
@@ -128,13 +123,15 @@ def train_model(train_file = 'cropped_random_shapes.pkl',
         # efficiently. 
         save = joblib.load(f)
         train_shape_dataset = save['train_shape_dataset']
-        train_y_dataset = save['train_y_dataset']
+        #train_y_dataset = save['train_y_dataset']
+        #validate_shape_dataset = save['validate_shape_dataset']
+        #validate_y_dataset = save['validate_y_dataset']
         del save  # hint to help gc free up memory 
       
     name = []
-    num_files = 200 
+    num_files = 1600 
     for i in range(num_files):
-        name.append("cropped_sobel/total_shapes/crop_" + str(i) + ".jpg")
+        name.append("test/crop_" + str(i) + ".jpg")
         
     for x in range(num_files):
         scipy.misc.imsave(name[x], get_edges(train_shape_dataset[x]))

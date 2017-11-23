@@ -8,10 +8,12 @@ import cairo
 import random 
 from multiprocessing import Pool
 import argparse
+
 """
 to execute this via command line:
-python draw.py --draw-func draw_circle --num-images 100 --file-dir test_set_args/circle1/circle_ 
+python draw.py --draw-func draw_circle --num-images 2000 --file-dir training_set/circle/circle_ 
 """
+
 def draw_objects(object, file_dir, filename):
     canvas = object(300,300)
     obj1 = canvas.background_color()
@@ -213,11 +215,7 @@ class Draw(object):
         
     def save_img(self, file_dir, filename):
         print (filename)
-        # dir = "test_set/circle1/"
-        # dir = "test_set_args/circle1/" 
-        # intersection = "circle."
         self.surface.write_to_png(file_dir + filename + ".png")
-        
         
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

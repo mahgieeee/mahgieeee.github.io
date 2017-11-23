@@ -34,7 +34,7 @@ import numpy as np
 #import pickle
 
 """to run code locally:
-   python cnn_copy_sobel.py --job-dir ./ --train-file cropped_random_shapes.pkl 
+   python cnn_copy_sobel_test.py --job-dir ./ --train-file random_shapes_test.pkl 
 """
     
 """code to get boundaries of contour shapes and crops the images based on the 
@@ -45,7 +45,10 @@ by changing the stride in the convolution or making a function for stride
 to stop at the end pixels of the cropped shape"""
 def get_edges(image_array):    
     # needed for cv2 to read the image in the proper color format
-    original_img = cv2.cvtColor(np.array(image_array), cv2.COLOR_BGR2RGB)
+    new_image_converted = image_array.astype(np.float32)
+    #since drawContours modifies the image make a copy of the input image_array
+    new_image_copy = new_image_converted.copy() 
+    original_img = cv2.cvtColor(new_image_copy, cv2.COLOR_BGR2RGB)
 
     # requires the image to be in grayscale: 
     grayscale = cv2.cvtColor(original_img, cv2.COLOR_BGR2GRAY)
@@ -62,12 +65,11 @@ def get_edges(image_array):
 
     # Threshold filter
     # create threshold to separate edges from background
-    # retval, thresh_gray = cv2.threshold(grayscale, thresh=127, 
-                                         # maxval=255, type=cv2.THRESH_BINARY)
+    retval, thresh_gray = cv2.threshold(grayscale, thresh=127, maxval=255, type=cv2.THRESH_BINARY)
     im2, contours, hierarchy = cv2.findContours(gradient_t, 
                                                 cv2.RETR_TREE, 
                                                 cv2.CHAIN_APPROX_SIMPLE)
-    cv2.drawContours(gradient_t, contours, 0, (0, 0, 255), 2)
+    #cv2.drawContours(gradient_t, contours, 0, (0, 0, 255), 2) 
      
     # with each contour, find 2 sets of coordinates to draw bounding rectangle
     # need to do list allocation here
@@ -90,37 +92,37 @@ def get_edges(image_array):
     # draws physical rectangle to be cropped
     # cv2.rectangle(grayscale, (smallest_x, smallest_y), 
     #             (largest_x, largest_y), (0,255,0), 2)
-    offset = 30
-    crop_original_image = image_array[smallest_y + offset:largest_y + offset, 
-                                      smallest_x + offset:largest_x + offset]
-    #width, height = crop_original_image.shape[0], crop_original_image.shape[1]
-    print (crop_original_image.shape)
+    offset = 15
+    crop_original_image = image_array[smallest_y:largest_y + offset, 
+                                      smallest_x:largest_x + offset]
+    width, height = crop_original_image.shape[0], crop_original_image.shape[1]
+    
+    if not contours:
+        return image_array
      
     # resize the image using ratio 
-    crop_image = Image.fromarray(np.uint8(crop_original_image))
-    crop_width = 300
-    percent = (crop_width / float(crop_image.size[0]))
-    crop_height = int((float(crop_image.size[1]) * float(percent)))
-    crop_image = crop_image.resize((crop_width, crop_height), Image.ANTIALIAS) #ANTIALIAS reserves quality
-    crop_image = np.array(crop_image, np.float32)
-    
+    #crop_image = Image.fromarray(np.uint8(crop_original_image))
+    #crop_width = 300
+    #percent = (crop_width / float(crop_image.size[0]))
+    #crop_height = int((float(crop_image.size[1]) * float(percent)))
+    #crop_image = crop_image.resize((crop_width, crop_height), Image.ANTIALIAS) #ANTIALIAS reserves quality
+    #crop_image = np.array(crop_image, np.float32)
     # to deal with ambiguous images, just give it a single color 
-    if (crop_width < 50 or crop_height < 50):
-        crop_image[: , : , :] = [255, 255, 255] 
+    #if (width < 50 or height < 50):
+    #    crop_original_image[: , : , :] = [255, 255, 255] 
     
     # white background to create the same shapes (needed for keras generator)
     pasted_crop = Image.new("RGB", (300, 300), color = "white")
-    # creating an image from a PIL array
-    new_image = Image.fromarray(np.uint8(crop_image))
-    pasted_crop.paste(new_image, (0, 0, crop_width, crop_height))
-    # pasted_crop.show()
+    # creating an image from a PIL numpy array
+    new_image = Image.fromarray(np.uint8(crop_original_image))
+    pasted_crop.paste(new_image, (0, 0, height, width))
     
     # convert back to numpy array
-    pasted_crop = np.array(pasted_crop, np.float32)
-
+    pasted_crop = np.array(pasted_crop, np.float16)
+    
     return pasted_crop
 
-def train_model(train_file = 'random_shapes.pkl',
+def train_model(train_file = 'random_shapes_test.pkl',
                 job_dir = './', 
                 **args):
     # set the loggining path for ML Engine logging to storage bucket
@@ -135,8 +137,6 @@ def train_model(train_file = 'random_shapes.pkl',
         save = joblib.load(f)
         train_shape_dataset = save['train_shape_dataset']
         train_y_dataset = save['train_y_dataset']
-        train_shape_halfdataset = save['train_shape_halfdataset']
-        train_y_halfdataset = save['train_y_halfdataset']
         validate_shape_dataset = save['validate_shape_dataset']
         validate_y_dataset = save['validate_y_dataset']
         del save  # hint to help gc free up memory
@@ -193,8 +193,8 @@ def train_model(train_file = 'random_shapes.pkl',
     # Feeding CNN the input images and fitting the CNN 
     # CNN uses data augmentation configuration to prevent overfitting
     # datagen augmentation is for training data input
-    datagen = ImageDataGenerator(featurewise_center = True,
-                                 featurewise_std_normalization = True,
+    datagen = ImageDataGenerator(#featurewise_center = True,
+                                 #featurewise_std_normalization = True,
                                  rescale = 1./255,
                                  shear_range = 0.2,
                                  zoom_range = 0.2,
@@ -202,15 +202,16 @@ def train_model(train_file = 'random_shapes.pkl',
                                  preprocessing_function = get_edges) 
                          
     # augmentation configuration for rescaling images used for validation 
-    validate_datagen = ImageDataGenerator(rescale = 1./255)
+    validate_datagen = ImageDataGenerator(rescale = 1./255,
+                                          preprocessing_function = get_edges)
     
     # the test set data augmentation only rescales the images 
     # is this enough to test the network correctly? if you want a more manual 
     # representation of fitting the input data use for loop
     validate_datagen.fit(validate_shape_dataset)
-    validate_generator = datagen.flow(validate_shape_dataset, 
-                                      validate_y_dataset, 
-                                      batch_size = 32)
+    validate_generator = validate_datagen.flow(validate_shape_dataset, 
+                                               validate_y_dataset, 
+                                               batch_size = 32)
     
     # the code below fits the training data that is loaded by pickle file 
     # to prevent memory error, 1/2 of the number of data inputs are feed first
@@ -221,33 +222,23 @@ def train_model(train_file = 'random_shapes.pkl',
     # 128 neurons for the first layer -> ReLU -> 128 for hidden layer -> ReLU 
     # -> 3 neurons for output layer -> softmax  
     
+    # early stopping prevent overfitting after the second half
+    early_stopping = EarlyStopping(monitor = 'val_loss', patience = 2)
+    
     # compute quantities required for featurewise normalization
     datagen.fit(train_shape_dataset)
     # fits the model on batches with real-time data augmentation
     train_generator = datagen.flow(train_shape_dataset, 
                                    train_y_dataset, 
                                    batch_size = 32)
-    classifier.fit_generator(train_generator, #train generator
+    classifier.fit_generator(train_generator, 
                              steps_per_epoch = len(train_shape_dataset) / 32, 
-                             epochs = 30)
-                             #validation_data =  validate_generator,
-                             #validation_steps = 300)
-    
-    # early stopping prevent overfitting after the second half
-    early_stopping = EarlyStopping(monitor = 'val_loss', patience = 2)
-    # feed the same data generator the other half of the dataset
-    datagen.fit(train_shape_halfdataset)
-    train_generator_half = datagen.flow(train_shape_halfdataset, 
-                                        train_y_halfdataset, 
-                                        batch_size = 32)
-    classifier.fit_generator(train_generator_half, 
-                             steps_per_epoch = len(train_shape_halfdataset) / 32, 
                              epochs = 30,
                              callbacks = [early_stopping],
                              validation_data =  validate_generator,
                              validation_steps = 300)
 
-	#evaluate the model 	               
+    # evaluate the model 	               
     score = classifier.evaluate(validate_shape_dataset, 
                                 validate_y_dataset, 
                                 verbose = 0)

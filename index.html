@@ -224,13 +224,12 @@ P {
 <p><div class="dropdown">
   <button class="dropbtn">Current Logs in CNN file</button>
   <div class="dropdown-content">
-    <a href="segmentation_fault_nov14_testing_crop_in_cnn.txt">Simple testing of pickle loading with crop function</a>
-    <a href="cnn_sobel_py2.py">crop function</a>
-    <a href="cnn_sobel_main.py">crop function in main works except last input image load</a>
-    <a href="logs_generator_error.txt">fixed segmentation issue but issue with generator function</a>
-    <a href="cnn_copy_sobel.py"> cnn main loader file with crop (current)</a>
-    <a href="cnn_sobel_py2.py"> save images of cropped dataset  (current)</a>
-    <a href="cnn_copy_layercrop.py"> test cnn on a small dataset with crop implementation </a>
+    <a href="Simple_Shapes_CNN/segmentation_fault_nov14_testing_crop_in_cnn.txt">Simple testing of pickle loading with crop function</a>
+    <a href="Simple_Shapes_CNN/cnn_sobel_py2.py">crop function</a>
+    <a href="Simple_Shapes_CNN/cnn_sobel_main.py">crop function in main works except last input image load</a>
+    <a href="Simple_Shapes_CNN/logs_generator_error.txt">fixed segmentation issue but issue with generator function</a>
+    <a href="Simple_Shapes_CNN/cnn_copy_sobel.py"> cnn main loader file with crop (current)</a>
+    <a href="Simple_Shapes_CNN/cnn_copy_layercrop.py"> Cropping as a Layer (doesn't work)</a>
   </div>
 </div><p>
 </p>
@@ -289,8 +288,8 @@ Increased the offset from 15 to 50 or even 100, to allow more space for boundary
 <p> 11.16.17: <br>
 The current designs of the cnn architecture are: <br>
 <b>Cropping as a Function Call V.S. Cropping as a Layer in between Convolutions</b><br>
-<img src="cnn_design1.jpg" alt="cnn_design" width="30%" height=auto>
-<img src="cnn_design.jpg" alt="cnn_design_crop" width="30%" height=auto style="float:left"> <br>
+<img src="Simple_Shapes_CNN/cnn_design1.jpg" alt="cnn_design" width="30%" height=auto>
+<img src="Simple_Shapes_CNN/cnn_design.jpg" alt="cnn_design_crop" width="30%" height=auto style="float:left"> <br>
 If offset is 50 or greater, the offset extends the original image when pasted on the background (ValueError: tile cannot extend outside image)
 Going to clarify the architecture of the cnn (number neurons adjustment) and adding more details that are consistent with the code in the 
 cnn loader file.  

@@ -43,41 +43,27 @@ if __name__ == '__main__':
     np.random.shuffle(train_data)
 
     # split list in half
-    train_data_half = train_data[ :: 3]
-    train_data_other_half = train_data[1 :: 3]
-    train_data_third = train_data [2 :: 3]
+    train_data_half = train_data[ :: 5]
+
     #validation_data_half = validation_data[ :: 3]
     
     train_shape_dataset, train_y_dataset = get_data('shapes.dat', 
                                                     'shapes_y.dat', 
                                                     train_data_half)
-    train_shape_halfdataset, train_y_halfdataset = get_data('shapes1.dat', 
-                                                            'shapes_y1.dat', 
-                                                            train_data_other_half)
-    train_shape_halfdataset1, train_y_halfdataset1 = get_data('shapes2.dat', 
-                                                            'shapes_y2.dat', 
-                                                            train_data_third)
+   
     validate_shape_dataset, validate_y_dataset = get_data('validate_shapes.dat', 
                                                           'validate_shapes_y.dat', 
                                                           validation_data)
 
     print ("in main: 1/third train shape", train_shape_dataset.shape)
     print ("in main: 1/third train y_label", train_y_dataset.shape)
-    print ("in main: 2/third train", train_shape_halfdataset.shape)
-    print ("in main: 2/third y_label", train_y_halfdataset.shape)
-    print ("in main: 2/third train", train_shape_halfdataset1.shape)
-    print ("in main: 2/third y_label", train_y_halfdataset1.shape)
     print ("in main: validate", validate_shape_dataset.shape)
     print ("in main: validate y_label", validate_y_dataset.shape)
 
     try:
-        f = open(str('random_shapes.pkl'), 'wb')
+        f = open(str('random_shapes_test.pkl'), 'wb')
         save = {'train_shape_dataset': train_shape_dataset,
                 'train_y_dataset': train_y_dataset,
-                'train_shape_halfdataset': train_shape_halfdataset,
-                'train_y_halfdataset': train_y_halfdataset,
-                'train_shape_halfdataset1': train_shape_halfdataset1,
-                'train_y_halfdataset1': train_y_halfdataset1,
                 'validate_shape_dataset': validate_shape_dataset,
                 'validate_y_dataset': validate_y_dataset,
                 }
