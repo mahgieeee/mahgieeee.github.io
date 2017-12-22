@@ -335,8 +335,94 @@ from x and y derivatives, which finalizes the pixels for the image contours. <br
 <tab2>The final layer will have four units because the number of output classes is four. The activation function for the last layer will be softmax, which squashes the probabilities of the output classes from zero to one. After the architecture of the neural network is defined as a Sequential model, the convolutional and dense layers for the single-label output with multi-class classification will be compiled. The optimizer for compiling the convolutional neural network is one of the most crucial parameters of the learning process. This is because the optimizer determines the learning rate, decay and momentum of the network for correct weight updates during the forward-pass and backpropogation.</p> 
 <h2>Data input into the convolutional neural network architecture</h2>
 <p>
-<tab2>
-
+<tab2>After the architecture of the network, the optimizer and the loss functions are defined, the convolutional neural network will be feed the input images. Keras image generator uses data augmentation to create variations of the image data ranging from scaling, rotating to flipping in a default batch size of 32 per data input. The training data generator consists of rescaling at 1./255, shearing at 0.2, zooming at 0.2, horizontal flip and preprocessing function get_edges. <br>
+<tab2>Training and validation data generators will fit the Sequential model on batches of 32 with real-time data augmentation (Keras.io). The validate data generator will be rescaled at 1./255 and will also be preprocessed with the function get_edges. Fitting the validation and training data generator will “compute quantities required for feature-wise normalization such as standard deviation, mean, and principal components if ZCA whitening is applied,” (Keras.io). Data augmentation will prevent overfitting if the augmented data has informative pixels. The early stopping of the convolutional neural network is applied to also prevent overfitting. The network will stop training after three epochs of nondecreasing improvement in the loss values. Finally, after the convolutional neural network is learning through adjusting weight parameters through supervised training with categorical cross entropy loss, the Sequential model is evaluated on a validation set in terms of the validation loss and the validation accuracy. The layers of the model and their corresponding output shapes are printed via the summary() method. The Sequential model is saved as a hierarchical data format (HDF5) file and will be loaded in another file for the testing set, which will predict and evaluate the output classes of the input image data. The testing set file makes predictions based from the trained model that has the network architecture, weight and loss values and optimizer.</p>
+<h2>Cropped Shapes with Different Dimensions Using Spatial Pyramid Pooling</h2>
+<p>
+<tab2>The spatial pyramid pooling functions as a layer in between the convolutional layers. It will be used to see if the loss of the convolutional neural network can be reduced. The program cnn_sobel_main.py saves the cropped images of different dimensions, 300 pixels by 300 pixels and 300 pixels by 150 pixels in their respective folders. The images are pickled into a tuple of image data array and output labels, merged and split into two separate lists of image data and categorical label encodings for training and validation sets. The cnn_sobel_spp.py file does not use the preprocessing function get_edges because the processed images are already cropped, scaled and saved accordingly in cnn_sobel_main.py. The architecture with spatial pyramid pooling will use Keras Sequential layered model. Spatial pyramid pooling allows different image sizes to be incorporated into the convolutional neural network by replacing the flatten layer with the spatial pyramid pooling([1, 2, 4]) layer. The max-pool layer is also not needed into between the two-dimensional convolutional layer. The parameter [1, 2, 4] list array represents 3 regions with 1, 2x2 and 4x4 max pools, which creates 21 outputs per feature map, (yhenon/keras-spp). The architecture of the network is as follows: convolutional two-dimensional layer, max-pool layer, dropout layer, spatial pyramid pooling layer, dense Layer, dropout layer and dense layer for output classes. The Sequential model is then fitted for the training dataset with 300 pixels by 300 pixels and the other training dataset with 300 pixels by 150 pixels.</p>
+<h2>Inception Model using Keras Functional API</h2>
+<p>
+<tab2>A smaller version of Google’s Inception model architecture can be created using Keras functional API. The Input instance allows a defined image size of the shape (300, 300, 3), where Input represents the input data being loaded from the pickle file. The Inception module architecture consists of piling two-dimensional convolutions on top of each other; these layers are called towers. The first layer of the tower will obtain the vectors of input image matrices from Input(). It is followed by the second consecutive layer of the two-dimensional convolutional layer, which will obtain the output from the first layer of the tower. The layering of these two consecutive convolutional layers can continue to as many towers as needed. The layers of the tower are concatenated into a single output and then flattened for the towered layers to feed into the fully connected layer. The fully connected layer follows the dense instance where the first dense layer gets data from the flattened output. There will be dropout after the first dense layer, which gets its input from the first fully connected layer. The functional input into the layer modules continues as needed where the final dense layer contains four neurons for soft-max activation to a probabilistic output class. An inception model is then created from the functional layering by using the model instance where the inputs represent the input data and the outputs represent the resulting layer, which is the fully connected layer. The data generator, early stopping and the fitting of the inception model remains the same as the previous convolutional neural network file. </p>
+<h2>Multi-output (Y-label) Multi-Class Classification</h2>
+<p>
+<tab2>The multi-output classification is different from the single-output classification during the compilation of the Sequential model as well at the last dense layer. The last dense layer is responsible for generating the output classes in supervised training. At the last dense layer, the number of neurons, which is the number of classes, remains the same. The sigmoid activation function is used instead of soft-max because soft-max makes it more evident for a single output classification. Multi-label classification does not have a chance probability of an image pertaining to a single class. A multi-label output image contains multiple classes, so the sigmoid activation will smooth out multiple probabilities of classes pertaining to the data image. The loss function for the Sequential model will be in binary cross-entropy instead of categorical cross-entropy because the binary cross-entropy represents an array of zero or one label of an input image where zero doesn’t belong to the class and one belongs to the class. For instance, the array [1 1 1 1] represents that the input image has all the shapes belonging to all the classes. <br>
+<tab2>The difference between the single-label output with multi-class classification and multi-label output with multi-class classification is that the multi-label output will learn the intersection of different shapes from different classes not just a single class. The training dataset will consist of two or more classes on a single image consisting of the labels (circle, triangle, square, rectangle), (circle, rectangle), (circle, rectangle, square), (circle, square), (circle, triangle), (circle, triangle, rectangle), (circle, triangle, square), (rectangle, square), (triangle, rectangle), (triangle, rectangle, square) and (triangle, square) to create a consistent layered effect of the images, the same images from the previous training dataset on single-label output is used. For the layering of the shapes on top of each other, each pickle file representing a shape is loaded and returned as a numpy array. Concatenating the numpy array, rather than as a list in the single-label output, will combine the layers of the image data, creating an intersection of different shapes. <br>
+<tab2>The file merge_pkl_files.py is an option for merge where the intersections of shapes are created by draw.py. It does so by returning each pickled shape as a numpy array and merging them into layers in the next corresponding file. Since each pickled file from the training dataset consists of 2,000 images per shape, the memory mapping of numpy arrays are used for numpy array data in the shape (number of shapes, 300, 300, 3) and their categorical encoding in the shape (number of shapes, 4). The Loader() class uses multiprocessing of independent pool workers to return serialized pickled numpy arrays into function results(), where list arrays are stored globally. A pickle file called individual_data_shapes.pkl is created to represent the memory mapping of the pixelized data of each shape dataset for training and validation. The program load_merge_intersection.py merges all numpy arrays that describes each shape's pixels into layers in the next corresponding file. Each numpy array of data pixels represents a layer of information rather than as a merged list. So, the training dataset will consist of a combination of each shape layer, creating layered intersections of the same shape data of the original dataset. This is for the addition of the convolutional neural network where each training data will have multiple outputs as a label of shapes instead of a single output. This creates two pickle files by running the same program twice with different variables and pickle files called intersection_shapes_one.pkl and intersection_shapes_two.pkl. The point of these pickle files is for another program, save_pickle_images.py, to save these as images by loading the intersected layers of these pickle files. <br>
+<tab2> After the images for the multi-label output with multi-class classification are created, the images will be organized in a pickle file like the one with the single-label output. The difference is in the second data structure, which is y-label, that is part of the (data image, y-label) tuple. This y-label will be created by the multi-label binarizer class. It is a numpy array in binary representing zero for no class representation and one for class representation. For example, an image that consists of all shapes will have the y-label [1 1 1 1]. An image that has a circle, triangle and rectangle will have the y_label [1 1 0 1]. The numpy.squeeze function is needed to remove the extra shape axis created by multi-label binarizer so that Keras can process the numpy list structure correctly. <br>
+<tab2> After these pickle files are created, the program merge_files.py merges all types of intersections into a single large list for training and validation data. It is very similar to the merge_files.py for single label output for multi-class classification. The difference is that there are a lot more files to load and merge. Since each intersection dataset consists of 2,000 images with a total of 22,000 images is a lot of repetitive data, half of each dataset is merged instead of the entire set with a total of 11,000 images. The validation data for the intersections consists of 200 images for each multi-label class, with a total of 2200, which is 20% of the training dataset. It dumps all the merged dataset, training dataset and validation dataset into a pickle file called data_shapes.pkl in order for load_all_intersections.py to create two large lists of the intersected data: the numpy image data list and its corresponding multi-label output. Similar to the single-label output, the multi-label output for the training dataset and the validation dataset are shuffled in order to randomize the data input for the convolutional neural network.</p>
+<h2>Conclusion of the optimal Convolutional Neural Network Architecture</h2>
+<p>
+<tab2>It is unclear which neural network architecture works better for generalization: 2 Dense layers or 3 Dense layers with the final Dense layer representing the output classes of the convolutional neural network. I am not sure if the white background from the cropped images should pertain to a class. Will that decrease the loss of the neural network? The lowest loss I can obtain from training the network is 0.3466. This has the architecture in the chart below:<br>
+adamax = Adamax(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0) #prev 0.002 <br>
+<table>
+  <tr>
+    <th>Num of filters</th>
+    <th>64</th>
+    <th> </th>
+    <th>128 </th>
+    <th> </th>
+    <th> </th>
+    <th>512</th>
+    <th>512</th>
+    <th>512</th>
+    <th> 4 </th>
+  </tr>
+  <tr>
+    <td>Layer Type</td>
+    <td>CONV_2D</td>
+    <td>MAXPOOL</td>
+    <td>CONV_2D</td>
+    <td>MAXPOOL</td>
+    <td>Flatten()</td>
+    <td>Dense()</td>
+    <td>Dense()</td>
+    <td>Dense()</td>
+    <td>Dense()</td>
+  </tr>
+  <tr>
+    <td>Conv. Size</td>
+    <td>(6,6)</td>
+    <td>(6,6)</td>
+    <td>(6,6)</td>
+    <td>(6,6)</td>
+    <td> </td>
+    <td>Dropout(0.35)</td>
+    <td>Dropout(0.35)</td>
+    <td>Dropout(0.35)</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>Padding</td>
+    <td>valid</td>
+    <td> </td>
+    <td>valid</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>activation</td>
+    <td>relu</td>
+    <td> </td>
+    <td>relu</td>
+    <td> </td>
+    <td> </td>
+    <td>relu</td>
+    <td>relu</td>
+    <td>relu</td>
+    <td>softmax</td>
+  </tr>
+</table></p>
+<p>
+Epoch 30/50<br>
+250/250 [==============================] - 233s - loss: 0.3466 - acc: 0.8096 - val_loss: 0.3560 - val_acc: 0.7869<br>
+Test loss: 4.95138476849<br>
+Test accuracy 0.673125<br>
+Total params: 4,041,156<br>
+Trainable params: 4,041,156</p>
 </div>
 </div>
 
