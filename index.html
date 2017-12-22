@@ -415,7 +415,7 @@ loader file, it will return the original image array without the cropping if
 the contours are empty. Cropping as a layer would not work in this case of exactly 
 cropping the background data because Keras’ Cropping2D layer crops all the input 
 images once, which will manipulate the data too much where you can’t figure out 
-squares from rectangles. <br>
+squares from rectangles. </p>
 <p> 11.20.17-12.1.17: <br>
 <tab2> The cropping of the images will be incorporated as a function since the 
 cropping as a layer only works for an entire dataset input, not per image. The 
@@ -437,7 +437,7 @@ activations. I will test that after this set has a better accuracy. I am reading
 on how to change my code to recurrent convolutional neural networks where the convolution 
 layer will get the pixelized data from the images, followed by a LSTM recurrent layer 
 which will perform object classification and detection using rectangular boundaries 
-rather than the Dense MLP layer I have currently. <br>
+rather than the Dense MLP layer I have currently. </p>
 <p> 12.5.17–12.8.17: <br> 
 <tab2> The compression of PNG image data is more than half the total size of JPG 
 total image data (from 225 MB for JPG to 64 MB for PNG for 16000 images). I decided 
@@ -454,7 +454,7 @@ it to be the same shape. There will be no preprocessing as a function used in th
 CNN loader file because I already did the cropping manually through the cnn_sobel_main.py 
 file and saving them as images. Basically, the Sobel algorithm crops the image, the Image 
 module fills it with the same background color and the cropped image is pasted on a 
-200 pixels by 200 pixels image. <br>
+200 pixels by 200 pixels image. </p>
 <p> 12.8.17–12.15.17: <br>
 <tab2> The model is underfitting the dataset since the validation loss is half 
 of the training loss. The loss got a lot lower to around 0.15, with an accuracy 
@@ -464,7 +464,7 @@ the training input and the number of layers in the CNN architecture. After the C
 architecture is changed, there’s much less of an underfit with a starting training 
 loss of 0.3778 and training accuracy of 0.8355, and the validation loss is 0.12 and 
 validation accuracy is 0.96. I’m not sure if that’s underfitting or if it’s good. 
-The training looks like it’s getting to a lower loss of 0.112. <br>
+The training looks like it’s getting to a lower loss of 0.112. </p>
 
 </div>
 </div>
