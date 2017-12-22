@@ -242,7 +242,7 @@ the nature of the system within the visual cortex."
 </div>
 
   <div class="column middle">
-  <div style="width:800px;height:700px;line-height:1.2em;overflow:auto;padding:0px;">
+  <div style="width:1000px;height:700px;line-height:1.2em;overflow:auto;padding:0px;">
     <h2>Project Logs for Simple Shapes using Convolutional Neural Network project</h2>
     <p>
     <p><div class="dropdown">
@@ -333,13 +333,15 @@ from x and y derivatives, which finalizes the pixels for the image contours. <br
 <tab2>After the 6 pixels by 6 pixels convolutions are individually formed and activated with the rectifier, the 6 pixels by 6 pixels pool size will down-sample the number of pixels per output filter for the first convolutional layer. Then, a second two-dimensional convolutional neural layer is added to the Sequential model. To enable a growth of learning, the number of output filters is increased twice as much from 128 in the first layer to 256 in the second convolutional layer. The stride is still (1,1) by default in Keras with a convolution size of (6,6) with no padding. The relu activation is also the summation output from the second convolutional layer. After the convolutional filters are created in the second layer, the pixels will be downsampled through maxpool. Maxpooling determines whether each pixel is similar or belong to the surrounding pixels. If it is, the pixel will be visible in the down-sampled layer whereas the pixel removed in the maxpool layer if not. <br>
 <tab2>After the formation of two convolutional layers with maxpool in between, the flattening of these layers allows the convolutional network to be fed into a traditional fully connected neural network. Keras requires that the flattening of the pixelized data input to have a defined shape in the format (width, height, color). The drawback of using convolutional layers is that the images must be the same size. However, convolutional layers are capable of extracting pixels and characteristics from the image data and processes them in layered filters. The basic multi-layer perceptron is not capable of directly extracting features from pixels. In the fully connected layer of the network, a Dense layer is added onto the Sequential model. A Dense layer represents a basic perceptron where 512 neurons are fully connected from the flattening layer to the output of the first Dense layer. The output again will be summed and calculated by the rectifier function. The dropout at the rate of 0.35 is added for the neural network to prevent overfitting. The neurons will be dropped out from the network, removing their connective weight functionality from the next Dense layer of the network. <br>
 <tab2>The final layer will have four units because the number of output classes is four. The activation function for the last layer will be softmax, which squashes the probabilities of the output classes from zero to one. After the architecture of the neural network is defined as a Sequential model, the convolutional and dense layers for the single-label output with multi-class classification will be compiled. The optimizer for compiling the convolutional neural network is one of the most crucial parameters of the learning process. This is because the optimizer determines the learning rate, decay and momentum of the network for correct weight updates during the forward-pass and backpropogation.</p> 
-
+<h2>Data input into the convolutional neural network architecture</h2>
+<p>
+<tab2>
 
 </div>
 </div>
 
   <div class="column side">
-  <div style="width:300px;height:700px;line-height:1.2em;overflow:auto;padding:0px;">
+  <div style="width:200px;height:700px;line-height:1.2em;overflow:auto;padding:0px;">
     <h2>Questions or Comments?</h2>
     <p><a href="mailto:maggie.cao.bc@gmail.com" style="text-decoration:none;">Email Me</a> 
    </p>
