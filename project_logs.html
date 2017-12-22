@@ -147,6 +147,10 @@ P {
     background-color: #3e8e41;
 }
 
+table, th, td {
+    border: 1px solid black;
+}
+
 </style>
 </head>
 <body>
@@ -258,6 +262,135 @@ the nature of the system within the visual cortex."
     </div>
   </div><p>
     </p>
+    
+   <p> Introduction: <br>
+	<tab2> Pattern classification and recognition, which is a field of machine learning, 
+	has been one of the most challenging tasks for a computer. This is because computers 
+	do not learn the same way as humans. Humans can generalize and have temporary memory, 
+	making it difficult for machines to be hard-coded in the natural technicalities of the human brain. 
+	However, neural networks embody a similar organization of how neurons interact with each other. 
+	Each weight of single neuron in the neural network represents how strong the neuron’s 
+	knowledge is about the data input. The neurons are connected to each other in each layer 
+	and in between layers, which is also called a fully connected layer. As each input data 
+	is propagated forward through the hidden layers of the neural network, there are activation 
+	functions which acts as a summation of the input values multiplied by the weights for the 
+	learning features to be feed into the next layer. As it reaches the last layer output, 
+	which is the main classifier because it determines the probability of the class, the 
+	data is backpropagated using sophisticated multivariable calculus to update the weights. <br> 
+	<tab2> Without the weight updates, the neural network would not be able to learn. Each 
+	epoch describes a single forward and backward pass. Since the project is about classifying 
+	images of simple shapes, which includes circle, triangle, rectangle and square, a convolutional 
+	neural network will be implemented. A convolutional neural network do not need feature extraction 
+	in the preprocessing of the input images. The layers of the convolutional neural network act as 
+	a feature detector by extracting actual pixels from the data image, gathering features from 
+	filters and maxpooling. Then, the convolutional neural network will be connected to a traditional 
+	fully connected neural network to perform image classification. </p>
+
+   <p> Problem, Solution and Enhancements: <br>
+	<tab2> There are a lot of problems that need to be solved in the simple shapes 
+	image classification project. The hardest part of this simple shapes image classification 
+	problem is to be able to get the convolutional neural network to generalize well without 
+	overfitting or underfitting the network model. It is hard to generalize because the input 
+	data is never perfect, and it is redundant for the convolutional neural network to process 
+	background data without the class object. The input data is created by using Python’s Cairo 
+	module, where single shapes of each class is drawn on random locations, rotations and scales 
+	on the 300 pixels by 300 pixels image. <br>
+	<tab2> The final solution to deal with the unnecessary background data is to use the Sobel 
+	algorithm to detect edges, crop the image, and paste it on the 200 pixels by 200 pixels 
+	canvas with the same background color. This must be done separately before the main convolutional 
+	neural network loader file because I need to manually check if data image is good. Good data 
+	means that the square and rectangles are not shifted to the side, the triangles are not so small 
+	and that the circles do not overextend the boundary, making the image indecipherable. Then, the 
+	200 pixels by 200 pixels cropped image will be feed into the convolutional neural network without 
+	the extra preprocessing function in the Keras’ Image Generator. <br>
+	<tab2> A typical CPU will not be able to execute a convolutional neural network. The convolutional 
+	neural network will be trained in Google Cloud’s virtual machine because a typical job submitted 
+	to the Google Cloud gives a memory error if the data input is around 8000 images for training. 
+	Increasing the number of GPUs for the job would not work because each GPU is assigned a fixed memory 
+	limit for a Google Cloud job. A virtual machine will allow the user to manually install Tensorflow 
+	from source. This is because it is very time consuming to train a convolutional neural network. It 
+	usually takes about two hours for training. Tensorflow is installed from source, which enables AWX 
+	instructions with GPU CUDA support for the Tesla K80. This speeds up the computation of the convolutional
+	neural network by three times as without installing Tensorflow from source. Hyperparameter tuning of 
+	the dropout layers is an option for the virtual machine to be implemented with Google Cloud’s 
+	storage bucket of the project. </p>
+	<p> Summary: <br>
+	<tab2> During training of the convolutional neural network, the network is not able to go 
+	below a loss of 0.38 or reach an accuracy higher than 80% for any epoch. Based on the documentation, 
+	the network looks like it is being overfitted because the validation accuracy is lower than the 
+	training accuracy. I find that very peculiar and originally thought it was because I was using an 
+	incorrect network architecture and loss optimizer for the loss function. I tested on many versions 
+	of different network architectures, activation functions and optimizers, but the network still won’t go 
+	below 0.38. The major mistake I made was that I assumed I had perfect data images since I made my own data. 
+	I didn’t check if the data images are reliable. I had to manually check every training and validation image 
+	data to ensure that the data is clear for the neural network to process. After fixing the data images, the 
+	training of the convolutional neural network is being underfitted because the validation accuracy is twice 
+	as much as the training accuracy and the validation loss is half of the training loss as the first several 
+	epochs. This is shown in training output documentation: <br>
+   208/207 [==============================] - 62s - loss: 0.8218 - acc: 0.6593 - val_loss: 0.4303 - val_acc: 0.8694 <br>
+   <tab2> I tried increasing the layers of the convolutional neural network and reducing the dropout and 
+   maxpool layers and it seems to work. The current convolutional neural network architecture is described 
+   in the below chart. It also trains in PNG data instead of JPG because the compressed pickled files are much smaller (65MB). </p>
+   <table>
+  <tr>
+    <th>Num of filters</th>
+    <th>64</th>
+    <th> </th>
+    <th>64</th>
+    <th> </th>
+    <th> </th>
+    <th> 256 </th>
+    <th> 256 </th>
+    <th> 256 </th>
+    <th> 4 </th>
+  </tr>
+  <tr>
+    <td>Layer Type</td>
+    <td>CONV_2D</td>
+    <td>CONV_2D</td>
+    <td>MAXPOOL</td>
+    <td>CONV_2D</td>
+    <td>MAXPOOL</td>
+    <td>Flatten()</td>
+    <td>Dense()</td>
+    <td>Dense()</td>
+    <td>Dense()</td>
+    <td>Dense()</td>
+  </tr>
+  <tr>
+    <td>Conv. Size</td>
+    <td>(3,3)</td>
+    <td>(6,6)</td>
+    <td>(6,6)</td>
+    <td>(6,6)</td>
+    <td>(6,6)</td>
+    <td> </td>
+    <td> </td>
+    <td>Dropout(0.15)</td>
+    <td>Dropout(0.15)</td>
+  </tr>
+  <tr>
+    <td>Padding</td>
+    <td>valid</td>
+    <td>valid</td>
+    <td> </td>
+    <td>valid</td>
+  </tr>
+  <tr>
+    <td>activation</td>
+    <td>relu</td>
+    <td>relu</td>
+    <td> </td>
+    <td>relu</td>
+    <td> </td>
+    <td> </td>
+    <td>relu</td>
+    <td>relu</td>
+    <td>relu</td>
+    <td>softmax</td>
+  </tr>
+</table>
+
 </div>
 </div>
 
