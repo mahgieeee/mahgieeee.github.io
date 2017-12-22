@@ -404,7 +404,67 @@ of the cnn (number neurons adjustment) and adding more details that are consiste
 the code in the 
 cnn loader file.  
 </p>
-
+<p>11.17.17–11.20.17: <br>
+<tab2>There are some minor problems when Keras process the dataset from the image 
+generator using the get_edges preprocessing function. Cropping as a preprocessing 
+function works but the sobel algorithm sometimes returns an empty contour list. 
+This is because the image contains an object that blends so well with the background 
+or an object is too small for the sobel algorithm to detect the contours. In the 
+get_edges function if it’s included in the main convolutional neural network 
+loader file, it will return the original image array without the cropping if 
+the contours are empty. Cropping as a layer would not work in this case of exactly 
+cropping the background data because Keras’ Cropping2D layer crops all the input 
+images once, which will manipulate the data too much where you can’t figure out 
+squares from rectangles. <br>
+<p> 11.20.17-12.1.17: <br>
+<tab2> The cropping of the images will be incorporated as a function since the 
+cropping as a layer only works for an entire dataset input, not per image. The 
+convolutional neural network might have better accuracy with PNG files than JPG 
+files. Due to memory limitations, JPG files will be used. I looked at the difference 
+between the file types: PNG has more detail and JPG has some noise at some contours. 
+Google Cloud has memory limitations per job. Increasing the number of GPUs won’t 
+make a difference to the memory limit for a Google Cloud job. I created a virtual 
+machine instance with 58GB of memory at the root in the cloud to solve this problem, 
+and installed Tensorflow from source with GPU CUDA support for their Tesla K80 GPU. 
+I've been trying to get my neural network to perform better accuracies and losses, 
+it seems to not reach an accuracy over 75%. I tried increasing the number of layers, 
+but it didn't work. I might try fine-tuning the dropout and add a stride of 2,2 
+parameters for the convolutional layers. I also don't need to split the dataset 
+anymore, running 8000 images for training and 1600 images for validating the training 
+set. I got the multilabel classification (intersections of shapes) to work by changing 
+the y_labels using the cross entropy function to binary_crossentropy and sigmoid 
+activations. I will test that after this set has a better accuracy. I am reading up 
+on how to change my code to recurrent convolutional neural networks where the convolution 
+layer will get the pixelized data from the images, followed by a LSTM recurrent layer 
+which will perform object classification and detection using rectangular boundaries 
+rather than the Dense MLP layer I have currently. <br>
+<p> 12.5.17–12.8.17: <br> 
+<tab2> The compression of PNG image data is more than half the total size of JPG 
+total image data (from 225 MB for JPG to 64 MB for PNG for 16000 images). I decided 
+to see if I can get better training in PNG data. The main reason why the loss won’t 
+go any lower than 0.38 is because of the input data; the input data is too complicated 
+with the intersection of the same shapes per image. I decided to simplify that by 
+drawing one shape per image. I manually select my data because I noticed that the 
+data is far from perfect: circles are diluted, squares and rectangles need to be in 
+the image instead of off the border and the triangles are too small. To deal with 
+the background issue, I must get Draw.py to return rgb as a string, convert it to 
+tuple in order to get the background color of that image. I need that background 
+color since I would be using the Sobel algorithm to crop the images and a CNN requires 
+it to be the same shape. There will be no preprocessing as a function used in the main 
+CNN loader file because I already did the cropping manually through the cnn_sobel_main.py 
+file and saving them as images. Basically, the Sobel algorithm crops the image, the Image 
+module fills it with the same background color and the cropped image is pasted on a 
+200 pixels by 200 pixels image. <br>
+<p> 12.8.17–12.15.17: <br>
+<tab2> The model is underfitting the dataset since the validation loss is half 
+of the training loss. The loss got a lot lower to around 0.15, with an accuracy 
+of 94%. The test loss is 1.02644992199 with a test accuracy 0.935570469799. This 
+is a lot better from the previous data input of images. I would need to increase
+the training input and the number of layers in the CNN architecture. After the CNN 
+architecture is changed, there’s much less of an underfit with a starting training 
+loss of 0.3778 and training accuracy of 0.8355, and the validation loss is 0.12 and 
+validation accuracy is 0.96. I’m not sure if that’s underfitting or if it’s good. 
+The training looks like it’s getting to a lower loss of 0.112. <br>
 
 </div>
 </div>
