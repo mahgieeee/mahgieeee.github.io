@@ -242,7 +242,7 @@ the nature of the system within the visual cortex."
 </div>
 
   <div class="column middle">
-  <div style="width:1200px;height:700px;line-height:1.2em;overflow:auto;padding:0px;">
+  <div style="width:500px;height:700px;line-height:1.2em;overflow:auto;padding:0px;">
     <h2>Project Logs for Simple Shapes using Convolutional Neural Network project</h2>
     <p>
     <p><div class="dropdown">
@@ -331,6 +331,7 @@ the nature of the system within the visual cortex."
    <tab2> I tried increasing the layers of the convolutional neural network and reducing the dropout and 
    maxpool layers and it seems to work. The current convolutional neural network architecture is described 
    in the below chart. It also trains in PNG data instead of JPG because the compressed pickled files are much smaller (65MB). </p>
+   <p> Adam optimizer of 200 by 200 images (16,000 for training, 1,500 for validation) <br>
    <table>
   <tr>
     <th>Num of filters</th>
@@ -397,12 +398,47 @@ the nature of the system within the visual cortex."
     <td>relu</td>
     <td>softmax</td>
   </tr>
-</table>
+</table></p>
+<p> Complete Description of tasks mentioned in the proposal but not accomplished with reasons: <br>
+<tab2> Image classification and detection are two separate things in terms of getting 
+the code to work. I assumed that they have buildable and very similar architectures, but 
+they are completely different. This project only does image classification not image detection 
+since image detection requires a recurrent convolutional neural network to be implemented, such 
+as the FAST CNN. I am also not able to get the model to generalize well and I am still confused 
+about why the model couldn’t learn well. The final code also does not account for intersections 
+between shapes as stated in the interim status reports. This is because the loss of the 
+convolutional neural network during training wouldn’t go down, so I had to simplify my dataset 
+to consist of a single shape per image data instead of two variations of the same shape in an 
+image. This is the simplified version of the current dataset and the cropped version of it, 
+which is the actual input data for the convolutional neural network. <br>
+Evaluation: <p>
+<tab2> I think I did considerably well considering that I did not have any prior knowledge 
+or experience in machine learning and convolutional neural networks. I had to learn a new 
+programming language Python 2.7 and Keras from scratch. I created a program to draw simple 
+shapes, my own pickle files to store numpy arrays, merge and load these arrays to prepare 
+for the training of the main convolutional neural network file. I did all of this by myself 
+without anybody helping me with the code. One of my friends just offered me advice on multiplying 
+255 by the float value for the Image module to get the correct background color of the image.
+My friend who does Tensorflow gave me a link for a tutorial on compressing image data using 
+save from pickle. I had to use joblib to compress the data since it does a great job dumping 
+huge lists of numpy image data arrays. That code is not copied, it is a reference within the 
+save part, which is roughly five lines of code. In the main convolutional neural network file, 
+I had to also use a tutorial on how to prepare the file to be executed in the cloud. The tutorial
+is in https://github.com/clintonreece/keras-cloud-ml-engine. <br>
+<tab2> I learned that is extremely difficult to get the convolutional neural network to generalize 
+well during training. The network is overfitted and underfitted, but that balance is hard to get a 
+grasp of. This is because they are so many factors to consider, which are specifically convolutional 
+neural network architectures, image input data, loss functions, activation functions, number of filters 
+and neurons per layer. I also got a bit sidetracked by trying to do much in the project, classifying 
+multi-output labels of intersections between shapes. I should use programs to analyze the image data, 
+but the network is too complicated to get important information. This is because it is difficult to 
+get the gradients of the hidden layers. </p>
 
 </div>
 </div>
 
   <div class="column side">
+  <div style="width:300px;height:700px;line-height:1.2em;overflow:auto;padding:0px;">
     <h2>Questions or Comments?</h2>
     <p><a href="mailto:maggie.cao.bc@gmail.com" style="text-decoration:none;">Email Me</a> 
    </p>
