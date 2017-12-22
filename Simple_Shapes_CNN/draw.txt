@@ -11,7 +11,7 @@ import argparse
 
 """
 to execute this via command line:
-python draw.py --draw-func draw_circle --num-images 2000 --file-dir training_set/circle/circle_ 
+python draw.py --draw-func draw_circle --num-images 2000 --file-dir training_set_png1/circle/circle_ 
 """
 
 def draw_objects(object, file_dir, filename):
@@ -36,34 +36,43 @@ def draw_objects(object, file_dir, filename):
 
 def draw_rectangle(object, file_dir, filename):
     canvas = object(300,300)
-    bg_obj = canvas.background_color()
-    canvas.line_rectangle(bg_obj)
-    context_obj = canvas.new_context()
-    canvas.fill_rectangle(context_obj)
+    bg_obj, r,g,b = canvas.background_color()
+    print(file_dir + filename + '.png')
+    print (r, g, b)
+    #canvas.line_rectangle(bg_obj)
+    #context_obj = canvas.new_context()
+    canvas.fill_rectangle(bg_obj)
     canvas.save_img(file_dir, filename)
 
 def draw_circle(object, file_dir, filename):
     canvas = object(300,300)
-    bg_obj = canvas.background_color()
-    canvas.fill_circle(bg_obj)
-    context_obj = canvas.new_context()
-    canvas.line_circle(context_obj)
+    bg_obj, r,g,b = canvas.background_color()
+    print(file_dir + filename + '.png')
+    print (r, g, b)
+    #canvas.fill_circle(bg_obj)
+    #context_obj = canvas.new_context()
+    canvas.line_circle(bg_obj)
     canvas.save_img(file_dir, filename)
 
 def draw_square(object, file_dir, filename):
     canvas = object(300,300)
-    bg_obj = canvas.background_color()
+    bg_obj, r,g,b = canvas.background_color() 
+    print(file_dir + filename + '.png')
+    print (r, g, b)
     canvas.line_square(bg_obj)
-    context_obj = canvas.new_context()
-    canvas.fill_square(context_obj)
+    #context_obj = canvas.new_context()
+    #canvas.fill_square(bg_obj)
     canvas.save_img(file_dir, filename)
+
 
 def draw_triangle(object, file_dir, filename):
     canvas = object(300,300)
-    bg_obj = canvas.background_color()
+    bg_obj, r,g,b = canvas.background_color()
+    print(file_dir + filename + '.png')
+    print (r, g, b)
     canvas.line_triangle(bg_obj)
-    context_obj = canvas.new_context()
-    canvas.fill_triangle(context_obj)
+    #context_obj = canvas.new_context()
+    #canvas.fill_triangle(bg_obj)
     canvas.save_img(file_dir, filename)
      
 class Draw(object):
@@ -101,16 +110,16 @@ class Draw(object):
         name = self.new_context() 
         name.set_source_rgb(r,g,b)
         name.paint()
-        return name
+        return name, r,g,b
     
     def fill_circle(self, object):
         import math
         r = random.uniform(0,1)
         g = random.uniform(0,1)
         b = random.uniform(0,1)
-        xc = random.randint(10,300)
-        yc = random.randint(10,300)
-        radius = random.randint(50,150)
+        xc = random.randint(100,200)
+        yc = random.randint(100,200)
+        radius = random.randint(50,200)
         object.arc(xc, yc, radius, 0, 2*math.pi)
         object.set_source_rgb(r, g, b)
         object.fill()
@@ -120,9 +129,9 @@ class Draw(object):
         r = random.uniform(0,1)
         g = random.uniform(0,1)
         b = random.uniform(0,1)
-        xc = random.randint(10,300)
-        yc = random.randint(10,300)
-        radius = random.randint(50,150)
+        xc = random.randint(100,200)
+        yc = random.randint(100,200)
+        radius = random.randint(50,200)
         w = random.uniform(0,10)
         object.arc(xc, yc, radius, 0, 2*math.pi)
         object.set_line_width(w)
@@ -133,10 +142,10 @@ class Draw(object):
         r = random.uniform(0,1)
         g = random.uniform(0,1)
         b = random.uniform(0,1)
-        x = random.randint(50,300)
-        y = random.randint(50,300)
-        width = random.randint(50,250)
-        height = random.randint(50,250)
+        x = random.randint(10,150)
+        y = random.randint(10,150)
+        width = random.randint(50,130)
+        height = random.randint(50,130)
         object.rectangle(x, y, width, height)
         object.set_source_rgb(r, g, b)
         object.fill()
@@ -145,11 +154,11 @@ class Draw(object):
         r = random.uniform(0,1)
         g = random.uniform(0,1)
         b = random.uniform(0,1)
-        x = random.randint(10,300)
-        y = random.randint(10,300)
+        x = random.randint(10,150)
+        y = random.randint(10,150)
         w = random.uniform(0,10)
-        width = random.randint(50,250)
-        height = random.randint(50,250)
+        width = random.randint(50,130)
+        height = random.randint(50,130)
         object.rectangle(x, y, width, height)
         object.set_line_width(w)
         object.set_source_rgb(r, g, b)
@@ -159,9 +168,9 @@ class Draw(object):
         r = random.uniform(0,1)
         g = random.uniform(0,1)
         b = random.uniform(0,1)
-        x = random.randint(50,300)
-        y = random.randint(50,300)
-        width = random.randint(50,250)
+        x = random.randint(10,150)
+        y = random.randint(10,150)
+        width = random.randint(50,150)
         object.rectangle(x, y, width, width)
         object.set_source_rgb(r, g, b)
         object.fill()
@@ -170,10 +179,10 @@ class Draw(object):
         r = random.uniform(0,1)
         g = random.uniform(0,1)
         b = random.uniform(0,1)
-        x = random.randint(50,300)
-        y = random.randint(50,300)
+        x = random.randint(10,150)
+        y = random.randint(10,150)
         w = random.uniform(0,10)
-        width = random.randint(50,250)
+        width = random.randint(50,150)
         object.rectangle(x, y, width, width)
         object.set_line_width(w)
         object.set_source_rgb(r, g, b)
@@ -183,11 +192,11 @@ class Draw(object):
         r = random.uniform(0,1)
         g = random.uniform(0,1)
         b = random.uniform(0,1)
-        x = random.randint(50,300)
-        y = random.randint(50,300)
-        x1 = random.randint(50,300)
-        y1 = random.randint(50,300)
-        y2 = random.randint(50,300)
+        x = random.randint(100,200)
+        y = random.randint(100,200)
+        x1 = random.randint(0,250)
+        y1 = random.randint(0,250)
+        y2 = random.randint(0,250)
         object.move_to(x,y)
         object.line_to(x, y1)
         object.line_to(x1, y2)
@@ -199,11 +208,11 @@ class Draw(object):
         r = random.uniform(0,1)
         g = random.uniform(0,1)
         b = random.uniform(0,1)
-        x = random.randint(50,300)
-        y = random.randint(50,300)
-        x1 = random.randint(50,300)
-        y1 = random.randint(50,300)
-        y2 = random.randint(50,300)
+        x = random.randint(100,200)
+        y = random.randint(100,200)
+        x1 = random.randint(0,250)
+        y1 = random.randint(0,250)
+        y2 = random.randint(0,250)
         w = random.uniform(0,3)
         object.move_to(x,y)
         object.line_to(x, y1)
@@ -214,7 +223,7 @@ class Draw(object):
         object.stroke()
         
     def save_img(self, file_dir, filename):
-        print (filename)
+        #print (filename)
         self.surface.write_to_png(file_dir + filename + ".png")
         
 if __name__ == '__main__':
@@ -224,7 +233,7 @@ if __name__ == '__main__':
     parser.add_argument('--num-images',
                         help='number of images')
     parser.add_argument('--draw-func',
-                        help='draw-functions: draw_objects, draw_rectangle, draw_square, draw_circle, draw_triangle')
+                        help='draw-functions: draw_objects, draw_rectangle')
     args = parser.parse_args()
     arguments = args.__dict__
     d = Draw(300, 300)
