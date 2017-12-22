@@ -242,12 +242,12 @@ Proposed Solution: Since the architecture of a convolutional neural network (CNN
 7. Test the CNN model by loading it and seeing how it performs on unseen images.<br> 
 8. Make changes to the architecture of the CNN as necessary. </p>
 
-<p> Week of October 23: <br>
+<p> Week of October 23 2017: <br>
 	The baby AI image dataset is very old and has bugs in it. I wasn’t able to extract the dataset by running their python program. So, I spent all this time creating my own dataset and preparing it for loading using pickle’s serialization format into Google Cloud’s Machine Learning Engine. I created my own python class called Draw.py, which uses multiprocessing of Pool workers in a class to draw images themselves as well as the intersection of images. Multiprocessing allows me to make as many images as possible by using parallel computing of 4 cores in a CPU.</p>
-<img src="Simple_Shapes_CNN/circle.png" alt="Circle" width="80%" height=auto>
-<img src="Simple_Shapes_CNN/rectangle.png" alt="Rectangle" width="80%" height=auto style="float:right">
-<img src="Simple_Shapes_CNN/square.png" alt="Square" width="80%" height=auto>
-<img src="Simple_Shapes_CNN/triangle.png" alt="Triangle" width="80%" height=auto style="float:right">
+<img src="Simple_Shapes_CNN/circle.png" alt="Circle" width="50%" height=auto>
+<img src="Simple_Shapes_CNN/rectangle.png" alt="Rectangle" width="50%" height=auto style="float:right">
+<img src="Simple_Shapes_CNN/square.png" alt="Square" width="50%" height=auto>
+<img src="Simple_Shapes_CNN/triangle.png" alt="Triangle" width="50%" height=auto style="float:right">
 <p>10.31.17: <br>
 	The training set consists of a total of 6,200 images. Before being serialized into a pickle file, the training set is organized in a tuple structure (numpy array, y_label). The numpy array is the data array processed by the PIL module in (300, 300, 3) format. The numpy array represents the matrix in float32 of the image. The y_label represents the target values of the shapes, which is the expected output of the convolutional neural network. Keras requires categorical crossentropy loss to be computed with categorical encodings. The categorical one hot encoding transfers integers (0...number of classes) into binary format. My y_label is a series of categorical hot encodings of 0, 1, 2 in binary format of three classes (circles, rectangles and squares, triangle). <br> 
 	I had to change the numpy array data structure from a default float to float32 bit since the loading of the pickle files in the default float structure consumes too much memory in megabytes per file. The difference almost reduced the entire file size from 3.0 GB (without compression) to 1.7 G.B.  The pickle files are too huge, so I have to reduce the quality and size of each image to reduce the pickle files. Pickle loads and image creation of the shapes are created using multiprocessing of independent Pool workers. I have been trying to figure out how to create a pickle file, organize numpy arrays and store them in a huge list, dump that huge list using joblib. Use memmap to store large numpy arrays because it's inefficient for the list to increase in data memory allocation in list comprehension of pickle loading. The file below create (numpy arrays, y_label) tuples and stores them in a pickle file.<br>  
