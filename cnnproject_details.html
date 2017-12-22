@@ -242,6 +242,7 @@ the nature of the system within the visual cortex."
 </div>
 
   <div class="column middle">
+  <div style="width:1000px;height:700px;line-height:1.2em;overflow:auto;padding:0px;">
     <h2>Project Logs for Simple Shapes using Convolutional Neural Network project</h2>
     <p>
     <p><div class="dropdown">
@@ -261,11 +262,27 @@ the nature of the system within the visual cortex."
     </div>
   </div><p>
     </p>
-   <h2>Final Project Report</h2> 
-   <a href="cnnproject_details.html">Project Details</a>
-   <div style="width:1000px;height:700px;line-height:1.2em;overflow:auto;padding:0px;">
-   <p> 
-   kljlkjlkjlkj
+  <h2>Single Output with Multi-Class Classification</h2>
+<p>
+<tab2> The convolutional neural network will learn using supervised training in Keras.
+The training and validation datasets will have a supervised output of a single label 
+for each class in a 300 by 300 image. The dataset consisting of circles, triangles, squares 
+and rectangles is created by the program draw.py. It uses multiprocessing of independent pool workers 
+to draw these shapes and saving these shapes in ".png" format. Draw.py uses the cairo library for drawing 
+the shapes and the random library to randomize the location and size of these shapes. Each 300 by 300 
+image will have two variations, which are the linear contours and the fill of the shape pertaining to 
+the same class. To execute the file, simply run python draw.py --draw-func draw_circle --num-images 2000 
+--file-dir training_set/circle/circle_, where draw-func represents the drawing function that draws 
+either circle, triangle, square or rectangle or a combination of these shapes if needed. There are 
+2,000 images per data shape with a total of 8,000 images for the training dataset. The validation 
+dataset consists of 400 images per data shape with a total of 1,600 images, which is 20% of the 
+training dataset. <br>
+<tab2> A single PNG image file has a better pixel precision, but it comes at a cost of having 
+twice or even three times as much data storage as a JPEG file. Since the training data tend 
+to increase when the architecture of the convolutional neural network has more layers, it is efficient 
+to reduce the size of the images by converting from PNG to JPEG. The program reduce_images.py 
+reduces image sizes by adjusting a ratio of height and base decrease. It then saves the images in 
+pickle file, where the same pickle file is opened to save the newly reduced size images into a folder.
    </p>
 </div>
 </div>
