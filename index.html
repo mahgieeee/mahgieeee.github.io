@@ -224,209 +224,72 @@ P {
 </div>
 <div class="column middle">
   <div style="width:1000px;height:700px;line-height:1.2em;overflow:auto;padding:0px;">
-  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
-  <meta name="generator" content="PSPad editor, www.pspad.com">
-  <title>Algorithms</title>
-</head>
-<body>
-from __future__ import print_function<br>
-import math <br>
-<br>
-#the array input needs to be already sorted<br>
-def binary_search(array, start, end, key):<br>
-    #count how many elements in file, each separated by line<br>
-    mid = len(array)//2<br>
-    # binary search the first half<br>
-    if array[mid] is not key:<br>
-        if key &lt; array[mid]:<br>
-            return binary_search(array, array[0], array[mid-1], key)<br>
-        # binary search the second half<br>
-        elif key &gt; array[mid]:<br>
-            return binary_search(array, array[mid+1], array[array.size()-1], key)<br>
-    elif key == array[mid]:<br>
-        return array[mid]<br>
-    <br>
-'''Knuth's algorithm for uniform binary search:<br>
-    based on the idea that instead of having an upper bound,<br>
-    a lower bound and a midpoint, we use two ptrs: current<br>
-    position i and one for delta (rate of change)'''<br>
-def uniform_binary_search(array, i, delta, key):<br>
-    i = math.ceil(array.size()/2) #current position<br>
-    m = math.floor(array.size()/2) #num of current records<br>
-    if (key == array[i]):<br>
-        return i<br>
-    elif m is not 0: <br>
-        if array[i] &gt; key: <br>
-            i = i - math.ceil(m/2)<br>
-            m = math.floor(m/2)<br>
-            return uniform_binary_search(array, i, m, key)<br>
-        else:<br>
-            i = i + math.ceil(m/2)<br>
-            m = math.floor(m/2)<br>
-            return uniform_binary_search(array, i, m, key)<br>
-        <br>
-# but don't need to maintain the value of m at all, we<br>
-# only need to refer to a short table of the various delta<br>
-# to use at each evel of the tree, alg is reduced to a lookup table<br>
-def delta_table(num, j):<br>
-    delta = []<br>
-    if j &gt;= 1 and j &lt;= math.floor(math.log(num[2])) + 2:<br>
-        delta[j] = math.floor(num + math.pow(2, j-1))<br>
-        j = j + 1<br>
-        return delta[j-1]<br>
-    return -1 #error<br>
-<br>
-def uniform_binary_search_delta(array, i, delta, key):<br>
-    i = delta_table(array.size(), 0) - 1 #midpoint of array<br>
-    d = 0<br>
-    if key == array[i]:<br>
-        return i<br>
-    elif delta_table(array.size(), d) == 0:<br>
-        return -1<br>
-    else:<br>
-        if array[i] &gt; key:<br>
-            d = d + 1<br>
-            i = i - delta_table(array.size(), d)<br>
-        elif array[i] &lt; key:<br>
-            d = d + 1<br>
-            i = i + delta_table(array.size(), d)<br>
-<br>
-def factorial(n): #this is better in dynamic programming<br>
-    if n == 1:<br>
-        return 1<br>
-    elif n &gt; 1:<br>
-        return n*factorial(n-1)        <br>
-    return -1<br>
-<br>
-def palidrome(word, start, end):<br>
-    length = word.length()<br>
-    if length == 0 or length == 1:<br>
-        return True<br>
-    if word[0] == word[length]:<br>
-        return True    <br>
-    return palidrome(word, start+1, end-1)<br>
-<br>
-'''<br>
-algorithm from: https://www.khanacademy.org/computing/computer-science/algorithms/recursive-algorithms/a/computing-powers-of-a-number<br>
-'''<br>
-def powers_of_number(base, exponent):<br>
-    if exponent == 0:<br>
-        return 1<br>
-    #return powers_of_number(base, exponent-1) * base #this takes too much time if the base and exponent are large<br>
-    elif exponent%2 == 0 and exponent &gt; 0: #y=x&circ;(e/2)<br>
-        print("even exponent")<br>
-        return powers_of_number(base, exponent/2) * base  <br>
-    '''elif exponent%2 == 1 and exponent &gt; 0:<br>
-        return powers_of_number(base, exponent) * base<br>
-    elif exponent &lt; 0:<br>
-        return 1/powers_of_number(base, exponent) * base'''<br>
-         <br>
-<br>
-def insertion_sort(array):<br>
-    done = False<br>
-    i =  1<br>
-    while not done:<br>
-        j = i <br>
-        temp = array[i]<br>
-        while temp &lt; array[j-1] and j &gt; 0:<br>
-            array[j] = array[j-1]<br>
-            j = j - 1<br>
-        array[j] = temp #put it into position<br>
-        i = i + 1<br>
-        if i &gt;= len(array) or j &gt;= len(array):<br>
-            done = True<br>
-        <br>
-def merge_sort(array):<br>
-    if len(array) &gt; 1:<br>
-        mid = len(array)//2<br>
-        left_half = array[ :mid]<br>
-        right_half = array[mid: ] <br>
-        merge_sort(left_half)<br>
-        merge_sort(right_half)<br>
-        <br>
-        left_index = 0   <br>
-        right_index = 0<br>
-        k = 0<br>
-        while left_index &lt; len(left_half) and right_index &lt; len(right_half):<br>
-            if left_half[left_index] &lt; right_half[right_index]:<br>
-                array[k] = left_half[left_index]<br>
-                left_index = left_index + 1<br>
-            else: <br>
-                array[k] = right_half[right_index]<br>
-                right_index = right_index + 1<br>
-            k = k + 1<br>
-        #exhaused arrays:<br>
-        #if left_index == len(left_half)-1:<br>
-        while right_index &lt; len(right_half):<br>
-            array[k] = right_half[right_index]<br>
-            right_index = right_index + 1<br>
-            k = k + 1<br>
-                <br>
-        #if right_index == len(right_half)-1:<br>
-        while left_index &lt; len(left_half):<br>
-            array[k] = left_half[left_index]<br>
-            left_index = left_index + 1<br>
-            k = k + 1<br>
-<br>
-'''<br>
-uses left and right pointers to array elm to find correct partitioning <br>
-locations separating partition index value <br>
-'''<br>
-def swap(array, left, right):<br>
-    temp = array[left]<br>
-    array[left] = array[right]<br>
-    array[right] = temp<br>
-    <br>
-def partition(array, left, right):<br>
-    mid = left + (right-left)/2<br>
-    # make pivot the of array and swap it with leftmost elm<br>
-    pivot = array[mid]<br>
-    array[mid] = array[left]<br>
-    array[left] = pivot<br>
-    print("pivot in partition: ", pivot)<br>
-    forward = left + 1<br>
-    backward = right<br>
-    done = False<br>
-    # while forward &lt;= backward: doesn't work<br>
-    while not done:<br>
-        while forward &lt;= backward and array[forward] &lt;= pivot:<br>
-           forward = forward + 1   <br>
-        while array[backward] &gt;= pivot and backward &gt;= forward:<br>
-           backward = backward - 1<br>
-        # should stop at this point when they are improperly placed <br>
-        # array[forward] &gt; pivot and when array[backward] &lt; pivot<br>
-        if backward &lt; forward:<br>
-            done = True #exit out of loop<br>
-        #if forward &lt; backward:<br>
-        else:<br>
-            swap(array, forward, backward)<br>
-            <br>
-    # reach until they cross when backward &lt; forward<br>
-    # swap backward and first to put mid back in partition position<br>
-    swap(array, left, backward)<br>
-    print ("array backward: ", backward)<br>
-    # return backward index<br>
-    return backward <br>
-<br>
-def quicksort(array, front, back):<br>
-    if front &lt; back:<br>
-        pivot_position = partition(array, front, back)<br>
-        quicksort(array, front, pivot_position-1)<br>
-        quicksort(array, pivot_position+1, back)<br>
-<br>
-if __name__ == '__main__':<br>
-    array = [54,26,93,17,77,31,44,55,20]<br>
-    print ("Original array:", array)<br>
-    #quicksort(array, 0, len(array) - 1)<br>
-    #print ("After quicksort: ", array)<br>
-    #insertion_sort(array)<br>
-    #merge_sort(array)<br>
-    #print(array)<br>
-    #print (powers_of_number(12, 6))<br>
-    binary_search(array, 0, len(array), 31)<br></body>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    from __future__ import print_function from __future__ import division import math #the array
+    input needs to be already sorted def binary_search(array, start, end, key): if end &gt;= 1: mid
+    = start + (end-start)//2 if array[mid] is key: return mid elif array[mid] &gt; key: return
+    binary_search(array, start, mid-1, key) # binary search the second half elif array[mid] &lt;
+    key: return binary_search(array, mid+1, end, key) return -1 #point where key is not present in
+    the array anymore '''Knuth's algorithm for uniform binary search: based on the idea that
+    instead of having an upper bound, a lower bound and a midpoint, we use two ptrs: current
+    position i and one for delta (rate of change)''' def uniform_binary_search(array, i, delta,
+    key): i = math.ceil(array.size()/2) #current position m = math.floor(array.size()/2) #num of
+    current records if (key == array[i]): return i elif m is not 0: if array[i] &gt; key: i = i -
+    math.ceil(m/2) m = math.floor(m/2) return uniform_binary_search(array, i, m, key) else: i = i +
+    math.ceil(m/2) m = math.floor(m/2) return uniform_binary_search(array, i, m, key) # but don't
+    need to maintain the value of m at all, we # only need to refer to a short table of the various
+    delta # to use at each evel of the tree, alg is reduced to a lookup table def delta_table(num,
+    j): delta = [] if j &gt;= 1 and j &lt;= math.floor(math.log(num[2])) + 2: delta[j] =
+    math.floor(num + math.pow(2, j-1)) j = j + 1 return delta[j-1] return -1 #error def
+    uniform_binary_search_delta(array, i, delta, key): i = delta_table(array.size(), 0) - 1
+    #midpoint of array d = 0 if key == array[i]: return i elif delta_table(array.size(), d) == 0:
+    return -1 else: if array[i] &gt; key: d = d + 1 i = i - delta_table(array.size(), d) elif
+    array[i] &lt; key: d = d + 1 i = i + delta_table(array.size(), d) def factorial(n): #this is
+    better in dynamic programming if n == 1: return 1 elif n &gt; 1: return n*factorial(n-1) return
+    -1 def palidrome(word, start, end): length = word.length() if length == 0 or length == 1:
+    return True if word[0] == word[length]: return True return palidrome(word, start+1, end-1) '''
+    If n is even, then x^n = (x^2)^(n/2) If n is odd, then x^n = x * (x^2)^((n-1)/2) ''' def
+    powers_of_number(base, exponent): if exponent == 0: return 1 #return powers_of_number(base,
+    exponent-1) * base #this takes too much time if the base and exponent are large elif exponent%2
+    == 0 and exponent &gt; 0: print("even") return powers_of_number(base*base, exponent/2) elif
+    exponent%2 == 1 and exponent &gt; 0: print("odd") return powers_of_number(base*base,
+    (exponent-1)/2) * base elif exponent &lt; 0: return powers_of_number(base, exponent+1)/base def
+    insertion_sort(array): done = False i = 1 while not done: j = i temp = array[i] while temp &lt;
+    array[j-1] and j &gt; 0: array[j] = array[j-1] j = j - 1 array[j] = temp #put it into position
+    i = i + 1 if i &gt;= len(array) or j &gt;= len(array): done = True def merge_sort(array): if
+    len(array) &gt; 1: mid = len(array)//2 left_half = array[ :mid] right_half = array[mid: ]
+    merge_sort(left_half) merge_sort(right_half) left_index = 0 right_index = 0 k = 0 while
+    left_index &lt; len(left_half) and right_index &lt; len(right_half): if left_half[left_index]
+    &lt; right_half[right_index]: array[k] = left_half[left_index] left_index = left_index + 1
+    else: array[k] = right_half[right_index] right_index = right_index + 1 k = k + 1 #exhaused
+    arrays: #if left_index == len(left_half)-1: while right_index &lt; len(right_half): array[k] =
+    right_half[right_index] right_index = right_index + 1 k = k + 1 #if right_index ==
+    len(right_half)-1: while left_index &lt; len(left_half): array[k] = left_half[left_index]
+    left_index = left_index + 1 k = k + 1 ''' uses left and right pointers to array elm to find
+    correct partitioning locations separating partition index value ''' def swap(array, left,
+    right): temp = array[left] array[left] = array[right] array[right] = temp def partition(array,
+    left, right): mid = left + (right-left)//2 # make pivot the of array and swap it with leftmost
+    elm pivot = array[mid] array[mid] = array[left] array[left] = pivot print("pivot in partition:
+    ", pivot) forward = left + 1 backward = right done = False # while forward &lt;= backward:
+    doesn't work while not done: while forward &lt;= backward and array[forward] &lt;= pivot:
+    forward = forward + 1 while array[backward] &gt;= pivot and backward &gt;= forward: backward =
+    backward - 1 # should stop at this point when they are improperly placed # array[forward] &gt;
+    pivot and when array[backward] &lt; pivot if backward &lt; forward: done = True #exit out of
+    loop #if forward &lt; backward: else: swap(array, forward, backward) # reach until they cross
+    when backward &lt; forward # swap backward and first to put mid back in partition position
+    swap(array, left, backward) print ("array backward: ", backward) # return backward index return
+    backward def quicksort(array, front, back): if front &lt; back: pivot_position =
+    partition(array, front, back) quicksort(array, front, pivot_position-1) quicksort(array,
+    pivot_position+1, back) if __name__ == '__main__': array = [54,26,93,17,77,31,44,55,20] print
+    ("Original array:", array) quicksort(array, 0, len(array) - 1) print ("After quicksort: ",
+    array) #insertion_sort(array) #merge_sort(array) #print(array) #print (powers_of_number(2, -1))
+    print (binary_search(array, 0, len(array)-1, 31))
+  </body>
 </html>
 
 </body>
