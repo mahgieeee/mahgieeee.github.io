@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jan 05 21:26:45 2018
+
+@author: tangerineworld
+"""
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +48,6 @@ P {
     line-height: 1.5;
     letter-spacing: .25px;
 }
-
 /* Style the top navigation bar */
 .topnav {
     font-family: Arial, Helvetica, sans-serif;
@@ -55,7 +61,7 @@ P {
 
 /* Style the topnav links */
 .topnav a {
-    float: middle;
+    float: left;
     display: block;
     color: #000000;
     text-align: center;
@@ -68,7 +74,6 @@ P {
     background-color: #ddd;
     color: #009900;
 }
-
 /* Create three unequal columns that floats next to each other */
 .column {
     float: left;
@@ -82,7 +87,7 @@ P {
 
 /* Middle column */
 .column.middle {
-    width: 75%;
+    width: 70%;
 }
 
 /* Clear floats after the columns */
@@ -93,7 +98,7 @@ P {
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 500px) {
+@media (max-width: 800px) {
     .column.side, .column.middle {
         width: 100%;
     }
@@ -149,12 +154,59 @@ P {
     background-color: #3e8e41;
 }
 
+table, th, td {
+    border: 1px solid black;
+}
+
+a:link {
+    color: #3e8e41;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: #3e8e41;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: #006400;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: #3e8e41;
+    background-color: transparent;
+    text-decoration: none;
+}
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>Maggie Cao </h1>
+  <h1>Programming: </h1>
+<h2> "Our brains grow because the biological design of our camera-like eyes intake what we see and
+sends the exact visual data to the visual cortex, where it stores an abstraction, or abstractions, of the
+visual data effortlessly in a way that we can retrieve it without a knowing the location. It is stored and
+retrieved dynamically, nonpermanently and nonforcefully. We learn by choosing between such
+abstracts, which are triggered simultaneously through the interchange between the visual object in the
+real world and the systems in our brain, precisely in the visual cortex. The visual cortex organizes
+information dynamically through a set of random addresses, or lines of synaptic connections, where the
+abstract data is processed somewhere in the visual cortex to become precise data. The beauty lies in the
+fact that we do not have to explicitly define the abstractions of a visual object because the abstraction is
+the nature of the system within the visual cortex." 
+</h2>
+</div>
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="project_logs.html">Project Documentation</a>
+  <a href="#">About</a>
+  <a href="interests.html">Interests</a>
+</div>
+
+<div class="row">
+  <div class="column side">
+    <h2>Projects List</h2>
+    <p>
 <p><div class="dropdown">
   <button class="dropbtn">Simple Functions</button>
   <div class="dropdown-content">
@@ -215,13 +267,18 @@ P {
 
 </p>
 </div>
-</div>
-<div class="topnav">
-  <a href="index.html">Home</a>
-  <a href="about_me.html">About Me</a>
-  <a href="project_logs.html">Project Documentation</a>
-  <a href="interests.html">Interests</a>
-</div>
+
+  <div class="column middle">
+  <div style="width:1000px;height:700px;line-height:1.2em;overflow:auto;padding:0px;">
+  <p>
+  <tab2> Maggie Cao originally studied architecture at the Cooper Union for four years, but discovered 
+  a passion for software engineering and electronics. She completed her bachelor's in computer science at Brooklyn College in 2017.
+  Her interests include machine learning and neural networks, data science with Python and penetration testing in the newest operating 
+  systems. She's familiar with Linux, C++, C, Python and cloud computing. She occassionally likes to be a script kiddy from time to time
+  on her test laptops. You can reach her at maggie.cao.bc@gmail.com. Her github username is mahgieeee. 
+    
+  </p>
+    
 
 </body>
 </html>
