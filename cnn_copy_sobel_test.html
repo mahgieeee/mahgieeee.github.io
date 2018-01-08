@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>cnn_copy_sobel_test</title>
+</head>
+<body>
+"""<br>
+Created on Mon Nov 13 11:50:47 2017<br>
+Program finds contours by using the sobel algorithm. After finding<br>
+the countours, rectangular boundaries are drawn around it. The <br>
+locations of the rectangles are in (x,y) coordinates where the cropped<br>
+version will be from the top left corner (smallest_x, smallest_y)<br>
+and the bottom right opposite corner (largest_x, largest y). get_edges<br>
+creates a copy of the image that needs to be in grayscale for the <br>
+sobel algorithm. After the boundary is found, cropping of the original<br>
+image will be done through array slicing. This python 2 program will be <br>
+implemented in the main cnn loader file, which will be incorporated with <br>
+the cropping of images as a function. The cnn will see the images cropped <br>
+and will not see the original image.  <br>
+@author: maggie<br>
+"""<br>
+from __future__ import print_function<br>
+from __future__ import division<br>
+import argparse<br>
+from keras.models import Sequential<br>
+from keras.layers import Conv2D<br>
+from keras.layers import MaxPooling2D<br>
+from keras.layers import Flatten<br>
+from keras.layers import Dense<br>
+from keras.layers import Dropout<br>
+from keras.callbacks import EarlyStopping<br>
+from keras.optimizers import Adam<br>
+from keras.preprocessing.image import ImageDataGenerator<br>
+from datetime import datetime <br>
+from tensorflow.python.lib.io import file_io <br>
+import h5py<br>
+import joblib<br>
+<br>
+"""to run code locally:<br>
+   python cnn_copy_sobel_test.py --job-dir ./ --train-file random_shapes_all.pkl <br>
+"""<br>
+    <br>
+def train_model(train_file = 'random_shapes_png.pkl', job_dir = './', <br>
+                #dropout_one = 0.2, dropout_two = 0.2, <br>
+                **args):<br>
+    # set the loggining path for ML Engine logging to storage bucket<br>
+    logs_path = job_dir + '/logs/' + datetime.now().isoformat()<br>
+    print('Using logs_path located at {}'.format(logs_path))<br>
+    <br>
+    # need tensorflow to open file descriptor for google cloud to read<br>
+    with file_io.FileIO(train_file, mode='r') as f:<br>
+        # joblib loads compressed files consistenting of large datasets <br>
+        save = joblib.load(f)<br>
+        train_shape_dataset = save['train_shape_dataset']<br>
+        train_y_dataset = save['train_y_dataset']<br>
+        validate_shape_dataset = save['validate_shape_dataset']<br>
+        validate_y_dataset = save['validate_y_dataset']<br>
+        del save  # help gc free up memory<br>
+        <br>
+    # Initializing the CNN by adding a simple sequential layer<br>
+    classifier = Sequential()<br>
+<br>
+    # Step 1: <br>
+    # Sequential layer consists of Convolution of type 3 by 3 convolutional <br>
+    # window with 32 output filters for each input image uses relu layers <br>
+    # to make layer less linear; the stride default is (1,1)<br>
+    # the default for padding is 'valid'<br>
+    classifier.add(Conv2D(128, (6, 6),<br>
+                          padding = 'valid', <br>
+                          input_shape = (200, 200, 3), <br>
+                          activation = 'relu'))<br>
+<br>
+    # Step 2:  <br>
+    # Max Pooling downsamples the number pixels per neuron and create a max<br>
+    classifier.add(MaxPooling2D(pool_size = (6, 6)))<br>
+<br>
+    # Adding a second convolutional layer, which is the same as the first one<br>
+    # the default for padding is 'valid'<br>
+    classifier.add(Conv2D(256, (6, 6), <br>
+                          padding = 'valid', <br>
+                          activation = 'relu'))<br>
+    classifier.add(MaxPooling2D(pool_size = (6, 6)))<br>
+<br>
+<br>
+    # Step 3: Flattening the convolutional layers for input to MLP<br>
+    classifier.add(Flatten())<br>
+    <br>
+    # Step 4: <br>
+    # Fully connected: Dense function is used to add a fully connected layer<br>
+    classifier.add(Dense(units = 256, activation = 'relu'))<br>
+    classifier.add(Dropout(0.35)) <br>
+    #classifier.add(Dropout(dropout_one))<br>
+    <br>
+    # adding second hidden convolutional layer<br>
+    classifier.add(Dense(units = 256, activation = 'relu'))<br>
+    classifier.add(Dropout(0.25))<br>
+    #classifier.add(Dropout(dropout_two))<br>
+    <br>
+    classifier.add(Dense(units = 256, activation = 'relu'))<br>
+    classifier.add(Dropout(0.25))<br>
+    <br>
+    # softmax is an activation function for squashing probalities <br>
+    # between 0-1, units represent number of output classes <br>
+    classifier.add(Dense(units = 4, activation = 'softmax'))<br>
+<br>
+    # Compiling the CNN for single-label output: <br>
+    adam = Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0)<br>
+    classifier.compile(optimizer = adam, <br>
+                       loss = 'categorical_crossentropy', <br>
+                       metrics = ['accuracy'])<br>
+                       <br>
+    # Part 2: <br>
+    # Feeding CNN the input images and fitting the CNN <br>
+    # CNN uses data augmentation configuration to prevent overfitting<br>
+    datagen = ImageDataGenerator(rescale = 1./255, <br>
+                                 shear_range = 0.2, <br>
+                                 zoom_range = 0.2,<br>
+                                 horizontal_flip = True)<br>
+                         <br>
+    # augmentation configuration for rescaling images used for validation <br>
+    validate_datagen = ImageDataGenerator(rescale = 1./255)<br>
+    <br>
+    validate_datagen.fit(validate_shape_dataset)<br>
+    validate_generator = validate_datagen.flow(validate_shape_dataset, <br>
+                                               validate_y_dataset, <br>
+                                               batch_size = 32)<br>
+       <br>
+    # early stopping prevent overfitting<br>
+    early_stopping = EarlyStopping(monitor = 'val_loss', patience = 2)<br>
+    <br>
+    # compute quantities required for featurewise normalization<br>
+    datagen.fit(train_shape_dataset)<br>
+    <br>
+    # fits the model on batches with real-time data augmentation<br>
+    train_generator = datagen.flow(train_shape_dataset, <br>
+                                   train_y_dataset, <br>
+                                   batch_size = 32)<br>
+    classifier.fit_generator(train_generator, <br>
+                             steps_per_epoch = len(train_shape_dataset) / 32, <br>
+                             epochs = 50,<br>
+                             callbacks = [early_stopping], <br>
+                             validation_data =  validate_generator, <br>
+                             validation_steps = 300)     <br>
+                       <br>
+    # evaluate the model 	               <br>
+    score = classifier.evaluate(validate_shape_dataset, <br>
+                                validate_y_dataset, <br>
+                                batch_size = 32, <br>
+                                verbose = 0)<br>
+    print ("Test loss:", score[0])<br>
+    print ("Test accuracy", score[1])<br>
+    print ("Model Summary", classifier.summary())<br>
+<br>
+    classifier.save('model.h5')<br>
+<br>
+    # Save the model to the Cloud Storage bucket's jobs directory<br>
+    with file_io.FileIO('model.h5', mode='r') as input_f:<br>
+        with file_io.FileIO(job_dir + '/model.h5', mode='w+') as output_f:<br>
+            output_f.write(input_f.read())<br>
+<br>
+<br>
+if __name__ == '__main__':<br>
+    # Parse the input arguments for common Cloud ML Engine options<br>
+    parser = argparse.ArgumentParser()<br>
+    parser.add_argument('--train-file',<br>
+                        help='local path of pickle file')<br>
+    parser.add_argument('--job-dir', <br>
+                        help='Cloud storage bucket to export the model')<br>
+    '''parser.add_argument('--dropout-one',<br>
+                        help='Dropout hyperparameter after the first dense layer')<br>
+    parser.add_argument('--dropout-two',<br>
+                        help='Dropout hyperparameter after the second dense layer')'''<br>
+    args = parser.parse_args()<br>
+    arguments = args.__dict__<br>
+    train_model(**arguments)<br>
+<br>
+<br></body>
+</html>
