@@ -41,7 +41,6 @@ P {
     line-height: 1.5;
     letter-spacing: .25px;
 }
-
 /* Style the top navigation bar */
 .topnav {
     font-family: Arial, Helvetica, sans-serif;
@@ -55,7 +54,7 @@ P {
 
 /* Style the topnav links */
 .topnav a {
-    float: middle;
+    float: left;
     display: block;
     color: #000000;
     text-align: center;
@@ -68,7 +67,6 @@ P {
     background-color: #ddd;
     color: #009900;
 }
-
 /* Create three unequal columns that floats next to each other */
 .column {
     float: left;
@@ -93,7 +91,7 @@ P {
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 500px) {
+@media (max-width: 800px) {
     .column.side, .column.middle {
         width: 100%;
     }
@@ -149,13 +147,28 @@ P {
     background-color: #3e8e41;
 }
 
+table, th, td {
+    border: 1px solid black;
+}
+
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>Maggie Cao </h1>
-<p><div class="dropdown">
+  <h1>Neural Networks </h1>
+</div>
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="about_me.html">About Me</a>
+  <a href="project_logs.html">Project Documentation</a>
+  <a href="interests.html">Interests</a>
+</div>
+
+<div class="row">
+  <div class="column side">
+    <h2>Projects List</h2>
+    <p><div class="dropdown">
   <button class="dropbtn">Simple Functions</button>
   <div class="dropdown-content">
     <a href="Basic_Functions/compare_sorting.cpp">Compare Sorting Algorithms</a> 
@@ -189,41 +202,39 @@ P {
     <a href="Systems_Programming/pipe.c">Pipe example</a>
     <a href="Systems_Programming/my_nohup.c">Signals </a>
   </div>
-</div><p>
+</div></p>
 
 <p><div class="dropdown">
   <button class="dropbtn">Mirai Project </button>
   <div class="dropdown-content">
     <a href="MiraiSecurityProject.pdf">Mirai execution report</a>
   </div>
-</div><p>
+</div></p>
 
 <p><div class="dropdown">
-  <button class="dropbtn">Simple Shapes Classification with Convolutional Neural Networks</button>
+  <button class="dropbtn">Simple Shapes CNN </button>
   <div class="dropdown-content">
     <a href="Simple_Shapes_CNN/proposal.pdf">Neural Network Concept Proposal</a>
-    <a href="draw.html">Drawing random shapes (Dataset Generator)</a>
-    <a href="pickletestcats.html">Creating pickle files</a>
-    <a href="merge_files.html">Merging pickle files</a>
-    <a href="load_merged_files.html">Pickle loader to CNN</a>
-    <a href="cnn_sobel_main.html">Sobel Algorithm for Edge & Contour Detection</a>
-    <a href="save_pickle_images.html">Reduce image size</a>
-    <a href="cnn_copy_sobel_test.html">CNN loader</a>
-    <a href="cnn_sobel_inception.html">CNN Inception Example</a>
-    <a href="test_model.html">Test trained model</a>
+    <a href="Simple_Shapes_CNN/draw.py">Drawing random shapes (Dataset Generator)</a>
+    <a href="Simple_Shapes_CNN/pickletestcats.py">Creating pickle files</a>
+    <a href="Simple_Shapes_CNN/merge_files.py">Merging pickle files</a>
+    <a href="Simple_Shapes_CNN/load_merged_files.py">Pickle loader to CNN</a>
+    <a href="Simple_Shapes_CNN/cnn_sobel_main.py">Sobel Algorithm for Edge & Contour Detection</a>
+    <a href="Simple_Shapes_CNN/save_pickle_images.py">Reduce image size</a>
+    <a href="Simple_Shapes_CNN/cnn_copy_sobel_test.py">CNN loader</a>
+    <a href="Simple_Shapes_CNN/cnn_sobel_inception.py">CNN Inception Example</a>
+    <a href="Simple_Shapes_CNN/test_model.py">Test trained model</a>
     <a href="Simple_Shapes_CNN/googlecloud_config_cnn.txt">Google Cloud Configuration</a> 
   </div>
-</div><p>
-
-</p>
-</div>
+</div></p>
 </div>
 
-<div class="topnav">
-  <a href="index.html">Home</a>
-  <a href="about_me.html">About Me</a>
-  <a href="project_logs.html">Project Documentation</a>
-  <a href="interests.html">Interests</a>
+  <div class="column middle">
+  <div style="width:800px;height:700px;line-height:1.2em;overflow:auto;padding:0px;">
+    <h2>Simple Shapes using Convolutional Neural Networks:</h2>
+    <h2>This code uses the Sobel algorithm for edge and contour detection.</h2>
+    <script src="https://gist.github.com/mahgieeee/06d4727c2c5beba3d788559db042ab0b.js"></script>
+</div>
 </div>
 
 </body>
