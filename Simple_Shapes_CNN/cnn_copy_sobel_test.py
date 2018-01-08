@@ -59,39 +59,48 @@ def train_model(train_file = 'random_shapes_png.pkl', job_dir = './',
     # window with 32 output filters for each input image uses relu layers 
     # to make layer less linear; the stride default is (1,1)
     # the default for padding is 'valid'
-    classifier.add(Conv2D(128, (6, 6),
+    classifier.add(Conv2D(64, (3, 3),
                           padding = 'valid', 
                           input_shape = (200, 200, 3), 
                           activation = 'relu'))
 
     # Step 2:  
     # Max Pooling downsamples the number pixels per neuron and create a max
-    classifier.add(MaxPooling2D(pool_size = (6, 6)))
+    #classifier.add(MaxPooling2D(pool_size = (6, 6)))
 
     # Adding a second convolutional layer, which is the same as the first one
     # the default for padding is 'valid'
-    classifier.add(Conv2D(256, (6, 6), 
+    classifier.add(Conv2D(64, (6, 6), 
                           padding = 'valid', 
                           activation = 'relu'))
     classifier.add(MaxPooling2D(pool_size = (6, 6)))
 
+    classifier.add(Conv2D(128, (6, 6),
+                          padding = 'valid',
+                          activation = 'relu'))
+    classifier.add(MaxPooling2D(pool_size = (6, 6)))
+    
+    classifier.add(Conv2D(256, (2, 2),
+                          padding = 'valid',
+                          activation = 'relu'))
+    classifier.add(MaxPooling2D(pool_size = (2, 2)))
 
     # Step 3: Flattening the convolutional layers for input to MLP
     classifier.add(Flatten())
     
     # Step 4: 
     # Fully connected: Dense function is used to add a fully connected layer
-    classifier.add(Dense(units = 256, activation = 'relu'))
-    classifier.add(Dropout(0.35)) 
+    classifier.add(Dense(units = 512, activation = 'relu'))
+    classifier.add(Dropout(0.25)) 
     #classifier.add(Dropout(dropout_one))
     
     # adding second hidden convolutional layer
-    classifier.add(Dense(units = 256, activation = 'relu'))
-    classifier.add(Dropout(0.25))
+    classifier.add(Dense(units = 512, activation = 'relu'))
+    classifier.add(Dropout(0.15))
     #classifier.add(Dropout(dropout_two))
     
-    classifier.add(Dense(units = 256, activation = 'relu'))
-    classifier.add(Dropout(0.25))
+    classifier.add(Dense(units = 512, activation = 'relu'))
+    classifier.add(Dropout(0.15))
     
     # softmax is an activation function for squashing probalities 
     # between 0-1, units represent number of output classes 
@@ -106,7 +115,8 @@ def train_model(train_file = 'random_shapes_png.pkl', job_dir = './',
     # Part 2: 
     # Feeding CNN the input images and fitting the CNN 
     # CNN uses data augmentation configuration to prevent overfitting
-    datagen = ImageDataGenerator(rescale = 1./255, 
+    datagen = ImageDataGenerator(rescale = 1./255,
+                                 rotation_range = 30, 
                                  shear_range = 0.2, 
                                  zoom_range = 0.2,
                                  horizontal_flip = True)
@@ -117,7 +127,7 @@ def train_model(train_file = 'random_shapes_png.pkl', job_dir = './',
     validate_datagen.fit(validate_shape_dataset)
     validate_generator = validate_datagen.flow(validate_shape_dataset, 
                                                validate_y_dataset, 
-                                               batch_size = 32)
+                                               batch_size = 64)
        
     # early stopping prevent overfitting
     early_stopping = EarlyStopping(monitor = 'val_loss', patience = 2)
@@ -128,10 +138,10 @@ def train_model(train_file = 'random_shapes_png.pkl', job_dir = './',
     # fits the model on batches with real-time data augmentation
     train_generator = datagen.flow(train_shape_dataset, 
                                    train_y_dataset, 
-                                   batch_size = 32)
+                                   batch_size = 64)
     classifier.fit_generator(train_generator, 
-                             steps_per_epoch = len(train_shape_dataset) / 32, 
-                             epochs = 50,
+                             steps_per_epoch = len(train_shape_dataset) / 64, 
+                             epochs = 30,
                              callbacks = [early_stopping], 
                              validation_data =  validate_generator, 
                              validation_steps = 300)     
@@ -139,17 +149,17 @@ def train_model(train_file = 'random_shapes_png.pkl', job_dir = './',
     # evaluate the model 	               
     score = classifier.evaluate(validate_shape_dataset, 
                                 validate_y_dataset, 
-                                batch_size = 32, 
+                                batch_size = 64, 
                                 verbose = 0)
     print ("Test loss:", score[0])
     print ("Test accuracy", score[1])
     print ("Model Summary", classifier.summary())
 
-    classifier.save('model.h5')
+    classifier.save('model_ver2.h5')
 
     # Save the model to the Cloud Storage bucket's jobs directory
-    with file_io.FileIO('model.h5', mode='r') as input_f:
-        with file_io.FileIO(job_dir + '/model.h5', mode='w+') as output_f:
+    with file_io.FileIO('model_ver2.h5', mode='r') as input_f:
+        with file_io.FileIO(job_dir + '/model_ver2.h5', mode='w+') as output_f:
             output_f.write(input_f.read())
 
 

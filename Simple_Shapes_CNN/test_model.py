@@ -13,7 +13,7 @@ import joblib
 """
     
 
-def train_model(train_file = 'test_random_shapes.pkl',
+def train_model(train_file = 'test_resized_images.pkl',
                 job_dir = './', 
                 **args):
     # set the loggining path for ML Engine logging to storage bucket
@@ -31,7 +31,7 @@ def train_model(train_file = 'test_random_shapes.pkl',
     # this makes predictions of the model
     # the model contains the model architecture and weights, specification of the chosen loss 
     # and optimization algorithm so that you can resume training if needed
-    model = load_model('model.h5')                       
+    model = load_model('model_ver2.h5')                       
     '''predictions = model.predict(test_shape_dataset, batch_size = 32)    
     predictions[predictions >= 0.6] = 1
     predictions[predictions < 0.6] = 0     
