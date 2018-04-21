@@ -55,7 +55,7 @@ P {
 
 /* Style the topnav links */
 .topnav a {
-    float: middle;
+    float: left;
     display: block;
     color: #000000;
     text-align: center;
@@ -68,7 +68,6 @@ P {
     background-color: #ddd;
     color: #009900;
 }
-
 /* Create three unequal columns that floats next to each other */
 .column {
     float: left;
@@ -148,22 +147,37 @@ P {
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
-
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>Maggie Cao </h1>
-  
-<p><div class="dropdown">
-  <button class="dropbtn">Summary of Past Projects</button>
-  <div class="dropdown-content">
-    <a href="Project_Summary/work_samples.pdf">Completed Work</a> 
-  </div>
-</div></p>
+  <h1> Interests </h1>
+<h2> "Our brains grow because the biological design of our camera-like eyes <br>
+intake what we see and sends the exact visual data to the visual cortex, where it <br>
+stores an abstraction, or abstractions, of the visual data effortlessly in a way <br> 
+that we can retrieve it without a knowing the location. It is stored and <br>
+retrieved dynamically, nonpermanently and nonforcefully. We learn by choosing <br> 
+between such abstracts, which are triggered simultaneously through the interchange <br> 
+between the visual object in the real world and the systems in our brain, precisely <br>
+in the visual cortex. The visual cortex organizes information dynamically through a <br>
+set of random addresses, or lines of synaptic connections, where the abstract data <br>
+is processed somewhere in the visual cortex to become precise data. The beauty lies in the <br>
+fact that we do not have to explicitly define the abstractions of a visual object <br>
+because the abstraction is the nature of the system within the visual cortex." 
+</h2></div>
 
-<p><div class="dropdown">
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="about_me.html">About Me</a>
+  <a href="project_logs.html">Project Documentation</a>
+  <a href="interests.html">Interests</a>
+</div>
+
+<div class="row">
+  <div class="column side">
+    <h2>Projects List</h2>
+    <p><div class="dropdown">
   <button class="dropbtn">Simple Functions</button>
   <div class="dropdown-content">
     <a href="Basic_Functions/compare_sorting.html">Compare Sorting Algorithms</a> 
@@ -188,7 +202,6 @@ P {
   </div>
 </div></p>
 
-
 <p><div class="dropdown">
   <button class="dropbtn">Systems Programming</button>
   <div class="dropdown-content">
@@ -198,17 +211,17 @@ P {
     <a href="Systems_Programming/pipe.html">Pipe example</a>
     <a href="Systems_Programming/my_nohup.html">Signals </a>
   </div>
-</div><p>
+</div></p>
 
 <p><div class="dropdown">
   <button class="dropbtn">Mirai Project </button>
   <div class="dropdown-content">
     <a href="MiraiSecurityProject.pdf">Mirai execution report</a>
   </div>
-</div><p>
+</div></p>
 
 <p><div class="dropdown">
-  <button class="dropbtn">Simple Shapes Classification with Convolutional Neural Networks</button>
+  <button class="dropbtn">Simple Shapes (CNN)</button>
   <div class="dropdown-content">
     <a href="Simple_Shapes_CNN/proposal.pdf">Neural Network Concept Proposal</a>
     <a href="draw.html">Drawing random shapes (Dataset Generator)</a>
@@ -224,33 +237,19 @@ P {
   </div>
 </div><p>
 
-<p><div class="dropdown">
-  <button class="dropbtn">Microcontroller Projects in Physics</button>
-  <div class="dropdown-content">
-    <a href="Microcontrollers/AutomaticParallelParkingCar.pdf">Parallel Park Car</a>
-	<a href="Microcontrollers/ParallelParkingCarCode.txt">Parallel Park Code</a>
-	<a href="Microcontrollers/PythonCodeforWirelessControl.txt">Wireless Control Code</a>
-	<a href="microcontroller.html">Robotic Car Videos</a>
-  </div>
-</div><p>
+</div>
 
-<p><div class="dropdown">
-  <button class="dropbtn">Digital Enigma Machine </button>
-  <div class="dropdown-content">
-    <a href="Enigma_Machine_Project.pdf">Enigma Digital Logic Design Implementation</a>
-  </div>
-</div><p>
-
+  <div class="column middle">
+  <div style="width:600px;height:700px;line-height:1.2em;overflow:auto;padding:0px;">
+    <h2>Microcontroller Projects in Arduino: Parallel Park Car</h2>
+    
+<p>
+<embed src="/support/mediaplayer.swf?file=Microcontrollers/WirelessControlParking.mp4" width="325" height="230" allowfullscreen="true" />
 </p>
-</div>
-</div>
 
-<div class="topnav">
-  <a href="index.html">Home</a>
-  <a href="about_me.html">About Me</a>
-  <a href="project_logs.html">Project Documentation</a>
-  <a href="interests.html">Interests</a>
-</div>
+<p>
+<embed src="/support/mediaplayer.swf?file=Microcontrollers/ParallelParking.mp4" width="325" height="230" allowfullscreen="true" />
+</p>
 
 </body>
 </html>
