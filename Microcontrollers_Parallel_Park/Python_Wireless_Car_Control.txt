@@ -1,0 +1,42 @@
+import serial
+import time
+import sys
+from tkinter import *
+root = Tk()
+
+
+ser=serial.Serial('COM7', 9600)
+
+isSerialOpen = True
+
+if isSerialOpen:
+    print ("serial connected")
+    def key(data):
+        frame.focus_force()
+        #print ("pressed"),
+        repr(data.keysym)
+        if data.keysym=="Left":
+           ser.write(b'l')
+           print("pressed Left")
+        if data.keysym=="Right":
+            ser.write(b'r')
+            print ("pressed Right")
+        if data.keysym=="Up":
+            ser.write(b'u')
+            print ("pressed Up")
+        if data.keysym=="Down":
+            ser.write(b'd')
+            print ("pressed Down")
+        if data.keysym=="t":
+            ser.write(b't')
+            print ("pressed t")
+        if data.keysym=="s":
+            ser.write(b's')
+            print ("pressed s")
+
+frame = Frame(root, width=100, height=100)
+frame.bind("<Key>", key)
+frame.pack()
+frame.focus_set()
+
+root.mainloop()
