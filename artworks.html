@@ -322,7 +322,25 @@ P {
 <p>In this example, we use CSS to create a modal (dialog box) that is hidden by default.</p>
 <p>We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.</p>
 
-<img id="myImg" src="Artwork/musictestcolor.jpg" alt="Trolltunga, Norway" width="300" height="200">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- Trigger the Modal -->
+<img class="myImg" src="Artwork/musictestcolor.jpg" alt="Trolltunga, Norway" width="300" height="200">
+<img class="myImg" src="Artwork/blackandwhite.jpg" alt="Trolltunga, Norway" width="300" height="200">
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -353,26 +371,6 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 </script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<!-- Trigger the Modal -->
-<img class="myImg" src="Artwork/musictestcolor.jpg" alt="Trolltunga, Norway" width="300" height="200">
-<img class="myImg" src="Artwork/blackandwhite.jpg" alt="Trolltunga, Norway" width="300" height="200">
-
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- The Close Button -->
-  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-
-  <!-- Modal Content (The Image) -->
-  <img class="modal-content" id="img01">
-
-  <!-- Modal Caption (Image Text) -->
-  <div id="caption"></div>
-</div>
-
 
 
 </div>
