@@ -110,7 +110,7 @@ body,
 }
 
 .slide1 {
-  background-image: url("pictures/tomo_restaurant_frontpage.jpg");
+  background-image: url("file:///pictures/tomo_restaurant_frontpage.jpg");
 }
 .slide2 {
   background-image: url("https://static.pexels.com/photos/302892/pexels-photo-302892.jpeg");
