@@ -110,7 +110,7 @@ body,
 }
 
 .slide1 {
-  background-image: url("https://static.pexels.com/photos/302889/pexels-photo-302889.jpeg");
+  background-image: url("./pictures/tomo_restaurant_frontpage.jpg");
 }
 .slide2 {
   background-image: url("https://static.pexels.com/photos/302892/pexels-photo-302892.jpeg");
@@ -128,7 +128,7 @@ body,
 }
 
 .slide-content span {
-  font-size: 5rem;
+  font-size: 2rem; #previously 5
   color: #fff;
 }
 
