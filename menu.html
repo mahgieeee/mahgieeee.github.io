@@ -2,216 +2,1683 @@
 <html>
 <head>
   <title> Tomo Sushi Japanese </title>
-  <link rel="stylesheet" href="styles/styles.css" />
-  <style>
-
-//updated ver
-* {
-  box-sizing:border-box;
-}
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
-body {
-
-  font-family:'Lato';
-}
-.heading-primary {
-  font-size:2em;
-  padding:2em;
-  text-align:center;
-}
-.accordion dl,
-.accordion-list {
-   border:1px solid #ddd;
-   &:after {
-       content: "";
-       display:block;
-       height:1em;
-       width:100%;
-       background-color:darken(#38cc70, 10%);
-     }
-}
-.accordion dd,
-.accordion__panel {
-   background-color:#eee;
-   font-size:1em;
-   line-height:1.5em;
-}
-.accordion p {
-  padding:1em 2em 1em 2em;
-}
-
-.accordion {
-    position:relative;
-    background-color:#eee;
-}
-.container {
-  max-width:960px;
-  margin:0 auto;
-  padding:2em 0 2em 0;
-}
-.accordionTitle,
-.accordion__Heading {
- background-color:#38cc70;
-   text-align:center;
-     font-weight:700;
-          padding:2em;
-          display:block;
-          text-decoration:none;
-          color:#fff;
-          transition:background-color 0.5s ease-in-out;
-  border-bottom:1px solid darken(#38cc70, 5%);
-  &:before {
-   content: "+";
-   font-size:1.5em;
-   line-height:0.5em;
-   float:left;
-   transition: transform 0.3s ease-in-out;
-  }
-  &:hover {
-    background-color:darken(#38cc70, 10%);
-  }
-}
-.accordionTitleActive,
-.accordionTitle.is-expanded {
-   background-color:darken(#38cc70, 10%);
-    &:before {
-
-      transform:rotate(-225deg);
-    }
-}
-.accordionItem {
-    height:auto;
-    overflow:hidden;
-    //SHAME: magic number to allow the accordion to animate
-
-     max-height:50em;
-    transition:max-height 1s;
-
-
-    @media screen and (min-width:48em) {
-         max-height:15em;
-        transition:max-height 0.5s
-
-    }
-
-
-}
-
-.accordionItem.is-collapsed {
-    max-height:0;
-}
-.no-js .accordionItem.is-collapsed {
-  max-height: auto;
-}
-.animateIn {
-     animation: accordionIn 0.45s normal ease-in-out both 1;
-}
-.animateOut {
-     animation: accordionOut 0.45s alternate ease-in-out both 1;
-}
-@keyframes accordionIn {
-  0% {
-    opacity: 0;
-    transform:scale(0.9) rotateX(-60deg);
-    transform-origin: 50% 0;
-  }
-  100% {
-    opacity:1;
-    transform:scale(1);
-  }
-}
-
-@keyframes accordionOut {
-    0% {
-       opacity: 1;
-       transform:scale(1);
-     }
-     100% {
-          opacity:0;
-           transform:scale(0.9) rotateX(-60deg);
-       }
-}
-</style>
-
+  <link rel="stylesheet" href="styles/styles.css" /> </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="./about.html">ABOUT</a>
-    <a href="./menu.html">MENU</a>
-    <a href="./locations.html">LOCATIONS</a>
-    <a href="./contact.html">CONTACT</a>
-  </div>
 
-  <div id="main">
-
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; TOMO SUSHI JAPANESE</span>
-  </div>
-  <div class="wrap">
-    <div id="arrow-left" class="arrow"></div>
-    <div id="slider">
-      <div class="slide slide1">
-        <div class="slide-content">
-          <span> BYOB for hibachi, teriyaki & more <br>
-            plus an All-You-Can-Eat Sushi option </span>
+<header>
+    <div class = "bg-img">
+        <div class="crossfade">
+                <figure></figure>
+                <figure></figure>
+                <figure></figure>
+                <figure></figure>
+                <figure></figure>
+            <div class="container">
+                <div class="topnav-right">
+                    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+                    <a href="menu.html">Menu</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="#about">About</a>
+                </div>
+    
+                <div class="topnav">
+                    <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet'>
+                    <a href="index.html">Tomo Sushi Japanese</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="slide slide2">
-        <div class="slide-content">
-          <span>Image Two</span>
-        </div>
-      </div>
-      <div class="slide slide3">
-        <div class="slide-content">
-          <span>Image Three</span>
-        </div>
-      </div>
     </div>
-    <div id="arrow-right" class="arrow"></div>
-  </div>
+</header>
 
-  <section>
-    <article>
-      <div class="container">
-          <h1 class="heading-primary">Menu</h1>
-          <div class="accordion">
-            <dl>
-              <dt>
-                <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Appetizers</a>
-              </dt>
-              <dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
-                <p>Lorem ipsum dolor sit amet, consectetur <a href="https://www.google.com">Test</a>adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
-                <p>Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.</p>
-              </dd>
-              <dt>
-                <a href="#accordion2" aria-expanded="false" aria-controls="accordion2" class="accordion-title accordionTitle js-accordionTrigger">
-                  Second Accordion heading</a>
-              </dt>
-              <dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
-                <p>Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.</p>
-              </dd>
-              <dt>
-                <a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionTitle js-accordionTrigger">
-                  Third Accordion heading
-                </a>
-              </dt>
-              <dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
-                <p>Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.</p>
-              </dd>
-            </dl>
-          </div>
+<body>
+        <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet'>
+        <h3>Menu Items</h3>
+
+    <div class = "centered">
+        <div class="centered_tab button">
+          <button class="tablinks" onclick="openCity(event, 'Appetizers')">Appetizers</button>
+          <button class="tablinks" onclick="openCity(event, 'Lunch')">Lunch</button>
+          <button class="tablinks" onclick="openCity(event, 'Entrees')">Entrees</button>
+          <button class="tablinks" onclick="openCity(event, 'Sushi')">Sushi</button>
+          <button class="tablinks" onclick="openCity(event, 'Special Roll')">Special Roll</button>
+          <button class="tablinks" onclick="openCity(event, 'Hibachi & Rice')">Hibachi & Rice</button>
+          <button class="tablinks" onclick="openCity(event, 'Noodles')">Noodles</button>
         </div>
-    </article>
-  </section>
+        
+    </div>
 
-  <footer>
-  <p> Copyright 2019 Tomo Sushi Japanese </p>
-  </footer>
+        
+        <div id="Appetizers" class="tabcontent">
+            <div class="panel">
+                <p4> Beverages </p4>
+                    <div class="flex-container">
+                        <div>
+                        <p3>Can Soda</p3>
+                        <br>
+                        <p1>$1.25</p1>
+                        </div>
 
-  <script src="./javascript/menu.js"></script>
+                        <div>
+                        <p3>Japanese Soda</p3>
+                        <br>
+                        <p1>$2.00</p1>
+                        </div>
+                    </div>
+                <p4> Soup Selections </p4>
+                    <div class="flex-container">
+                        <div>
+                        <p3>Miso Soup</p3>
+                        <br>
+                        <p1>$1.50 </p1>
+                        <br>
+                        <p2>Soy bean paste soup w. bean curd, seaweed & scallion</p2>
+                        </div>
 
+                        <div>
+                        <p3>Shumai Soup</p3>
+                        <br>
+                        <p1>$3.50 </p1>
+                        <br>
+                        <p2>Shrimp dumpling, vegetable in the soup</p2>
+                        </div>
+
+                        <div>
+                        <p3>Clear Soup</p3>
+                        <br>
+                        <p1>$1.50 </p1>
+                        <br>
+                        <p2>Clear broth w. mushroom, scallion and crabmeat</p2>
+                        </div>
+
+                        <div>
+                        <p3>Spicy Seafood</p3>
+                        <br>
+                        <p1>$5.50 </p1>
+                        <br>
+                        <p2>Shrimp, scallop, fish, crab stick, vegetable in the broth w. spicy</p2>
+                        </div>
+
+                        <div>
+                        <p3>Seafood Soup</p3>
+                        <br>
+                        <p1>$5.50</p1>
+                        <br>
+                        <p2>Shrimp, scallop, fish, crabmeat, tofu in the broth</p2>
+                        </div>
+                        </div>
+
+                <p4> From The Kitchen </p4>
+                    <div class="flex-container">
+                        <div>
+                        <p3>Agedashi Tofu</p3>
+                        <br>
+                        <p1>$3.95 </p1>
+                        <br>
+                        <p2>Deep fried Japanese bean curd w. special sauce</p2>
+                        </div>
+
+                        <div>
+                        <p3>Edamame</p3>
+                        <br>
+                        <p1>$3.50 </p1>
+                        <br>
+                        <p2>Japanese young soybean</p2>
+                        </div>
+
+                        <div>
+                        <p3>Surume Ika</p3>
+                        <br>
+                        <p1>$6.95 </p1>
+                        <br>
+                        <p2>Grilled squid w. special ginger sauce</p2>
+                        </div>
+
+                        <div>
+                        <p3>Kaki Fried</p3>
+                        <br>
+                        <p1>$5.95 </p1>
+                        <br>
+                        <p2>Fried baby oyster</p2>
+                        </div>
+
+                        <div>
+                        <p3>Soft Shell Crab</p3>
+                        <br>
+                        <p1>$6.50 </p1>
+                        <br>
+                        <p2>Japanese style deep fried soft shell crab</p2>
+                        </div>
+
+                        <div>
+                        <p3>Ika Age</p3>
+                        <br>
+                        <p1>$5.50 </p1>
+                        <br>
+                        <p2>Deep fried marinated squid</p2>
+                        </div>
+
+                        <div>
+                        <p3>Beef Negimaki</p3>
+                        <br>
+                        <p1>$5.95 </p1>
+                        <br>
+                        <p2>Sliced beef rolled w. scallion, grilled w. teriyaki sauce</p2>
+                        </div>
+
+                        <div>
+                        <p3>Gyoza</p3>
+                        <br>
+                        <p1>$4.50 </p1>
+                        <br>
+                        <p2>Pan fried dumpling, choice of pork or shrimp </p2>
+                        </div>
+
+                        <div>
+                        <p3>Harumaki</p3>
+                        <br>
+                        <p1>$4.50 </p1>
+                        <br>
+                        <p2>Japanese pork & vegetable spring roll</p2>
+                        </div>
+
+                        <div>
+                        <p3>Nasu Age</p3>
+                        <br>
+                        <p1>$4.50 </p1>
+                        <br>
+                        <p2>Broiled eggplant w. miso paste</p2>
+                        </div>
+
+                        <div>
+                        <p3>Tempura</p3>
+                        <br>
+                        <p1>$5.95 </p1>
+                        <br>
+                        <p2>Lightly battered deep fried shrimp & vegatable</p2>
+                        </div>
+
+                        <div>
+                        <p3>Chicken Kara Age</p3>
+                        <br>
+                        <p1>$4.50 </p1>
+                        <br>
+                        <p2>Japanese style deep fried chicken</p2>
+                        </div>
+
+                        <div>
+                        <p3>Shumai</p3>
+                        <br>
+                        <p1>$4.50 </p1>
+                        <br>
+                        <p2>Japanese shrimp dumpling</p2>
+                        </div>
+
+                        <div>
+                        <p3>Hamachi Kama</p3>
+                        <br>
+                        <p1>$8.95 </p1>
+                        <br>
+                        <p2>Grilled yellowtail jaw w. ponzu sauce</p2>
+                        </div>
+
+                        <div>
+                        <p3>Yakitori</p3>
+                        <br>
+                        <p1>$4.50 </p1>
+                        <br>
+                        <p2>Chicken & vegetable grilled w. teriyaki sauce</p2>
+                        </div>
+
+                        <div>
+                        <p3>Fish Tempura</p3>
+                        <br>
+                        <p1>$6.50 </p1>
+                        <br>
+                        <p2>Lightly battered deep fried white fish</p2>
+                        </div>
+                        </div>
+                <p4> From The Sushi Bar </p4>
+                    <div class="flex-container">
+                        <div>
+                        <p3>Kani Su</p3>
+                        <br>
+                        <p1>$4.50 </p1>
+                        <br>
+                        <p2>Crab stick, cucumber w. ponzu sauce</p2>
+                        </div>
+                        <div>
+                        <p3>Sunomono</p3>
+                        <br>
+                        <p1>$6.50 </p1>
+                        <br>
+                        <p2>Marinated seafood w. ponzu sauce, seaweed & cucumber</p2>
+                        </div>
+                        <div>
+                        <p3>Usuzukuri</p3>
+                        <br>
+                        <p1>$7.95 </p1>
+                        <br>
+                        <p2>Very thinly sliced fluke w. ponzu sauce & scallion</p2>
+                        </div>
+                        <div>
+                        <p3>Sushi (5 pcs)</p3>
+                        <br>
+                        <p1>$6.50 </p1>
+                        <br>
+                        </div>
+                        <div>
+                        <p3>Tako Su</p3>
+                        <br>
+                        <p1>$5.95 </p1>
+                        <br>
+                        <p2>Octopus seaweed & cucumber w. ponzu sauce</p2>
+                        </div>
+                        <div>
+                        <p3>Tako Chan</p3>
+                        <br>
+                        <p1>$6.50</p1>
+                        <br>
+                        <p2>Baby octopus w. sweet sauce</p2>
+                        </div>
+                        <div>
+                        <p3>Yellowtail Carpacci</p3>
+                        <br>
+                        <p1>$8.50 </p1>
+                        <br>
+                        <p2>Thinly sliced yellowtail w. chef's special sauce</p2>
+                        </div>
+                        <div>
+                        <p3>Sashimi</p3>
+                        <br>
+                        <p1>$8.50 </p1>
+                        <br>
+                        <p2>8 pcs assorted raw fish</p2>
+                        </div>
+                        <div>
+                        <p3>Pepper Tuna</p3>
+                        <br>
+                        <p1>$8.50 </p1>
+                        <br>
+                        <p2>Seared red pepper & tuna w. wasabi sauce</p2>
+                        </div>
+                        <div>
+                        <p3>Treasure Island</p3>
+                        <br>
+                        <p1>$6.95 </p1>
+                        <br>
+                        <p2>Half cut avocado w. spicy tuna & tempura flake</p2>
+                        </div>
+                        <div>
+                        <p3>Kani Naurto</p3>
+                        <br>
+                        <p1>$5.50 </p1>
+                        <br>
+                        <p2>Crab stick, avocado, caviar wrapped w. thin sliced cucumber</p2>
+                        </div>
+                    </div>
+                <p4> Golden Tempura - Lightly Battered & Golden Deep Fried </p4>
+                    <div class="flex-container">
+                        <div>
+                        <p3>Vegetable Tempura</p3>
+                        <br>
+                        <p1>$8.95</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Shrimp Tempura</p3>
+                        <br>
+                        <p1>$14.95</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Shrimp & Vegetable Tempura</p3>
+                        <br>
+                        <p1>$13.95</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Chicken & Vegetable Tempura</p3>
+                        <br>
+                        <p1>$12.95</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Seafood Tempura</p3>
+                        <br>
+                        <p1>$15.95</p1>
+                        <br>
+                        </p2>Scallop, fish, crab stick & shrimp</p2>
+                        </div>
+                    
+                        <div>
+                        <p3>Ton Katsu (Pork Cutlet)</p3>
+                        <br>
+                        <p1>$11.95</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Chicken Katsu (Chicken Cutlet)</p3>
+                        <br>
+                        <p1>$11.95</p1>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+        <div id="Lunch" class="tabcontent">
+            <div class="panel">
+                <p4> Lunch From Sushi Bar </p4>
+                    <div class="flex-container">
+                        <div>
+                        <p3>Sushi Lunch</p3>
+                        <br>
+                        <p1>$8.50</p1>
+                        <br>
+                        <p2>5 pcs sushi, one California roll</p2>
+                        </div>
+                            
+                        <div>
+                        <p3>Sashimi Lunch</p3>
+                        <br>
+                        <p1>$10.50</p1>
+                        <br>
+                        <p2>10 pcs raw fish, comes w. a bowl of rice</p2>
+                        </div>
+
+                        <div>
+                        <p3>Sushi & Sashimi</p3>
+                        <br>
+                        <p1>$12.50</p1>
+                        <br>
+                        <p2>3 pcs sushi, 8 pcs sashimi & California roll</p2>
+                        </div>
+
+                        <div>
+                        <p3>Chirashi</p3>
+                        <br>
+                        <p1>$9.95</p1>
+                        <br>
+                        <p2>10 pcs sashimi over sushi rice</p2>
+                        </div>
+
+                        <div>
+                        <p3>Cooked Sushi</p3>
+                        <br>
+                        <p1>$8.95</p1>
+                        <br>
+                        <p2>2 pcs shrimp, 2 pcs eel & one shrimp tempura roll</p2>
+                        </div>
+
+                        <div>
+                        <p3>Roll Combo - Choice of 2 rolls</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        <br>
+                        <p2>California Roll, Eel Avocado, Eel Cucumber, Avocado Cucumber, Shrimp Cucumber, Shrimp Tempura, Boston Roll, Salmon Avocado, Tuna Avocado, Spicy Crabmeat, Spicy Tuna, Spicy Salmon, Spicy Yellowtail, Spicy White Fish, Yellowtail Scallion, Philly Roll, Sweet Potato, Alaska Roll</p2>
+                        </div>
+
+                        <div>
+                        <p3>Roll Combo - Choice of 3 rolls</p3>
+                        <br>
+                        <p1>$10.50</p1>
+                        <br>
+                        <p2>California Roll, Eel Avocado, Eel Cucumber, Avocado Cucumber, Shrimp Cucumber, Shrimp Tempura, Boston Roll, Salmon Avocado, Tuna Avocado, Spicy Crabmeat, Spicy Tuna, Spicy Salmon, Spicy Yellowtail, Spicy White Fish, Yellowtail Scallion, Philly Roll, Sweet Potato, Alaska Roll</p2>
+                        </div>
+                    </div>
+                <p4> Lunch From Kitchen </p4>
+                    <div class="flex-container">
+                        <div>
+                        <p3>Steak Teriyaki</p3>
+                        <br>
+                        <p1>$5.95</p1>
+                        </div>
+                                
+                        <div>
+                        <p3>Chicken Teriyaki</p3>
+                        <br>
+                        <p1>$5.95</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Pork Teriyaki</p3>
+                        <br>
+                        <p1>$5.95</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Salmon Teriyaki</p3>
+                        <br>
+                        <p1>$5.95</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Shrimp Teriyaki</p3>
+                        <br>
+                        <p1>$5.95</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Ton Katsu (Pork Cutlet)</p3>
+                        <br>
+                        <p1>$5.95</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Chicken Katsu (Chicken Cutlet)</p3>
+                        <br>
+                        <p1>$5.95</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Green Curry</p3>
+                        <br>
+                        <p1>$5.95</p1>
+                        <br>
+                        <p2>Choice of Beef, Chicken or Shrimp</p2>
+                        </div>
+                    </div>
+                <p4> Lunch Box </p4>
+                    <div class="flex-container">
+                        <div>
+                        <p3>Beef Negimaki</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        </div>
+                                        
+                        <div>
+                        <p3>Chicken Teriyaki</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Salmon Teriyaki</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Steak Teriyaki</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Shrimp Teriyaki</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Chicken Katsu (Chicken Cutlet)</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Ton Katsu (Pork Cutlet)</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Shrimp & Vegetable Tempura</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Tofu Teriyaki</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        </div>
+                    </div>
+                <p4> Don Buri Lunch </p4>
+                    <div class="flex-container">
+                        <div>
+                        <p3>Katsu Don</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        <br>
+                        <p2>Cook pork cutlet w. egg & vegetable over rice</p2>
+                        </div>
+                
+                        <div>
+                        <p3>Oyako Don</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        <br>
+                        <p2>Cook chicken cutlet w. egg & vegetable over rice</p2>
+                        </div>
+                
+                        <div>
+                        <p3>Ten Don</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        <br>
+                        <p2>Batter shrimp & vegetable over rice</p2>
+                        </div>
+                    
+                        <div>
+                        <p3>Una Don</p3>
+                        <br>
+                        <p1>$7.95</p1>
+                        <br>
+                        <p2>Grilled eel over rice</p2>
+                        </div>
+                    </div>
+                <p4> Hibachi Lunch </p4>
+                    <div class="flex-container">
+                        <div>
+                        <p3>Chicken</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        </div>
+
+                        <div>
+                        <p3>Steak</p3>
+                        <br>
+                        <p1>$7.95</p1>
+                        </div>
+
+                        <div>
+                        <p3>Shrimp</p3>
+                        <br>
+                        <p1>$7.95</p1>
+                        </div>
+
+                        <div>
+                        <p3>Salmon</p3>
+                        <br>
+                        <p1>$7.95</p1>
+                        </div>
+
+                        <div>
+                        <p3>Scallop</p3>
+                        <br>
+                        <p1>$7.95</p1>
+                        </div>
+                    </div>
+                <p4> Noodle Lunch </p4>
+                    <div class="flex-container">
+                        <div>
+                        <p3>Tempura Udon (Noodle Soup)</p3>
+                        <br>
+                        <p1>$7.95</p1>
+                        <br>
+                        <p2>Shrimp & vegetable tempura on the side</p2>
+                        </div>
+
+                        <div>
+                        <p3>Nabe Yaki Udon (Noodle Soup)</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        <br>
+                        <p2>Chicken, shrimp, vegetable, egg & noodle in soup</p2>
+                        </div>
+
+                        <div>
+                        <p3>Yaki Udon or Soba</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        <br>
+                        <p2>Pan fried noodle - Choice of chicken, beef, or shrimp</p2>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+        <div id="Entrees" class="tabcontent">
+                <div class="panel">
+                        <p4> From The Sushi Bar </p4>
+                           <div class="flex-container">
+                                <div>
+                                <p3>Sushi Deluxe</p3>
+                                <br>
+                                <p1>$15.95 </p1>
+                                <br>
+                                <p2>9 pcs assorted raw fish on seasoned rice, one tuna roll</p2>
+                                </div>
+                                  
+                                <div>
+                                <p3>Vegetarian Sushi</p3>
+                                <br>
+                                <p1>$10.95 </p1>
+                                <br>
+                                <p2>7 pcs sushi, one vegetable roll</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Sashimi Regular</p3>
+                                <br>
+                                <p1>$16.95 </p1>
+                                <br>
+                                <p2>15 pcs assorted raw fish, a bowl of rice</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Maki Combo</p3>
+                                <br>
+                                <p1>$11.95 </p1>
+                                <br>
+                                <p2>One tuna roll, one salmon roll, one California roll</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Trio Sashimi</p3>
+                                <br>
+                                <p1>$22.95</p1>
+                                <br>
+                                <p2>15 pcs sashimi of tuna, salmon & yellowtail</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>California Maki Dinner</p3>
+                                <br>
+                                <p1>$10.95 </p1>
+                                <br>
+                                <p2>3 California rolls</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Love Boat For Two</p3>
+                                <br>
+                                <p1>$39.95</p1>
+                                <br>
+                                <p2>6 pcs sushi, 16 pcs sashimi, one dragon roll, one rock 'n' roll</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Sushi Tuna or Salmon Only</p3>
+                                <br>
+                                <p1>$19.95 </p1>
+                                <br>
+                                <p2>10 pcs tuna or salmon sushi, one tuna roll or one salmon roll</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Cooked Sushi</p3>
+                                <br>
+                                <p1>$14.95</p1>
+                                <br>
+                                <p2>2 pcs eel, 2 pcs shrimp, 2 pcs crab stick, one shrimp tempura roll</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Sashimi Deluxe</p3>
+                                <br>
+                                <p1>$19.95</p1>
+                                <br>
+                                <p2>18 pcs assorted raw fish, a bowl of rice</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Sushi, Sashimi Combo</p3>
+                                <br>
+                                <p1>$21.95</p1>
+                                <br>
+                                <p2>8 pcs sashimi, 4 pcs sushi, one spicy tuna roll</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Vegetarian Roll Combo</p3>
+                                <br>
+                                <p1>$9.95 </p1>
+                                <br>
+                                <p2>One cucumber roll, one asparagus roll, one avocado roll</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Sushi For Two</p3>
+                                <br>
+                                <p1>$30.95</p1>
+                                <br>
+                                <p2>12 pcs sushi, one spicy salmon roll, one rainbow roll</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Trio Sushi</p3>
+                                <br>
+                                <p1>$17.95 </p1>
+                                <br>
+                                <p2>12 pcs sushi of tuna, salmon, yellowtail</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Tuna Lover Special</p3>
+                                <br>
+                                <p1>$12.95</p1>
+                                <br>
+                                <p2>3 kinds of tuna sushi, one tuna roll & one spicy tuna roll</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Sashimi Tuna or Salmon Only</p3>
+                                <br>
+                                <p1>$19.95 </p1>
+                                <br>
+                                <p2>12 pcs of tuna or salmon sashimi, a bowl of rice</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Chirashi</p3>
+                                <br>
+                                <p1>$15.95</p1>
+                                <br>
+                                <p2>Variety of raw fish over seasoned rice</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Spicy Maki Combo</p3>
+                                <br>
+                                <p1>$12.95</p1>
+                                <br>
+                                <p2>Spicy tuna roll, spicy salmon roll & spicy California roll</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Sashimi For Two</p3>
+                                <br>
+                                <p1>$45.95</p1>
+                                <br>
+                                <p2>Assorted raw fish in big boat</p2>
+                                </div>
+                            </div>
+                        <p4> Kitchen Entrees - Teriyaki Grill </p4>
+                            <div class="flex-container">
+                                <div>
+                                <p3>Chicken</p3>
+                                <br>
+                                <p1>$11.95</p1>
+                                </div>
+                                      
+                                <div>
+                                <p3>Steak</p3>
+                                <br>
+                                <p1>$13.95</p1>
+                                </div>
+                            
+                                <div>
+                                <p3>Shrimp</p3>
+                                <br>
+                                <p1>$13.95</p1>
+                                </div>
+                            
+                                <div>
+                                <p3>Salmon</p3>
+                                <br>
+                                <p1>$13.95</p1>
+                                </div>
+                            
+                                <div>
+                                <p3>Beef Negimaki</p3>
+                                <br>
+                                <p1>$13.95</p1>
+                                <br>
+                                <p2>Sliced beef rolled w. scallions</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Seafood</p3>
+                                <br>
+                                <p1>$14.95</p1>
+                                <br>
+                                <p2>Shrimp, Scallops & Salmon</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Tofu</p3>
+                                <br>
+                                <p1>$10.95</p1>
+                                </div>
+                            
+                                <div>
+                                <p3>Pork</p3>
+                                <br>
+                                <p1>$11.95</p1>
+                                </div>
+                            
+                                <div>
+                                <p3>Vegetable</p3>
+                                <br>
+                                <p1>$8.95</p1>
+                                <br>
+                                <p2>Mixed Vegetables</p2>
+                                </div>
+                            
+                                <div>
+                                <p3>Scallop</p3>
+                                <br>
+                                <p1>$15.95</p1>
+                                </div>
+                            
+                                <div>
+                                <p3>Teriyaki Combo</p3>
+                                <br>
+                                <p1>$14.95</p1>
+                                <br>
+                                <p2>Choice Two Items (Chicken, Steak, Salmon, Shrimp, Pork, Scallop)</p2>
+                                </div>
+                        </div>
+                        <p4> Combination Dinner Box </p4>
+                           <div class="flex-container">
+                                <div>
+                                <p3>Chicken Teriyaki</p3>
+                                <br>
+                                <p1>$13.95</p1>
+                                </div>
+                            
+                                <div>
+                                <p3>Pork Teriyaki</p3>
+                                <br>
+                                <p1>$13.95</p1>
+                                </div>
+                            
+                                <div>
+                                <p3>Steak Teriyaki</p3>
+                                <br>
+                                <p1>$14.95</p1>
+                                </div>
+                            
+                                <div>
+                                <p3>Salmon Teriyaki</p3>
+                                <br>
+                                <p1>$14.95</p1>
+                                </div>
+                            
+                                <div>
+                                <p3>Shrimp Teriyaki</p3>
+                                <br>
+                                <p1>$14.95</p1>
+                                </div>
+                            
+                                <div>
+                                <p3>Scallop Teriyaki</p3>
+                                <br>
+                                <p1>$15.95</p1>
+                                </div>
+                            
+                                <div>
+                                <p3>Beef Negimaki</p3>
+                                <br>
+                                <p1>$14.95</p1>
+                                </div>
+                            
+                                <div>
+                                <p3>Donkatsu (Pork Cutlet)</p3>
+                                <br>
+                                <p1>$13.95</p1>
+                                </div>
+                            
+                                <div>
+                                <p3>Chicken Katsu (Chicken Cutlet)</p3>
+                                <br>
+                                <p1>$13.95</p1>
+                                </div>
+                            </div>
+                </div>
+        </div>
+
+        <div id="Sushi" class="tabcontent">
+            <div class="panel">
+                <p4> A La Carte - Sushi Or Sashimi </p4>
+                    <div class="flex-container">
+                        <div>
+                        <p3>Tuna (Maguro)</p3>
+                        <br>
+                        <p1>$2.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Fluke (Hirame)</p3>
+                        <br>
+                        <p1>$2.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Shrimp (Ebi)</p3>
+                        <br>
+                        <p1>$1.50 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Crab Stick (Kani)</p3>
+                        <br>
+                        <p1>$1.50 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Flying Fish Egg (Tabiko)</p3>
+                        <br>
+                        <p1>$3.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Smelt Fish Egg (Masago)</p3>
+                        <br>
+                        <p1>$2.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Red Snapper (Tai)</p3>
+                        <br>
+                        <p1>$2.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Pepper Tuna</p3>
+                        <br>
+                        <p1>$2.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Salmon (Sake)</p3>
+                        <br>
+                        <p1>$2.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Mackerel (Saba)</p3>
+                        <br>
+                        <p1>$2.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Jumbo Sweet Shrimp (Botan Ebi)</p3>
+                        <br>
+                        <p1>$3.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Squid (Ika)</p3>
+                        <br>
+                        <p1>$3.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Surf Clam (Hokkigai)</p3>
+                        <br>
+                        <p1>$1.50 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Egg (Tamago)</p3>
+                        <br>
+                        <p1>$1.50 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Sea Urchin (Uni)</p3>
+                        <br>
+                        <p1>$1.50 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>White Tuna</p3>
+                        <br>
+                        <p1>$2.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Yellowtail (Hamachi)</p3>
+                        <br>
+                        <p1>$2.50 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Eel (Unagi)</p3>
+                        <br>
+                        <p1>$2.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Spanish Mackerel (Sawara)</p3>
+                        <br>
+                        <p1>$2.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Octopus (Tako)</p3>
+                        <br>
+                        <p1>$2.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Tofu Skin (Inari)</p3>
+                        <br>
+                        <p1>$1.50 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Scallop (Hotategai)</p3>
+                        <br>
+                        <p1>$3.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Salmon Roe (Ikura)</p3>
+                        <br>
+                        <p1>$2.50 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Smoke Salmon</p3>
+                        <br>
+                        <p1>$2.00 </p1>
+                        </div>
+                    </div>
+                <p4> Hand Roll Or Roll </p4>
+                <div class="flex-container"> 
+                        <div>
+                        <p3>Avocado Roll</p3>
+                        <br>
+                        <p1>$3.00 </p1>
+                        </div>
+                          
+                        <div>
+                        <p3>Tuna Roll</p3>
+                        <br>
+                        <p1>$3.95 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Sweet Potato Roll</p3>
+                        <br>
+                        <p1>$3.50 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Salmon Avocado or Cucumber Roll</p3>
+                        <br>
+                        <p1>$4.95 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Spicy Crabmeat Roll</p3>
+                        <br>
+                        <p1>$4.50 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Spicy White Fish Roll</p3>
+                        <br>
+                        <p1>$4.95</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Shrimp Tempura Roll</p3>
+                        <br>
+                        <p1>$5.50 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Boston Roll</p3>
+                        <br>
+                        <p1>$4.95 </p1>
+                        <br>
+                        <p2>Shrimp cucumber, lettuce & mayo sauce</p2>
+                        </div>
+                    
+                        <div>
+                        <p3>Philly Roll</p3>
+                        <br>
+                        <p1>$4.95 </p1>
+                        <br>
+                        <p2>Smoke salmon, cucumber & cream cheese</p2>
+                        </div>
+                    
+                        <div>
+                        <p3>Atlantic Roll</p3>
+                        <br>
+                        <p1>$4.95 </p1>
+                        <br>
+                        <p2>Salmon cucumber & cream cheese</p2>
+                        </div>
+                    
+                        <div>
+                        <p3>California Roll</p3>
+                        <br>
+                        <p1>$3.95 </p1>
+                        <br>
+                        <p2>Crab stick, avocado & cucumber</p2>
+                        </div>
+                    
+                        <div>
+                        <p3>Tuna Avocado or Cucumber Roll</p3>
+                        <br>
+                        <p1>$4.95 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Yellowtail w. Scallion Roll</p3>
+                        <br>
+                        <p1>$3.95 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Shrimp Asparagus Roll</p3>
+                        <br>
+                        <p1>$4.95 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Spicy Salmon Roll</p3>
+                        <br>
+                        <p1>$4.50 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Eel Avocado or Cucumber Roll</p3>
+                        <br>
+                        <p1>$4.95 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Chicken Tempura Roll</p3>
+                        <br>
+                        <p1>$5.50 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Shrimp Avocado or Cucumber Roll</p3>
+                        <br>
+                        <p1>$4.95 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Futo Maki</p3>
+                        <br>
+                        <p1>$5.50 </p1>
+                        <br>
+                        <p2>Egg, crabmeat squash avocado & cucumber</p2>
+                        </div>
+                    
+                        <div>
+                        <p3>Spider Roll</p3>
+                        <br>
+                        <p1>$6.95 </p1>
+                        <br>
+                        <p2>Soft shell crab tempura, cucumber, avocado & caviar</p2>
+                        </div>
+                    
+                        <div>
+                        <p3>Cucumber Roll</p3>
+                        <br>
+                        <p1>$3.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Oshinko Roll (Pickled Radish)</p3>
+                        <br>
+                        <p1>$3.00 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Salmon Roll</p3>
+                        <br>
+                        <p1>$3.95 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Spicy Tuna Roll</p3>
+                        <br>
+                        <p1>$4.50 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Spicy Yellowtail Roll</p3>
+                        <br>
+                        <p1>$4.95 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Salmon Skin Roll</p3>
+                        <br>
+                        <p1>$3.95 </p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Alaska Roll</p3>
+                        <br>
+                        <p1>$4.95 </p1>
+                        <br>
+                        <p2>Salmon avocado & cucumber</p2>
+                        </div>
+                    
+                        <div>
+                        <p3>New York Roll</p3>
+                        <br>
+                        <p1>$4.95 </p1>
+                        <br>
+                        <p2>Apple cucumber tuna & mayo sauce</p2>
+                        </div>
+                    
+                        <div>
+                        <p3>Vegetable Roll</p3>
+                        <br>
+                        <p1>$3.95 </p1>
+                        <br>
+                        <p2>Avocado, cucumber, lettuce & oshinko</p2>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div id="Special Roll" class="tabcontent">
+                <div class="panel">
+                        <p4> Special Roll </p4>
+                          <div class="flex-container">
+                            <div>
+                            <p3>American Dream</p3>
+                            <br>
+                            <p1>$7.50</p1>
+                            <br>
+                            <p2>Tuna, salmon, yellowtail, caviar, avocado, seaweed outside</p2>
+                            </div>
+
+                            <div>
+                            <p3>Butterfly</p3>
+                            <br>
+                            <p1>$8.95</p1>
+                            <br>
+                            <p2>Shrimp tempura, cucumber inside topped w. crab stick & caviar</p2>
+                            </div>
+
+                            <div>
+                            <p3>Dynamite Roll</p3>
+                            <br>
+                            <p1>$8.95</p1>
+                            <br>
+                            <p2>Roll of fish & crabmeat, deep fried w. chef's spicy sauce</p2>
+                            </div>
+
+                            <div>
+                            <p3>Christmas Roll</p3>
+                            <br>
+                            <p1>$10.00</p1>
+                            <br>
+                            <p2>Crabmeat, shrimp, cucumber, avocado inside topped w. colorful caviar</p2>
+                            </div>
+
+                            <div>
+                            <p3>Green Dragon</p3>
+                            <br>
+                            <p1>$8.95</p1>
+                            <br>
+                            <p2>Eel cucumber inside, topped w. avocado, caviar</p2>
+                            </div>
+
+                            <div>
+                            <p3>Rainbow</p3>
+                            <br>
+                            <p1>$8.95</p1>
+                            <br>
+                            <p2>Crabmeat, cucumber, avocado inside topped w. assorted fish</p2>
+                            </div>
+
+                            <div>
+                            <p3>Black Pearl</p3>
+                            <br>
+                            <p1>$10.00</p1>
+                            <br>
+                            <p2>Salomon, avocado, cucumber inside topped w. black caviar</p2>
+                            </div>
+
+                            <div>
+                            <p3>Eel Special</p3>
+                            <br>
+                            <p1>$10.00</p1>
+                            <br>
+                            <p2>Tuna, avocado inside, topped w. eel</p2>
+                            </div>
+
+                            <div>
+                            <p3>Hollywood Roll</p3>
+                            <br>
+                            <p1>$10.00</p1>
+                            <br>
+                            <p2>Shrimp, crabmeat, avocado inside topped w. yellowtail</p2>
+                            </div>
+
+                            <div>
+                            <p3>Wasabi Roll</p3>
+                            <br>
+                            <p1>$6.50</p1>
+                            <br>
+                            <p2>Roll of salmon, white fish, deep fried w. wasabi sauce</p2>
+                            </div>
+
+                            <div>
+                            <p3>Naruto Roll (No Rice)</p3>
+                            <br>
+                            <p1>$6.50</p1>
+                            <br>
+                            <p2>Tuna, salmon, white fish, avocado, caviar, wrapped w. cucumber skin</p2>
+                            </div>
+
+                            <div>
+                            <p3>Rock 'N' Roll</p3>
+                            <br>
+                            <p1>$6.50</p1>
+                            <br>
+                            <p2>Deep fried assorted fish, scallion inside, tobiko on top</p2>
+                            </div>
+
+                            <div>
+                            <p3>Red Boy</p3>
+                            <br>
+                            <p1>$10.00</p1>
+                            <br>
+                            <p2>Crabmeat, shrimp & cucumber inside topped w. tuna</p2>
+                            </div>
+
+                            <div>
+                            <p3>Pink Lady</p3>
+                            <br>
+                            <p1>$10.00</p1>
+                            <br>
+                            <p2>Crabmeat, shrimp, cucumber inside topped w. salmon</p2>
+                            </div>
+
+                            <div>
+                            <p3>Osaka Roll</p3>
+                            <br>
+                            <p1>$10.00</p1>
+                            <br>
+                            <p2>Salmon, yellowtail, mango, cucumber inside topped w. spicy tuna & crunchy</p2>
+                            </div>
+
+                            <div>
+                            <p3>Sakura</p3>
+                            <br>
+                            <p1>$10.00</p1>
+                            <br>
+                            <p2>Crabmeat, avocado, cucumber & shrimp inside topped w. spicy salmon</p2>
+                            </div>
+
+                            <div>
+                            <p3>Tomo Special</p3>
+                            <br>
+                            <p1>$11.00</p1>
+                            <br>
+                            <p2>Tuna, salmon, yellowtail, avocado inside topped w. colorful caviar</p2>
+                            </div>
+
+                            <div>
+                            <p3>Red Dragon</p3>
+                            <br>
+                            <p1>$10.00</p1>
+                            <br>
+                            <p2>Shrimp tempura inside, topped w. eel & red tobiko</p2>
+                            </div>
+
+                            <div>
+                            <p3>Crazy Eel</p3>
+                            <br>
+                            <p1>$10.00</p1>
+                            <br>
+                            <p2>Spicy tuna, avocado inside topped w. eel</p2>
+                            </div>
+
+                            <div>
+                            <p3>Crazy Tuna</p3>
+                            <br>
+                            <p1>$10.00</p1>
+                            <br>
+                            <p2>Pepper, tuna, avocado inside topped w. spicy tuna</p2>
+                            </div>
+
+                            <div>
+                            <p3>Volcano Roll</p3>
+                            <br>
+                            <p1>$10.00</p1>
+                            <br>
+                            <p2>Mixed spicy fish inside topped w. tobiko & chili sauce</p2>
+                            </div>
+
+                            <div>
+                            <p3>Tiger Roll</p3>
+                            <br>
+                            <p1>$10.00</p1>
+                            <br>
+                            <p2>Spicy salmon, crunchy inside topped w. salmon</p2>
+                            </div>
+
+                            <div>
+                            <p3>Ichiban Roll</p3>
+                            <br>
+                            <p1>$11.00</p1>
+                            <br>
+                            <p2>Salmon, mango, asparagus inside topped w. tuna, avocado, crabmeat & spicy sauce</p2>
+                            </div>
+
+                            <div>
+                            <p3>Crystal Roll</p3>
+                            <br>
+                            <p1>$6.95</p1>
+                            <br>
+                            <p2>Shrimp, crab, cucumber, avocado wrapped w. rice skin</p2>
+                            </div>
+                    </div>
+                </div>
+        </div>
+
+        <div id="Hibachi & Rice" class="tabcontent">
+            <div class="panel">
+                <p4> Hibachi Specialities </p4>
+                    <div class="flex-container">
+                        <div>
+                        <p3>Chicken</p3>
+                        <br>
+                        <p1>$11.95</p1>
+                        </div>
+
+                        <div>
+                        <p3>Salmon</p3>
+                        <br>
+                        <p1>$13.95</p1>
+                        </div>
+
+                        <div>
+                        <p3>Shrimp</p3>
+                        <br>
+                        <p1>$13.95</p1>
+                        </div>
+
+                        <div>
+                        <p3>Steak</p3>
+                        <br>
+                        <p1>$14.95</p1>
+                        </div>
+
+                        <div>
+                        <p3>Scallop</p3>
+                        <br>
+                        <p1>$14.95</p1>
+                        </div>
+
+                        <div>
+                        <p3>Vegetable</p3>
+                        <br>
+                        <p1>$9.95</p1>
+                        </div>
+                    </div>
+                <p4> Don Buri - Cooked Food On A Bed Of Rice </p4>
+                    <div class="flex-container">
+                        <div>
+                        <p3>Oyako Don</p3>
+                        <br>
+                        <p1>$9.50</p1>
+                        <br>
+                        <p2>Chicken cutlet w. egg & vegetable</p2>
+                        </div>
+                    
+                        <div>
+                        <p3>Katsu Don</p3>
+                        <br>
+                        <p1>$9.50</p1>
+                        <br>
+                        <p2>Pork cutlet w. egg & vegetable</p2>
+                        </div>
+                    
+                        <div>
+                        <p3>Ebi Don</p3>
+                        <br>
+                        <p1>$9.50</p1>
+                        <br>
+                        <p2>Cooked shrimp & onion over rice</p2>
+                        </div>
+                    
+                        <div>
+                        <p3>Ten Don</p3>
+                        <br>
+                        <p1>$9.50</p1>
+                        <br>
+                        <p2>Batter shrimp & vegetable over rice</p2>
+                        </div>
+                    
+                        <div>
+                        <p3>Unagi Don</p3>
+                        <br>
+                        <p1>$10.95</p1>
+                        <br>
+                        <p2>Grilled eel over rice</p2>
+                        </div>
+                    
+                        <div>
+                        <p3>Green Curry</p3>
+                        <br>
+                        <p1>$9.50</p1>
+                        <br>
+                        <p2>Choice of Chicken, Shrimp or Beef</p2>
+                        </div>
+                    </div>
+                <p4> Japanese Fried Rice </p4>
+                    <div class="flex-container">
+                        <div>
+                        <p3>Shrimp Yaki Meshi</p3>
+                        <br>
+                        <p1>$8.50</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Chicken Yaki Meshi</p3>
+                        <br>
+                        <p1>$7.50</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Vegetable Yaki Meshi</p3>
+                        <br>
+                        <p1>$6.50</p1>
+                        </div>
+                    
+                        <div>
+                        <p3>Beef Yaki Meshi</p3>
+                        <br>
+                        <p1>$8.50</p1>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+        <div id="Noodles" class="tabcontent">
+                <div class="panel">
+                    <p4> Yaki Udon (Thick White) Or Soba (Thin Yellow) - Japanese Pan-fried Noodles </p4>
+                        <div class="flex-container">
+                            <div>
+                            <p3>Chicken</p3>
+                            <br>
+                            <p1>$9.50</p1>
+                            </div>
+                        
+                            <div>
+                            <p3>Shrimp</p3>
+                            <br>
+                            <p1>$9.95</p1>
+                            </div>
+                        
+                            <div>
+                            <p3>Beef</p3>
+                            <br>
+                            <p1>$9.95</p1>
+                            </div>
+                        
+                            <div>
+                            <p3>Seafood</p3>
+                            <br>
+                            <p1>$10.50</p1>
+                            <br>
+                            <p2>Shrimp, crabmeat, scallop, fish cake & vegetable</p2>
+                            </div>
+                        
+                            <div>
+                            <p3>Vegetable</p3>
+                            <br>
+                            <p1>$8.50</p1>
+                            </div>
+                        </div>
+                    <p4> Udon Or Soba - Noodle Soup </p4>
+                        <div class="flex-container">
+                            <div>
+                            <p3>Nabe Yaki Udon or Soba</p3>
+                            <br>
+                            <p1>$9.50</p1>
+                            <br>
+                            <p2>Shrimp, chicken, egg, mixed vegetable in stew style</p2>
+                            </div>
+                        
+                            <div>
+                            <p3>Tempura Udon or Soba</p3>
+                            <br>
+                            <p1>$9.95</p1>
+                            <br>
+                            <p2>Noodle soup w. shrimp & vegetable tempura on the side</p2>
+                            </div>
+                        
+                            <div>
+                            <p3>Yasai Tofu Udon or Soba</p3>
+                            <br>
+                            <p1>$8.95</p1>
+                            <br>
+                            <p2>Vegetable, tofu & noodle in stew style</p2>
+                            </div>
+                        
+                            <div>
+                            <p3>Seafood Udon or Soba</p3>
+                            <br>
+                            <p1>$10.95</p1>
+                            <br>
+                            <p2>Shrimp, crabmeat, scallop, fish cake & vegetable</p2>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        
+        <h3><br></h3>
+
+        <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        </script>
+
+    <footer>
+        <p5>Copyright 2019 Tomo Sushi Japanese 806 Delsea Drive
+        Glassboro, New Jersey 08028 United States </p5>
+    </footer>
+    
 </body>
 </html>

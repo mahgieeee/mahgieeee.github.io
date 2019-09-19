@@ -1,159 +1,568 @@
-* {
-  box-sizing: border-box;
+body 
+{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
 }
 
-/* Container for flexboxes */
-section {
-  display: -webkit-flex;
-  display: flex;
+html
+{
+    height: 100%; 
 }
 
-/* Style the content */
-article {
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  font-family: "Lato", sans-serif;
-  flex: 3;
-  background-color: #f1f1f1;
-  padding: 10px;
-
+.footer 
+{
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
-/* Style the footer */
-footer {
-  background-color: #777;
-  font-family: "Lato", sans-serif;
-  padding: 10px;
-  text-align: center;
-  color: white;
+* 
+{
+    box-sizing: border-box;
 }
 
-
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  section {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
+/* Position the navbar container inside the image for background*/
+.container 
+{
+    position: relative;
+    margin: 0px;
+    width: auto;
+    height: 100%;
 }
 
 
-body {
-  font-family: "Lato", sans-serif;
+.bg-img 
+{
+    min-height: 480px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    /* Needed to position the navbar */
+    position: relative;
 }
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+/* The left navbar */
+.topnav 
+{
+    overflow: hidden;
+    background-color: transparent;
+    padding: 20px;
 }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+/* The right navbar */
+.topnav-right 
+{
+    overflow: hidden;
+    background-color: transparent;
+    padding: 20px;
 }
 
-.sidenav a:hover {
-  color: #f1f1f1;
+/* Navbar links */
+.topnav a 
+{
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align:left;
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    color: white;
+    text-shadow: 1px 1px 0px whitesmoke, 1px 1px 5px whitesmoke;
+    letter-spacing: 2px;
+    font-size: 48px;
 }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+.topnav-right a 
+{
+    float: right;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align:center;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 5px;
+    line-height: 70px;  
+    font-weight: lighter;
 }
 
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
+.topnav a:hover 
+{
+    background-color: transparent;
+    color: rgb(54, 148, 36);
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.topnav-right a:hover 
+{
+    background-color: transparent;
+    color: rgb(54, 148, 36);
+    transform: scale(1.4);
 }
 
-body,
-#slider,
-.wrap,
-.slide-content {
-  margin: 0;
-  padding: 0;
-  /*font-family: Arial, Helvetica, sans-serif;*/
-  font-family: "Lato", sans-serif;
-  width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
+.topnav-right 
+{
+    float: right;
 }
 
-.wrap {
-  position: relative;
+/*-----------------------animation for header------------------------------*/
+.crossfade > figure 
+{
+    animation: imageAnimation 30s linear infinite 0s;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center center;
+    color: transparent;
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 0;
+    margin:0 auto; /*centers the fading image important*/
 }
 
-.slide {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.crossfade > .figure1 
+{
+    animation: imageAnimation 30s linear infinite 0s;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center center;
+    color: transparent;
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 0;
+    margin:0 auto; /*centers the fading image important*/
 }
 
-.slide1 {
-  background-image: url("https://live.staticflickr.com/65535/48746858157_73f52d9dfc_b.jpg");
-}
-.slide2 {
-  background-image: url("https://live.staticflickr.com/65535/48746858162_0164bc9bb5_b.jpg");
-}
-.slide3 {
-  background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg");
+.crossfade > figure:nth-child(1) 
+{ 
+    background-image: url("https://live.staticflickr.com/65535/48746858157_73f52d9dfc_b.jpg"); 
 }
 
-.slide-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.crossfade > figure:nth-child(2) 
+{
+    animation-delay: 6s;
+    background-image: url("https://live.staticflickr.com/65535/48746858162_0164bc9bb5_b.jpg");
 }
 
-.slide-content span {
-  font-size: 2rem; #previously 5
-  color: #fff;
+.crossfade > figure:nth-child(3) 
+{
+    animation-delay: 12s;
+    background-image: url("https://live.staticflickr.com/65535/48746858157_73f52d9dfc_b.jpg");
 }
 
-.arrow {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  margin-top: -35px;
-  width: 0;
-  height: 0;
-  border-style: solid;
+.crossfade > figure:nth-child(4) 
+{ 
+    animation-delay: 18s;
+    background-image: url("https://live.staticflickr.com/65535/48746858157_73f52d9dfc_b.jpg"); 
 }
 
-#arrow-left {
-  /*border-width: 30px 40px 30px 0;*/
-  border-width: 10px 20px 10px 0;
-  border-color: transparent #fff transparent transparent;
-  left: 0;
-  margin-left: 30px;
+.crossfade > figure:nth-child(5) 
+{
+    animation-delay: 24s;
+    background-image: url("https://live.staticflickr.com/65535/48746858162_0164bc9bb5_b.jpg");
 }
 
-#arrow-right {
-  /*border-width: 30px 0 30px 40px;*/
-  border-width: 10px 0 10px 20px;
-  border-color: transparent transparent transparent #fff;
-  right: 0;
-  margin-right: 30px;
+
+.crossfade > .figure1:nth-child(1) 
+{ 
+    background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg"); 
 }
+
+.crossfade > .figure1:nth-child(2) 
+{
+    animation-delay: 6s;
+    background-image: url("https://live.staticflickr.com/65535/48746342198_76c2080f37_b.jpg");
+}
+
+.crossfade > .figure1:nth-child(3) 
+{
+    animation-delay: 12s;
+    background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg");
+}
+
+.crossfade > .figure1:nth-child(4) 
+{ 
+    animation-delay: 18s;
+    background-image: url("https://live.staticflickr.com/65535/48746342198_76c2080f37_b.jpg"); 
+}
+
+.crossfade > .figure1:nth-child(5) 
+{
+    animation-delay: 24s;
+    background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg");
+}
+
+
+@keyframes 
+imageAnimation 
+{  0% 
+    {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    }
+    8% 
+    {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    }
+    17% 
+    {
+    opacity: 1
+    }
+    25% 
+    {
+    opacity: 0
+    }
+    100% {
+    opacity: 0
+    }
+}
+
+.centered {
+    text-align: center;
+    width: 100%;
+}
+
+.centered_tab button{
+    float:none; /*to make sure there is no active float*/
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 20px;
+    letter-spacing: 3.5px;
+}
+
+
+/* Change background color of buttons on hover */
+.centered_tab button:hover 
+{
+    color:  rgb(54, 148, 36);
+    transform: scale(1.4);
+}
+
+/* Style the tab content */
+.tabcontent 
+{
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+/*-----------------------Fade in tabs for menu------------------------------*/
+@-webkit-keyframes fadeEffect 
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect 
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+/*-----------------------Body heading------------------------------*/
+h3
+{
+    text-align: center;
+    text-decoration: none;
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    color: black;
+    text-shadow: 1px 1px 0px whitesmoke, 1px 1px 5px whitesmoke;
+    letter-spacing: 2px;
+    font-size: 28px; 
+}
+
+
+/*-----------------------Flexbox menu items------------------------------*/
+.flex-container 
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-container > div 
+{
+    background-color: whitesmoke;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+
+/*-----------------------menu items------------------------------*/
+p1
+{
+    text-align:left;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    font-weight: normal;
+    font-size: 12px;
+}
+    
+p2
+{
+    text-align:left;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+p3
+{
+    text-align:center;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    letter-spacing: 2px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+/*-----------------------menu subtitles------------------------------*/
+p4 
+{
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    color: black;
+    text-shadow: 1px 1px 0px whitesmoke, 1px 1px 5px whitesmoke;
+    letter-spacing: 2px;
+    font-size: 25px; 
+}
+
+
+/*-----------------------footer paragraph------------------------------*/
+p5
+{
+    text-align:center;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    letter-spacing: 5px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+/*-----------------------mouse text over image------------------------------*/
+.container1 
+{
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    background-color: white;
+}
+  
+.image 
+{
+    opacity: 1;
+    display: block;
+    width: 50%;
+    height: auto;
+    position: relative;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    text-align: center;
+    /*float: left;*/
+    transition: transform .2s;
+    margin: 0 auto;
+}
+
+.big_image 
+{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    text-align: center;
+    /*float: left;*/
+    transition: transform .2s;
+    margin: 0 auto;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.container1:hover .image 
+{
+    opacity: 0.8;
+    /*-ms-transform: scale(1.5); /* IE 9 */
+    /*-webkit-transform: scale(1.5); /* Safari 3-8 */
+    /*transform: scale(1.5);*/
+}
+
+.container1:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    color: black;
+    font-weight: lighter;
+    text-shadow: 1px 1px 0px whitesmoke, 1px 1px 5px whitesmoke;
+    letter-spacing: 2px;
+    font-size: 25px; 
+}
+
+
+/*-----------------------Style inputs for contacts------------------------------*/
+
+/*for business hours*/
+p6
+{
+    text-align:center;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.form_img
+{
+    min-height: 380px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-image: url("https://live.staticflickr.com/65535/48746858277_b5b8faf102_b.jpg");
+
+}
+input[type=text], input[type=email], select, textarea 
+{
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-size: 15px;
+}
+  
+input[type=submit] 
+{
+    font:  400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    background-color:  rgb(54, 148, 36);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 25px; 
+}
+
+.left
+{
+    text-align: left;
+    width: 100%;
+}
+
+.label
+{
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    float: none;
+}
+  
+input[type=submit]:hover 
+    {
+    background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container2 
+{
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    padding: 10px;
+    font-size: 25px; 
+}
+
+.centered_column 
+{
+    text-align: center;
+    width: 100%;
+}
+
+/* Create two columns that float next to each other for contact page*/
+.column 
+{
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    float: none;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+    margin:0 auto;
+    font-size: 15px; 
+}
+
+/* if you want image to left*/
+.float_column 
+{
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+    margin:0 auto;
+    font-size: 15px; 
+}
+
+/* Clear floats after the columns */
+.row:after 
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) 
+{
+    .column, input[type=submit] 
+    {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+  
