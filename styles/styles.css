@@ -83,7 +83,6 @@ html
     overflow: hidden;
     background-color: transparent;
     padding: 20px;
-    position: absolute; /*for mobile to work remove if it doesn't work*/
 }
 
 #topnav #logo 
@@ -142,7 +141,6 @@ html
 #topnav-right 
 {
     float: right;
-    position: absolute; /*for mobile to work remove if it doesn't work*/
 }
 
 
@@ -488,9 +486,13 @@ p6
       }
   }
   @media only screen and (max-width: 400px) {
-      .container1 {
-          width: 100%;
-      }
+    .container1 {
+        width: 100%;
+    }
+    #topnav a 
+    {
+        font-size: 28px;
+    }
   }
 
 /*for google maps image*/
