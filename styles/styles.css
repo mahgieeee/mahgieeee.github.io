@@ -83,6 +83,7 @@ html
     overflow: hidden;
     background-color: transparent;
     padding: 20px;
+    position: absolute;
 }
 
 #topnav #logo 
@@ -90,8 +91,6 @@ html
     overflow: hidden;
     background-color: transparent;
     transition: 0.4s;
-    display: flex;
-    flex-wrap: nowrap;
 }
 
 /* Navbar links */
