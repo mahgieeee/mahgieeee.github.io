@@ -486,7 +486,7 @@ p6
           width: calc(50% - 6px);
       }
   }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 300px) {
     .container1 {
         width: 100%;
     }
@@ -499,7 +499,7 @@ p6
 #topnav-container
 {
     
-    background-size: 250px;
+    background-size: 150px;
     background-image: url("/pictures/wild_oliva.png");
     opacity: 0.6;
     padding: 40px 10px;
