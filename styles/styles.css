@@ -515,6 +515,12 @@ p6
         -webkit-text-size-adjust : none;
         text-size-adjust         : none;
     }
+
+    #topnav a 
+    {
+        float: left;
+        font-size: 18px !important
+    }
     
   }
 
