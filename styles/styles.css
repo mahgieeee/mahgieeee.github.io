@@ -516,11 +516,15 @@ p6
         text-size-adjust         : none;
     }
 
-    #topnav a 
+    #topnav-container
     {
-        float: left;
-        position: auto;
+        position: absolute;
     }
+
+    .container 
+{
+    position: absolute;
+}
     
   }
 
