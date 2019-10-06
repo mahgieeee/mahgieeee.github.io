@@ -519,7 +519,7 @@ p6
     #topnav a 
     {
         float: left;
-        font-size: 18px !important
+        position: auto;
     }
     
   }
