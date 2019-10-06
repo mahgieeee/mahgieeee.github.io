@@ -8,7 +8,7 @@ body
     width: 600px;
     height: 600px;
     width: 100%;
-    background-image: url("/pictures/gravel.png");
+    background-image: url("/pictures/wild_oliva.png");
     
 }
 
@@ -41,7 +41,7 @@ html
 {
     
     background-size: 250px;
-    background-image: url("/pictures/gravel.png");
+    background-image: url("/pictures/wild_oliva.png");
     opacity: 0.6;
     padding: 40px 10px;
     transition: 0.4s;
@@ -90,6 +90,8 @@ html
     overflow: hidden;
     background-color: transparent;
     transition: 0.4s;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 /* Navbar links */
