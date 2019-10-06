@@ -1,8 +1,15 @@
+/* Background pattern from Toptal Subtle Patterns */
 body 
 {
     min-height: 100%;
     display: grid;
     grid-template-rows: 1fr auto;
+    background-size: 250px;
+    width: 600px;
+    height: 600px;
+    width: 100%;
+    background-image: url("/pictures/wild_oliva.png");
+    
 }
 
 html
@@ -30,11 +37,23 @@ html
     height: 100%;
 }
 
+#topnav-container
+{
+    
+    background-size: 250px;
+    background-image: url("/pictures/wild_oliva.png");
+    opacity: 0.6;
+    padding: 40px 10px;
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
 
 .bg-img 
 {
-    min-height: 480px;
-
+    min-height: 680px;
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
@@ -44,24 +63,37 @@ html
     position: relative;
 }
 
+/*for not the main page*/
+.bg-img1  
+{
+    min-height: 180px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    /* Needed to position the navbar */
+    position: relative;
+}
+
+
 /* The left navbar */
-.topnav 
+#topnav 
 {
     overflow: hidden;
     background-color: transparent;
     padding: 20px;
 }
 
-/* The right navbar */
-.topnav-right 
+#topnav #logo 
 {
     overflow: hidden;
     background-color: transparent;
-    padding: 20px;
+    transition: 0.4s;
 }
 
 /* Navbar links */
-.topnav a 
+#topnav a 
 {
     float: left;
     text-align: center;
@@ -70,12 +102,12 @@ html
     text-align:left;
     font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
     color: white;
-    text-shadow: 1px 1px 0px whitesmoke, 1px 1px 5px whitesmoke;
     letter-spacing: 2px;
-    font-size: 48px;
+    font-size: 58px;
+    font-weight: lighter;
 }
 
-.topnav-right a 
+#topnav-right a 
 {
     float: right;
     text-align: center;
@@ -90,23 +122,25 @@ html
     font-weight: lighter;
 }
 
-.topnav a:hover 
+#topnav a:hover 
 {
     background-color: transparent;
     color: rgb(54, 148, 36);
+    transform: scale(1.2);
 }
 
-.topnav-right a:hover 
+#topnav-right a:hover 
 {
     background-color: transparent;
     color: rgb(54, 148, 36);
     transform: scale(1.4);
 }
 
-.topnav-right 
+#topnav-right 
 {
     float: right;
 }
+
 
 /*-----------------------animation for header------------------------------*/
 .crossfade > figure 
@@ -145,7 +179,7 @@ html
 
 .crossfade > figure:nth-child(1) 
 { 
-    background-image: url("https://live.staticflickr.com/65535/48746858157_73f52d9dfc_b.jpg"); 
+    background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg"); 
 }
 
 .crossfade > figure:nth-child(2) 
@@ -157,7 +191,7 @@ html
 .crossfade > figure:nth-child(3) 
 {
     animation-delay: 12s;
-    background-image: url("https://live.staticflickr.com/65535/48746858157_73f52d9dfc_b.jpg");
+    background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg");
 }
 
 .crossfade > figure:nth-child(4) 
@@ -169,7 +203,7 @@ html
 .crossfade > figure:nth-child(5) 
 {
     animation-delay: 24s;
-    background-image: url("https://live.staticflickr.com/65535/48746858162_0164bc9bb5_b.jpg");
+    background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg");
 }
 
 
@@ -181,7 +215,7 @@ html
 .crossfade > .figure1:nth-child(2) 
 {
     animation-delay: 6s;
-    background-image: url("https://live.staticflickr.com/65535/48746342198_76c2080f37_b.jpg");
+    background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg");
 }
 
 .crossfade > .figure1:nth-child(3) 
@@ -193,7 +227,7 @@ html
 .crossfade > .figure1:nth-child(4) 
 { 
     animation-delay: 18s;
-    background-image: url("https://live.staticflickr.com/65535/48746342198_76c2080f37_b.jpg"); 
+    background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg"); 
 }
 
 .crossfade > .figure1:nth-child(5) 
@@ -234,7 +268,7 @@ imageAnimation
 }
 
 .centered_tab button{
-    float:none; /*to make sure there is no active float*/
+    float: none; /*to make sure there is no active float*/
     display: inline-block;
     border: none;
     outline: none;
@@ -243,6 +277,8 @@ imageAnimation
     transition: 0.3s;
     font-size: 20px;
     letter-spacing: 3.5px;
+    background: transparent;
+    color: white;
 }
 
 
@@ -282,8 +318,7 @@ h3
     text-align: center;
     text-decoration: none;
     font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
-    color: black;
-    text-shadow: 1px 1px 0px whitesmoke, 1px 1px 5px whitesmoke;
+    color: white;
     letter-spacing: 2px;
     font-size: 28px; 
 }
@@ -300,7 +335,7 @@ h3
 
 .flex-container > div 
 {
-    background-color: whitesmoke;
+    background-color: transparent;
     width: 300px;
     margin: 20px;
     text-align: center;
@@ -315,6 +350,7 @@ p1
     text-align:left;
     font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
     letter-spacing: 0.5px;
+    color: white;
     font-weight: normal;
     font-size: 12px;
 }
@@ -323,6 +359,7 @@ p2
 {
     text-align:left;
     font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    color: white;
     letter-spacing: 0.5px;
     line-height: 10px;
     font-weight: lighter;
@@ -333,6 +370,7 @@ p3
 {
     text-align:center;
     font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    color: white;
     letter-spacing: 2px;
     line-height: 40px;
     font-weight: bold;
@@ -347,8 +385,7 @@ p4
     text-align: center;
     text-decoration: none;
     font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
-    color: black;
-    text-shadow: 1px 1px 0px whitesmoke, 1px 1px 5px whitesmoke;
+    color: white;
     letter-spacing: 2px;
     font-size: 25px; 
 }
@@ -359,86 +396,11 @@ p5
 {
     text-align:center;
     font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
-    letter-spacing: 5px;
+    letter-spacing: 1.5px;
     line-height: 40px;
-    font-weight: bold;
-    font-size: 12px;
-}
-
-
-/*-----------------------mouse text over image------------------------------*/
-.container1 
-{
-    position: relative;
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    background-color: white;
-}
-  
-.image 
-{
-    opacity: 1;
-    display: block;
-    width: 50%;
-    height: auto;
-    position: relative;
-    transition: .5s ease;
-    backface-visibility: hidden;
-    text-align: center;
-    /*float: left;*/
-    transition: transform .2s;
-    margin: 0 auto;
-}
-
-.big_image 
-{
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    position: relative;
-    transition: .5s ease;
-    backface-visibility: hidden;
-    text-align: center;
-    /*float: left;*/
-    transition: transform .2s;
-    margin: 0 auto;
-}
-
-.middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: left;
-}
-
-.container1:hover .image 
-{
-    opacity: 0.8;
-    /*-ms-transform: scale(1.5); /* IE 9 */
-    /*-webkit-transform: scale(1.5); /* Safari 3-8 */
-    /*transform: scale(1.5);*/
-}
-
-.container1:hover .middle {
-    opacity: 1;
-}
-
-.text {
-    background-color: transparent;
-    text-align: center;
-    text-decoration: none;
-    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
-    color: black;
     font-weight: lighter;
-    text-shadow: 1px 1px 0px whitesmoke, 1px 1px 5px whitesmoke;
-    letter-spacing: 2px;
-    font-size: 25px; 
+    font-size: 12px;
+    color: white;
 }
 
 
@@ -454,115 +416,77 @@ p6
     font-size: 15px;
 }
 
-.form_img
-{
-    min-height: 380px;
 
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    background-image: url("https://live.staticflickr.com/65535/48746858277_b5b8faf102_b.jpg");
-
-}
-input[type=text], input[type=email], select, textarea 
-{
-    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    font-size: 15px;
-}
-  
-input[type=submit] 
-{
-    font:  400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
-    background-color:  rgb(54, 148, 36);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 25px; 
-}
-
-.left
-{
-    text-align: left;
-    width: 100%;
-}
-
-.label
-{
-    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
-    float: none;
-}
-  
-input[type=submit]:hover 
-    {
-    background-color: #45a049;
-}
-
-/* Style the container/contact section */
-.container2 
-{
-    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
-    border-radius: 5px;
-    background-color: whitesmoke;
-    padding: 10px;
-    font-size: 25px; 
-}
-
-.centered_column 
-{
+  .container-all{
+    width: fit-content;
+    margin: 20px auto;
+    height: auto;
+    
+  }
+  .container1{
+    width: calc(43% - 6px);
+    overflow:hidden;
+    height: fit-content;
+    margin:3px;
+    padding: 0;
+    display:block;
+    position:relative;
     text-align: center;
+    margin:0 auto;
+  }
+
+  img{
     width: 100%;
-}
+    transition-duration: .3s;
+    max-width: 100%;
+    display:block;
+    overflow:hidden;
+    cursor:pointer;
+  }
 
-/* Create two columns that float next to each other for contact page*/
-.column 
-{
+  .text{
+    position:absolute;
+    top: 90%;
+    cursor:pointer;
+    max-width: 80%;
+    text-align:center;
+    left: 50%;
     font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
-    float: none;
-    width: 50%;
-    margin-top: 6px;
-    padding: 20px;
+    text-shadow: 1px 5px 10px black;
+    font-size: 1em;
+    display:none;
+    margin-right: -50%;
+    transition-duration: .3s;
+    transform: translate(-50%, -50%) 
+  }
+  .container1:hover img{
+    transform: scale(1.2);
+    transition-duration: .3s;
+    opacity: .85;
+  }
+  .container1:hover span{
+    color:white;
+    display: block;
+    transition-duration: .3s;
+  }
+  @media only screen and (max-width: 900px) {
+      .container1 {
+          width: calc(50% - 6px);
+      }
+  }
+  @media only screen and (max-width: 400px) {
+      .container1 {
+          width: 100%;
+      }
+  }
+
+/*for google maps image*/
+  .container3
+  {
+    position: relative;
+    margin: 0px;
+    width: auto;
+    height: 100%;
+    text-align: center;
     margin:0 auto;
-    font-size: 15px; 
-}
-
-/* if you want image to left*/
-.float_column 
-{
-    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-    padding: 20px;
-    margin:0 auto;
-    font-size: 15px; 
-}
-
-/* Clear floats after the columns */
-.row:after 
-{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) 
-{
-    .column, input[type=submit] 
-    {
-        width: 100%;
-        margin-top: 0;
-    }
-}
-
-
-  
+  }

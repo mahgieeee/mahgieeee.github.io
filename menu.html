@@ -7,34 +7,30 @@
 </head>
 
 <header>
-    <div class = "bg-img">
-        <div class="crossfade">
-                <figure></figure>
-                <figure></figure>
-                <figure></figure>
-                <figure></figure>
-                <figure></figure>
-            <div class="container">
-                <div class="topnav-right">
-                    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-                    <a href="menu.html">Menu</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="#about">About</a>
-                </div>
-    
-                <div class="topnav">
-                    <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet'>
-                    <a href="index.html">Tomo Sushi Japanese</a>
-                </div>
+        <div class = "bg-img1">
+                    <div class="container">
+                        <div id="topnav-container">
+                        <div id="topnav-right">
+                            <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+                            <a href="menu.html">Menu</a>
+                            <a href="gallery.html">Gallery</a>
+                            <a href="contact.html">About</a>
+                        </div>
+            
+                        <div id="topnav">
+                            <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet'>
+                            <a href="index.html" id="logo">Tomo Sushi Japanese </a>
+                        </div>
+                    </div>
             </div>
-        </div>
-    </div>
+            </div>
+        
 </header>
 
 <body>
+
         <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet'>
-        <h3>Menu Items</h3>
+        <h3>Menu</h3>
 
     <div class = "centered">
         <div class="centered_tab button">
@@ -45,6 +41,7 @@
           <button class="tablinks" onclick="openCity(event, 'Special Roll')">Special Roll</button>
           <button class="tablinks" onclick="openCity(event, 'Hibachi & Rice')">Hibachi & Rice</button>
           <button class="tablinks" onclick="openCity(event, 'Noodles')">Noodles</button>
+          <button class="tablinks" onclick="openCity(event, 'Beverages')">Beverages</button>
         </div>
         
     </div>
@@ -52,20 +49,6 @@
         
         <div id="Appetizers" class="tabcontent">
             <div class="panel">
-                <p4> Beverages </p4>
-                    <div class="flex-container">
-                        <div>
-                        <p3>Can Soda</p3>
-                        <br>
-                        <p1>$1.25</p1>
-                        </div>
-
-                        <div>
-                        <p3>Japanese Soda</p3>
-                        <br>
-                        <p1>$2.00</p1>
-                        </div>
-                    </div>
                 <p4> Soup Selections </p4>
                     <div class="flex-container">
                         <div>
@@ -348,8 +331,6 @@
                         <p3>Seafood Tempura</p3>
                         <br>
                         <p1>$15.95</p1>
-                        <br>
-                        </p2>Scallop, fish, crab stick & shrimp</p2>
                         </div>
                     
                         <div>
@@ -1656,29 +1637,35 @@
                         </div>
                 </div>
         </div>
+
+        <div id="Beverages" class="tabcontent">
+                <div class="panel">
+                    <p4> Beverages </p4>
+                    <div class="flex-container">
+                        <div>
+                        <p3>Can Soda</p3>
+                        <br>
+                        <p1>$1.25</p1>
+                        </div>
+
+                        <div>
+                        <p3>Japanese Soda</p3>
+                        <br>
+                        <p1>$2.00</p1>
+                        </div>
+                    </div>
+                </div>
+        </div>
         
         <h3><br></h3>
 
-        <script>
-        function openCity(evt, cityName) {
-          var i, tabcontent, tablinks;
-          tabcontent = document.getElementsByClassName("tabcontent");
-          for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-          }
-          tablinks = document.getElementsByClassName("tablinks");
-          for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-          }
-          document.getElementById(cityName).style.display = "block";
-          evt.currentTarget.className += " active";
-        }
-        </script>
-
+        <script src="./javascript/menu.js"></script>
+        <script src="./javascript/scrollbar.js"></script>
+      
     <footer>
         <p5>Copyright 2019 Tomo Sushi Japanese 806 Delsea Drive
         Glassboro, New Jersey 08028 United States </p5>
     </footer>
-    
+
 </body>
 </html>
