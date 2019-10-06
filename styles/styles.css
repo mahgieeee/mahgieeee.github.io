@@ -486,9 +486,34 @@ p6
           width: calc(50% - 6px);
       }
   }
-  @media only screen and (max-width: 300px) {
+  @media only screen and (orientation:landscape) and (max-width: 480px) {
     .container1 {
         width: 100%;
+    }
+
+    body{
+        padding: 10px !important
+    }
+
+    html {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+    
+  }
+
+  @media only screen and (orientation:portrait) and (max-width: 280px) {
+    .container1 {
+        width: 50%;
+    }
+
+    body{
+        padding: 50px !important
+    }
+
+    html {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
     }
     
   }
