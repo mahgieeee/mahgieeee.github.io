@@ -83,7 +83,7 @@ html
     overflow: hidden;
     background-color: transparent;
     padding: 20px;
-    position: absolute;
+    position: absolute; /*for mobile to work remove if it doesn't work*/
 }
 
 #topnav #logo 
@@ -142,6 +142,7 @@ html
 #topnav-right 
 {
     float: right;
+    position: absolute; /*for mobile to work remove if it doesn't work*/
 }
 
 
