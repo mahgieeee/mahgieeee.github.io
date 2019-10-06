@@ -490,29 +490,6 @@ p6
     .container1 {
         width: 100%;
     }
-
-    #topnav-right 
-{
-    float: bottom;
-}
-
-#topnav-container
-{
-    
-    background-size: 150px;
-    background-image: url("/pictures/wild_oliva.png");
-    opacity: 0.6;
-    padding: 40px 10px;
-    transition: 0.4s;
-    position: fixed;
-    width: 50%;
-    top: 0;
-    z-index: 99;
-}
-
-body{
-    width: 50%;
-}
     
   }
 
