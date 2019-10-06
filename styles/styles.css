@@ -490,10 +490,20 @@ p6
     .container1 {
         width: 100%;
     }
-    #topnav-container  
-    {
-        width:50%;
-    }
+    #topnav a 
+{
+    float: right;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align:left;
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 58px;
+    font-weight: lighter;
+    font-style: normal;
+}
   }
 
 /*for google maps image*/
