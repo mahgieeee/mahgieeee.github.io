@@ -428,13 +428,15 @@ p6
 }
 
 
-  .container-all{
+.container-all
+{
     width: fit-content;
     margin: 20px auto;
     height: auto;
-    
-  }
-  .container1{
+}
+
+.container1
+{
     width: calc(43% - 6px);
     overflow:hidden;
     height: fit-content;
@@ -444,18 +446,19 @@ p6
     position:relative;
     text-align: center;
     margin:0 auto;
-  }
+}
 
-  img{
+img
+{
     width: 100%;
     transition-duration: .3s;
     max-width: 100%;
     display:block;
     overflow:hidden;
     cursor:pointer;
-  }
+}
 
-  .text{
+.text{
     position:absolute;
     top: 90%;
     cursor:pointer;
@@ -470,48 +473,65 @@ p6
     margin-right: -50%;
     transition-duration: .3s;
     transform: translate(-50%, -50%); 
-  }
-  .container1:hover img{
+}
+
+.container1:hover img
+{
     transform: scale(1.2);
     transition-duration: .3s;
     opacity: .85;
-  }
-  .container1:hover span{
+}
+
+.container1:hover span
+{
     color:white;
     display: block;
     transition-duration: .3s;
-  }
-  @media only screen and (max-width: 900px) {
-      .container1 {
-          width: calc(50% - 6px);
-      }
-  }
-  @media only screen and (orientation:landscape) and (max-width: 480px) {
-    .container1 {
-        width: 100%;
+}
+
+/*for desktop, mobile websites*/
+@media only screen and (max-width: 900px) 
+{
+    .container1 
+    {
+        width: calc(50% - 6px);
     }
 
-    body{
-        padding: 10px !important
+}
+
+@media only screen and (orientation:landscape) and (max-width: 480px) 
+{
+    .container1 
+    {
+    width: 100%;
     }
 
-    html {
-        -webkit-text-size-adjust : none;
-        text-size-adjust         : none;
+    body
+    {
+    padding: 10px !important
     }
-    
-  }
 
-  @media only screen and (orientation:portrait) and (max-width: 280px) {
-    .container1 {
+    html 
+    {
+    -webkit-text-size-adjust : none;
+    text-size-adjust         : none;
+    }
+}
+
+@media only screen and (orientation:portrait) and (max-width: 280px) 
+{
+    .container1 
+    {
         width: 50%;
     }
 
-    body{
+    body
+    {
         padding: 50px !important
     }
 
-    html {
+    html 
+    {
         -webkit-text-size-adjust : none;
         text-size-adjust         : none;
     }
@@ -522,32 +542,23 @@ p6
     }
 
     .container 
-{
-    position: absolute;
+    {
+        position: absolute;
+    }
+
+    #topnav a 
+    {
+        font-size: 18px;
+    }
 }
-#topnav a 
-{
-    float: left;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    text-align:left;
-    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
-    color: white;
-    letter-spacing: 2px;
-    font-size: 18px;
-    font-weight: lighter;
-    font-style: normal;
-}
-  }
 
 /*for google maps image*/
-  .container3
-  {
+.container3
+{
     position: relative;
     margin: 0px;
     width: auto;
     height: 100%;
     text-align: center;
     margin:0 auto;
-  }
+}
