@@ -9,6 +9,7 @@ body
     height: 600px;
     width: 100%;
     background-image: url("/pictures/wild_oliva.png");
+    position: absolute;
     
 }
 
@@ -539,6 +540,7 @@ img
     #topnav-container
     {
         position: absolute;
+        transition: 0.4s;
     }
 
     .container 
