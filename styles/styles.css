@@ -525,7 +525,20 @@ p6
 {
     position: absolute;
 }
-    
+#topnav a 
+{
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align:left;
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: lighter;
+    font-style: normal;
+}
   }
 
 /*for google maps image*/
