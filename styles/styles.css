@@ -44,12 +44,13 @@ html
     height: 100%;
 }
 
+
 #topnav-container
 {
     
     background-size: 250px;
     background-image: url("/pictures/wild_oliva.png");
-    opacity: 0.6;
+    opacity: 0.7;
     padding: 40px 10px;
     transition: 0.4s;
     position: fixed;
@@ -73,7 +74,7 @@ html
 /*for not the main page*/
 .bg-img1  
 {
-    min-height: 180px;
+    min-height: 200px;
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
@@ -82,6 +83,20 @@ html
     /* Needed to position the navbar */
     position: relative;
 }
+
+.bg-img2  
+{
+    min-height: 680px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    /* Needed to position the navbar */
+    position: relative;
+    background-image: url("/pictures/louis-hansel-8FWQQXMspEM-unsplash.jpg");
+}
+
 
 
 /* The left navbar */
@@ -129,6 +144,7 @@ html
     letter-spacing: 5px;
     line-height: 70px;  
     font-weight: lighter;
+    padding: 25px;
 }
 
 #topnav a:hover 
@@ -188,62 +204,34 @@ html
 
 .crossfade > figure:nth-child(1) 
 { 
-    background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg"); 
+    background-image: url("/pictures/luigi-pozzoli-iIS1SIO5_aY-unsplash.jpg"); 
 }
 
 .crossfade > figure:nth-child(2) 
 {
     animation-delay: 6s;
-    background-image: url("https://live.staticflickr.com/65535/48746858162_0164bc9bb5_b.jpg");
+    background-image: url("/pictures/youjeen-cho-JorKKx5rvA0-unsplash.jpg");
 }
 
 .crossfade > figure:nth-child(3) 
 {
     animation-delay: 12s;
-    background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg");
+    background-image: url("/pictures/riccardo-bergamini-O2yNzXdqOu0-unsplash.jpg");
 }
 
 .crossfade > figure:nth-child(4) 
 { 
     animation-delay: 18s;
-    background-image: url("https://live.staticflickr.com/65535/48746858157_73f52d9dfc_b.jpg"); 
+    background-image: url("/pictures/bady-qb-VIv0srmK78g-unsplash.jpg"); 
 }
 
 .crossfade > figure:nth-child(5) 
 {
     animation-delay: 24s;
-    background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg");
+    background-image: url("/pictures/florian-metzner-12IsagncQ7o-unsplash.jpg");
 }
 
-
-.crossfade > .figure1:nth-child(1) 
-{ 
-    background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg"); 
-}
-
-.crossfade > .figure1:nth-child(2) 
-{
-    animation-delay: 6s;
-    background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg");
-}
-
-.crossfade > .figure1:nth-child(3) 
-{
-    animation-delay: 12s;
-    background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg");
-}
-
-.crossfade > .figure1:nth-child(4) 
-{ 
-    animation-delay: 18s;
-    background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg"); 
-}
-
-.crossfade > .figure1:nth-child(5) 
-{
-    animation-delay: 24s;
-    background-image: url("https://live.staticflickr.com/65535/48746677146_ced4198fed_b.jpg");
-}
+/*to repeat this on different pages use figure1:nth-child*/
 
 
 @keyframes 
