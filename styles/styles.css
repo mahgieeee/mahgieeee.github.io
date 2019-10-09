@@ -498,6 +498,12 @@ img
     -webkit-text-size-adjust : none;
     text-size-adjust         : none;
     }
+    
+    .container-flexbox 
+    {
+    padding-left: 0;
+    }
+
 }
 
 @media only screen and (orientation:portrait) and (max-width: 280px) 
