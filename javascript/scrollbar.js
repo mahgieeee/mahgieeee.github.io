@@ -1,6 +1,6 @@
 window.onscroll = function() {scrollFunction()};
 
-var mq = window.matchMedia("screen and (max-device-width: 280px) and (orientation: portrait)");
+var mq = window.matchMedia("only screen and (orientation:portrait) and (max-width: 280px)");
 
 function scrollFunction(){
     if (!mq.matches){
@@ -22,7 +22,8 @@ function scrollFunction(){
             }
     }
 }
-   
+
+
 
 
 
