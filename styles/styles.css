@@ -543,7 +543,7 @@ img
 
     .container-flexbox 
     {
-    padding-left: calc(10.5%);
+    padding-left: 0;
     }
 
 }
