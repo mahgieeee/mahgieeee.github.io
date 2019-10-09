@@ -500,6 +500,17 @@ img
     {
         font-size: 6px;
     }
+
+    ul.leaders 
+    {
+    max-width: 20em;
+    }
+
+    .container-flexbox 
+    {
+    padding-left: calc(28.5%);
+    }
+
 }
 
 /*for google maps image*/
