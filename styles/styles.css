@@ -593,6 +593,18 @@ p5
 }
 
 /*for google maps image*/
+.container5
+{
+    position: relative;
+    margin: 0px;
+    width: auto;
+    height: 100%;
+    text-align: center;
+    margin:0 auto;
+    padding-bottom: 75px;
+}
+
+/*for parallax image*/
 .container3
 {
     position: relative;
@@ -601,6 +613,7 @@ p5
     height: 100%;
     text-align: center;
     margin:0 auto;
+    padding: 200px;
 }
 
 ul.leaders 
@@ -665,4 +678,19 @@ ul.leaders sup{
     font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
     font-size: 10px;
     font-weight: lighter;
+}
+
+
+.parallax {
+    /* The image used */
+    background-image: url("/pictures/bady-qb-VIv0srmK78g-unsplash.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
