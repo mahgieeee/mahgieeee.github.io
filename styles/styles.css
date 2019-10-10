@@ -48,7 +48,9 @@ html
 .container-flexbox 
 {
     height: 100%;
+    position: relative;
     padding-left: calc(28.5%);
+    padding-bottom: 100px;
 }
 
 
@@ -57,7 +59,7 @@ html
     
     background-size: 250px;
     background-image: url("/pictures/wild_oliva.png");
-    opacity: 0.7;
+    opacity: 0.8;
     padding: 40px 10px;
     transition: 0.4s;
     position: fixed;
@@ -489,9 +491,6 @@ p5
     text-align: center;
 }
 
-
-
-
 /*for desktop, mobile websites*/
 @media only screen and (max-width: 900px) 
 {
@@ -621,8 +620,21 @@ p5
     height: 100%;
     text-align: center;
     margin:0 auto;
-    padding: 200px;
+    padding: 300px;
 }
+
+.container6
+{
+    position: relative;
+    margin: 0px;
+    width: auto;
+    height: 100%;
+    text-align: center;
+    margin:0 auto;
+    padding: 100px;
+}
+
+
 
 ul.leaders 
 {
@@ -688,7 +700,6 @@ ul.leaders sup{
     font-weight: lighter;
 }
 
-
 .parallax {
     /* The image used */
     background-image: url("/pictures/bady-qb-VIv0srmK78g-unsplash.jpg");
@@ -702,3 +713,52 @@ ul.leaders sup{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.parallax1 {
+    /* The image used */
+    background-image: url("/pictures/christian-allard-etIkw39orF8-unsplash.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+.parallax2
+{
+    background-size: 250px;
+    height: 100%;
+    background-image: url("/pictures/wild_oliva.png");
+    background-attachment: fixed;
+    opacity: 1;
+}
+
+
+.parallax3
+{
+    height: 100%;
+    background-image: url("/pictures/louis-hansel-8FWQQXMspEM-unsplash.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+.parallax4
+{
+    height: 100%;
+    background-image: url("/pictures/youjeen-cho-JorKKx5rvA0-unsplash.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+
