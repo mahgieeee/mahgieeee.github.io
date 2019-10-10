@@ -531,6 +531,10 @@ p5
         height: 10px;
     }
 
+    .parallax {
+        background-attachment: scroll;
+    }
+
 }
 
 @media only screen and (orientation:portrait) and (max-width: 280px) 
@@ -588,6 +592,10 @@ p5
     .tile-gallery__tile--normal {
         width: 210px;
         height: 210px;
+    }
+
+    .parallax {
+        background-attachment: scroll;
     }
 
 }
