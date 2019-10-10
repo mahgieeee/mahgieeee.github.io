@@ -266,6 +266,7 @@ imageAnimation
 .centered {
     text-align: center;
     width: 100%;
+    margin: 0 auto;
 }
 
 .centered_tab button{
@@ -626,12 +627,7 @@ p5
 .container6
 {
     position: relative;
-    margin: 0px;
-    width: auto;
-    height: 100%;
-    text-align: center;
-    margin:0 auto;
-    padding: 100px;
+    padding-bottom: 50px;
 }
 
 
@@ -761,4 +757,14 @@ ul.leaders sup{
     opacity: 0.7;
 }
 
+.parallax5
+{
+    height: 100%;
+    background-image:url("/pictures/louis-hansel-PRJbFSNgSzQ-unsplash.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
 
