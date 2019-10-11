@@ -380,9 +380,10 @@ p5
 }
 
 .tile-gallery__tile {
-    padding-left: 0px;
+    /*padding-left: 15px;*/
     width: 310px;
     height: 310px;
+    padding-bottom: 15px;
 }
 
 .tile-gallery__tile--normal {
@@ -456,6 +457,11 @@ p5
 
 @media only screen and (orientation:portrait) and (max-width: 380px) 
 {
+    header
+    {
+        width: 20%;
+    }
+    
     html 
     {
         -webkit-text-size-adjust : none;
