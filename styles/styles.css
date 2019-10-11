@@ -492,13 +492,14 @@ p5
 
     .container 
     {
-        position: relative;
+        position: absolute;
     }
 
 
     .container2
     {
         width: 20%;
+        position: absolute;
     }
 
     /* The left navbar */
