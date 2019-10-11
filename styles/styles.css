@@ -471,6 +471,13 @@ p5
     text-size-adjust         : none;
     }
     
+    .parallax{
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        background-attachment: inherit;
+    }
 
 }
 
@@ -504,36 +511,44 @@ p5
 
   
 
-.bg-img 
-{
-    height: 180px;
-}
+    .bg-img 
+    {
+        height: 180px;
+    }
 
 
 
-/* The left navbar */
-#topnav 
-{
-    margin: 0 auto;
-}
+    /* The left navbar */
+    #topnav 
+    {
+        margin: 0 auto;
+    }
 
 
-/* Navbar links */
-#topnav a 
-{
-    margin: 0 auto;
-    text-align: center;
-    padding: 0px;
-  
-}
+    /* Navbar links */
+    #topnav a 
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px;
+    
+    }
 
-#topnav-right a 
-{
-    float: center;
-    text-align: center;
-    margin: 0 auto;
-   
-}
+    #topnav-right a 
+    {
+        float: center;
+        text-align: center;
+        margin: 0 auto;
+    
+    }
+
+    .parallax{
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        background-attachment: inherit;
+    }
 
 
 }
@@ -635,9 +650,6 @@ ul.leaders sup{
 }
 
 .parallax {
-    /* The image used */
-    background-image: url("/pictures/bady-qb-VIv0srmK78g-unsplash.jpg");
-  
     /* Full height */
     height: 100%; 
   
@@ -648,20 +660,6 @@ ul.leaders sup{
     background-size: cover;
 }
 
-.parallax1 {
-    /* The image used */
-    background-image: url("/pictures/christian-allard-etIkw39orF8-unsplash.jpg");
-  
-    /* Full height */
-    height: 100%; 
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.7;
-}
 
 .parallax2
 {
@@ -673,36 +671,4 @@ ul.leaders sup{
 }
 
 
-.parallax3
-{
-    height: 100%;
-    background-image: url("/pictures/louis-hansel-8FWQQXMspEM-unsplash.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.7;
-}
-
-.parallax4
-{
-    height: 100%;
-    background-image: url("/pictures/youjeen-cho-JorKKx5rvA0-unsplash.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.7;
-}
-
-.parallax5
-{
-    height: 100%;
-    background-image:url("/pictures/louis-hansel-PRJbFSNgSzQ-unsplash.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.8;
-}
 
