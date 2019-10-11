@@ -8,7 +8,6 @@ body
     background-image: url("/pictures/wild_oliva.png");
     overflow-x:hidden;
     margin: 0;
-    position: relative;
     padding-bottom: 1rem;
     min-height: 100%;
 }
@@ -481,6 +480,7 @@ p5
     body
     {
         width: 25%;
+        height: 50%;
     }
 
     html 
@@ -506,7 +506,7 @@ p5
 
 .bg-img 
 {
-    min-height: 480px;
+    height: 180px;
 }
 
 
@@ -529,6 +529,7 @@ p5
 
 #topnav-right a 
 {
+    float: center;
     text-align: center;
     margin: 0 auto;
    
