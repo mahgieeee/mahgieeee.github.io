@@ -45,7 +45,7 @@ html
 }
 
 
-.container-flexbox 
+.container-menu 
 {
     height: 100%;
     position: relative;
@@ -112,10 +112,8 @@ html
 #topnav a 
 {
     float: left;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    text-align:left;
     font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
     color: white;
     letter-spacing: 2px;
@@ -132,7 +130,6 @@ html
 #topnav-right a 
 {
     float: right;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     text-align:center;
@@ -189,22 +186,6 @@ html
     margin:0 auto; /*centers the fading image important*/
 }
 
-.crossfade > .figure1 
-{
-    animation: imageAnimation 30s linear infinite 0s;
-    backface-visibility: hidden;
-    background-size: cover;
-    background-position: center center;
-    color: transparent;
-    height: 100%;
-    left: 0px;
-    opacity: 0;
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    z-index: 0;
-    margin:0 auto; /*centers the fading image important*/
-}
 
 .crossfade > figure:nth-child(1) 
 { 
@@ -316,26 +297,6 @@ imageAnimation
 
 
 /*-----------------------Body heading------------------------------*/
-
-
-h5
-{
-    text-align: center;
-    text-decoration: none;
-    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
-    color: white;
-    letter-spacing: 2px;
-    font-size: 28px; 
-    font-style: normal;
-    font-weight: lighter;
-    text-decoration: underline;
-    text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-        1px 1px 0 #000;
-}
-
 h3
 {
     text-align: center;
@@ -504,10 +465,6 @@ p5
 
 @media only screen and (orientation:landscape) and (max-width: 680px) 
 {
-    .container1 
-    {
-    width: 100%;
-    }
 
     html 
     {
@@ -515,34 +472,11 @@ p5
     text-size-adjust         : none;
     }
     
-    .container-flexbox 
-    {
-    padding-left: 0;
-    }
-
-    .tile-gallery__tile {
-        padding-left: 0px;
-        width: 210px;
-        height: 210px;
-    }
-    
-    .tile-gallery__tile--normal {
-        width: 110px;
-        height: 10px;
-    }
-
-    .parallax {
-        background-attachment: scroll;
-    }
 
 }
 
-@media only screen and (orientation:portrait) and (max-width: 280px) 
+@media only screen and (orientation:portrait) and (max-width: 380px) 
 {
-    .container1 
-    {
-        width: 50%;
-    }
 
 
     html 
@@ -553,9 +487,14 @@ p5
 
     #topnav-container
     {
+        background-size: 150px;
         position: absolute;
         transition: 0.4s;
         padding: 20px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .container 
@@ -563,40 +502,38 @@ p5
         position: relative;
     }
 
-    #topnav a 
-    {
-        font-size: 18px;
-    }
+  
 
-    p5
-    {
-        font-size: 6px;
-    }
+.bg-img 
+{
+    min-height: 480px;
+}
 
-    ul.leaders 
-    {
-    max-width: 20em;
-    }
 
-    .container-flexbox 
-    {
-    padding-left: 0;
-    }
 
-    .tile-gallery__tile {
-        padding-left: 0px;
-        width: 210px;
-        height: 210px;
-    }
-    
-    .tile-gallery__tile--normal {
-        width: 210px;
-        height: 210px;
-    }
+/* The left navbar */
+#topnav 
+{
+    margin: 0 auto;
+}
 
-    .parallax {
-        background-attachment: scroll;
-    }
+
+/* Navbar links */
+#topnav a 
+{
+    margin: 0 auto;
+    text-align: center;
+    padding: 0px;
+  
+}
+
+#topnav-right a 
+{
+    text-align: center;
+    margin: 0 auto;
+   
+}
+
 
 }
 
