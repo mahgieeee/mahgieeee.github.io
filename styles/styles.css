@@ -478,6 +478,10 @@ p5
 @media only screen and (orientation:portrait) and (max-width: 380px) 
 {
 
+    body
+    {
+        width: 25%;
+    }
 
     html 
     {
@@ -490,11 +494,7 @@ p5
         background-size: 150px;
         position: absolute;
         transition: 0.4s;
-        padding: 20px 10px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
+        padding: 0px;
     }
 
     .container 
