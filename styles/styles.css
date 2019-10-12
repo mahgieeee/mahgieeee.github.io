@@ -474,7 +474,7 @@ p5
 {
     header
     {
-        width: 20%;
+        width: 50%;
     }
 
     
@@ -487,19 +487,19 @@ p5
     #topnav-container
     {
         position: absolute;
-        width: 20%;
+        width: 50%;
     }
 
     .container 
     {
-        position: absolute;
+        position: relative;
     }
 
 
     .container2
     {
-        width: 20%;
-        position: absolute;
+        width: 50%;
+        position: relative;
     }
 
     /* The left navbar */
