@@ -489,7 +489,11 @@ p5
 
     header
     {
+<<<<<<< HEAD
         width: 65%;
+=======
+        width: 50%;
+>>>>>>> f6573e92b4a2acab96fcb217844730b9433a40c6
     }
 
     
@@ -502,8 +506,12 @@ p5
     #topnav-container
     {
         position: absolute;
+<<<<<<< HEAD
         height: 20%;
         position: relative;
+=======
+        width: 50%;
+>>>>>>> f6573e92b4a2acab96fcb217844730b9433a40c6
     }
 
     .container 
@@ -514,6 +522,7 @@ p5
 
     .container2
     {
+<<<<<<< HEAD
         width: 62.5%;
         position: relative;
     }
@@ -522,6 +531,10 @@ p5
     {
         width: 100%;
         padding: 50px;
+=======
+        width: 50%;
+        position: relative;
+>>>>>>> f6573e92b4a2acab96fcb217844730b9433a40c6
     }
 
     /* The left navbar */
