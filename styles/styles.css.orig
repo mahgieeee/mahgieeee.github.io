@@ -1,0 +1,663 @@
+/* Background pattern from Toptal Subtle Patterns */
+body 
+{
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background-size: 250px;
+    width: 100%;
+    background-image: url("/pictures/wild_oliva.png");
+    overflow-x:hidden;
+    margin: 0;
+    padding-bottom: 1rem;
+    min-height: 100%;
+}
+
+html
+{
+    height: 100%; 
+    box-sizing: border-box;
+}
+
+.footer 
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Position the navbar container inside the image for background*/
+.container 
+{
+    position: relative;
+    margin: 0px;
+    width: auto;
+    height: 100%;
+}
+
+.container1
+{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    padding: 300px;
+}
+
+
+.container2
+{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width: 100%;
+}
+
+.container5
+{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 75px;
+}
+
+.container-menu 
+{
+    height: 100%;
+    position: relative;
+    padding-left: calc(28.5%);
+    padding-bottom: 50px;
+}
+
+
+#topnav-container
+{
+    
+    background-size: 250px;
+    background-image: url("/pictures/wild_oliva.png");
+    opacity: 0.8;
+    padding: 40px 10px;
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+
+header{
+    width: 100%;
+}
+
+.bg-img 
+{
+    min-height: 680px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    /* Needed to position the navbar */
+    position: relative;
+}
+
+/* The left navbar */
+#topnav 
+{
+    overflow: hidden;
+    background-color: transparent;
+    padding: 20px;
+}
+
+#topnav #logo 
+{
+    overflow: hidden;
+    background-color: transparent;
+    transition: 0.4s;
+}
+
+/* Navbar links */
+#topnav a 
+{
+    float: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 58px;
+    font-weight: lighter;
+    font-style: normal;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+#topnav-right a 
+{
+    float: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align:center;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    color: white;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 5px;
+    line-height: 70px;  
+    font-weight: lighter;
+    padding: 35px;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+#topnav a:hover 
+{
+    background-color: transparent;
+    color: rgb(54, 148, 36);
+    transform: scale(1.1);
+}
+
+#topnav-right a:hover 
+{
+    background-color: transparent;
+    color: rgb(54, 148, 36);
+    transform: scale(1.4);
+}
+
+#topnav-right 
+{
+    float: right;
+}
+
+
+/*-----------------------animation for header------------------------------*/
+.crossfade > figure 
+{
+    animation: imageAnimation 30s linear infinite 0s;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center center;
+    color: transparent;
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 0;
+    margin:0 auto; /*centers the fading image important*/
+}
+
+
+.crossfade > figure:nth-child(1) 
+{ 
+    background-image: url("/pictures/luigi-pozzoli-iIS1SIO5_aY-unsplash.jpg"); 
+}
+
+.crossfade > figure:nth-child(2) 
+{
+    animation-delay: 6s;
+    background-image: url("/pictures/youjeen-cho-JorKKx5rvA0-unsplash.jpg");
+}
+
+.crossfade > figure:nth-child(3) 
+{
+    animation-delay: 12s;
+    background-image: url("/pictures/riccardo-bergamini-O2yNzXdqOu0-unsplash.jpg");
+}
+
+.crossfade > figure:nth-child(4) 
+{ 
+    animation-delay: 18s;
+    background-image: url("/pictures/bady-qb-VIv0srmK78g-unsplash.jpg"); 
+}
+
+.crossfade > figure:nth-child(5) 
+{
+    animation-delay: 24s;
+    background-image: url("/pictures/florian-metzner-12IsagncQ7o-unsplash.jpg");
+}
+
+/*to repeat this on different pages use figure1:nth-child*/
+
+
+@keyframes 
+imageAnimation 
+{  0% 
+    {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    }
+    8% 
+    {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    }
+    17% 
+    {
+    opacity: 1
+    }
+    25% 
+    {
+    opacity: 0
+    }
+    100% {
+    opacity: 0
+    }
+}
+
+.centered {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.centered_tab button{
+    float: none; /*to make sure there is no active float*/
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 20px;
+    letter-spacing: 3.5px;
+    background: transparent;
+    color: white;
+    font-style: normal;
+}
+
+
+/* Change background color of buttons on hover */
+.centered_tab button:hover 
+{
+    color:  rgb(54, 148, 36);
+    transform: scale(1.4);
+}
+
+/* Style the tab content */
+.tabcontent 
+{
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+/*-----------------------Fade in tabs for menu------------------------------*/
+@-webkit-keyframes fadeEffect 
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect 
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+/*-----------------------Body heading------------------------------*/
+h3
+{
+    text-align: center;
+    text-decoration: none;
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 28px; 
+    font-style: normal;
+    font-weight: lighter;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+
+/*-----------------------Flexbox menu items------------------------------*/
+.flex-container 
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-container > div 
+{
+    background-color: transparent;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 20px;
+    font-style: normal;
+}
+
+
+/*-----------------------menu items------------------------------*/
+    
+p2
+{
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 15px;
+    font-style: italic;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+/*-----------------------footer paragraph------------------------------*/
+p5
+{
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    letter-spacing: 1.5px;
+    line-height: 40px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: white;
+    font-style: normal;
+}
+
+
+
+.gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.tile-gallery__col {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.tile-gallery__col + .tile-gallery__col {
+    margin-left: 0px;
+}
+.tile-gallery__row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.tile-gallery__row + .tile-gallery__row {
+    margin-top: 0px;
+}
+
+.tile-gallery__tile {
+    /*padding-left: 15px;*/
+    width: 310px;
+    height: 310px;
+    padding-bottom: 15px;
+}
+
+.tile-gallery__tile--normal {
+    width: 310px;
+    height: 310px;
+}
+
+
+.tile-gallery__figure {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.tile-gallery__figure:hover .tile-gallery__image, .tile-gallery__figure:focus .tile-gallery__image, .tile-gallery__figure:active .tile-gallery__image {
+    transform: translate(-50%, -50%) scale(1.10);
+}
+
+.tile-gallery__image {
+    transition: transform 250ms ease-in-out;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.tile-gallery__figure .text{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;        
+    text-align: center;
+    top: 90%; /* Adjust this value to move the positioned div up and down */
+    width: 60%; /* Set the width of the positioned div */
+}
+
+
+/*for desktop, mobile websites*/
+
+@media only screen and (orientation:landscape) and (max-width: 680px) 
+{
+
+    html 
+    {
+    -webkit-text-size-adjust : none;
+    text-size-adjust         : none;
+    }
+    
+    .parallax{
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        background-attachment: inherit;
+    }
+
+}
+
+@media only screen and (orientation:portrait) and (max-width: 414px) 
+{
+    h3
+    {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .bg-img 
+    {
+    min-height: 180px;
+    }
+
+    header
+    {
+<<<<<<< HEAD
+        width: 65%;
+=======
+        width: 50%;
+>>>>>>> f6573e92b4a2acab96fcb217844730b9433a40c6
+    }
+
+    
+    html 
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+    #topnav-container
+    {
+        position: absolute;
+<<<<<<< HEAD
+        height: 20%;
+        position: relative;
+=======
+        width: 50%;
+>>>>>>> f6573e92b4a2acab96fcb217844730b9433a40c6
+    }
+
+    .container 
+    {
+        position: relative;
+    }
+
+
+    .container2
+    {
+<<<<<<< HEAD
+        width: 62.5%;
+        position: relative;
+    }
+
+    .container1
+    {
+        width: 100%;
+        padding: 50px;
+=======
+        width: 50%;
+        position: relative;
+>>>>>>> f6573e92b4a2acab96fcb217844730b9433a40c6
+    }
+
+    /* The left navbar */
+    #topnav 
+    {
+        margin: 0 auto;
+    }
+
+
+    /* Navbar links */
+    #topnav a 
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px;
+    
+    }
+
+    #topnav-right a 
+    {
+        float: center;
+        text-align: center;
+        margin: 0 auto;
+    
+    }
+
+    .parallax{
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        background-attachment: inherit;
+    }
+
+
+    .gallery {
+        flex-flow: row wrap;
+    }
+}
+
+ul.leaders 
+{
+    max-width: 40em;
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none;
+    margin: 0;
+}
+
+ul.leaders li:after 
+{
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    line-height: 40px;
+    color: white;
+    content:
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+}
+
+ul.leaders span:first-child 
+{
+    padding-right: 0.33em;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    color:  rgb(54, 148, 36);
+    background-size: 250px;
+    background-image: url("/pictures/wild_oliva.png");
+    letter-spacing: 2px;
+    line-height: 40px;
+    font-size: 18px;
+    font-style: normal;
+}
+
+ul.leaders span + span
+{
+    float: right;
+    line-height: 40px;
+    padding-left: 0.33em;
+    position: relative;
+    z-index: 1;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    background-size: 250px;
+    background-image: url("/pictures/wild_oliva.png");
+    letter-spacing: 2.5px;
+    color: white;
+    font-weight: normal;
+    font-size: 18px;
+    font-style: normal;
+}
+
+
+ul.leaders sup{
+    font-size: 70%;
+    color: white;
+    padding: 0px;
+    margin-left: -5px;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+.parallax {
+    /* Full height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.parallax2
+{
+    background-size: 250px;
+    height: 100%;
+    background-image: url("/pictures/wild_oliva.png");
+    background-attachment: fixed;
+    opacity: 1;
+}
+
+
+
