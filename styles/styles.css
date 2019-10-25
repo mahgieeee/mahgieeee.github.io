@@ -21,9 +21,10 @@ html
 .footer 
 {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    right: 100px;
+    bottom: 200px;
+    left: 100px;
+    top: 200px;
     padding: 1rem;
 }
 
@@ -62,6 +63,26 @@ html
     width: 100%;
 }
 
+.menu-p
+{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    max-width: 40em;
+}
+
+.container3
+{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
 .container5
 {
     overflow:hidden;
@@ -77,7 +98,7 @@ html
 {
     height: 100%;
     position: relative;
-    padding-left: calc(28.5%);
+    padding-left: calc(26.5%);
     padding-bottom: 50px;
 }
 
@@ -95,6 +116,7 @@ html
     top: 0;
     z-index: 99;
 }
+
 
 header{
     width: 100%;
@@ -314,6 +336,23 @@ imageAnimation
     to {opacity: 1;}
 }
 
+/*-----------------------Contact Google Maps------------------------------*/
+.mapouter
+{
+    position:relative;
+    text-align:center;
+    margin: 0 auto;
+    height:500px;
+    width:600px;
+}
+
+.gmap_canvas
+{
+    overflow:hidden;
+    background:none!important;
+    height:500px;
+    width:600px;
+}
 
 /*-----------------------Body heading------------------------------*/
 h3
@@ -368,6 +407,7 @@ p2
     font-style: italic;
     padding-top: 150px;
     padding-bottom: 150px;
+    text-align: left;
 }
 
 /*-----------------------footer paragraph------------------------------*/
@@ -377,12 +417,27 @@ p5
     letter-spacing: 1.5px;
     line-height: 40px;
     font-weight: lighter;
-    font-size: 12px;
+    font-size: 15px;
     color: white;
     font-style: normal;
 }
 
-
+h5
+{
+    text-align: center;
+    text-decoration: none;
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 18px; 
+    font-style: normal;
+    font-weight: lighter;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
 
 .gallery {
     display: flex;
@@ -410,7 +465,7 @@ p5
     /*padding-left: 15px;*/
     width: 310px;
     height: 310px;
-    padding-bottom: 15px;
+    padding-bottom: 0px;
 }
 
 .tile-gallery__tile--normal {
@@ -474,11 +529,22 @@ p5
 
 }
 
-@media only screen and (orientation:portrait) and (max-width: 414px) 
+@media only screen and (orientation:portrait) and (max-width: 375px) 
 {
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 60%;
+        text-align: center;
+    }
+
     h3
     {
-        font-size: 18px;
+        width: 60%;
+        font-size: 20px;
         text-align: center;
     }
 
@@ -489,11 +555,7 @@ p5
 
     header
     {
-<<<<<<< HEAD
         width: 65%;
-=======
-        width: 50%;
->>>>>>> f6573e92b4a2acab96fcb217844730b9433a40c6
     }
 
     
@@ -506,12 +568,8 @@ p5
     #topnav-container
     {
         position: absolute;
-<<<<<<< HEAD
         height: 20%;
         position: relative;
-=======
-        width: 50%;
->>>>>>> f6573e92b4a2acab96fcb217844730b9433a40c6
     }
 
     .container 
@@ -522,19 +580,38 @@ p5
 
     .container2
     {
-<<<<<<< HEAD
         width: 62.5%;
         position: relative;
+        padding-bottom: 50px;
+        padding-top: 50px;
     }
 
+    .container5
+    {
+        width: 90%;
+        padding-bottom: 25px;
+    }
+
+    .mapouter
+    {
+        width: 90%;
+        position:relative;
+        text-align:center;
+        margin: 0 auto;
+        height:300px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:300px;
+        width:300px;
+    }
     .container1
     {
         width: 100%;
-        padding: 50px;
-=======
-        width: 50%;
-        position: relative;
->>>>>>> f6573e92b4a2acab96fcb217844730b9433a40c6
+        padding: 25px;
     }
 
     /* The left navbar */
@@ -573,7 +650,55 @@ p5
     .gallery {
         flex-flow: row wrap;
     }
+
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 10px;
+    }
+
+    .container-menu 
+    {
+        padding-left: calc(6%);
+        padding-bottom: 10px;
+        width: 65%;
+    }
+
+    .menu-p
+    {
+        width: 80%;
+    }
+
+    ul.leaders 
+    {
+        width: 80%;
+    }
+
+    ul.leaders span:first-child 
+    {
+        font-size: 15px;
+    }
+    
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+
 }
+
 
 ul.leaders 
 {
@@ -628,17 +753,6 @@ ul.leaders span + span
     font-style: normal;
 }
 
-
-ul.leaders sup{
-    font-size: 70%;
-    color: white;
-    padding: 0px;
-    margin-left: -5px;
-    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
-    font-size: 10px;
-    font-weight: lighter;
-}
-
 .parallax {
     /* Full height */
     height: 100%;
@@ -659,5 +773,11 @@ ul.leaders sup{
     opacity: 1;
 }
 
-
-
+.parallax-footer
+{
+    background-size: 150px;
+    height: 100%;
+    background-image: url("/pictures/prism.png");
+    background-attachment: fixed;
+    opacity: 1;
+}
