@@ -1164,7 +1164,7 @@ ul.leaders span + span
     .parallax{
         height: 150%;
         width: 100%;
-        background-position-x: 100%;
+        background-position-x: 0%;
         background-position-y: 25%;
         background-attachment: inherit;
     }
@@ -1172,7 +1172,7 @@ ul.leaders span + span
     .parallax2{
         height: 150%;
         width: 100%;
-        background-position-x: 100%;
+        background-position-x: 0%;
         background-position-y: 25%;
         background-attachment: inherit;
     }
