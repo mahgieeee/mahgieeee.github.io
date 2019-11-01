@@ -1,3 +1,4 @@
+/* Container 2 needs to be fixed, repeated in index, gallery and menu*/
 /* Background pattern from Toptal Subtle Patterns */
 body 
 {
@@ -673,14 +674,14 @@ h5
 
 .tile-gallery__tile {
     /*padding-left: 15px;*/
-    width: 310px;
-    height: 310px;
+    width: 255px;
+    height: 255px;
     padding-bottom: 0px;
 }
 
 .tile-gallery__tile--normal {
-    width: 310px;
-    height: 310px;
+    width: 255px;
+    height: 255px;
 }
 
 
@@ -717,6 +718,87 @@ h5
     width: 60%; /* Set the width of the positioned div */
 }
 
+
+ul.leaders 
+{
+    max-width: 40em;
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none;
+    margin: 0;
+}
+
+ul.leaders li:after 
+{
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    line-height: 40px;
+    color: white;
+    content:
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+}
+
+ul.leaders span:first-child 
+{
+    padding-right: 0.33em;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    color:  rgb(54, 148, 36);
+    background-size: 250px;
+    background-image: url("/pictures/wild_oliva.png");
+    letter-spacing: 2px;
+    line-height: 40px;
+    font-size: 18px;
+    font-style: normal;
+}
+
+ul.leaders span + span
+{
+    float: right;
+    line-height: 40px;
+    padding-left: 0.33em;
+    position: relative;
+    z-index: 1;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    background-size: 250px;
+    background-image: url("/pictures/wild_oliva.png");
+    letter-spacing: 2.5px;
+    color: white;
+    font-weight: normal;
+    font-size: 18px;
+    font-style: normal;
+}
+
+.parallax {
+    /* Full height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2
+{
+    background-size: 250px;
+    height: 100%;
+    background-image: url("/pictures/wild_oliva.png");
+    background-attachment: fixed;
+    opacity: 1;
+}
+
+.parallax-about
+{
+    background-size: 150px;
+    height: 100%;
+    background-image: url("/pictures/footer_lodyas.png");
+    background-attachment: fixed;
+    opacity: 1;
+}
 
 /*for desktop, mobile websites*/
 @media only screen and (orientation:portrait) and (min-width: 375px) and (-webkit-min-device-pixel-ratio : 2)
@@ -851,7 +933,7 @@ h5
         width: 62.5%;
         position: relative;
         padding-bottom: 50px;
-        padding-top: 50px;
+        padding-top: 10px;
     }
 
     .container5
@@ -994,7 +1076,7 @@ h5
 
     header
     {
-        width: 65%;
+        width: 70%;
     }
 
     
@@ -1019,7 +1101,7 @@ h5
 
     .container2
     {
-        width: 62.5%;
+        width: 75%;
         position: relative;
         padding-bottom: 50px;
         padding-top: 50px;
@@ -1218,84 +1300,569 @@ h5
 
 }
 
-
-ul.leaders 
+@media only screen and (orientation:portrait) and (min-width: 768px) and (-webkit-min-device-pixel-ratio : 2)
 {
-    max-width: 40em;
-    padding: 0;
-    overflow-x: hidden;
-    list-style: none;
-    margin: 0;
-}
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
 
-ul.leaders li:after 
+    h3
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .bg-img 
+    {
+    min-height: 180px;
+    }
+
+    header
+    {
+        width: 100%;
+    }
+
+    
+    html 
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+    #topnav-container
+    {
+        position: absolute;
+        height: 30%;
+        position: relative;
+    }
+
+    .container 
+    {
+        position: relative;
+    }
+
+    .container2
+    {
+        width: 100%;
+        position: relative;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    .container5
+    {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+
+    /*-----------------------Contact Google Maps------------------------------*/
+    .mapouter
+    {
+        position:relative;
+        text-align:center;
+        margin: 0 auto;
+        height:500px;
+        width:600px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:500px;
+        width:600px;
+    }
+    
+    .container1
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        padding: 200px;
+    }
+
+    /* The left navbar */
+    #topnav 
+    {
+        margin: 0 auto;
+    }
+
+
+    /* Navbar links */
+    #topnav a 
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px;
+    
+    }
+
+    #topnav-right a 
+    {
+        float: center;
+        text-align: center;
+        margin: 0 auto;
+    
+    }
+
+    .parallax{
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        background-attachment: inherit;
+    }
+
+
+    .gallery {
+        flex-flow: row nowrap;
+    }
+
+    .tile-gallery__tile {
+        /*padding-left: 15px;*/
+        width: 192px;
+        height: 192px;
+        padding-bottom: 0px;
+    }
+    
+    .tile-gallery__tile--normal {
+        width: 192px;
+        height: 192px;
+    }
+    
+
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 12px;
+    }
+
+    .container-menu 
+    {
+        padding-left: calc(6%);
+        padding-bottom: 10px;
+        width: 100%;
+    }
+
+    .menu-p
+    {
+        width: 100%;
+    }
+
+    ul.leaders 
+    {
+        width: 100%;
+    }
+
+    ul.leaders span:first-child 
+    {
+        font-size: 15px;
+    }
+    
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+    
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left 
+    {
+        float: center;
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .column-right 
+    {
+        width: 0%;
+    }
+
+   
+/*-----------------------column layout for about------------------------------*/
+.column-about
 {
     float: left;
-    width: 0;
-    white-space: nowrap;
-    line-height: 40px;
-    color: white;
-    content:
-    ". . . . . . . . . . . . . . . . . . . . "
-    ". . . . . . . . . . . . . . . . . . . . "
-    ". . . . . . . . . . . . . . . . . . . . "
-    ". . . . . . . . . . . . . . . . . . . . "
+    width: 50%;
+    padding: 0px;
 }
 
-ul.leaders span:first-child 
+.column
 {
-    padding-right: 0.33em;
-    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
-    color:  rgb(54, 148, 36);
-    background-size: 250px;
-    background-image: url("/pictures/wild_oliva.png");
-    letter-spacing: 2px;
-    line-height: 40px;
-    font-size: 18px;
-    font-style: normal;
+    float: left;
+    width: 50%;
+    padding: 50px;
 }
 
-ul.leaders span + span
+
+ /* Clear floats after the columns */
+ .row:after 
+ {
+     content: "";
+     display: table;
+     clear: both;
+ }
+
+ .container-about
+ {
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+ }
+
+ .column-map
 {
-    float: right;
-    line-height: 40px;
-    padding-left: 0.33em;
-    position: relative;
-    z-index: 1;
-    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
-    background-size: 250px;
-    background-image: url("/pictures/wild_oliva.png");
-    letter-spacing: 2.5px;
-    color: white;
-    font-weight: normal;
-    font-size: 18px;
-    font-style: normal;
+    float: center;
+    width: 100%;
 }
 
-.parallax {
-    /* Full height */
-    height: 100%;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.parallax2
+.column-p
 {
-    background-size: 250px;
-    height: 100%;
-    background-image: url("/pictures/wild_oliva.png");
-    background-attachment: fixed;
-    opacity: 1;
+    float: center;
+    width: 100%;
+    padding-bottom: 50px;
 }
 
-.parallax-about
+.container-map
 {
-    background-size: 150px;
-    height: 100%;
-    background-image: url("/pictures/footer_lodyas.png");
-    background-attachment: fixed;
-    opacity: 1;
+    display:block;
+    position:relative;
+    width: 100%;
+    padding-top: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+    
+h6
+{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.container-f
+{
+    padding-top: 50px;
+    width: 100%;
+}
+
+#bottomnav-right 
+{
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+}
+
+
+@media only screen and (orientation:portrait) and (min-width: 1024px) and (-webkit-min-device-pixel-ratio : 2)
+{
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    h3
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .bg-img 
+    {
+    min-height: 180px;
+    }
+
+    header
+    {
+        width: 100%;
+    }
+
+    
+    html 
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+    #topnav-container
+    {
+        position: absolute;
+        height: 30%;
+        position: relative;
+    }
+
+    .container 
+    {
+        position: relative;
+    }
+
+    .container2
+    {
+        width: 100%;
+        position: relative;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    .container5
+    {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+
+    /*-----------------------Contact Google Maps------------------------------*/
+    .mapouter
+    {
+        position:relative;
+        text-align:center;
+        margin: 0 auto;
+        height:500px;
+        width:600px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:500px;
+        width:600px;
+    }
+    
+    .container1
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        padding: 200px;
+    }
+
+    /* The left navbar */
+    #topnav 
+    {
+        margin: 0 auto;
+    }
+
+
+    /* Navbar links */
+    #topnav a 
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px;
+    
+    }
+
+    #topnav-right a 
+    {
+        float: center;
+        text-align: center;
+        margin: 0 auto;
+    
+    }
+
+    .parallax{
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        background-attachment: inherit;
+    }
+
+
+    .gallery {
+        flex-flow: row nowrap;
+    }
+
+    .tile-gallery__tile {
+        /*padding-left: 15px;*/
+        width: 256px;
+        height: 256px;
+        padding-bottom: 0px;
+    }
+    
+    .tile-gallery__tile--normal {
+        width: 256px;
+        height: 256px;
+    }
+    
+
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 12px;
+    }
+
+    .container-menu 
+    {
+        padding-left: calc(6%);
+        padding-bottom: 10px;
+        width: 100%;
+    }
+
+    .menu-p
+    {
+        width: 100%;
+    }
+
+    ul.leaders 
+    {
+        width: 100%;
+    }
+
+    ul.leaders span:first-child 
+    {
+        font-size: 15px;
+    }
+    
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+    
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left 
+    {
+        float: left;
+        width: 60%;
+        padding: 0px;
+    }
+
+    .column-right 
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        width: 40%;
+        padding-top: 50px;
+    }
+   
+/*-----------------------column layout for about------------------------------*/
+.column-about
+{
+    float: left;
+    width: 50%;
+    padding: 0px;
+}
+
+.column
+{
+    float: left;
+    width: 50%;
+    padding: 50px;
+}
+
+
+ /* Clear floats after the columns */
+ .row:after 
+ {
+     content: "";
+     display: table;
+     clear: both;
+ }
+
+ .container-about
+ {
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+ }
+
+ .column-map
+{
+    float: center;
+    width: 100%;
+}
+
+.column-p
+{
+    float: center;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.container-map
+{
+    display:block;
+    position:relative;
+    width: 100%;
+    padding-top: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+    
+h6
+{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.container-f
+{
+    padding-top: 50px;
+    width: 100%;
+}
+
+#bottomnav-right 
+{
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+
+
 }
