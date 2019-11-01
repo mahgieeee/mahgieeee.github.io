@@ -1018,12 +1018,19 @@ ul.leaders span + span
     }
 
     .parallax{
+        height: 150%;
+        width: 100%;
+        background-position-y: 100%;
         background-attachment: inherit;
     }
 
     .parallax2{
+        height: 150%;
+        width: 100%;
+        background-position-y: 100%;
         background-attachment: inherit;
     }
+
 
 
     .gallery {
@@ -1164,14 +1171,14 @@ ul.leaders span + span
     .parallax{
         height: 150%;
         width: 100%;
-        background-position: 100%;
+        background-position-y: 100%;
         background-attachment: inherit;
     }
 
     .parallax2{
         height: 150%;
         width: 100%;
-        background-position: 100%;
+        background-position-y: 100%;
         background-attachment: inherit;
     }
 
@@ -1423,12 +1430,19 @@ ul.leaders span + span
     }
 
     .parallax{
+        height: 150%;
+        width: 100%;
+        background-position-y: 100%;
         background-attachment: inherit;
     }
 
     .parallax2{
+        height: 150%;
+        width: 100%;
+        background-position-y: 100%;
         background-attachment: inherit;
     }
+
 
 
     .gallery {
@@ -1704,12 +1718,19 @@ h6
     }
 
     .parallax{
+        height: 150%;
+        width: 100%;
+        background-position-y: 100%;
         background-attachment: inherit;
     }
 
     .parallax2{
+        height: 150%;
+        width: 100%;
+        background-position-y: 100%;
         background-attachment: inherit;
     }
+
 
 
     .gallery {
