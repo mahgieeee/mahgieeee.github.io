@@ -1727,7 +1727,7 @@ h6
     .parallax2{
         height: 150%;
         width: 100%;
-        background-position-y: 100%;
+        background-position-y: 25%;
         background-attachment: inherit;
     }
 
