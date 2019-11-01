@@ -467,6 +467,7 @@ imageAnimation
     padding: 50px;
 }
 
+
  /* Clear floats after the columns */
  .row:after 
  {
@@ -484,6 +485,47 @@ imageAnimation
     margin: 0 auto;
     text-align: center;
  }
+
+ .column-map
+{
+    float: center;
+    width: 100%;
+}
+
+.column-p
+{
+    float: center;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.container-map
+{
+    display:block;
+    position:relative;
+    width: 100%;
+    padding-top: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+    
+
+ h6
+{
+    text-align: center;
+    text-decoration: none;
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 28px; 
+    font-style: normal;
+    font-weight: lighter;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
  
 /*-----------------------Contact Google Maps------------------------------*/
 .mapouter
@@ -677,27 +719,7 @@ h5
 
 
 /*for desktop, mobile websites*/
-
-@media only screen and (orientation:landscape) and (max-width: 680px) 
-{
-
-    html 
-    {
-    -webkit-text-size-adjust : none;
-    text-size-adjust         : none;
-    }
-    
-    .parallax{
-        background-attachment: inherit;
-    }
-
-    .parallax2{
-        background-attachment: inherit;
-    }
-
-}
-
-@media only screen and (orientation:portrait) and (max-width: 375px) 
+@media only screen and (orientation:portrait) and (min-width: 375px) and (-webkit-min-device-pixel-ratio : 2)
 {
     .centered_tab button
     {
@@ -712,6 +734,255 @@ h5
     h3
     {
         width: 60%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    html 
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+
+    .container-menu 
+    {
+        padding-left: calc(6%);
+        padding-bottom: 10px;
+        width: 65%;
+    }
+
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left 
+    {
+        float: center;
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .column-right 
+    {
+        width: 0%;
+    }
+
+
+    /*-----------------------column layout for about------------------------------*/
+    .column-about
+    {
+        float: center;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .column
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .column-p
+    {
+        width: 65%;
+    }
+    
+    .container-about
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .column-map
+    {
+        float: center;
+        width: 50%;
+    }
+
+    .container-map
+    {
+        width: 100%;
+        position: relative;
+        padding-top: 50px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    h6
+    {
+        width: 55%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    .bg-img 
+    {
+    min-height: 50px;
+    }
+
+    header
+    {
+        width: 65%;
+    }
+
+    #topnav-container
+    {
+        position: absolute;
+        height: 10%;
+        position: relative;
+    }
+
+    .container 
+    {
+        position: relative;
+    }
+
+    .container1
+    {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .container2
+    {
+        width: 62.5%;
+        position: relative;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    .container5
+    {
+        width: 90%;
+        padding-bottom: 25px;
+    }
+
+    .mapouter
+    {
+        width: 95%;
+        position:relative;
+        text-align:left;
+        margin: 0 auto;
+        height:300px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:300px;
+        width:360px;
+    }
+    
+
+    
+    /* The left navbar */
+    #topnav 
+    {
+        margin: 0 auto;
+    }
+
+
+    /* Navbar links */
+    #topnav a 
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px;
+    
+    }
+
+    #topnav-right a 
+    {
+        float: center;
+        text-align: center;
+        margin: 0 auto;
+    
+    }
+
+    .menu-p
+    {
+        width: 80%;
+    }
+
+    ul.leaders 
+    {
+        width: 80%;
+    }
+
+    ul.leaders span:first-child 
+    {
+        font-size: 15px;
+    }
+    
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+    .parallax{
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        background-attachment: inherit;
+    }
+
+
+    .gallery {
+        flex-flow: row wrap;
+    }
+
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 10px;
+    }
+
+    .container-f
+    {
+        padding-top: 50px;
+        width: 60%;
+    }
+
+    #bottomnav-right 
+    {
+        padding-right: 20px;
+        padding-bottom: 50px;
+    }
+}
+
+
+@media only screen and (orientation:portrait) and (min-width: 414px) and (-webkit-min-device-pixel-ratio : 2)
+{
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 70%;
+        text-align: center;
+    }
+
+    h3
+    {
+        width: 70%;
         font-size: 20px;
         text-align: center;
     }
@@ -760,11 +1031,12 @@ h5
         padding-bottom: 25px;
     }
 
+
     .mapouter
     {
-        width: 90%;
+        width: 95%;
         position:relative;
-        text-align:center;
+        text-align:left;
         margin: 0 auto;
         height:300px;
     }
@@ -774,8 +1046,9 @@ h5
         overflow:hidden;
         background:none!important;
         height:300px;
-        width:300px;
+        width:400px;
     }
+    
     .container1
     {
         width: 100%;
@@ -822,14 +1095,14 @@ h5
     p5
     {
         letter-spacing: 0.5px;
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .container-menu 
     {
         padding-left: calc(6%);
         padding-bottom: 10px;
-        width: 65%;
+        width: 75%;
     }
 
     .menu-p
@@ -864,6 +1137,84 @@ h5
     text-align: left;
     }
 
+    
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left 
+    {
+        float: center;
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .column-right 
+    {
+        width: 0%;
+    }
+
+
+    /*-----------------------column layout for about------------------------------*/
+    .column-about
+    {
+        float: center;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .column
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .column-p
+    {
+        width: 70%;
+    }
+
+    .container-about
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .column-map
+    {
+        float: center;
+        width: 50%;
+    }
+
+    .container-map
+    {
+        width: 100%;
+        position: relative;
+        padding-top: 50px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+    h6
+    {
+        width: 65%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .container-f
+    {
+        padding-top: 50px;
+        width: 65%;
+    }
+
+    #bottomnav-right 
+    {
+        padding-right: 30px;
+        padding-bottom: 60px;
+    }
 
 }
 
