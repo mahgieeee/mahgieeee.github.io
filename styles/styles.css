@@ -5,12 +5,8 @@
     min-height: 450px;
     }
 
-  .container1-menu
-    {
-        padding-top: 150px;
-    }
     
-    change font size for landscape too
+    change right nav font size for landscape too
      #topnav-right a 
     {
         float: center;
@@ -23,11 +19,7 @@
 
     change for portrait 
      
-    .container1-menu
-    {
-        padding-top: 15px;
-    }
-
+   
         .container2
     {
         width: 63%;
@@ -67,6 +59,21 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+
+
+    for index.html heading
+        .container3
+{
+    width: 80%;
+}
+    h3
+    {
+        width: 50%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    container2 {padding-bottom: 0px}
 */
 /* Background pattern from Toptal Subtle Patterns */
 body 
@@ -131,19 +138,6 @@ html
     padding: 300px;
 }
 
-.container1-menu
-{
-    overflow:hidden;
-    display:block;
-    position:relative;
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
-    padding-bottom: 50px; 
-    padding-top: 50px;
-}
-
-
 .container2
 {
     overflow:hidden;
@@ -151,6 +145,16 @@ html
     position:relative;
     width: 100%;
 }
+
+.container-column-menu
+{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width: 100%;
+    padding-right: 89px;
+}
+
 
 .menu-p
 {
@@ -170,6 +174,16 @@ html
     margin: 0 auto;
     padding-bottom: 50px;
     padding-top: 50px;
+}
+
+.container-empty
+{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 0px;
 }
 
 .container-footer
@@ -197,10 +211,10 @@ html
 {
     height: 100%;
     position: relative;
-    padding-left: calc(16.5%);
-    padding-bottom: 30px;
+    padding-left: calc(7%);
+    padding-bottom: 50px; 
+    padding-top: 50px;
 }
-
 
 #topnav-container
 {
@@ -224,6 +238,18 @@ header{
 .bg-img 
 {
     min-height: 680px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    /* Needed to position the navbar */
+    position: relative;
+}
+
+.bg-img1 
+{
+    min-height: 200px;
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
@@ -645,6 +671,23 @@ h3
 		1px 1px 0 #000;
 }
 
+h2
+{
+    text-align: center;
+    text-decoration: none;
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 28px; 
+    font-style: normal;
+    font-weight: lighter;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
 
 /*-----------------------Flexbox menu items------------------------------*/
 .flex-container 
@@ -914,7 +957,24 @@ ul.leaders span + span
         text-align: center;
     }
 
+    .container3
+    {
+        width: 80%;
+    }
+
+    .container-empty
+    {
+        padding-bottom: 100px;
+    }
+
     h3
+    {
+        width: 66%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h2
     {
         width: 60%;
         font-size: 20px;
@@ -930,11 +990,12 @@ ul.leaders span + span
 
     .container-menu 
     {
-        padding-left: calc(6%);
+        padding-left: 3px;
         padding-bottom: 10px;
-        width: 65%;
+        width: 85%;
     }
 
+   
     /*-----------------------column layout for menu------------------------------*/
     .column-left 
     {
@@ -943,10 +1004,11 @@ ul.leaders span + span
         padding-left: 0px;
     }
 
-    .column-right 
+    .container-column-menu
     {
         width: 0%;
     }
+
 
 
     /*-----------------------column layout for about------------------------------*/
@@ -995,7 +1057,7 @@ ul.leaders span + span
 
     h6
     {
-        width: 55%;
+        width: 50%;
         font-size: 20px;
         text-align: center;
     }
@@ -1003,18 +1065,7 @@ ul.leaders span + span
 
     .bg-img 
     {
-    min-height: 450px;
-    }
-
-    header
-    {
-        width: 65%;
-    }
-
-    #topnav-container
-    {
-        height: 10%;
-        position: relative;
+    min-height: 350px;
     }
 
     .container 
@@ -1030,9 +1081,9 @@ ul.leaders span + span
 
     .container2
     {
-        width: 62.5%;
+        width: 60%;
         position: relative;
-        padding-bottom: 50px;
+        padding-bottom: 0px;
         padding-top: 50px;
     }
 
@@ -1059,30 +1110,57 @@ ul.leaders span + span
         width:330px;
     }
     
+    /*-----------------------header links layout------------------------------*/    
+    header
+    {
+        width: 100%;
+    }
 
-    
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
     /* The left navbar */
     #topnav 
     {
         margin: 0 auto;
+        padding: 0px;
+        padding-left: 0px;
+        padding-right: 250px; /*to change offset of logo*/
     }
-
 
     /* Navbar links */
     #topnav a 
     {
         margin: 0 auto;
         text-align: center;
-        padding: 0px;
-    
+        padding: 0px 0px;
     }
 
     #topnav-right a 
     {
         float: center;
-        text-align: center;
         margin: 0 auto;
-    
+        font-size: 25px;
+        line-height: 0px;
+        padding: 20px;
+        padding-right: 300px;
+    }
+
+    #topnav-right 
+    {
+        position: absolute;
+        top: 200px;
+        left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
     }
 
     .menu-p
@@ -1166,13 +1244,32 @@ ul.leaders span + span
     .container-f
     {
         padding-top: 50px;
-        width: 57.5%;
+        width: 63%;
     }
 
     #bottomnav-right 
     {
-        padding-right: 20px;
+        padding-right: 45px; /*same as bottomnav a padding-left*/
         padding-bottom: 50px;
+    }
+
+    .container-footer
+    {
+        padding-bottom: 25px;
+        padding-left: 30px;
+        padding-right: 38px;
+    }
+
+    #bottomnav
+    {
+        padding-left: 0px;
+    }
+
+    #bottomnav a 
+    {
+        font-size: 15px;
+        padding-left: 30px; /*same as bottomnav-right padding-left*/
+        padding-right: 25px;
     }
 }
 
@@ -1208,6 +1305,7 @@ ul.leaders span + span
         padding-left: calc(6%);
         padding-bottom: 10px;
         width: 65%;
+        padding-top: 15px;
     }
 
     /*-----------------------column layout for menu------------------------------*/
@@ -1296,7 +1394,7 @@ ul.leaders span + span
     {
         width: 63%;
         position: relative;
-        padding-bottom: 50px;
+        padding-bottom: 0px;
         padding-top: 50px;
     }
 
@@ -1342,7 +1440,7 @@ ul.leaders span + span
         margin: 0 auto;
         padding: 0px;
         padding-left: 0px;
-        padding-right: 200px;
+        padding-right: 225px;
     }
 
     /* Navbar links */
@@ -1374,11 +1472,6 @@ ul.leaders span + span
         flex-direction: column;
         width: 100%;
         text-align: center;
-    }
-
-    .container1-menu
-    {
-        padding-top: 15px;
     }
 
     .menu-p
@@ -1474,8 +1567,8 @@ ul.leaders span + span
     .container-footer
     {
         padding-bottom: 25px;
-        padding-left: 35px;
-        padding-right: 35px;
+        padding-left: 38px;
+        padding-right: 28px;
     }
 
     #bottomnav
@@ -1486,10 +1579,10 @@ ul.leaders span + span
     #bottomnav a 
     {
         font-size: 15px;
-        padding-left: 15px;
+        padding-left: 25px;
         padding-right: 15px;
     }
-    }
+}
 
 @media only screen and (orientation:landscape) and (min-width: 667px) and (min-height: 375px) and (-webkit-min-device-pixel-ratio : 2)
 {
@@ -1522,6 +1615,7 @@ ul.leaders span + span
         padding-left: calc(15%);
         padding-bottom: 10px;
         width: 100%;
+        padding-top: 15px;
     }
 
     /*-----------------------column layout for menu------------------------------*/
@@ -1686,11 +1780,6 @@ ul.leaders span + span
         text-align: center;
     }
 
-    .container1-menu
-    {
-        padding-top: 10px;
-    }
-
     .menu-p
     {
         width: 80%;
@@ -1825,25 +1914,13 @@ ul.leaders span + span
 
     .bg-img 
     {
-    min-height: 180px;
+    min-height: 350px;
     }
-
-    header
-    {
-        width: 100%;
-    }
-
     
     html 
     {
         -webkit-text-size-adjust : none;
         text-size-adjust         : none;
-    }
-
-    #topnav-container
-    {
-        position: relative;
-        height: 20%;
     }
 
     .container 
@@ -1856,7 +1933,7 @@ ul.leaders span + span
     {
         width: 69.5%;
         position: relative;
-        padding-bottom: 50px;
+        padding-bottom: 0px;
         padding-top: 50px;
     }
 
@@ -1890,28 +1967,57 @@ ul.leaders span + span
         padding: 25px;
     }
 
+    /*-----------------------header links layout------------------------------*/    
+    header
+    {
+        width: 100%;
+    }
+
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
     /* The left navbar */
     #topnav 
     {
         margin: 0 auto;
+        padding: 0px;
+        padding-left: 0px;
+        padding-right: 200px;
     }
-
 
     /* Navbar links */
     #topnav a 
     {
         margin: 0 auto;
         text-align: center;
-        padding: 0px;
-    
+        padding: 0px 0px;
     }
 
     #topnav-right a 
     {
         float: center;
-        text-align: center;
         margin: 0 auto;
-    
+        font-size: 25px;
+        line-height: 0px;
+        padding: 20px;
+        padding-right: 300px;
+    }
+
+    #topnav-right 
+    {
+        position: absolute;
+        top: 200px;
+        left: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
     }
 
     .parallax{
@@ -1944,6 +2050,7 @@ ul.leaders span + span
         padding-left: calc(6%);
         padding-bottom: 10px;
         width: 75%;
+        padding-top: 15px;
     }
 
     .menu-p
@@ -2090,6 +2197,7 @@ ul.leaders span + span
         padding-left: calc(15%);
         padding-bottom: 10px;
         width: 100%;
+        padding-top: 15px;
     }
 
     /*-----------------------column layout for menu------------------------------*/
@@ -2252,11 +2360,6 @@ ul.leaders span + span
         flex-direction: column;
         width: 100%;
         text-align: center;
-    }
-
-    .container1-menu
-    {
-        padding-top: 10px;
     }
 
     .menu-p
@@ -2531,6 +2634,7 @@ ul.leaders span + span
         padding-left: calc(6%);
         padding-bottom: 10px;
         width: 100%;
+        padding-top: 15px;
     }
 
     .menu-p
@@ -2817,6 +2921,7 @@ h6
         padding-left: calc(6%);
         padding-bottom: 10px;
         width: 100%;
+        padding-top: 15px;
     }
 
     .menu-p
