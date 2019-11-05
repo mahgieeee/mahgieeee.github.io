@@ -2000,12 +2000,6 @@ ul.leaders span + span
         flex-flow: row wrap;
     }
 
-    p5
-    {
-        letter-spacing: 0.5px;
-        font-size: 12px;
-    }
-
     .container-menu 
     {
         padding-left: calc(1.5%);
@@ -2117,16 +2111,46 @@ ul.leaders span + span
         text-align: center;
     }
 
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 12px;
+    }
+
     .container-f
     {
-        padding-top: 50px;
-        width: 65%;
+        padding-top: 38px;
+        width: 63%;
     }
 
     #bottomnav-right 
     {
-        padding-right: 30px;
-        padding-bottom: 60px;
+        padding-right: 5px;
+        padding-bottom: 50px;
+    }
+
+    #bottomnav-right a
+    {
+        font-size: 20px;
+    }
+
+    .container-footer
+    {
+        padding-bottom: 20px;
+        padding-left: 38px;
+        padding-right: 28px;
+    }
+
+    #bottomnav
+    {
+        padding-left: 0px;
+    }
+
+    #bottomnav a 
+    {
+        font-size: 20px;
+        padding-left: 12px;
+        padding-right: 0px;
     }
 
 }
@@ -2461,6 +2485,338 @@ ul.leaders span + span
     {
         font-size: 20px;
         padding-left: 25px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (orientation:landscape) and (min-width: 896px) and (min-height: 414px)
+{
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    h3
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h2
+    {
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    html 
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+    .container3
+    {
+        width: 80%;
+    }
+
+    .container-menu 
+    {
+        padding-left: calc(2%);
+        padding-bottom: 10px;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    .container-column-menu
+    {
+        width: 100%;
+        padding-right: 72px;
+    }
+
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left 
+    {
+        float: center;
+        width: 70%;
+        padding-left: 0px;
+    }
+
+    .column-right 
+    {
+        width: 30%;
+    }
+
+
+    /*-----------------------column layout for about------------------------------*/
+    .column-about
+    {
+        float: center;
+        width: 100%;
+        padding-bottom: 0px;
+    }
+
+    .column
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .column-p
+    {
+        width: 100%;
+    }
+    
+    .container-about
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .column-map
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .container-map
+    {
+        width: 69.5%;
+        padding-top: 50px;
+        padding-left: 0px;
+    }
+
+    h6
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    .bg-img 
+    {
+    min-height: 350px;
+    }
+
+    .container 
+    {
+        position: relative;
+    }
+
+    .container1
+    {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .container2
+    {
+        width: 100%;
+        position: relative;
+        padding-bottom: 25px;
+        padding-top: 50px;
+    }
+
+    .container5
+    {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+    .mapouter
+    {
+        width: 100%;
+        height:500px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:500px;
+        width:615px;
+    }
+    
+
+    /*-----------------------header links layout------------------------------*/    
+    header
+    {
+        width: 100%;
+    }
+
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
+    /* The left navbar */
+    #topnav 
+    {
+        margin: 0 auto;
+        padding-left: 202px;
+    }
+
+    /* Navbar links */
+    #topnav a 
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px 0px;
+    }
+
+    #topnav-right a 
+    {
+        float: center;
+        margin: 0 auto;
+        line-height: 0px;
+        font-size: 35px;
+        padding: 30px;
+        padding-right: 300px;
+    }
+
+    #topnav-right 
+    {
+        position: absolute;
+        top: 160px;
+        left: 137px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-p
+    {
+        width: 80%;
+    }
+
+    ul.leaders 
+    {
+        width: 80%;
+    }
+
+    ul.leaders span:first-child 
+    {
+        font-size: 15px;
+    }
+    
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+    .parallax{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 100%;
+        background-attachment: inherit;
+    }
+
+    .parallax-menu{
+        height: 100%;
+        width: 100%;
+        background-position: 100% 0%;
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-about{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-column-info{
+        height: 20%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+
+    .gallery {
+        flex-flow: row nowrap;
+    }
+
+    .tile-gallery__tile {
+        width: 246px;
+        height: 246px;
+        padding-bottom: 0px;
+    }
+    
+    .tile-gallery__tile--normal {
+        width: 246px;
+        height: 246px;
+    }
+
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 15px;
+    }
+
+    .container-f
+    {
+        padding-top: 50px;
+        width: 100%;
+    }
+
+    #bottomnav-right 
+    {
+        padding-right: 60px;
+        padding-bottom: 50px;
+    }
+
+    .container-footer
+    {
+        padding-bottom: 25px;
+        padding-left: 60px;
+        padding-right: 37px;
+    }
+
+    #bottomnav
+    {
+        padding-left: 15px;
+    }
+
+    #bottomnav a 
+    {
+        font-size: 20px;
+        padding-left: 45px;
         padding-right: 15px;
     }
 }
