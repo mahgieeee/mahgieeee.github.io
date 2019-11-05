@@ -1,80 +1,4 @@
 /* Container 2 needs to be fixed, repeated in index, gallery and menu*/
-/* to change for portrait modes:
-.bg-img 
-    {
-    min-height: 450px;
-    }
-
-    
-    change right nav font size for landscape too
-     #topnav-right a 
-    {
-        float: center;
-        margin: 0 auto;
-        font-size: 30px;
-        line-height: 0px;
-        padding: 20px;
-        padding-right: 300px;
-    }
-
-    change for portrait 
-     
-   
-        .container2
-    {
-        width: 63%;
-        position: relative;
-        padding-bottom: 50px;
-        padding-top: 50px;
-    }
-
-    
-    .container-f
-    {
-        padding-top: 50px;
-        width: 63%;
-    }
-
-    #bottomnav-right 
-    {
-        padding-right: 35px;
-        padding-bottom: 50px;
-    }
-
-    .container-footer
-    {
-        padding-bottom: 25px;
-        padding-left: 35px;
-        padding-right: 35px;
-    }
-
-    #bottomnav
-    {
-        padding-left: 0px;
-    }
-
-    #bottomnav a 
-    {
-        font-size: 15px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-
-    for index.html heading
-        .container3
-{
-    width: 80%;
-}
-    h3
-    {
-        width: 50%;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    container2 {padding-bottom: 0px}
-*/
 /* Background pattern from Toptal Subtle Patterns */
 body 
 {
@@ -213,7 +137,7 @@ html
     position: relative;
     padding-left: calc(7%);
     padding-bottom: 50px; 
-    padding-top: 50px;
+    padding-top: 0px;
 }
 
 #topnav-container
@@ -945,7 +869,7 @@ ul.leaders span + span
 }
 
 /*for desktop, mobile websites*/
-@media only screen and (orientation:portrait) and (min-width: 360px) and (-webkit-min-device-pixel-ratio : 2)
+@media only screen and (orientation:portrait) and (min-width: 360px) 
 {
     .centered_tab button
     {
@@ -964,7 +888,7 @@ ul.leaders span + span
 
     .container-empty
     {
-        padding-bottom: 100px;
+        padding-bottom: 150px;
     }
 
     h3
@@ -1004,11 +928,10 @@ ul.leaders span + span
         padding-left: 0px;
     }
 
-    .container-column-menu
+    .column-right 
     {
         width: 0%;
     }
-
 
 
     /*-----------------------column layout for about------------------------------*/
@@ -1274,7 +1197,7 @@ ul.leaders span + span
 }
 
 
-@media only screen and (orientation:portrait) and (min-width: 375px) and (-webkit-min-device-pixel-ratio : 2)
+@media only screen and (orientation:portrait) and (min-width: 375px) 
 {
     .centered_tab button
     {
@@ -1282,13 +1205,20 @@ ul.leaders span + span
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        width: 60%;
+        width: 63%;
         text-align: center;
     }
 
     h3
     {
-        width: 60%;
+        width: 67%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h2
+    {
+        width: 63%;
         font-size: 20px;
         text-align: center;
     }
@@ -1302,9 +1232,9 @@ ul.leaders span + span
 
     .container-menu 
     {
-        padding-left: calc(6%);
+        padding-left: calc(0.5%);
         padding-bottom: 10px;
-        width: 65%;
+        width: 87%;
         padding-top: 15px;
     }
 
@@ -1338,7 +1268,7 @@ ul.leaders span + span
 
     .column-p
     {
-        width: 65%;
+        width: 63%;
     }
     
     .container-about
@@ -1402,6 +1332,11 @@ ul.leaders span + span
     {
         width: 90%;
         padding-bottom: 25px;
+    }
+
+    .container-empty
+    {
+        padding-bottom: 150px;
     }
 
     .mapouter
@@ -1584,7 +1519,7 @@ ul.leaders span + span
     }
 }
 
-@media only screen and (orientation:landscape) and (min-width: 667px) and (min-height: 375px) and (-webkit-min-device-pixel-ratio : 2)
+@media only screen and (orientation:landscape) and (min-width: 667px) and (min-height: 375px)
 {
     .centered_tab button
     {
@@ -1598,9 +1533,14 @@ ul.leaders span + span
 
     h3
     {
-        width: 100%;
+        width: 80%;
         font-size: 20px;
         text-align: center;
+    }
+
+    .container-empty
+    {
+        padding-bottom: 150px;
     }
 
     html 
@@ -1612,23 +1552,29 @@ ul.leaders span + span
 
     .container-menu 
     {
-        padding-left: calc(15%);
+        padding-left: calc(2%);
         padding-bottom: 10px;
         width: 100%;
         padding-top: 15px;
+    }
+
+    .container-column-menu
+    {
+        width: 100%;
+        padding-right: 48px;
     }
 
     /*-----------------------column layout for menu------------------------------*/
     .column-left 
     {
         float: center;
-        width: 100%;
+        width: 65%;
         padding-left: 0px;
     }
 
     .column-right 
     {
-        width: 0%;
+        width: 35%;
     }
 
 
@@ -1747,7 +1693,7 @@ ul.leaders span + span
     #topnav 
     {
         margin: 0 auto;
-        padding-left: 75px;
+        padding-left: 78px;
     }
 
     /* Navbar links */
@@ -1771,7 +1717,7 @@ ul.leaders span + span
     {
         position: absolute;
         top: 150px;
-        left: 135px;
+        left: 138px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1866,7 +1812,7 @@ ul.leaders span + span
     p5
     {
         letter-spacing: 0.5px;
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .container-f
@@ -1877,23 +1823,31 @@ ul.leaders span + span
 
     #bottomnav-right 
     {
-        padding-right: 50px;
+        padding-right: 35px;
         padding-bottom: 50px;
     }
 
     .container-footer
     {
         padding-bottom: 25px;
-        padding-left: 40px;
+        padding-left: 38px;
+        padding-right: 28px;
     }
 
     #bottomnav
     {
-        padding-left: 15px;
+        padding-left: 13px;
+    }
+
+    #bottomnav a 
+    {
+        font-size: 20px;
+        padding-left: 25px;
+        padding-right: 15px;
     }
 }
 
-@media only screen and (orientation:portrait) and (min-width: 414px) and (-webkit-min-device-pixel-ratio : 2)
+@media only screen and (orientation:portrait) and (min-width: 414px)
 {
     .centered_tab button
     {
@@ -1906,6 +1860,13 @@ ul.leaders span + span
     }
 
     h3
+    {
+        width: 74%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h2
     {
         width: 70%;
         font-size: 20px;
@@ -1950,15 +1911,15 @@ ul.leaders span + span
         position:relative;
         text-align:left;
         margin: 0 auto;
-        height:300px;
+        height:350px;
     }
 
     .gmap_canvas
     {
         overflow:hidden;
         background:none!important;
-        height:300px;
-        width:400px;
+        height:350px;
+        width:385px;
     }
     
     .container1
@@ -1985,7 +1946,7 @@ ul.leaders span + span
     {
         margin: 0 auto;
         padding: 0px;
-        padding-left: 0px;
+        padding-left: 18px;
         padding-right: 200px;
     }
 
@@ -2011,7 +1972,7 @@ ul.leaders span + span
     {
         position: absolute;
         top: 200px;
-        left: 40px;
+        left: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -2047,9 +2008,9 @@ ul.leaders span + span
 
     .container-menu 
     {
-        padding-left: calc(6%);
+        padding-left: calc(1.5%);
         padding-bottom: 10px;
-        width: 75%;
+        width: 90%;
         padding-top: 15px;
     }
 
@@ -2099,7 +2060,11 @@ ul.leaders span + span
         width: 0%;
     }
 
-
+    .container-column-menu
+    {
+        width: 0%;
+        padding-right: 0px;
+    }
     /*-----------------------column layout for about------------------------------*/
     .column-about
     {
@@ -2166,7 +2131,7 @@ ul.leaders span + span
 
 }
 
-@media only screen and (orientation:landscape) and (min-width: 736px) and (min-height: 414px) and (-webkit-min-device-pixel-ratio : 2)
+@media only screen and (orientation:landscape) and (min-width: 736px) and (min-height: 414px) 
 {
     .centered_tab button
     {
@@ -2185,32 +2150,49 @@ ul.leaders span + span
         text-align: center;
     }
 
+    h2
+    {
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+    }
+
     html 
     {
         -webkit-text-size-adjust : none;
         text-size-adjust         : none;
     }
 
+    .container3
+    {
+        width: 80%;
+    }
 
     .container-menu 
     {
-        padding-left: calc(15%);
+        padding-left: calc(2%);
         padding-bottom: 10px;
         width: 100%;
         padding-top: 15px;
+    }
+
+    .container-column-menu
+    {
+        width: 100%;
+        padding-right: 72px;
     }
 
     /*-----------------------column layout for menu------------------------------*/
     .column-left 
     {
         float: center;
-        width: 100%;
+        width: 70%;
         padding-left: 0px;
     }
 
     .column-right 
     {
-        width: 0%;
+        width: 30%;
     }
 
 
@@ -2308,7 +2290,7 @@ ul.leaders span + span
         overflow:hidden;
         background:none!important;
         height:500px;
-        width:550px;
+        width:615px;
     }
     
 
@@ -2329,7 +2311,7 @@ ul.leaders span + span
     #topnav 
     {
         margin: 0 auto;
-        padding-left: 105px;
+        padding-left: 116px;
     }
 
     /* Navbar links */
@@ -2353,7 +2335,7 @@ ul.leaders span + span
     {
         position: absolute;
         top: 150px;
-        left: 135px;
+        left: 137px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -2435,20 +2417,20 @@ ul.leaders span + span
     }
 
     .tile-gallery__tile {
-        width: 225px;
-        height: 225px;
+        width: 246px;
+        height: 246px;
         padding-bottom: 0px;
     }
     
     .tile-gallery__tile--normal {
-        width: 225px;
-        height: 225px;
+        width: 246px;
+        height: 246px;
     }
 
     p5
     {
         letter-spacing: 0.5px;
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .container-f
@@ -2459,7 +2441,7 @@ ul.leaders span + span
 
     #bottomnav-right 
     {
-        padding-right: 50px;
+        padding-right: 45px;
         padding-bottom: 50px;
     }
 
@@ -2467,15 +2449,23 @@ ul.leaders span + span
     {
         padding-bottom: 25px;
         padding-left: 40px;
+        padding-right: 37px;
     }
 
     #bottomnav
     {
         padding-left: 15px;
     }
+
+    #bottomnav a 
+    {
+        font-size: 20px;
+        padding-left: 25px;
+        padding-right: 15px;
+    }
 }
 
-@media only screen and (orientation:portrait) and (min-width: 768px) and (-webkit-min-device-pixel-ratio : 2)
+@media only screen and (orientation:portrait) and (min-width: 768px) and (min-height:1024px) 
 {
     .centered_tab button
     {
@@ -2494,17 +2484,19 @@ ul.leaders span + span
         text-align: center;
     }
 
-    .bg-img 
-    {
-    min-height: 180px;
-    }
-
-    header
+    
+    h2
     {
         width: 100%;
+        font-size: 20px;
+        text-align: center;
     }
 
-    
+    .bg-img 
+    {
+    min-height: 380px;
+    }
+
     html 
     {
         -webkit-text-size-adjust : none;
@@ -2566,29 +2558,58 @@ ul.leaders span + span
         padding: 200px;
     }
 
+    /*-----------------------header links layout------------------------------*/    
+    header
+    {
+        width: 100%;
+    }
+
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
     /* The left navbar */
     #topnav 
     {
         margin: 0 auto;
+        padding: 0px;
+        padding-left: 130px;
     }
-
 
     /* Navbar links */
     #topnav a 
     {
         margin: 0 auto;
         text-align: center;
-        padding: 0px;
-    
+        padding: 0px 0px;
     }
 
     #topnav-right a 
     {
         float: center;
-        text-align: center;
         margin: 0 auto;
-    
+        font-size: 35px;
+        line-height: 0px;
+        padding: 30px;
+        padding-right: 300px;
     }
+
+    #topnav-right 
+    {
+        position: absolute;
+        top: 160px;
+        left: 142px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
 
     .parallax{
         height: 100%;
@@ -2604,6 +2625,12 @@ ul.leaders span + span
         background-attachment: inherit;
     }
 
+    .parallax-about{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
 
 
     .gallery {
@@ -2622,13 +2649,6 @@ ul.leaders span + span
         height: 155px;
     }
     
-
-    p5
-    {
-        letter-spacing: 0.5px;
-        font-size: 12px;
-    }
-
     .container-menu 
     {
         padding-left: calc(6%);
@@ -2748,22 +2768,379 @@ h6
     text-align: center;
 }
 
+p5
+{
+    letter-spacing: 0.5px;
+    font-size: 15px;
+}
+
 .container-f
 {
-    padding-top: 50px;
+    padding-top: 40px;
     width: 100%;
 }
 
 #bottomnav-right 
 {
-    padding-right: 30px;
-    padding-bottom: 30px;
+    padding-right: 45px;
+    padding-bottom: 50px;
+}
+
+.container-footer
+{
+    padding-bottom: 25px;
+    padding-left: 40px;
+    padding-right: 37px;
+}
+
+#bottomnav
+{
+    padding-left: 15px;
+}
+
+#bottomnav a 
+{
+    font-size: 25px;
+    padding-left: 25px;
+    padding-right: 15px;
 }
 
 }
 
+@media only screen and (orientation:landscape) and (min-width: 1024px) and (min-height: 768px)
+{
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
 
-@media only screen and (orientation:portrait) and (min-width: 1024px) and (-webkit-min-device-pixel-ratio : 2)
+    h3
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h2
+    {
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    html 
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+    .container3
+    {
+        width: 80%;
+    }
+
+    .container-menu 
+    {
+        padding-left: calc(2%);
+        padding-bottom: 10px;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    .container-column-menu
+    {
+        width: 100%;
+        padding-right: 72px;
+    }
+
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left 
+    {
+        float: center;
+        width: 70%;
+        padding-left: 0px;
+    }
+
+    .column-right 
+    {
+        width: 30%;
+    }
+
+
+    /*-----------------------column layout for about------------------------------*/
+    .column-about
+    {
+        float: center;
+        width: 100%;
+        padding-bottom: 0px;
+    }
+
+    .column
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .column-p
+    {
+        width: 100%;
+    }
+    
+    .container-about
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .column-map
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .container-map
+    {
+        width: 60%;
+        padding-top: 50px;
+        padding-left: 0px;
+    }
+
+    h6
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    .bg-img 
+    {
+    min-height: 350px;
+    }
+
+    .container 
+    {
+        position: relative;
+    }
+
+    .container1
+    {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .container2
+    {
+        width: 100%;
+        position: relative;
+        padding-bottom: 25px;
+        padding-top: 50px;
+    }
+
+    .container5
+    {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+    .mapouter
+    {
+        width: 100%;
+        height:500px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:500px;
+        width:615px;
+    }
+    
+
+    /*-----------------------header links layout------------------------------*/    
+    header
+    {
+        width: 100%;
+    }
+
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
+    /* The left navbar */
+    #topnav 
+    {
+        margin: 0 auto;
+        padding-left: 256px;
+    }
+
+    /* Navbar links */
+    #topnav a 
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px 0px;
+    }
+
+    #topnav-right a 
+    {
+        float: center;
+        margin: 0 auto;
+        line-height: 0px;
+        font-size: 35px;
+        padding: 30px;
+        padding-right: 300px;
+    }
+
+    #topnav-right 
+    {
+        position: absolute;
+        top: 160px;
+        left: 137px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-p
+    {
+        width: 80%;
+    }
+
+    ul.leaders 
+    {
+        width: 80%;
+    }
+
+    ul.leaders span:first-child 
+    {
+        font-size: 15px;
+    }
+    
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+    .parallax{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 100%;
+        background-attachment: inherit;
+    }
+
+    .parallax-menu{
+        height: 100%;
+        width: 100%;
+        background-position: 100% 0%;
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-about{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-column-info{
+        height: 20%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+
+    .gallery {
+        flex-flow: row nowrap;
+    }
+
+    .tile-gallery__tile {
+        width: 246px;
+        height: 246px;
+        padding-bottom: 0px;
+    }
+    
+    .tile-gallery__tile--normal {
+        width: 246px;
+        height: 246px;
+    }
+
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 15px;
+    }
+
+    .container-f
+    {
+        padding-top: 50px;
+        width: 100%;
+    }
+
+    #bottomnav-right 
+    {
+        padding-right: 45px;
+        padding-bottom: 50px;
+    }
+
+    .container-footer
+    {
+        padding-bottom: 25px;
+        padding-left: 40px;
+        padding-right: 37px;
+    }
+
+    #bottomnav
+    {
+        padding-left: 15px;
+    }
+
+    #bottomnav a 
+    {
+        font-size: 20px;
+        padding-left: 25px;
+        padding-right: 15px;
+    }
+}
+
+
+@media only screen and (orientation:portrait) and (min-width: 1024px) and (min-height: 1366px) 
 {
     .centered_tab button
     {
@@ -2784,15 +3161,9 @@ h6
 
     .bg-img 
     {
-    min-height: 180px;
+    min-height: 380px;
     }
 
-    header
-    {
-        width: 100%;
-    }
-
-    
     html 
     {
         -webkit-text-size-adjust : none;
@@ -2854,28 +3225,56 @@ h6
         padding: 200px;
     }
 
+    /*-----------------------header links layout------------------------------*/    
+    header
+    {
+        width: 100%;
+    }
+
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
     /* The left navbar */
     #topnav 
     {
         margin: 0 auto;
+        padding: 0px;
+        padding-left: 258px;
     }
-
 
     /* Navbar links */
     #topnav a 
     {
         margin: 0 auto;
         text-align: center;
-        padding: 0px;
-    
+        padding: 0px 0px;
     }
 
     #topnav-right a 
     {
         float: center;
-        text-align: center;
         margin: 0 auto;
-    
+        font-size: 35px;
+        line-height: 0px;
+        padding: 30px;
+        padding-right: 300px;
+    }
+
+    #topnav-right 
+    {
+        position: absolute;
+        top: 160px;
+        left: 142px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
     }
 
     .parallax{
@@ -3035,8 +3434,14 @@ h6
 h6
 {
     width: 100%;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
+}
+
+p5
+{
+    letter-spacing: 0.5px;
+    font-size: 20px;
 }
 
 .container-f
@@ -3047,10 +3452,372 @@ h6
 
 #bottomnav-right 
 {
-    padding-right: 30px;
-    padding-bottom: 30px;
+    padding-right: 45px;
+    padding-bottom: 50px;
+    font-size: 30px;
+}
+
+#bottomnav-right a 
+{
+    font-size: 35px;
+}
+
+.container-footer
+{
+    padding-bottom: 35px;
+    padding-left: 40px;
+    padding-right: 37px;
+}
+
+#bottomnav
+{
+    padding-left: 15px;
+}
+
+#bottomnav a 
+{
+    font-size: 30px;
+    padding-left: 25px;
+}
+}
+
+@media only screen and (orientation:landscape) and (min-width: 1366px) and (min-height: 1024px) 
+{
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    h3
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .bg-img 
+    {
+    min-height: 380px;
+    }
+
+    html 
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+    #topnav-container
+    {
+        position: relative;
+        height: 30%;
+    }
+
+    .container 
+    {
+        position: relative;
+    }
+
+    .container2
+    {
+        width: 100%;
+        position: relative;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    .container5
+    {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+
+    /*-----------------------Contact Google Maps------------------------------*/
+    .mapouter
+    {
+        position:relative;
+        text-align:center;
+        margin: 0 auto;
+        height:500px;
+        width:600px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:500px;
+        width:600px;
+    }
+    
+    .container1
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        padding: 200px;
+    }
+
+    /*-----------------------header links layout------------------------------*/    
+    header
+    {
+        width: 100%;
+    }
+
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
+    /* The left navbar */
+    #topnav 
+    {
+        margin: 0 auto;
+        padding: 0px;
+        padding-left: 430px;
+    }
+
+    /* Navbar links */
+    #topnav a 
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px 0px;
+    }
+
+    #topnav-right a 
+    {
+        float: center;
+        margin: 0 auto;
+        font-size: 35px;
+        line-height: 0px;
+        padding: 30px;
+        padding-right: 300px;
+    }
+
+    #topnav-right 
+    {
+        position: absolute;
+        top: 160px;
+        left: 142px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .parallax{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+
+
+    .gallery {
+        flex-flow: row nowrap;
+    }
+
+    .tile-gallery__tile {
+        /*padding-left: 15px;*/
+        width: 205px;
+        height: 205px;
+        padding-bottom: 0px;
+    }
+    
+    .tile-gallery__tile--normal {
+        width: 205px;
+        height: 205px;
+    }
+
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 12px;
+    }
+
+    .container-menu 
+    {
+        padding-left: calc(6%);
+        padding-bottom: 10px;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    .menu-p
+    {
+        width: 100%;
+    }
+
+    ul.leaders 
+    {
+        width: 100%;
+    }
+
+    ul.leaders span:first-child 
+    {
+        font-size: 15px;
+    }
+    
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+    
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left 
+    {
+        float: left;
+        width: 60%;
+        padding: 0px;
+    }
+
+    .column-right 
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        width: 40%;
+        padding-top: 50px;
+    }
+   
+/*-----------------------column layout for about------------------------------*/
+.column-about
+{
+    float: left;
+    width: 50%;
+    padding: 0px;
+}
+
+.column
+{
+    float: left;
+    width: 50%;
+    padding: 50px;
 }
 
 
+ /* Clear floats after the columns */
+ .row:after 
+ {
+     content: "";
+     display: table;
+     clear: both;
+ }
 
+ .container-about
+ {
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+ }
+
+ .column-map
+{
+    float: center;
+    width: 100%;
+}
+
+.column-p
+{
+    float: center;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.container-map
+{
+    display:block;
+    position:relative;
+    width: 100%;
+    padding-top: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+    
+h6
+{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+
+p5
+{
+    letter-spacing: 0.5px;
+    font-size: 20px;
+}
+
+.container-f
+{
+    padding-top: 50px;
+    width: 100%;
+}
+
+#bottomnav-right 
+{
+    padding-right: 45px;
+    padding-bottom: 50px;
+    font-size: 30px;
+}
+
+#bottomnav-right a 
+{
+    font-size: 35px;
+}
+
+.container-footer
+{
+    padding-bottom: 35px;
+    padding-left: 40px;
+    padding-right: 37px;
+}
+
+#bottomnav
+{
+    padding-left: 15px;
+}
+
+#bottomnav a 
+{
+    font-size: 30px;
+    padding-left: 25px;
+}
 }
