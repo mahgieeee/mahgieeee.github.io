@@ -57,6 +57,7 @@ html
   font-size: 48px;
   color: #B49988;
   padding: 50px;
+  overflow-x: scroll;
 }
 
 .container1
