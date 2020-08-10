@@ -6,7 +6,7 @@ body
     grid-template-rows: 1fr auto;
     background-size: 250px;
     width: 100%;
-    background-image: url("/pictures/wild_oliva.png");
+    /*background-image: url("/pictures/wild_oliva.png");*/
     overflow-x:hidden;
     margin: 0;
     padding-bottom: 1rem;
@@ -54,6 +54,8 @@ html
 .parisienne{
   font-family: 'Parisienne';
   font-style: cursive;
+  font-size: 48px;
+  font-color: rgb(180, 153, 136);
 }
 
 .container1
