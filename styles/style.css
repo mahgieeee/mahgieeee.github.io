@@ -1,0 +1,4184 @@
+/* Container 2 needs to be fixed, repeated in index, gallery and menu*/
+/* Background pattern from Toptal Subtle Patterns */
+body
+{
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background-size: 250px;
+    width: 100%;
+    background-image: url("/pictures/wild_oliva.png");
+    overflow-x:hidden;
+    margin: 0;
+    padding-bottom: 1rem;
+    min-height: 100%;
+}
+
+html
+{
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.parisienne{
+  font-family: 'Parisienne';
+  font-style: cursive;
+}
+
+.footer
+{
+    position: absolute;
+    right: 100px;
+    bottom: 200px;
+    left: 100px;
+    top: 200px;
+    padding: 1rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Position the navbar container inside the image for background*/
+.container
+{
+    position: relative;
+    margin: 0px;
+    width: auto;
+    height: 100%;
+}
+
+.container-f
+{
+    position: relative;
+    width: auto;
+    padding-top: 70px;
+}
+
+.container1
+{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    padding: 300px;
+}
+
+.container2
+{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width: 100%;
+}
+
+.container-column-menu
+{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width: 100%;
+    padding-right: 89px;
+}
+
+
+.menu-p
+{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    max-width: 40em;
+}
+
+.container3
+{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.container-empty
+{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 0px;
+}
+
+.container-footer
+{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width: 100%;
+    padding-bottom: 25px;
+    padding-left: 30px;
+}
+
+.container5
+{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 75px;
+}
+
+.container-menu
+{
+    height: 100%;
+    position: relative;
+    padding-left: calc(7%);
+    padding-bottom: 50px;
+    padding-top: 0px;
+}
+
+#topnav-container
+{
+
+    background-size: 250px;
+    background-image: url("/pictures/wild_oliva.png");
+    opacity: 0.8;
+    padding: 40px 10px;
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+
+
+header{
+    width: 100%;
+}
+
+.bg-img
+{
+    min-height: 680px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    /* Needed to position the navbar */
+    position: relative;
+}
+
+.bg-img1
+{
+    min-height: 200px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    /* Needed to position the navbar */
+    position: relative;
+}
+
+/* The left navbar */
+#topnav
+{
+    overflow: hidden;
+    background-color: transparent;
+    padding: 20px;
+}
+
+#topnav #logo
+{
+    overflow: hidden;
+    background-color: transparent;
+    transition: 0.4s;
+}
+
+/* Navbar links */
+#topnav a
+{
+    float: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 58px;
+    font-weight: lighter;
+    font-style: normal;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+#topnav-right a
+{
+    float: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align:center;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    color: white;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 5px;
+    line-height: 70px;
+    font-weight: lighter;
+    padding: 35px;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+#topnav a:hover
+{
+    background-color: transparent;
+    color: rgb(54, 148, 36);
+    transform: scale(1.1);
+}
+
+#topnav-right a:hover
+{
+    background-color: transparent;
+    color: rgb(54, 148, 36);
+    transform: scale(1.4);
+}
+
+#topnav-right
+{
+    float: right;
+}
+
+#bottomnav-container
+{
+    background-color: transparent;
+    position: relative;
+    bottom: 0;
+    z-index: 99;
+}
+
+#bottomnav
+{
+    overflow: hidden;
+    background-color: transparent;
+}
+
+#bottomnav #logo
+{
+    overflow: hidden;
+    background-color: transparent;
+}
+
+/* Navbar links */
+#bottomnav a
+{
+    float: left;
+    text-decoration: none;
+    text-align:center;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    color: white;
+    font-style: normal;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: lighter;
+    padding-left: 28px;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+
+#bottomnav-right a
+{
+    float: right;
+    text-decoration: none;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    color: white;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: lighter;
+    border: 1px solid white;
+    font-variant: small-caps;
+    padding: 5px;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+
+
+#bottomnav a:hover
+{
+    background-color: transparent;
+    color: rgb(54, 148, 36);
+}
+
+#bottomnav-right a:hover
+{
+    background-color: transparent;
+    border-color: rgb(54, 148, 36);
+}
+
+#bottomnav-right
+{
+    float: right;
+    padding-right: 50px;
+}
+
+/*-----------------------animation for header------------------------------*/
+.crossfade > figure
+{
+    animation: imageAnimation 30s linear infinite 0s;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center center;
+    color: transparent;
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 0;
+    margin:0 auto; /*centers the fading image important*/
+}
+
+
+.crossfade > figure:nth-child(1)
+{
+    background-image: url("/pictures/luigi-pozzoli-iIS1SIO5_aY-unsplash.jpg");
+}
+
+.crossfade > figure:nth-child(2)
+{
+    animation-delay: 6s;
+    background-image: url("/pictures/youjeen-cho-JorKKx5rvA0-unsplash.jpg");
+}
+
+.crossfade > figure:nth-child(3)
+{
+    animation-delay: 12s;
+    background-image: url("/pictures/riccardo-bergamini-O2yNzXdqOu0-unsplash.jpg");
+}
+
+.crossfade > figure:nth-child(4)
+{
+    animation-delay: 18s;
+    background-image: url("/pictures/bady-qb-VIv0srmK78g-unsplash.jpg");
+}
+
+.crossfade > figure:nth-child(5)
+{
+    animation-delay: 24s;
+    background-image: url("/pictures/florian-metzner-12IsagncQ7o-unsplash.jpg");
+}
+
+/*to repeat this on different pages use figure1:nth-child*/
+
+
+@keyframes
+imageAnimation
+{  0%
+    {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    }
+    8%
+    {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    }
+    17%
+    {
+    opacity: 1
+    }
+    25%
+    {
+    opacity: 0
+    }
+    100% {
+    opacity: 0
+    }
+}
+
+.centered {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.centered_tab button{
+    float: none; /*to make sure there is no active float*/
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 20px;
+    letter-spacing: 3.5px;
+    background: transparent;
+    color: white;
+    font-style: normal;
+}
+
+
+/* Change background color of buttons on hover */
+.centered_tab button:hover
+{
+    color:  rgb(54, 148, 36);
+    transform: scale(1.4);
+}
+
+/* Style the tab content */
+.tabcontent
+{
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+/*-----------------------Fade in tabs for menu------------------------------*/
+@-webkit-keyframes fadeEffect
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/*-----------------------column layout for menu------------------------------*/
+.column-left
+{
+    float: left;
+    width: 60%;
+    padding: 0px;
+}
+
+.column-right
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 40%;
+    padding-top: 50px;
+}
+
+
+/*-----------------------column layout for about------------------------------*/
+.column-about
+{
+    float: left;
+    width: 50%;
+    padding: 0px;
+}
+
+.column
+{
+    float: left;
+    width: 50%;
+    padding: 50px;
+}
+
+
+ /* Clear floats after the columns */
+ .row:after
+ {
+     content: "";
+     display: table;
+     clear: both;
+ }
+
+ .container-about
+ {
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+ }
+
+ .column-map
+{
+    float: center;
+    width: 100%;
+}
+
+.column-p
+{
+    float: center;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.container-map
+{
+    display:block;
+    position:relative;
+    width: 100%;
+    padding-top: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+ h6
+{
+    text-align: center;
+    text-decoration: none;
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: lighter;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+/*-----------------------Contact Google Maps------------------------------*/
+.mapouter
+{
+    position:relative;
+    text-align:center;
+    margin: 0 auto;
+    height:500px;
+    width:600px;
+}
+
+.gmap_canvas
+{
+    overflow:hidden;
+    background:none!important;
+    height:500px;
+    width:600px;
+}
+
+/*-----------------------Body heading------------------------------*/
+h3
+{
+    text-align: center;
+    text-decoration: none;
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: lighter;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+h2
+{
+    text-align: center;
+    text-decoration: none;
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: lighter;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+
+/*-----------------------Flexbox menu items------------------------------*/
+.flex-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-container > div
+{
+    background-color: transparent;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 20px;
+    font-style: normal;
+}
+
+
+/*-----------------------menu items------------------------------*/
+
+p2
+{
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 15px;
+    font-style: italic;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: left;
+}
+
+
+/*-----------------------about page fonts ------------------------------*/
+p3
+{
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 15px;
+    font-style: normal;
+}
+
+/*-----------------------footer paragraph------------------------------*/
+p5
+{
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+
+h5
+{
+    text-align: center;
+    text-decoration: none;
+    font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: lighter;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+.gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.tile-gallery__col {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.tile-gallery__col + .tile-gallery__col {
+    margin-left: 0px;
+}
+.tile-gallery__row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.tile-gallery__row + .tile-gallery__row {
+    margin-top: 0px;
+}
+
+.tile-gallery__tile {
+    /*padding-left: 15px;*/
+    width: 306px;
+    height: 306px;
+    padding-bottom: 0px;
+}
+
+.tile-gallery__tile--normal {
+    width: 306px;
+    height: 306px;
+}
+
+
+.tile-gallery__figure {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.tile-gallery__figure:hover .tile-gallery__image, .tile-gallery__figure:focus .tile-gallery__image, .tile-gallery__figure:active .tile-gallery__image {
+    transform: translate(-50%, -50%) scale(1.10);
+}
+
+.tile-gallery__image {
+    transition: transform 250ms ease-in-out;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.tile-gallery__figure .text{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 90%; /* Adjust this value to move the positioned div up and down */
+    width: 60%; /* Set the width of the positioned div */
+}
+
+
+ul.leaders
+{
+    max-width: 40em;
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none;
+    margin: 0;
+}
+
+ul.leaders li:after
+{
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    line-height: 40px;
+    color: white;
+    content:
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+}
+
+ul.leaders span:first-child
+{
+    padding-right: 0.33em;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    color:  rgb(54, 148, 36);
+    background-size: 250px;
+    background-image: url("/pictures/wild_oliva.png");
+    letter-spacing: 2px;
+    line-height: 40px;
+    font-size: 18px;
+    font-style: normal;
+}
+
+ul.leaders span + span
+{
+    float: right;
+    line-height: 40px;
+    padding-left: 0.33em;
+    position: relative;
+    z-index: 1;
+    font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
+    background-size: 250px;
+    background-image: url("/pictures/wild_oliva.png");
+    letter-spacing: 2.5px;
+    color: white;
+    font-weight: normal;
+    font-size: 18px;
+    font-style: normal;
+}
+
+.parallax {
+    /* Full height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-column-info {
+    /* Full height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-menu {
+    /* Full height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2
+{
+    background-size: 250px;
+    height: 100%;
+    background-image: url("/pictures/wild_oliva.png");
+    background-attachment: fixed;
+    opacity: 1;
+}
+
+.parallax-about
+{
+    background-size: 150px;
+    height: 100%;
+    background-image: url("/pictures/footer_lodyas.png");
+    background-attachment: fixed;
+    opacity: 1;
+}
+
+/*for desktop, mobile websites*/
+@media only screen and (orientation:portrait) and (min-width: 360px)
+{
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 60%;
+        text-align: center;
+    }
+
+    .container3
+    {
+        width: 80%;
+    }
+
+    .container-empty
+    {
+        padding-bottom: 150px;
+    }
+
+    h3
+    {
+        width: 66%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h2
+    {
+        width: 60%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    html
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+
+    .container-menu
+    {
+        padding-left: 3px;
+        padding-bottom: 10px;
+        width: 85%;
+    }
+
+
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left
+    {
+        float: center;
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .column-right
+    {
+        width: 0%;
+    }
+
+
+    /*-----------------------column layout for about------------------------------*/
+    .column-about
+    {
+        float: center;
+        width: 100%;
+        padding-bottom: 0px;
+    }
+
+    .column
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .column-p
+    {
+        width: 60.5%;
+    }
+
+    .container-about
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .column-map
+    {
+        float: center;
+        width: 50%;
+    }
+
+    .container-map
+    {
+        width: 100%;
+        position: relative;
+        padding-top: 50px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    h6
+    {
+        width: 50%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    .bg-img
+    {
+    min-height: 350px;
+    }
+
+    .container
+    {
+        position: relative;
+    }
+
+    .container1
+    {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .container2
+    {
+        width: 60%;
+        position: relative;
+        padding-bottom: 0px;
+        padding-top: 50px;
+    }
+
+    .container5
+    {
+        width: 90%;
+        padding-bottom: 25px;
+    }
+
+    .mapouter
+    {
+        width: 95%;
+        position:relative;
+        text-align:left;
+        margin: 0 auto;
+        height:300px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:300px;
+        width:330px;
+    }
+
+    /*-----------------------header links layout------------------------------*/
+    header
+    {
+        width: 100%;
+    }
+
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
+    /* The left navbar */
+    #topnav
+    {
+        margin: 0 auto;
+        padding: 0px;
+        padding-left: 0px;
+        padding-right: 250px; /*to change offset of logo*/
+    }
+
+    /* Navbar links */
+    #topnav a
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px 0px;
+    }
+
+    #topnav-right a
+    {
+        float: center;
+        margin: 0 auto;
+        font-size: 25px;
+        line-height: 0px;
+        padding: 20px;
+        padding-right: 300px;
+    }
+
+    #topnav-right
+    {
+        position: absolute;
+        top: 200px;
+        left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-p
+    {
+        width: 80%;
+    }
+
+    ul.leaders
+    {
+        width: 80%;
+    }
+
+    ul.leaders span:first-child
+    {
+        font-size: 15px;
+    }
+
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+    .parallax{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 100%;
+        background-attachment: inherit;
+    }
+
+    .parallax-menu{
+        height: 100%;
+        width: 100%;
+        background-position: 100% 0%;
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-about{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-column-info{
+        height: 20%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+
+    .gallery {
+        flex-flow: row wrap;
+    }
+
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 10px;
+    }
+
+    .container-f
+    {
+        padding-top: 50px;
+        width: 63%;
+    }
+
+    #bottomnav-right
+    {
+        padding-right: 45px; /*same as bottomnav a padding-left*/
+        padding-bottom: 50px;
+    }
+
+    .container-footer
+    {
+        padding-bottom: 25px;
+        padding-left: 30px;
+        padding-right: 38px;
+    }
+
+    #bottomnav
+    {
+        padding-left: 0px;
+    }
+
+    #bottomnav a
+    {
+        font-size: 15px;
+        padding-left: 30px; /*same as bottomnav-right padding-left*/
+        padding-right: 25px;
+    }
+}
+
+
+@media only screen and (orientation:portrait) and (min-width: 375px)
+{
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 63%;
+        text-align: center;
+    }
+
+    h3
+    {
+        width: 67%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h2
+    {
+        width: 63%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    html
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+
+    .container-menu
+    {
+        padding-left: calc(0.5%);
+        padding-bottom: 10px;
+        width: 87%;
+        padding-top: 15px;
+    }
+
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left
+    {
+        float: center;
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .column-right
+    {
+        width: 0%;
+    }
+
+
+    /*-----------------------column layout for about------------------------------*/
+    .column-about
+    {
+        float: center;
+        width: 100%;
+        padding-bottom: 0px;
+    }
+
+    .column
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .column-p
+    {
+        width: 63%;
+    }
+
+    .container-about
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .column-map
+    {
+        float: center;
+        width: 50%;
+    }
+
+    .container-map
+    {
+        width: 100%;
+        position: relative;
+        padding-top: 50px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    h6
+    {
+        width: 55%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    .bg-img
+    {
+    min-height: 350px;
+    }
+
+    .container
+    {
+        position: relative;
+    }
+
+    .container1
+    {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .container2
+    {
+        width: 63%;
+        position: relative;
+        padding-bottom: 0px;
+        padding-top: 50px;
+    }
+
+    .container5
+    {
+        width: 90%;
+        padding-bottom: 25px;
+    }
+
+    .container-empty
+    {
+        padding-bottom: 150px;
+    }
+
+    .mapouter
+    {
+        width: 95%;
+        position:relative;
+        text-align:left;
+        margin: 0 auto;
+        height:300px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:300px;
+        width:350px;
+    }
+
+    /*-----------------------header links layout------------------------------*/
+    header
+    {
+        width: 100%;
+    }
+
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
+    /* The left navbar */
+    #topnav
+    {
+        margin: 0 auto;
+        padding: 0px;
+        padding-left: 0px;
+        padding-right: 225px;
+    }
+
+    /* Navbar links */
+    #topnav a
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px 0px;
+    }
+
+    #topnav-right a
+    {
+        float: center;
+        margin: 0 auto;
+        font-size: 25px;
+        line-height: 0px;
+        padding: 20px;
+        padding-right: 300px;
+    }
+
+    #topnav-right
+    {
+        position: absolute;
+        top: 200px;
+        left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-p
+    {
+        width: 80%;
+    }
+
+    ul.leaders
+    {
+        width: 80%;
+    }
+
+    ul.leaders span:first-child
+    {
+        font-size: 15px;
+    }
+
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+    .parallax{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 100%;
+        background-attachment: inherit;
+    }
+
+    .parallax-menu{
+        height: 100%;
+        width: 100%;
+        background-position: 100% 0%;
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-about{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-column-info{
+        height: 20%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+
+    .gallery {
+        flex-flow: row wrap;
+    }
+
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 10px;
+    }
+
+    .container-f
+    {
+        padding-top: 50px;
+        width: 63%;
+    }
+
+    #bottomnav-right
+    {
+        padding-right: 35px;
+        padding-bottom: 50px;
+    }
+
+    .container-footer
+    {
+        padding-bottom: 25px;
+        padding-left: 38px;
+        padding-right: 28px;
+    }
+
+    #bottomnav
+    {
+        padding-left: 0px;
+    }
+
+    #bottomnav a
+    {
+        font-size: 15px;
+        padding-left: 25px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (orientation:landscape) and (min-width: 667px) and (min-height: 375px)
+{
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    h3
+    {
+        width: 80%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .container-empty
+    {
+        padding-bottom: 150px;
+    }
+
+    html
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+
+    .container-menu
+    {
+        padding-left: calc(2%);
+        padding-bottom: 10px;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    .container-column-menu
+    {
+        width: 100%;
+        padding-right: 48px;
+    }
+
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left
+    {
+        float: center;
+        width: 65%;
+        padding-left: 0px;
+    }
+
+    .column-right
+    {
+        width: 35%;
+    }
+
+
+    /*-----------------------column layout for about------------------------------*/
+    .column-about
+    {
+        float: center;
+        width: 100%;
+        padding-bottom: 0px;
+    }
+
+    .column
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .column-p
+    {
+        width: 100%;
+    }
+
+    .container-about
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .column-map
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .container-map
+    {
+        width: 100%;
+        position: relative;
+        padding-top: 50px;
+        padding-left: 60px;
+    }
+
+    h6
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    .bg-img
+    {
+    min-height: 350px;
+    }
+
+    .container
+    {
+        position: relative;
+    }
+
+    .container1
+    {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .container2
+    {
+        width: 100%;
+        position: relative;
+        padding-bottom: 25px;
+        padding-top: 50px;
+    }
+
+    .container5
+    {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+    .mapouter
+    {
+        width: 100%;
+        position:relative;
+        margin: 0 auto;
+        height:500px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:500px;
+        width:550px;
+    }
+
+
+    /*-----------------------header links layout------------------------------*/
+    header
+    {
+        width: 100%;
+    }
+
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
+    /* The left navbar */
+    #topnav
+    {
+        margin: 0 auto;
+        padding-left: 78px;
+    }
+
+    /* Navbar links */
+    #topnav a
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px 0px;
+    }
+
+    #topnav-right a
+    {
+        float: center;
+        margin: 0 auto;
+        line-height: 0px;
+        padding: 30px;
+        padding-right: 300px;
+    }
+
+    #topnav-right
+    {
+        position: absolute;
+        top: 150px;
+        left: 138px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-p
+    {
+        width: 80%;
+    }
+
+    ul.leaders
+    {
+        width: 80%;
+    }
+
+    ul.leaders span:first-child
+    {
+        font-size: 15px;
+    }
+
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+    .parallax{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 100%;
+        background-attachment: inherit;
+    }
+
+    .parallax-menu{
+        height: 100%;
+        width: 100%;
+        background-position: 100% 0%;
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-about{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-column-info{
+        height: 20%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+
+    .gallery {
+        flex-flow: row nowrap;
+    }
+
+    .tile-gallery__tile {
+        width: 225px;
+        height: 225px;
+        padding-bottom: 0px;
+    }
+
+    .tile-gallery__tile--normal {
+        width: 225px;
+        height: 225px;
+    }
+
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 15px;
+    }
+
+    .container-f
+    {
+        padding-top: 50px;
+        width: 100%;
+    }
+
+    #bottomnav-right
+    {
+        padding-right: 35px;
+        padding-bottom: 50px;
+    }
+
+    .container-footer
+    {
+        padding-bottom: 25px;
+        padding-left: 38px;
+        padding-right: 28px;
+    }
+
+    #bottomnav
+    {
+        padding-left: 13px;
+    }
+
+    #bottomnav a
+    {
+        font-size: 20px;
+        padding-left: 25px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (orientation:portrait) and (min-width: 414px)
+{
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 70%;
+        text-align: center;
+    }
+
+    h3
+    {
+        width: 74%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h2
+    {
+        width: 70%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .bg-img
+    {
+    min-height: 350px;
+    }
+
+    html
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+    .container
+    {
+        position: relative;
+    }
+
+
+    .container2
+    {
+        width: 69.5%;
+        position: relative;
+        padding-bottom: 0px;
+        padding-top: 50px;
+    }
+
+    .container5
+    {
+        width: 90%;
+        padding-bottom: 25px;
+    }
+
+
+    .mapouter
+    {
+        width: 95%;
+        position:relative;
+        text-align:left;
+        margin: 0 auto;
+        height:350px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:350px;
+        width:385px;
+    }
+
+    .container1
+    {
+        width: 100%;
+        padding: 25px;
+    }
+
+    /*-----------------------header links layout------------------------------*/
+    header
+    {
+        width: 100%;
+    }
+
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
+    /* The left navbar */
+    #topnav
+    {
+        margin: 0 auto;
+        padding: 0px;
+        padding-left: 18px;
+        padding-right: 200px;
+    }
+
+    /* Navbar links */
+    #topnav a
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px 0px;
+    }
+
+    #topnav-right a
+    {
+        float: center;
+        margin: 0 auto;
+        font-size: 25px;
+        line-height: 0px;
+        padding: 20px;
+        padding-right: 300px;
+    }
+
+    #topnav-right
+    {
+        position: absolute;
+        top: 200px;
+        left: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .parallax{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+
+    .gallery {
+        flex-flow: row wrap;
+    }
+
+    .container-menu
+    {
+        padding-left: calc(1.5%);
+        padding-bottom: 10px;
+        width: 90%;
+        padding-top: 15px;
+    }
+
+    .menu-p
+    {
+        width: 80%;
+    }
+
+    ul.leaders
+    {
+        width: 80%;
+    }
+
+    ul.leaders span:first-child
+    {
+        font-size: 15px;
+    }
+
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left
+    {
+        float: center;
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .column-right
+    {
+        width: 0%;
+    }
+
+    .container-column-menu
+    {
+        width: 0%;
+        padding-right: 0px;
+    }
+    /*-----------------------column layout for about------------------------------*/
+    .column-about
+    {
+        float: center;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .column
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .column-p
+    {
+        width: 70%;
+    }
+
+    .container-about
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .column-map
+    {
+        float: center;
+        width: 50%;
+    }
+
+    .container-map
+    {
+        width: 100%;
+        position: relative;
+        padding-top: 50px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+    h6
+    {
+        width: 65%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 12px;
+    }
+
+    .container-f
+    {
+        padding-top: 38px;
+        width: 63%;
+    }
+
+    #bottomnav-right
+    {
+        padding-right: 5px;
+        padding-bottom: 50px;
+    }
+
+    #bottomnav-right a
+    {
+        font-size: 20px;
+    }
+
+    .container-footer
+    {
+        padding-bottom: 20px;
+        padding-left: 38px;
+        padding-right: 28px;
+    }
+
+    #bottomnav
+    {
+        padding-left: 0px;
+    }
+
+    #bottomnav a
+    {
+        font-size: 20px;
+        padding-left: 12px;
+        padding-right: 0px;
+    }
+
+}
+
+@media only screen and (orientation:landscape) and (min-width: 736px) and (min-height: 414px)
+{
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    h3
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h2
+    {
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    html
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+    .container3
+    {
+        width: 80%;
+    }
+
+    .container-menu
+    {
+        padding-left: calc(2%);
+        padding-bottom: 10px;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    .container-column-menu
+    {
+        width: 100%;
+        padding-right: 72px;
+    }
+
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left
+    {
+        float: center;
+        width: 70%;
+        padding-left: 0px;
+    }
+
+    .column-right
+    {
+        width: 30%;
+    }
+
+
+    /*-----------------------column layout for about------------------------------*/
+    .column-about
+    {
+        float: center;
+        width: 100%;
+        padding-bottom: 0px;
+    }
+
+    .column
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .column-p
+    {
+        width: 100%;
+    }
+
+    .container-about
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .column-map
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .container-map
+    {
+        width: 100%;
+        position: relative;
+        padding-top: 50px;
+        padding-left: 60px;
+    }
+
+    h6
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    .bg-img
+    {
+    min-height: 350px;
+    }
+
+    .container
+    {
+        position: relative;
+    }
+
+    .container1
+    {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .container2
+    {
+        width: 100%;
+        position: relative;
+        padding-bottom: 25px;
+        padding-top: 50px;
+    }
+
+    .container5
+    {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+    .mapouter
+    {
+        width: 100%;
+        position:relative;
+        margin: 0 auto;
+        height:500px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:500px;
+        width:615px;
+    }
+
+
+    /*-----------------------header links layout------------------------------*/
+    header
+    {
+        width: 100%;
+    }
+
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
+    /* The left navbar */
+    #topnav
+    {
+        margin: 0 auto;
+        padding-left: 116px;
+    }
+
+    /* Navbar links */
+    #topnav a
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px 0px;
+    }
+
+    #topnav-right a
+    {
+        float: center;
+        margin: 0 auto;
+        line-height: 0px;
+        padding: 30px;
+        padding-right: 300px;
+    }
+
+    #topnav-right
+    {
+        position: absolute;
+        top: 150px;
+        left: 137px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-p
+    {
+        width: 80%;
+    }
+
+    ul.leaders
+    {
+        width: 80%;
+    }
+
+    ul.leaders span:first-child
+    {
+        font-size: 15px;
+    }
+
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+    .parallax{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 100%;
+        background-attachment: inherit;
+    }
+
+    .parallax-menu{
+        height: 100%;
+        width: 100%;
+        background-position: 100% 0%;
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-about{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-column-info{
+        height: 20%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+
+    .gallery {
+        flex-flow: row nowrap;
+    }
+
+    .tile-gallery__tile {
+        width: 246px;
+        height: 246px;
+        padding-bottom: 0px;
+    }
+
+    .tile-gallery__tile--normal {
+        width: 246px;
+        height: 246px;
+    }
+
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 15px;
+    }
+
+    .container-f
+    {
+        padding-top: 50px;
+        width: 100%;
+    }
+
+    #bottomnav-right
+    {
+        padding-right: 45px;
+        padding-bottom: 50px;
+    }
+
+    .container-footer
+    {
+        padding-bottom: 25px;
+        padding-left: 40px;
+        padding-right: 37px;
+    }
+
+    #bottomnav
+    {
+        padding-left: 15px;
+    }
+
+    #bottomnav a
+    {
+        font-size: 20px;
+        padding-left: 25px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (orientation:landscape) and (min-width: 896px) and (min-height: 414px)
+{
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    h3
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h2
+    {
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    html
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+    .container3
+    {
+        width: 80%;
+    }
+
+    .container-menu
+    {
+        padding-left: calc(2%);
+        padding-bottom: 10px;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    .container-column-menu
+    {
+        width: 100%;
+        padding-right: 72px;
+    }
+
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left
+    {
+        float: center;
+        width: 70%;
+        padding-left: 0px;
+    }
+
+    .column-right
+    {
+        width: 30%;
+    }
+
+
+    /*-----------------------column layout for about------------------------------*/
+    .column-about
+    {
+        float: center;
+        width: 100%;
+        padding-bottom: 0px;
+    }
+
+    .column
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .column-p
+    {
+        width: 100%;
+    }
+
+    .container-about
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .column-map
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .container-map
+    {
+        width: 69.5%;
+        padding-top: 50px;
+        padding-left: 0px;
+    }
+
+    h6
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    .bg-img
+    {
+    min-height: 350px;
+    }
+
+    .container
+    {
+        position: relative;
+    }
+
+    .container1
+    {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .container2
+    {
+        width: 100%;
+        position: relative;
+        padding-bottom: 25px;
+        padding-top: 50px;
+    }
+
+    .container5
+    {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+    .mapouter
+    {
+        width: 100%;
+        height:500px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:500px;
+        width:615px;
+    }
+
+
+    /*-----------------------header links layout------------------------------*/
+    header
+    {
+        width: 100%;
+    }
+
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
+    /* The left navbar */
+    #topnav
+    {
+        margin: 0 auto;
+        padding-left: 202px;
+    }
+
+    /* Navbar links */
+    #topnav a
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px 0px;
+    }
+
+    #topnav-right a
+    {
+        float: center;
+        margin: 0 auto;
+        line-height: 0px;
+        font-size: 35px;
+        padding: 30px;
+        padding-right: 300px;
+    }
+
+    #topnav-right
+    {
+        position: absolute;
+        top: 160px;
+        left: 137px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-p
+    {
+        width: 80%;
+    }
+
+    ul.leaders
+    {
+        width: 80%;
+    }
+
+    ul.leaders span:first-child
+    {
+        font-size: 15px;
+    }
+
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+    .parallax{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 100%;
+        background-attachment: inherit;
+    }
+
+    .parallax-menu{
+        height: 100%;
+        width: 100%;
+        background-position: 100% 0%;
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-about{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-column-info{
+        height: 20%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+
+    .gallery {
+        flex-flow: row nowrap;
+    }
+
+    .tile-gallery__tile {
+        width: 246px;
+        height: 246px;
+        padding-bottom: 0px;
+    }
+
+    .tile-gallery__tile--normal {
+        width: 246px;
+        height: 246px;
+    }
+
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 15px;
+    }
+
+    .container-f
+    {
+        padding-top: 50px;
+        width: 100%;
+    }
+
+    #bottomnav-right
+    {
+        padding-right: 60px;
+        padding-bottom: 50px;
+    }
+
+    .container-footer
+    {
+        padding-bottom: 25px;
+        padding-left: 60px;
+        padding-right: 37px;
+    }
+
+    #bottomnav
+    {
+        padding-left: 15px;
+    }
+
+    #bottomnav a
+    {
+        font-size: 20px;
+        padding-left: 45px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (orientation:portrait) and (min-width: 768px) and (min-height:1024px)
+{
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    h3
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    h2
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .bg-img
+    {
+    min-height: 380px;
+    }
+
+    html
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+    #topnav-container
+    {
+        position: relative;
+        height: 30%;
+    }
+
+    .container
+    {
+        position: relative;
+    }
+
+    .container2
+    {
+        width: 100%;
+        position: relative;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    .container5
+    {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+
+    /*-----------------------Contact Google Maps------------------------------*/
+    .mapouter
+    {
+        position:relative;
+        text-align:center;
+        margin: 0 auto;
+        height:500px;
+        width:600px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:500px;
+        width:600px;
+    }
+
+    .container1
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        padding: 200px;
+    }
+
+    /*-----------------------header links layout------------------------------*/
+    header
+    {
+        width: 100%;
+    }
+
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
+    /* The left navbar */
+    #topnav
+    {
+        margin: 0 auto;
+        padding: 0px;
+        padding-left: 130px;
+    }
+
+    /* Navbar links */
+    #topnav a
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px 0px;
+    }
+
+    #topnav-right a
+    {
+        float: center;
+        margin: 0 auto;
+        font-size: 35px;
+        line-height: 0px;
+        padding: 30px;
+        padding-right: 300px;
+    }
+
+    #topnav-right
+    {
+        position: absolute;
+        top: 160px;
+        left: 142px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .parallax{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-about{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+
+    .gallery {
+        flex-flow: row nowrap;
+    }
+
+    .tile-gallery__tile {
+        /*padding-left: 15px;*/
+        width: 155px;
+        height: 155px;
+        padding-bottom: 0px;
+    }
+
+    .tile-gallery__tile--normal {
+        width: 155px;
+        height: 155px;
+    }
+
+    .container-menu
+    {
+        padding-left: calc(6%);
+        padding-bottom: 10px;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    .menu-p
+    {
+        width: 100%;
+    }
+
+    ul.leaders
+    {
+        width: 100%;
+    }
+
+    ul.leaders span:first-child
+    {
+        font-size: 15px;
+    }
+
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left
+    {
+        float: center;
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .column-right
+    {
+        width: 0%;
+    }
+
+
+/*-----------------------column layout for about------------------------------*/
+.column-about
+{
+    float: left;
+    width: 50%;
+    padding: 0px;
+}
+
+.column
+{
+    float: left;
+    width: 50%;
+    padding: 50px;
+}
+
+
+ /* Clear floats after the columns */
+ .row:after
+ {
+     content: "";
+     display: table;
+     clear: both;
+ }
+
+ .container-about
+ {
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+ }
+
+ .column-map
+{
+    float: center;
+    width: 100%;
+}
+
+.column-p
+{
+    float: center;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.container-map
+{
+    display:block;
+    position:relative;
+    width: 100%;
+    padding-top: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h6
+{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+
+p5
+{
+    letter-spacing: 0.5px;
+    font-size: 15px;
+}
+
+.container-f
+{
+    padding-top: 40px;
+    width: 100%;
+}
+
+#bottomnav-right
+{
+    padding-right: 45px;
+    padding-bottom: 50px;
+}
+
+.container-footer
+{
+    padding-bottom: 25px;
+    padding-left: 40px;
+    padding-right: 37px;
+}
+
+#bottomnav
+{
+    padding-left: 15px;
+}
+
+#bottomnav a
+{
+    font-size: 25px;
+    padding-left: 25px;
+    padding-right: 15px;
+}
+
+}
+
+@media only screen and (orientation:landscape) and (min-width: 1024px) and (min-height: 768px)
+{
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    h3
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h2
+    {
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    html
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+    .container3
+    {
+        width: 80%;
+    }
+
+    .container-menu
+    {
+        padding-left: calc(2%);
+        padding-bottom: 10px;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    .container-column-menu
+    {
+        width: 100%;
+        padding-right: 72px;
+    }
+
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left
+    {
+        float: center;
+        width: 70%;
+        padding-left: 0px;
+    }
+
+    .column-right
+    {
+        width: 30%;
+    }
+
+
+    /*-----------------------column layout for about------------------------------*/
+    .column-about
+    {
+        float: center;
+        width: 100%;
+        padding-bottom: 0px;
+    }
+
+    .column
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .column-p
+    {
+        width: 100%;
+    }
+
+    .container-about
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .column-map
+    {
+        float: center;
+        width: 100%;
+    }
+
+    .container-map
+    {
+        width: 60%;
+        padding-top: 50px;
+        padding-left: 0px;
+    }
+
+    h6
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    .bg-img
+    {
+    min-height: 350px;
+    }
+
+    .container
+    {
+        position: relative;
+    }
+
+    .container1
+    {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .container2
+    {
+        width: 100%;
+        position: relative;
+        padding-bottom: 25px;
+        padding-top: 50px;
+    }
+
+    .container5
+    {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+    .mapouter
+    {
+        width: 100%;
+        height:500px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:500px;
+        width:615px;
+    }
+
+
+    /*-----------------------header links layout------------------------------*/
+    header
+    {
+        width: 100%;
+    }
+
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
+    /* The left navbar */
+    #topnav
+    {
+        margin: 0 auto;
+        padding-left: 256px;
+    }
+
+    /* Navbar links */
+    #topnav a
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px 0px;
+    }
+
+    #topnav-right a
+    {
+        float: center;
+        margin: 0 auto;
+        line-height: 0px;
+        font-size: 35px;
+        padding: 30px;
+        padding-right: 300px;
+    }
+
+    #topnav-right
+    {
+        position: absolute;
+        top: 160px;
+        left: 137px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-p
+    {
+        width: 80%;
+    }
+
+    ul.leaders
+    {
+        width: 80%;
+    }
+
+    ul.leaders span:first-child
+    {
+        font-size: 15px;
+    }
+
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+    .parallax{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 100%;
+        background-attachment: inherit;
+    }
+
+    .parallax-menu{
+        height: 100%;
+        width: 100%;
+        background-position: 100% 0%;
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-about{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax-column-info{
+        height: 20%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+
+    .gallery {
+        flex-flow: row nowrap;
+    }
+
+    .tile-gallery__tile {
+        width: 246px;
+        height: 246px;
+        padding-bottom: 0px;
+    }
+
+    .tile-gallery__tile--normal {
+        width: 246px;
+        height: 246px;
+    }
+
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 15px;
+    }
+
+    .container-f
+    {
+        padding-top: 50px;
+        width: 100%;
+    }
+
+    #bottomnav-right
+    {
+        padding-right: 45px;
+        padding-bottom: 50px;
+    }
+
+    .container-footer
+    {
+        padding-bottom: 25px;
+        padding-left: 40px;
+        padding-right: 37px;
+    }
+
+    #bottomnav
+    {
+        padding-left: 15px;
+    }
+
+    #bottomnav a
+    {
+        font-size: 20px;
+        padding-left: 25px;
+        padding-right: 15px;
+    }
+}
+
+
+@media only screen and (orientation:portrait) and (min-width: 1024px) and (min-height: 1366px)
+{
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    h3
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .bg-img
+    {
+    min-height: 380px;
+    }
+
+    html
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+    #topnav-container
+    {
+        position: relative;
+        height: 30%;
+    }
+
+    .container
+    {
+        position: relative;
+    }
+
+    .container2
+    {
+        width: 100%;
+        position: relative;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    .container5
+    {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+
+    /*-----------------------Contact Google Maps------------------------------*/
+    .mapouter
+    {
+        position:relative;
+        text-align:center;
+        margin: 0 auto;
+        height:500px;
+        width:600px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:500px;
+        width:600px;
+    }
+
+    .container1
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        padding: 200px;
+    }
+
+    /*-----------------------header links layout------------------------------*/
+    header
+    {
+        width: 100%;
+    }
+
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
+    /* The left navbar */
+    #topnav
+    {
+        margin: 0 auto;
+        padding: 0px;
+        padding-left: 258px;
+    }
+
+    /* Navbar links */
+    #topnav a
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px 0px;
+    }
+
+    #topnav-right a
+    {
+        float: center;
+        margin: 0 auto;
+        font-size: 35px;
+        line-height: 0px;
+        padding: 30px;
+        padding-right: 300px;
+    }
+
+    #topnav-right
+    {
+        position: absolute;
+        top: 160px;
+        left: 142px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .parallax{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+
+
+    .gallery {
+        flex-flow: row nowrap;
+    }
+
+    .tile-gallery__tile {
+        /*padding-left: 15px;*/
+        width: 205px;
+        height: 205px;
+        padding-bottom: 0px;
+    }
+
+    .tile-gallery__tile--normal {
+        width: 205px;
+        height: 205px;
+    }
+
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 12px;
+    }
+
+    .container-menu
+    {
+        padding-left: calc(6%);
+        padding-bottom: 10px;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    .menu-p
+    {
+        width: 100%;
+    }
+
+    ul.leaders
+    {
+        width: 100%;
+    }
+
+    ul.leaders span:first-child
+    {
+        font-size: 15px;
+    }
+
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left
+    {
+        float: left;
+        width: 60%;
+        padding: 0px;
+    }
+
+    .column-right
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        width: 40%;
+        padding-top: 50px;
+    }
+
+/*-----------------------column layout for about------------------------------*/
+.column-about
+{
+    float: left;
+    width: 50%;
+    padding: 0px;
+}
+
+.column
+{
+    float: left;
+    width: 50%;
+    padding: 50px;
+}
+
+
+ /* Clear floats after the columns */
+ .row:after
+ {
+     content: "";
+     display: table;
+     clear: both;
+ }
+
+ .container-about
+ {
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+ }
+
+ .column-map
+{
+    float: center;
+    width: 100%;
+}
+
+.column-p
+{
+    float: center;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.container-map
+{
+    display:block;
+    position:relative;
+    width: 100%;
+    padding-top: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h6
+{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+
+p5
+{
+    letter-spacing: 0.5px;
+    font-size: 20px;
+}
+
+.container-f
+{
+    padding-top: 50px;
+    width: 100%;
+}
+
+#bottomnav-right
+{
+    padding-right: 45px;
+    padding-bottom: 50px;
+    font-size: 30px;
+}
+
+#bottomnav-right a
+{
+    font-size: 35px;
+}
+
+.container-footer
+{
+    padding-bottom: 35px;
+    padding-left: 40px;
+    padding-right: 37px;
+}
+
+#bottomnav
+{
+    padding-left: 15px;
+}
+
+#bottomnav a
+{
+    font-size: 30px;
+    padding-left: 25px;
+}
+}
+
+@media only screen and (orientation:landscape) and (min-width: 1366px) and (min-height: 1024px)
+{
+    .centered_tab button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    h3
+    {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .bg-img
+    {
+    min-height: 380px;
+    }
+
+    html
+    {
+        -webkit-text-size-adjust : none;
+        text-size-adjust         : none;
+    }
+
+    #topnav-container
+    {
+        position: relative;
+        height: 30%;
+    }
+
+    .container
+    {
+        position: relative;
+    }
+
+    .container2
+    {
+        width: 100%;
+        position: relative;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    .container5
+    {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+
+    /*-----------------------Contact Google Maps------------------------------*/
+    .mapouter
+    {
+        position:relative;
+        text-align:center;
+        margin: 0 auto;
+        height:500px;
+        width:600px;
+    }
+
+    .gmap_canvas
+    {
+        overflow:hidden;
+        background:none!important;
+        height:500px;
+        width:600px;
+    }
+
+    .container1
+    {
+        overflow:hidden;
+        display:block;
+        position:relative;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        padding: 200px;
+    }
+
+    /*-----------------------header links layout------------------------------*/
+    header
+    {
+        width: 100%;
+    }
+
+    #topnav-container
+    {
+        opacity: 0.5;
+        position: relative;
+        padding: 0px 0px;
+    }
+
+    /* The left navbar */
+    #topnav
+    {
+        margin: 0 auto;
+        padding: 0px;
+        padding-left: 430px;
+    }
+
+    /* Navbar links */
+    #topnav a
+    {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px 0px;
+    }
+
+    #topnav-right a
+    {
+        float: center;
+        margin: 0 auto;
+        font-size: 35px;
+        line-height: 0px;
+        padding: 30px;
+        padding-right: 300px;
+    }
+
+    #topnav-right
+    {
+        position: absolute;
+        top: 160px;
+        left: 142px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .parallax{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+    .parallax2{
+        height: 100%;
+        width: 100%;
+        background-position: 50% 70%;
+        background-attachment: inherit;
+    }
+
+
+
+    .gallery {
+        flex-flow: row nowrap;
+    }
+
+    .tile-gallery__tile {
+        /*padding-left: 15px;*/
+        width: 205px;
+        height: 205px;
+        padding-bottom: 0px;
+    }
+
+    .tile-gallery__tile--normal {
+        width: 205px;
+        height: 205px;
+    }
+
+    p5
+    {
+        letter-spacing: 0.5px;
+        font-size: 12px;
+    }
+
+    .container-menu
+    {
+        padding-left: calc(6%);
+        padding-bottom: 10px;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    .menu-p
+    {
+        width: 100%;
+    }
+
+    ul.leaders
+    {
+        width: 100%;
+    }
+
+    ul.leaders span:first-child
+    {
+        font-size: 15px;
+    }
+
+    ul.leaders span + span
+    {
+        font-size: 15px;
+    }
+
+    p2
+    {
+    letter-spacing: 0.5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    }
+
+
+    /*-----------------------column layout for menu------------------------------*/
+    .column-left
+    {
+        float: left;
+        width: 60%;
+        padding: 0px;
+    }
+
+    .column-right
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        width: 40%;
+        padding-top: 50px;
+    }
+
+/*-----------------------column layout for about------------------------------*/
+.column-about
+{
+    float: left;
+    width: 50%;
+    padding: 0px;
+}
+
+.column
+{
+    float: left;
+    width: 50%;
+    padding: 50px;
+}
+
+
+ /* Clear floats after the columns */
+ .row:after
+ {
+     content: "";
+     display: table;
+     clear: both;
+ }
+
+ .container-about
+ {
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+ }
+
+ .column-map
+{
+    float: center;
+    width: 100%;
+}
+
+.column-p
+{
+    float: center;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.container-map
+{
+    display:block;
+    position:relative;
+    width: 100%;
+    padding-top: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h6
+{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+
+p5
+{
+    letter-spacing: 0.5px;
+    font-size: 20px;
+}
+
+.container-f
+{
+    padding-top: 50px;
+    width: 100%;
+}
+
+#bottomnav-right
+{
+    padding-right: 45px;
+    padding-bottom: 50px;
+    font-size: 30px;
+}
+
+#bottomnav-right a
+{
+    font-size: 35px;
+}
+
+.container-footer
+{
+    padding-bottom: 35px;
+    padding-left: 40px;
+    padding-right: 37px;
+}
+
+#bottomnav
+{
+    padding-left: 15px;
+}
+
+#bottomnav a
+{
+    font-size: 30px;
+    padding-left: 25px;
+}
+}
