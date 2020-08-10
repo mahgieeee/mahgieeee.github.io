@@ -1,6 +1,6 @@
 /* Container 2 needs to be fixed, repeated in index, gallery and menu*/
 /* Background pattern from Toptal Subtle Patterns */
-body 
+body
 {
     display: grid;
     grid-template-rows: 1fr auto;
@@ -15,11 +15,11 @@ body
 
 html
 {
-    height: 100%; 
+    height: 100%;
     box-sizing: border-box;
 }
 
-.footer 
+.footer
 {
     position: absolute;
     right: 100px;
@@ -36,7 +36,7 @@ html
 }
 
 /* Position the navbar container inside the image for background*/
-.container 
+.container
 {
     position: relative;
     margin: 0px;
@@ -49,6 +49,11 @@ html
     position: relative;
     width: auto;
     padding-top: 70px;
+}
+
+.parisienne{
+  font-family: 'Parisienne';
+  font-style: cursive;
 }
 
 .container1
@@ -131,18 +136,18 @@ html
     padding-bottom: 75px;
 }
 
-.container-menu 
+.container-menu
 {
     height: 100%;
     position: relative;
     padding-left: calc(7%);
-    padding-bottom: 50px; 
+    padding-bottom: 50px;
     padding-top: 0px;
 }
 
 #topnav-container
 {
-    
+
     background-size: 250px;
     background-image: url("/pictures/wild_oliva.png");
     opacity: 0.8;
@@ -159,7 +164,7 @@ header{
     width: 100%;
 }
 
-.bg-img 
+.bg-img
 {
     min-height: 680px;
     /* Center and scale the image nicely */
@@ -171,7 +176,7 @@ header{
     position: relative;
 }
 
-.bg-img1 
+.bg-img1
 {
     min-height: 200px;
     /* Center and scale the image nicely */
@@ -184,14 +189,14 @@ header{
 }
 
 /* The left navbar */
-#topnav 
+#topnav
 {
     overflow: hidden;
     background-color: transparent;
     padding: 20px;
 }
 
-#topnav #logo 
+#topnav #logo
 {
     overflow: hidden;
     background-color: transparent;
@@ -199,7 +204,7 @@ header{
 }
 
 /* Navbar links */
-#topnav a 
+#topnav a
 {
     float: left;
     padding: 14px 16px;
@@ -217,7 +222,7 @@ header{
 		1px 1px 0 #000;
 }
 
-#topnav-right a 
+#topnav-right a
 {
     float: right;
     padding: 14px 16px;
@@ -228,7 +233,7 @@ header{
     font-style: normal;
     font-size: 20px;
     letter-spacing: 5px;
-    line-height: 70px;  
+    line-height: 70px;
     font-weight: lighter;
     padding: 35px;
     text-shadow:
@@ -238,21 +243,21 @@ header{
 		1px 1px 0 #000;
 }
 
-#topnav a:hover 
+#topnav a:hover
 {
     background-color: transparent;
     color: rgb(54, 148, 36);
     transform: scale(1.1);
 }
 
-#topnav-right a:hover 
+#topnav-right a:hover
 {
     background-color: transparent;
     color: rgb(54, 148, 36);
     transform: scale(1.4);
 }
 
-#topnav-right 
+#topnav-right
 {
     float: right;
 }
@@ -271,14 +276,14 @@ header{
     background-color: transparent;
 }
 
-#bottomnav #logo 
+#bottomnav #logo
 {
     overflow: hidden;
     background-color: transparent;
 }
 
 /* Navbar links */
-#bottomnav a 
+#bottomnav a
 {
     float: left;
     text-decoration: none;
@@ -298,7 +303,7 @@ header{
 }
 
 
-#bottomnav-right a 
+#bottomnav-right a
 {
     float: right;
     text-decoration: none;
@@ -320,26 +325,26 @@ header{
 
 
 
-#bottomnav a:hover 
+#bottomnav a:hover
 {
     background-color: transparent;
     color: rgb(54, 148, 36);
 }
 
-#bottomnav-right a:hover 
+#bottomnav-right a:hover
 {
     background-color: transparent;
     border-color: rgb(54, 148, 36);
 }
 
-#bottomnav-right 
+#bottomnav-right
 {
     float: right;
     padding-right: 50px;
 }
 
 /*-----------------------animation for header------------------------------*/
-.crossfade > figure 
+.crossfade > figure
 {
     animation: imageAnimation 30s linear infinite 0s;
     backface-visibility: hidden;
@@ -357,30 +362,30 @@ header{
 }
 
 
-.crossfade > figure:nth-child(1) 
-{ 
-    background-image: url("/pictures/luigi-pozzoli-iIS1SIO5_aY-unsplash.jpg"); 
+.crossfade > figure:nth-child(1)
+{
+    background-image: url("/pictures/luigi-pozzoli-iIS1SIO5_aY-unsplash.jpg");
 }
 
-.crossfade > figure:nth-child(2) 
+.crossfade > figure:nth-child(2)
 {
     animation-delay: 6s;
     background-image: url("/pictures/youjeen-cho-JorKKx5rvA0-unsplash.jpg");
 }
 
-.crossfade > figure:nth-child(3) 
+.crossfade > figure:nth-child(3)
 {
     animation-delay: 12s;
     background-image: url("/pictures/riccardo-bergamini-O2yNzXdqOu0-unsplash.jpg");
 }
 
-.crossfade > figure:nth-child(4) 
-{ 
+.crossfade > figure:nth-child(4)
+{
     animation-delay: 18s;
-    background-image: url("/pictures/bady-qb-VIv0srmK78g-unsplash.jpg"); 
+    background-image: url("/pictures/bady-qb-VIv0srmK78g-unsplash.jpg");
 }
 
-.crossfade > figure:nth-child(5) 
+.crossfade > figure:nth-child(5)
 {
     animation-delay: 24s;
     background-image: url("/pictures/florian-metzner-12IsagncQ7o-unsplash.jpg");
@@ -389,23 +394,23 @@ header{
 /*to repeat this on different pages use figure1:nth-child*/
 
 
-@keyframes 
-imageAnimation 
-{  0% 
+@keyframes
+imageAnimation
+{  0%
     {
     animation-timing-function: ease-in;
     opacity: 0;
     }
-    8% 
+    8%
     {
     animation-timing-function: ease-out;
     opacity: 1;
     }
-    17% 
+    17%
     {
     opacity: 1
     }
-    25% 
+    25%
     {
     opacity: 0
     }
@@ -437,14 +442,14 @@ imageAnimation
 
 
 /* Change background color of buttons on hover */
-.centered_tab button:hover 
+.centered_tab button:hover
 {
     color:  rgb(54, 148, 36);
     transform: scale(1.4);
 }
 
 /* Style the tab content */
-.tabcontent 
+.tabcontent
 {
     display: none;
     padding: 6px 12px;
@@ -453,27 +458,27 @@ imageAnimation
 }
 
 /*-----------------------Fade in tabs for menu------------------------------*/
-@-webkit-keyframes fadeEffect 
+@-webkit-keyframes fadeEffect
 {
     from {opacity: 0;}
     to {opacity: 1;}
 }
 
-@keyframes fadeEffect 
+@keyframes fadeEffect
 {
     from {opacity: 0;}
     to {opacity: 1;}
 }
 
 /*-----------------------column layout for menu------------------------------*/
-.column-left 
+.column-left
 {
     float: left;
     width: 60%;
     padding: 0px;
 }
 
-.column-right 
+.column-right
 {
     display: flex;
     flex-wrap: wrap;
@@ -501,7 +506,7 @@ imageAnimation
 
 
  /* Clear floats after the columns */
- .row:after 
+ .row:after
  {
      content: "";
      display: table;
@@ -540,7 +545,7 @@ imageAnimation
     margin: 0 auto;
     text-align: center;
 }
-    
+
 
  h6
 {
@@ -549,7 +554,7 @@ imageAnimation
     font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
     color: white;
     letter-spacing: 2px;
-    font-size: 28px; 
+    font-size: 28px;
     font-style: normal;
     font-weight: lighter;
     text-shadow:
@@ -558,7 +563,7 @@ imageAnimation
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
 }
- 
+
 /*-----------------------Contact Google Maps------------------------------*/
 .mapouter
 {
@@ -585,7 +590,7 @@ h3
     font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
     color: white;
     letter-spacing: 2px;
-    font-size: 28px; 
+    font-size: 28px;
     font-style: normal;
     font-weight: lighter;
     text-shadow:
@@ -602,7 +607,7 @@ h2
     font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
     color: white;
     letter-spacing: 2px;
-    font-size: 28px; 
+    font-size: 28px;
     font-style: normal;
     font-weight: lighter;
     text-shadow:
@@ -614,7 +619,7 @@ h2
 
 
 /*-----------------------Flexbox menu items------------------------------*/
-.flex-container 
+.flex-container
 {
     display: flex;
     flex-wrap: wrap;
@@ -622,7 +627,7 @@ h2
     justify-content: center;
 }
 
-.flex-container > div 
+.flex-container > div
 {
     background-color: transparent;
     width: 300px;
@@ -635,7 +640,7 @@ h2
 
 
 /*-----------------------menu items------------------------------*/
-    
+
 p2
 {
     font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
@@ -688,7 +693,7 @@ h5
     font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
     color: white;
     letter-spacing: 2px;
-    font-size: 18px; 
+    font-size: 18px;
     font-style: normal;
     font-weight: lighter;
     text-shadow:
@@ -760,14 +765,14 @@ h5
     z-index: 999;
     margin: 0 auto;
     left: 0;
-    right: 0;        
+    right: 0;
     text-align: center;
     top: 90%; /* Adjust this value to move the positioned div up and down */
     width: 60%; /* Set the width of the positioned div */
 }
 
 
-ul.leaders 
+ul.leaders
 {
     max-width: 40em;
     padding: 0;
@@ -776,7 +781,7 @@ ul.leaders
     margin: 0;
 }
 
-ul.leaders li:after 
+ul.leaders li:after
 {
     float: left;
     width: 0;
@@ -790,7 +795,7 @@ ul.leaders li:after
     ". . . . . . . . . . . . . . . . . . . . "
 }
 
-ul.leaders span:first-child 
+ul.leaders span:first-child
 {
     padding-right: 0.33em;
     font: 400 100px/1.3 'Roboto', Helvetica, sans-serif;
@@ -869,7 +874,7 @@ ul.leaders span + span
 }
 
 /*for desktop, mobile websites*/
-@media only screen and (orientation:portrait) and (min-width: 360px) 
+@media only screen and (orientation:portrait) and (min-width: 360px)
 {
     .centered_tab button
     {
@@ -905,30 +910,30 @@ ul.leaders span + span
         text-align: center;
     }
 
-    html 
+    html
     {
         -webkit-text-size-adjust : none;
         text-size-adjust         : none;
     }
 
 
-    .container-menu 
+    .container-menu
     {
         padding-left: 3px;
         padding-bottom: 10px;
         width: 85%;
     }
 
-   
+
     /*-----------------------column layout for menu------------------------------*/
-    .column-left 
+    .column-left
     {
         float: center;
         width: 100%;
         padding-left: 0px;
     }
 
-    .column-right 
+    .column-right
     {
         width: 0%;
     }
@@ -952,7 +957,7 @@ ul.leaders span + span
     {
         width: 60.5%;
     }
-    
+
     .container-about
     {
         overflow:hidden;
@@ -986,12 +991,12 @@ ul.leaders span + span
     }
 
 
-    .bg-img 
+    .bg-img
     {
     min-height: 350px;
     }
 
-    .container 
+    .container
     {
         position: relative;
     }
@@ -1032,8 +1037,8 @@ ul.leaders span + span
         height:300px;
         width:330px;
     }
-    
-    /*-----------------------header links layout------------------------------*/    
+
+    /*-----------------------header links layout------------------------------*/
     header
     {
         width: 100%;
@@ -1047,7 +1052,7 @@ ul.leaders span + span
     }
 
     /* The left navbar */
-    #topnav 
+    #topnav
     {
         margin: 0 auto;
         padding: 0px;
@@ -1056,14 +1061,14 @@ ul.leaders span + span
     }
 
     /* Navbar links */
-    #topnav a 
+    #topnav a
     {
         margin: 0 auto;
         text-align: center;
         padding: 0px 0px;
     }
 
-    #topnav-right a 
+    #topnav-right a
     {
         float: center;
         margin: 0 auto;
@@ -1073,7 +1078,7 @@ ul.leaders span + span
         padding-right: 300px;
     }
 
-    #topnav-right 
+    #topnav-right
     {
         position: absolute;
         top: 200px;
@@ -1091,16 +1096,16 @@ ul.leaders span + span
         width: 80%;
     }
 
-    ul.leaders 
+    ul.leaders
     {
         width: 80%;
     }
 
-    ul.leaders span:first-child 
+    ul.leaders span:first-child
     {
         font-size: 15px;
     }
-    
+
     ul.leaders span + span
     {
         font-size: 15px;
@@ -1170,7 +1175,7 @@ ul.leaders span + span
         width: 63%;
     }
 
-    #bottomnav-right 
+    #bottomnav-right
     {
         padding-right: 45px; /*same as bottomnav a padding-left*/
         padding-bottom: 50px;
@@ -1188,7 +1193,7 @@ ul.leaders span + span
         padding-left: 0px;
     }
 
-    #bottomnav a 
+    #bottomnav a
     {
         font-size: 15px;
         padding-left: 30px; /*same as bottomnav-right padding-left*/
@@ -1197,7 +1202,7 @@ ul.leaders span + span
 }
 
 
-@media only screen and (orientation:portrait) and (min-width: 375px) 
+@media only screen and (orientation:portrait) and (min-width: 375px)
 {
     .centered_tab button
     {
@@ -1223,14 +1228,14 @@ ul.leaders span + span
         text-align: center;
     }
 
-    html 
+    html
     {
         -webkit-text-size-adjust : none;
         text-size-adjust         : none;
     }
 
 
-    .container-menu 
+    .container-menu
     {
         padding-left: calc(0.5%);
         padding-bottom: 10px;
@@ -1239,14 +1244,14 @@ ul.leaders span + span
     }
 
     /*-----------------------column layout for menu------------------------------*/
-    .column-left 
+    .column-left
     {
         float: center;
         width: 100%;
         padding-left: 0px;
     }
 
-    .column-right 
+    .column-right
     {
         width: 0%;
     }
@@ -1270,7 +1275,7 @@ ul.leaders span + span
     {
         width: 63%;
     }
-    
+
     .container-about
     {
         overflow:hidden;
@@ -1304,12 +1309,12 @@ ul.leaders span + span
     }
 
 
-    .bg-img 
+    .bg-img
     {
     min-height: 350px;
     }
 
-    .container 
+    .container
     {
         position: relative;
     }
@@ -1355,8 +1360,8 @@ ul.leaders span + span
         height:300px;
         width:350px;
     }
-    
-    /*-----------------------header links layout------------------------------*/    
+
+    /*-----------------------header links layout------------------------------*/
     header
     {
         width: 100%;
@@ -1370,7 +1375,7 @@ ul.leaders span + span
     }
 
     /* The left navbar */
-    #topnav 
+    #topnav
     {
         margin: 0 auto;
         padding: 0px;
@@ -1379,14 +1384,14 @@ ul.leaders span + span
     }
 
     /* Navbar links */
-    #topnav a 
+    #topnav a
     {
         margin: 0 auto;
         text-align: center;
         padding: 0px 0px;
     }
 
-    #topnav-right a 
+    #topnav-right a
     {
         float: center;
         margin: 0 auto;
@@ -1396,7 +1401,7 @@ ul.leaders span + span
         padding-right: 300px;
     }
 
-    #topnav-right 
+    #topnav-right
     {
         position: absolute;
         top: 200px;
@@ -1414,16 +1419,16 @@ ul.leaders span + span
         width: 80%;
     }
 
-    ul.leaders 
+    ul.leaders
     {
         width: 80%;
     }
 
-    ul.leaders span:first-child 
+    ul.leaders span:first-child
     {
         font-size: 15px;
     }
-    
+
     ul.leaders span + span
     {
         font-size: 15px;
@@ -1493,7 +1498,7 @@ ul.leaders span + span
         width: 63%;
     }
 
-    #bottomnav-right 
+    #bottomnav-right
     {
         padding-right: 35px;
         padding-bottom: 50px;
@@ -1511,7 +1516,7 @@ ul.leaders span + span
         padding-left: 0px;
     }
 
-    #bottomnav a 
+    #bottomnav a
     {
         font-size: 15px;
         padding-left: 25px;
@@ -1543,14 +1548,14 @@ ul.leaders span + span
         padding-bottom: 150px;
     }
 
-    html 
+    html
     {
         -webkit-text-size-adjust : none;
         text-size-adjust         : none;
     }
 
 
-    .container-menu 
+    .container-menu
     {
         padding-left: calc(2%);
         padding-bottom: 10px;
@@ -1565,14 +1570,14 @@ ul.leaders span + span
     }
 
     /*-----------------------column layout for menu------------------------------*/
-    .column-left 
+    .column-left
     {
         float: center;
         width: 65%;
         padding-left: 0px;
     }
 
-    .column-right 
+    .column-right
     {
         width: 35%;
     }
@@ -1596,7 +1601,7 @@ ul.leaders span + span
     {
         width: 100%;
     }
-    
+
     .container-about
     {
         overflow:hidden;
@@ -1629,12 +1634,12 @@ ul.leaders span + span
     }
 
 
-    .bg-img 
+    .bg-img
     {
     min-height: 350px;
     }
 
-    .container 
+    .container
     {
         position: relative;
     }
@@ -1674,9 +1679,9 @@ ul.leaders span + span
         height:500px;
         width:550px;
     }
-    
 
-    /*-----------------------header links layout------------------------------*/    
+
+    /*-----------------------header links layout------------------------------*/
     header
     {
         width: 100%;
@@ -1690,21 +1695,21 @@ ul.leaders span + span
     }
 
     /* The left navbar */
-    #topnav 
+    #topnav
     {
         margin: 0 auto;
         padding-left: 78px;
     }
 
     /* Navbar links */
-    #topnav a 
+    #topnav a
     {
         margin: 0 auto;
         text-align: center;
         padding: 0px 0px;
     }
 
-    #topnav-right a 
+    #topnav-right a
     {
         float: center;
         margin: 0 auto;
@@ -1713,7 +1718,7 @@ ul.leaders span + span
         padding-right: 300px;
     }
 
-    #topnav-right 
+    #topnav-right
     {
         position: absolute;
         top: 150px;
@@ -1731,16 +1736,16 @@ ul.leaders span + span
         width: 80%;
     }
 
-    ul.leaders 
+    ul.leaders
     {
         width: 80%;
     }
 
-    ul.leaders span:first-child 
+    ul.leaders span:first-child
     {
         font-size: 15px;
     }
-    
+
     ul.leaders span + span
     {
         font-size: 15px;
@@ -1803,7 +1808,7 @@ ul.leaders span + span
         height: 225px;
         padding-bottom: 0px;
     }
-    
+
     .tile-gallery__tile--normal {
         width: 225px;
         height: 225px;
@@ -1821,7 +1826,7 @@ ul.leaders span + span
         width: 100%;
     }
 
-    #bottomnav-right 
+    #bottomnav-right
     {
         padding-right: 35px;
         padding-bottom: 50px;
@@ -1839,7 +1844,7 @@ ul.leaders span + span
         padding-left: 13px;
     }
 
-    #bottomnav a 
+    #bottomnav a
     {
         font-size: 20px;
         padding-left: 25px;
@@ -1873,18 +1878,18 @@ ul.leaders span + span
         text-align: center;
     }
 
-    .bg-img 
+    .bg-img
     {
     min-height: 350px;
     }
-    
-    html 
+
+    html
     {
         -webkit-text-size-adjust : none;
         text-size-adjust         : none;
     }
 
-    .container 
+    .container
     {
         position: relative;
     }
@@ -1921,14 +1926,14 @@ ul.leaders span + span
         height:350px;
         width:385px;
     }
-    
+
     .container1
     {
         width: 100%;
         padding: 25px;
     }
 
-    /*-----------------------header links layout------------------------------*/    
+    /*-----------------------header links layout------------------------------*/
     header
     {
         width: 100%;
@@ -1942,7 +1947,7 @@ ul.leaders span + span
     }
 
     /* The left navbar */
-    #topnav 
+    #topnav
     {
         margin: 0 auto;
         padding: 0px;
@@ -1951,14 +1956,14 @@ ul.leaders span + span
     }
 
     /* Navbar links */
-    #topnav a 
+    #topnav a
     {
         margin: 0 auto;
         text-align: center;
         padding: 0px 0px;
     }
 
-    #topnav-right a 
+    #topnav-right a
     {
         float: center;
         margin: 0 auto;
@@ -1968,7 +1973,7 @@ ul.leaders span + span
         padding-right: 300px;
     }
 
-    #topnav-right 
+    #topnav-right
     {
         position: absolute;
         top: 200px;
@@ -2000,7 +2005,7 @@ ul.leaders span + span
         flex-flow: row wrap;
     }
 
-    .container-menu 
+    .container-menu
     {
         padding-left: calc(1.5%);
         padding-bottom: 10px;
@@ -2013,16 +2018,16 @@ ul.leaders span + span
         width: 80%;
     }
 
-    ul.leaders 
+    ul.leaders
     {
         width: 80%;
     }
 
-    ul.leaders span:first-child 
+    ul.leaders span:first-child
     {
         font-size: 15px;
     }
-    
+
     ul.leaders span + span
     {
         font-size: 15px;
@@ -2040,16 +2045,16 @@ ul.leaders span + span
     text-align: left;
     }
 
-    
+
     /*-----------------------column layout for menu------------------------------*/
-    .column-left 
+    .column-left
     {
         float: center;
         width: 100%;
         padding-left: 0px;
     }
 
-    .column-right 
+    .column-right
     {
         width: 0%;
     }
@@ -2123,7 +2128,7 @@ ul.leaders span + span
         width: 63%;
     }
 
-    #bottomnav-right 
+    #bottomnav-right
     {
         padding-right: 5px;
         padding-bottom: 50px;
@@ -2146,7 +2151,7 @@ ul.leaders span + span
         padding-left: 0px;
     }
 
-    #bottomnav a 
+    #bottomnav a
     {
         font-size: 20px;
         padding-left: 12px;
@@ -2155,7 +2160,7 @@ ul.leaders span + span
 
 }
 
-@media only screen and (orientation:landscape) and (min-width: 736px) and (min-height: 414px) 
+@media only screen and (orientation:landscape) and (min-width: 736px) and (min-height: 414px)
 {
     .centered_tab button
     {
@@ -2181,7 +2186,7 @@ ul.leaders span + span
         text-align: center;
     }
 
-    html 
+    html
     {
         -webkit-text-size-adjust : none;
         text-size-adjust         : none;
@@ -2192,7 +2197,7 @@ ul.leaders span + span
         width: 80%;
     }
 
-    .container-menu 
+    .container-menu
     {
         padding-left: calc(2%);
         padding-bottom: 10px;
@@ -2207,14 +2212,14 @@ ul.leaders span + span
     }
 
     /*-----------------------column layout for menu------------------------------*/
-    .column-left 
+    .column-left
     {
         float: center;
         width: 70%;
         padding-left: 0px;
     }
 
-    .column-right 
+    .column-right
     {
         width: 30%;
     }
@@ -2238,7 +2243,7 @@ ul.leaders span + span
     {
         width: 100%;
     }
-    
+
     .container-about
     {
         overflow:hidden;
@@ -2271,12 +2276,12 @@ ul.leaders span + span
     }
 
 
-    .bg-img 
+    .bg-img
     {
     min-height: 350px;
     }
 
-    .container 
+    .container
     {
         position: relative;
     }
@@ -2316,9 +2321,9 @@ ul.leaders span + span
         height:500px;
         width:615px;
     }
-    
 
-    /*-----------------------header links layout------------------------------*/    
+
+    /*-----------------------header links layout------------------------------*/
     header
     {
         width: 100%;
@@ -2332,21 +2337,21 @@ ul.leaders span + span
     }
 
     /* The left navbar */
-    #topnav 
+    #topnav
     {
         margin: 0 auto;
         padding-left: 116px;
     }
 
     /* Navbar links */
-    #topnav a 
+    #topnav a
     {
         margin: 0 auto;
         text-align: center;
         padding: 0px 0px;
     }
 
-    #topnav-right a 
+    #topnav-right a
     {
         float: center;
         margin: 0 auto;
@@ -2355,7 +2360,7 @@ ul.leaders span + span
         padding-right: 300px;
     }
 
-    #topnav-right 
+    #topnav-right
     {
         position: absolute;
         top: 150px;
@@ -2373,16 +2378,16 @@ ul.leaders span + span
         width: 80%;
     }
 
-    ul.leaders 
+    ul.leaders
     {
         width: 80%;
     }
 
-    ul.leaders span:first-child 
+    ul.leaders span:first-child
     {
         font-size: 15px;
     }
-    
+
     ul.leaders span + span
     {
         font-size: 15px;
@@ -2445,7 +2450,7 @@ ul.leaders span + span
         height: 246px;
         padding-bottom: 0px;
     }
-    
+
     .tile-gallery__tile--normal {
         width: 246px;
         height: 246px;
@@ -2463,7 +2468,7 @@ ul.leaders span + span
         width: 100%;
     }
 
-    #bottomnav-right 
+    #bottomnav-right
     {
         padding-right: 45px;
         padding-bottom: 50px;
@@ -2481,7 +2486,7 @@ ul.leaders span + span
         padding-left: 15px;
     }
 
-    #bottomnav a 
+    #bottomnav a
     {
         font-size: 20px;
         padding-left: 25px;
@@ -2515,7 +2520,7 @@ ul.leaders span + span
         text-align: center;
     }
 
-    html 
+    html
     {
         -webkit-text-size-adjust : none;
         text-size-adjust         : none;
@@ -2526,7 +2531,7 @@ ul.leaders span + span
         width: 80%;
     }
 
-    .container-menu 
+    .container-menu
     {
         padding-left: calc(2%);
         padding-bottom: 10px;
@@ -2541,14 +2546,14 @@ ul.leaders span + span
     }
 
     /*-----------------------column layout for menu------------------------------*/
-    .column-left 
+    .column-left
     {
         float: center;
         width: 70%;
         padding-left: 0px;
     }
 
-    .column-right 
+    .column-right
     {
         width: 30%;
     }
@@ -2572,7 +2577,7 @@ ul.leaders span + span
     {
         width: 100%;
     }
-    
+
     .container-about
     {
         overflow:hidden;
@@ -2604,12 +2609,12 @@ ul.leaders span + span
     }
 
 
-    .bg-img 
+    .bg-img
     {
     min-height: 350px;
     }
 
-    .container 
+    .container
     {
         position: relative;
     }
@@ -2647,9 +2652,9 @@ ul.leaders span + span
         height:500px;
         width:615px;
     }
-    
 
-    /*-----------------------header links layout------------------------------*/    
+
+    /*-----------------------header links layout------------------------------*/
     header
     {
         width: 100%;
@@ -2663,21 +2668,21 @@ ul.leaders span + span
     }
 
     /* The left navbar */
-    #topnav 
+    #topnav
     {
         margin: 0 auto;
         padding-left: 202px;
     }
 
     /* Navbar links */
-    #topnav a 
+    #topnav a
     {
         margin: 0 auto;
         text-align: center;
         padding: 0px 0px;
     }
 
-    #topnav-right a 
+    #topnav-right a
     {
         float: center;
         margin: 0 auto;
@@ -2687,7 +2692,7 @@ ul.leaders span + span
         padding-right: 300px;
     }
 
-    #topnav-right 
+    #topnav-right
     {
         position: absolute;
         top: 160px;
@@ -2705,16 +2710,16 @@ ul.leaders span + span
         width: 80%;
     }
 
-    ul.leaders 
+    ul.leaders
     {
         width: 80%;
     }
 
-    ul.leaders span:first-child 
+    ul.leaders span:first-child
     {
         font-size: 15px;
     }
-    
+
     ul.leaders span + span
     {
         font-size: 15px;
@@ -2777,7 +2782,7 @@ ul.leaders span + span
         height: 246px;
         padding-bottom: 0px;
     }
-    
+
     .tile-gallery__tile--normal {
         width: 246px;
         height: 246px;
@@ -2795,7 +2800,7 @@ ul.leaders span + span
         width: 100%;
     }
 
-    #bottomnav-right 
+    #bottomnav-right
     {
         padding-right: 60px;
         padding-bottom: 50px;
@@ -2813,7 +2818,7 @@ ul.leaders span + span
         padding-left: 15px;
     }
 
-    #bottomnav a 
+    #bottomnav a
     {
         font-size: 20px;
         padding-left: 45px;
@@ -2821,7 +2826,7 @@ ul.leaders span + span
     }
 }
 
-@media only screen and (orientation:portrait) and (min-width: 768px) and (min-height:1024px) 
+@media only screen and (orientation:portrait) and (min-width: 768px) and (min-height:1024px)
 {
     .centered_tab button
     {
@@ -2840,7 +2845,7 @@ ul.leaders span + span
         text-align: center;
     }
 
-    
+
     h2
     {
         width: 100%;
@@ -2848,12 +2853,12 @@ ul.leaders span + span
         text-align: center;
     }
 
-    .bg-img 
+    .bg-img
     {
     min-height: 380px;
     }
 
-    html 
+    html
     {
         -webkit-text-size-adjust : none;
         text-size-adjust         : none;
@@ -2865,7 +2870,7 @@ ul.leaders span + span
         height: 30%;
     }
 
-    .container 
+    .container
     {
         position: relative;
     }
@@ -2902,7 +2907,7 @@ ul.leaders span + span
         height:500px;
         width:600px;
     }
-    
+
     .container1
     {
         overflow:hidden;
@@ -2914,7 +2919,7 @@ ul.leaders span + span
         padding: 200px;
     }
 
-    /*-----------------------header links layout------------------------------*/    
+    /*-----------------------header links layout------------------------------*/
     header
     {
         width: 100%;
@@ -2928,7 +2933,7 @@ ul.leaders span + span
     }
 
     /* The left navbar */
-    #topnav 
+    #topnav
     {
         margin: 0 auto;
         padding: 0px;
@@ -2936,14 +2941,14 @@ ul.leaders span + span
     }
 
     /* Navbar links */
-    #topnav a 
+    #topnav a
     {
         margin: 0 auto;
         text-align: center;
         padding: 0px 0px;
     }
 
-    #topnav-right a 
+    #topnav-right a
     {
         float: center;
         margin: 0 auto;
@@ -2953,7 +2958,7 @@ ul.leaders span + span
         padding-right: 300px;
     }
 
-    #topnav-right 
+    #topnav-right
     {
         position: absolute;
         top: 160px;
@@ -2999,13 +3004,13 @@ ul.leaders span + span
         height: 155px;
         padding-bottom: 0px;
     }
-    
+
     .tile-gallery__tile--normal {
         width: 155px;
         height: 155px;
     }
-    
-    .container-menu 
+
+    .container-menu
     {
         padding-left: calc(6%);
         padding-bottom: 10px;
@@ -3018,16 +3023,16 @@ ul.leaders span + span
         width: 100%;
     }
 
-    ul.leaders 
+    ul.leaders
     {
         width: 100%;
     }
 
-    ul.leaders span:first-child 
+    ul.leaders span:first-child
     {
         font-size: 15px;
     }
-    
+
     ul.leaders span + span
     {
         font-size: 15px;
@@ -3045,21 +3050,21 @@ ul.leaders span + span
     text-align: left;
     }
 
-    
+
     /*-----------------------column layout for menu------------------------------*/
-    .column-left 
+    .column-left
     {
         float: center;
         width: 100%;
         padding-left: 0px;
     }
 
-    .column-right 
+    .column-right
     {
         width: 0%;
     }
 
-   
+
 /*-----------------------column layout for about------------------------------*/
 .column-about
 {
@@ -3077,7 +3082,7 @@ ul.leaders span + span
 
 
  /* Clear floats after the columns */
- .row:after 
+ .row:after
  {
      content: "";
      display: table;
@@ -3116,7 +3121,7 @@ ul.leaders span + span
     margin: 0 auto;
     text-align: center;
 }
-    
+
 h6
 {
     width: 100%;
@@ -3136,7 +3141,7 @@ p5
     width: 100%;
 }
 
-#bottomnav-right 
+#bottomnav-right
 {
     padding-right: 45px;
     padding-bottom: 50px;
@@ -3154,7 +3159,7 @@ p5
     padding-left: 15px;
 }
 
-#bottomnav a 
+#bottomnav a
 {
     font-size: 25px;
     padding-left: 25px;
@@ -3189,7 +3194,7 @@ p5
         text-align: center;
     }
 
-    html 
+    html
     {
         -webkit-text-size-adjust : none;
         text-size-adjust         : none;
@@ -3200,7 +3205,7 @@ p5
         width: 80%;
     }
 
-    .container-menu 
+    .container-menu
     {
         padding-left: calc(2%);
         padding-bottom: 10px;
@@ -3215,14 +3220,14 @@ p5
     }
 
     /*-----------------------column layout for menu------------------------------*/
-    .column-left 
+    .column-left
     {
         float: center;
         width: 70%;
         padding-left: 0px;
     }
 
-    .column-right 
+    .column-right
     {
         width: 30%;
     }
@@ -3246,7 +3251,7 @@ p5
     {
         width: 100%;
     }
-    
+
     .container-about
     {
         overflow:hidden;
@@ -3278,12 +3283,12 @@ p5
     }
 
 
-    .bg-img 
+    .bg-img
     {
     min-height: 350px;
     }
 
-    .container 
+    .container
     {
         position: relative;
     }
@@ -3321,9 +3326,9 @@ p5
         height:500px;
         width:615px;
     }
-    
 
-    /*-----------------------header links layout------------------------------*/    
+
+    /*-----------------------header links layout------------------------------*/
     header
     {
         width: 100%;
@@ -3337,21 +3342,21 @@ p5
     }
 
     /* The left navbar */
-    #topnav 
+    #topnav
     {
         margin: 0 auto;
         padding-left: 256px;
     }
 
     /* Navbar links */
-    #topnav a 
+    #topnav a
     {
         margin: 0 auto;
         text-align: center;
         padding: 0px 0px;
     }
 
-    #topnav-right a 
+    #topnav-right a
     {
         float: center;
         margin: 0 auto;
@@ -3361,7 +3366,7 @@ p5
         padding-right: 300px;
     }
 
-    #topnav-right 
+    #topnav-right
     {
         position: absolute;
         top: 160px;
@@ -3379,16 +3384,16 @@ p5
         width: 80%;
     }
 
-    ul.leaders 
+    ul.leaders
     {
         width: 80%;
     }
 
-    ul.leaders span:first-child 
+    ul.leaders span:first-child
     {
         font-size: 15px;
     }
-    
+
     ul.leaders span + span
     {
         font-size: 15px;
@@ -3451,7 +3456,7 @@ p5
         height: 246px;
         padding-bottom: 0px;
     }
-    
+
     .tile-gallery__tile--normal {
         width: 246px;
         height: 246px;
@@ -3469,7 +3474,7 @@ p5
         width: 100%;
     }
 
-    #bottomnav-right 
+    #bottomnav-right
     {
         padding-right: 45px;
         padding-bottom: 50px;
@@ -3487,7 +3492,7 @@ p5
         padding-left: 15px;
     }
 
-    #bottomnav a 
+    #bottomnav a
     {
         font-size: 20px;
         padding-left: 25px;
@@ -3496,7 +3501,7 @@ p5
 }
 
 
-@media only screen and (orientation:portrait) and (min-width: 1024px) and (min-height: 1366px) 
+@media only screen and (orientation:portrait) and (min-width: 1024px) and (min-height: 1366px)
 {
     .centered_tab button
     {
@@ -3515,12 +3520,12 @@ p5
         text-align: center;
     }
 
-    .bg-img 
+    .bg-img
     {
     min-height: 380px;
     }
 
-    html 
+    html
     {
         -webkit-text-size-adjust : none;
         text-size-adjust         : none;
@@ -3532,7 +3537,7 @@ p5
         height: 30%;
     }
 
-    .container 
+    .container
     {
         position: relative;
     }
@@ -3569,7 +3574,7 @@ p5
         height:500px;
         width:600px;
     }
-    
+
     .container1
     {
         overflow:hidden;
@@ -3581,7 +3586,7 @@ p5
         padding: 200px;
     }
 
-    /*-----------------------header links layout------------------------------*/    
+    /*-----------------------header links layout------------------------------*/
     header
     {
         width: 100%;
@@ -3595,7 +3600,7 @@ p5
     }
 
     /* The left navbar */
-    #topnav 
+    #topnav
     {
         margin: 0 auto;
         padding: 0px;
@@ -3603,14 +3608,14 @@ p5
     }
 
     /* Navbar links */
-    #topnav a 
+    #topnav a
     {
         margin: 0 auto;
         text-align: center;
         padding: 0px 0px;
     }
 
-    #topnav-right a 
+    #topnav-right a
     {
         float: center;
         margin: 0 auto;
@@ -3620,7 +3625,7 @@ p5
         padding-right: 300px;
     }
 
-    #topnav-right 
+    #topnav-right
     {
         position: absolute;
         top: 160px;
@@ -3659,7 +3664,7 @@ p5
         height: 205px;
         padding-bottom: 0px;
     }
-    
+
     .tile-gallery__tile--normal {
         width: 205px;
         height: 205px;
@@ -3671,7 +3676,7 @@ p5
         font-size: 12px;
     }
 
-    .container-menu 
+    .container-menu
     {
         padding-left: calc(6%);
         padding-bottom: 10px;
@@ -3684,16 +3689,16 @@ p5
         width: 100%;
     }
 
-    ul.leaders 
+    ul.leaders
     {
         width: 100%;
     }
 
-    ul.leaders span:first-child 
+    ul.leaders span:first-child
     {
         font-size: 15px;
     }
-    
+
     ul.leaders span + span
     {
         font-size: 15px;
@@ -3711,16 +3716,16 @@ p5
     text-align: left;
     }
 
-    
+
     /*-----------------------column layout for menu------------------------------*/
-    .column-left 
+    .column-left
     {
         float: left;
         width: 60%;
         padding: 0px;
     }
 
-    .column-right 
+    .column-right
     {
         display: flex;
         flex-wrap: wrap;
@@ -3729,7 +3734,7 @@ p5
         width: 40%;
         padding-top: 50px;
     }
-   
+
 /*-----------------------column layout for about------------------------------*/
 .column-about
 {
@@ -3747,7 +3752,7 @@ p5
 
 
  /* Clear floats after the columns */
- .row:after 
+ .row:after
  {
      content: "";
      display: table;
@@ -3786,7 +3791,7 @@ p5
     margin: 0 auto;
     text-align: center;
 }
-    
+
 h6
 {
     width: 100%;
@@ -3806,14 +3811,14 @@ p5
     width: 100%;
 }
 
-#bottomnav-right 
+#bottomnav-right
 {
     padding-right: 45px;
     padding-bottom: 50px;
     font-size: 30px;
 }
 
-#bottomnav-right a 
+#bottomnav-right a
 {
     font-size: 35px;
 }
@@ -3830,14 +3835,14 @@ p5
     padding-left: 15px;
 }
 
-#bottomnav a 
+#bottomnav a
 {
     font-size: 30px;
     padding-left: 25px;
 }
 }
 
-@media only screen and (orientation:landscape) and (min-width: 1366px) and (min-height: 1024px) 
+@media only screen and (orientation:landscape) and (min-width: 1366px) and (min-height: 1024px)
 {
     .centered_tab button
     {
@@ -3856,12 +3861,12 @@ p5
         text-align: center;
     }
 
-    .bg-img 
+    .bg-img
     {
     min-height: 380px;
     }
 
-    html 
+    html
     {
         -webkit-text-size-adjust : none;
         text-size-adjust         : none;
@@ -3873,7 +3878,7 @@ p5
         height: 30%;
     }
 
-    .container 
+    .container
     {
         position: relative;
     }
@@ -3910,7 +3915,7 @@ p5
         height:500px;
         width:600px;
     }
-    
+
     .container1
     {
         overflow:hidden;
@@ -3922,7 +3927,7 @@ p5
         padding: 200px;
     }
 
-    /*-----------------------header links layout------------------------------*/    
+    /*-----------------------header links layout------------------------------*/
     header
     {
         width: 100%;
@@ -3936,7 +3941,7 @@ p5
     }
 
     /* The left navbar */
-    #topnav 
+    #topnav
     {
         margin: 0 auto;
         padding: 0px;
@@ -3944,14 +3949,14 @@ p5
     }
 
     /* Navbar links */
-    #topnav a 
+    #topnav a
     {
         margin: 0 auto;
         text-align: center;
         padding: 0px 0px;
     }
 
-    #topnav-right a 
+    #topnav-right a
     {
         float: center;
         margin: 0 auto;
@@ -3961,7 +3966,7 @@ p5
         padding-right: 300px;
     }
 
-    #topnav-right 
+    #topnav-right
     {
         position: absolute;
         top: 160px;
@@ -4000,7 +4005,7 @@ p5
         height: 205px;
         padding-bottom: 0px;
     }
-    
+
     .tile-gallery__tile--normal {
         width: 205px;
         height: 205px;
@@ -4012,7 +4017,7 @@ p5
         font-size: 12px;
     }
 
-    .container-menu 
+    .container-menu
     {
         padding-left: calc(6%);
         padding-bottom: 10px;
@@ -4025,16 +4030,16 @@ p5
         width: 100%;
     }
 
-    ul.leaders 
+    ul.leaders
     {
         width: 100%;
     }
 
-    ul.leaders span:first-child 
+    ul.leaders span:first-child
     {
         font-size: 15px;
     }
-    
+
     ul.leaders span + span
     {
         font-size: 15px;
@@ -4052,16 +4057,16 @@ p5
     text-align: left;
     }
 
-    
+
     /*-----------------------column layout for menu------------------------------*/
-    .column-left 
+    .column-left
     {
         float: left;
         width: 60%;
         padding: 0px;
     }
 
-    .column-right 
+    .column-right
     {
         display: flex;
         flex-wrap: wrap;
@@ -4070,7 +4075,7 @@ p5
         width: 40%;
         padding-top: 50px;
     }
-   
+
 /*-----------------------column layout for about------------------------------*/
 .column-about
 {
@@ -4088,7 +4093,7 @@ p5
 
 
  /* Clear floats after the columns */
- .row:after 
+ .row:after
  {
      content: "";
      display: table;
@@ -4127,7 +4132,7 @@ p5
     margin: 0 auto;
     text-align: center;
 }
-    
+
 h6
 {
     width: 100%;
@@ -4147,14 +4152,14 @@ p5
     width: 100%;
 }
 
-#bottomnav-right 
+#bottomnav-right
 {
     padding-right: 45px;
     padding-bottom: 50px;
     font-size: 30px;
 }
 
-#bottomnav-right a 
+#bottomnav-right a
 {
     font-size: 35px;
 }
@@ -4171,7 +4176,7 @@ p5
     padding-left: 15px;
 }
 
-#bottomnav a 
+#bottomnav a
 {
     font-size: 30px;
     padding-left: 25px;
