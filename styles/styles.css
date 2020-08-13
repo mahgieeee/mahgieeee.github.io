@@ -55,11 +55,11 @@ html
   font-family: 'Parisienne';
   font-style: cursive;
   font-size: 48px;
-  color: rgb(146, 116, 95);
+  color: rgb(104, 76, 56);
   padding-top: 200px;
   padding-left: 100px;
   letter-spacing: 2px;
-  text-shadow: 1px 1px rgb(146, 116, 95);
+  text-shadow: 1px 1px rgb(104, 76, 56);
 }
 
 .container1
