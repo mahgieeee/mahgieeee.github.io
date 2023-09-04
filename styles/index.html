@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Maggie's Codes</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Style the header */
+.header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+
+tab2 {
+    padding-left: 2em;
+}
+
+H2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    color: #009900;
+}
+tab2 {
+    padding-left: 2em;
+}
+P {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.5;
+    letter-spacing: .25px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    color: #000000;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: middle;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: #009900;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+    width: 15%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 70%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 500px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+
+.dropbtn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    background-color: #f9f9f9;
+    border-bottom: solid 1px #f9f9f9;
+    text-transform: uppercase;
+    color: black;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Maggie Cao </h1>
+
+<p><div class="dropdown">
+  <button class="dropbtn">My Portfolio Summary</button>
+  <div class="dropdown-content">
+    <a href="Project_Summary/work_samples.pdf">Completed Work</a>
+	<a href="Project_Summary/Cao_Resume.pdf">Resume</a>
+  </div>
+</div></p>
+
+<p><div class="dropdown">
+  <button class="dropbtn">Simple Functions</button>
+  <div class="dropdown-content">
+    <a href="Basic_Functions/compare_sorting.html">Compare Sorting Algorithms</a>
+    <a href="Basic_Functions/subset.html">Subset </a>
+    <a href="Basic_Functions/dynamic.html">Dynamic Function example</a>
+    <a href="Basic_Functions/Algorithms.html">Recursive Algorithms</a>
+    <a href="Basic_Functions/sierpinksi_gasket.html">Recursive Sierpinksi gasket</a>
+  </div>
+</div></p>
+
+<p><div class="dropdown">
+  <button class="dropbtn">Google Code Jam</button>
+  <div class="dropdown-content">
+    <a href="https://code.google.com/codejam/contest/544101/dashboard"> Connect-K Assignment Link </a>
+    <a href="Google_Code_Jam/Board.html">Board Class</a>
+    <a href="Google_Code_Jam/Board_h.html">Board Header File</a>
+    <a href="Google_Code_Jam/mainBoard.html">Board main driver</a>
+    <a href="Google_Code_Jam/reverse.html">Reverse</a> <br>
+    <a href="Google_Code_Jam/AlienLanguage.html">Alien Language</a>
+    <a href="Google_Code_Jam/Numbers.html">Numbers</a>
+    <a href="Google_Code_Jam/MinimumScalarProduct.html">Minimum Scalar Product</a>
+  </div>
+</div></p>
+
+
+<p><div class="dropdown">
+  <button class="dropbtn">Systems Programming</button>
+  <div class="dropdown-content">
+    <a href="Systems_Programming/uniq.html">Uniq command</a>
+    <a href="Systems_Programming/runsim.html">Running child processes</a>
+    <a href="Systems_Programming/my_grep.html">Grep command</a>
+    <a href="Systems_Programming/pipe.html">Pipe example</a>
+    <a href="Systems_Programming/my_nohup.html">Signals </a>
+  </div>
+</div><p>
+
+<p><div class="dropdown">
+  <button class="dropbtn">Mirai Project </button>
+  <div class="dropdown-content">
+    <a href="MiraiSecurityProject.pdf">Mirai execution report</a>
+  </div>
+</div><p>
+
+<p><div class="dropdown">
+  <button class="dropbtn">Simple Shapes Classification with Convolutional Neural Networks</button>
+  <div class="dropdown-content">
+    <a href="Simple_Shapes_CNN/proposal.pdf">Neural Network Concept Proposal</a>
+    <a href="draw.html">Drawing random shapes (Dataset Generator)</a>
+    <a href="pickletestcats.html">Creating pickle files</a>
+    <a href="merge_files.html">Merging pickle files</a>
+    <a href="load_merged_files.html">Pickle loader to CNN</a>
+    <a href="cnn_sobel_main.html">Sobel Algorithm for Edge & Contour Detection</a>
+    <a href="save_pickle_images.html">Reduce image size</a>
+    <a href="cnn_copy_sobel_test.html">CNN loader</a>
+    <a href="cnn_sobel_inception.html">CNN Inception Example</a>
+    <a href="test_model.html">Test trained model</a>
+    <a href="Simple_Shapes_CNN/googlecloud_config_cnn.txt">Google Cloud Configuration</a>
+  </div>
+</div><p>
+
+<p><div class="dropdown">
+  <button class="dropbtn">Microcontroller Projects in Physics</button>
+  <div class="dropdown-content">
+    <a href="Microcontrollers/Parallel_Documentation.pdf">Parallel Park Car</a>
+	<a href="Microcontrollers/Parallel_Parking_Car_Code.txt">Parallel Park Code</a>
+	<a href="Microcontrollers/Python_Wireless_Car_Control.txt">Wireless Control Code</a>
+	<a href="microcontroller.html">Robotic Car Videos</a>
+  </div>
+</div><p>
+
+<p><div class="dropdown">
+  <button class="dropbtn">Digital Enigma Machine </button>
+  <div class="dropdown-content">
+    <a href="Enigma_Machine_Project.pdf">Enigma Digital Logic Design Implementation</a>
+  </div>
+</div><p>
+
+<p><div class="dropdown">
+  <button class="dropbtn">Artworks </button>
+  <div class="dropdown-content">
+    <a href="artworks.html">See my artworks</a>
+  </div>
+</div><p>
+
+</p>
+</div>
+</div>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="about_me.html">About Me</a>
+  <a href="project_logs.html">Project Documentation</a>
+  <a href="interests.html">Interests</a>
+</div>
+
+</body>
+</html>
